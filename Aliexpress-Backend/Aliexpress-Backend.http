@@ -1,0 +1,6 @@
+@Aliexpress_Backend_HostAddress = http://localhost:5068
+
+GET {{Aliexpress_Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
