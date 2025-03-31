@@ -1,3 +1,5 @@
+@use "assets/functions.scss" as *;
+
 body {
     font-family:sans-serif;
     margin:0;
@@ -5,4 +7,13 @@ body {
     box-sizing:border-box;
     -webkit-user-drag:none;
     user-select:none;
+}
+
+// пример вариаций использования функции px-to-rem :
+div {
+    margin: px-to-rem(0 20 50 5);  // можно передать от 4 до 1 значений
+    padding: px-to-rem(10 5);      
+    font-size: px-to-rem(20);
+    border: px-to-rem(2) solid red;  // используется в абсолютно любых свойствах, где указывается какой-то размер
+    border-radius: px-to-rem(20);
 }
