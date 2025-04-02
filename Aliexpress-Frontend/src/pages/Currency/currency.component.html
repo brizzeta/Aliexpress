@@ -1,0 +1,12 @@
+<section class="currency">
+    <div class="container">
+      <h2>Select Currency</h2>
+  
+      <div class="currencies">
+        <button *ngFor="let currency of currencies" (click)="changeCurrency(currency)">
+          {{ currency.name }}
+        </button>
+      </div>
+    </div>
+  </section>
+  

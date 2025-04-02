@@ -1,0 +1,18 @@
+<section class="language">
+    <div class="container">
+      <h2>Select Language & Currency</h2>
+  
+      <div class="languages">
+        <button *ngFor="let lang of languages" (click)="changeLanguage(lang)">
+          {{ lang.name }}
+        </button>
+      </div>
+  
+      <div class="currencies">
+        <button *ngFor="let currency of currencies" (click)="changeCurrency(currency)">
+          {{ currency.name }}
+        </button>
+      </div>
+    </div>
+  </section>
+  

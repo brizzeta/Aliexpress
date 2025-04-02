@@ -1,0 +1,10 @@
+<section class="catalog">
+    <div class="filter">
+      <button>Filter by Price</button>
+      <button>Sort by Rating</button>
+    </div>
+    <div class="product-list">
+      <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+    </div>
+  </section>
+  

@@ -1,0 +1,21 @@
+<section class="support">
+    <div class="container">
+      <h2>Contact Support</h2>
+  
+      <p>If you have any issues or questions, feel free to reach out to our support team.</p>
+  
+      <h3>Contact Information</h3>
+      <p><strong>Email:</strong> support@company.com</p>
+      <p><strong>Phone:</strong> +1 234 567 890</p>
+  
+      <h3>Submit a Request</h3>
+      <form (submit)="submitRequest($event)">
+        <div class="form-group">
+          <label for="issueDescription">Describe your issue</label>
+          <textarea id="issueDescription" [(ngModel)]="issueDescription" name="issueDescription" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+  </section>
+  
