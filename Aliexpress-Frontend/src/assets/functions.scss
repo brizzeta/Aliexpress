@@ -3,14 +3,7 @@
 @function px-to-rem($px, $base: 16) {
     $rems: ();
     $count: length($px);
-
-    @if $count == 1 {
-        @return math.div($px, $base) * 1rem;
-    }
-
-    @for $i from 1 through $count {
-        $rems: append($rems, math.div(nth($px, $i), $base) * 1rem);
-    }
-
+    @if $count == 1 { @return math.div($px, $base) * 1rem; }
+    @for $i from 1 through $count { $rems: append($rems, math.div(nth($px, $i), $base) * 1rem); }
     @return $rems;
 }

@@ -1,19 +1,63 @@
 @use "assets/functions.scss" as *;
+$white: #FFFFFF;
+$black: #2E2E2E;
+$green: #65E4A3;
+$grey: #595858;
 
-body {
-    font-family:sans-serif;
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    -webkit-user-drag:none;
-    user-select:none;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-// пример вариаций использования функции px-to-rem :
-div {
-    margin: px-to-rem(0 20 50 5);  // можно передать от 4 до 1 значений
-    padding: px-to-rem(10 5);      
+*, *::before, *::after { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+h1 {
+    font-size: px-to-rem(128);
+    font-weight: 400;
+    color: $white;
+}
+h2 {
+    font-size: px-to-rem(120);
+    font-weight: 700;
+    color: $green;
+}
+h3 {
+    font-size: px-to-rem(64);
+    font-weight: 400;
+    color: $white;
+}
+h4 {
+    font-size: px-to-rem(48);
+    font-weight: 500;
+    color: $white;
+}
+h5, p {
     font-size: px-to-rem(20);
-    border: px-to-rem(2) solid red;  // используется в абсолютно любых свойствах, где указывается какой-то размер
-    border-radius: px-to-rem(20);
+    font-weight: 500;
+}
+h6 {
+    font-size: px-to-rem(16);
+    font-weight: 400;
+    color: $white;
+}
+a {
+    font-size: px-to-rem(20);
+    font-weight: 500;
+    color: $green;
+}
+header, nav {
+    font-size: px-to-rem(24);
+    font-weight: 400;
+}
+button {
+    font-size: px-to-rem(24);
+    font-weight: 400;
 }
