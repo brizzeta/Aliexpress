@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "variables.scss" as *;
 
 @function px-to-rem($px, $base: 16) {
     $rems: ();
@@ -6,4 +7,29 @@
     @if $count == 1 { @return math.div($px, $base) * 1rem; }
     @for $i from 1 through $count { $rems: append($rems, math.div(nth($px, $i), $base) * 1rem); }
     @return $rems;
+}
+@mixin media-breakpoint-between($lower, $upper) {
+    $min: map-get($breakpoints, $lower);
+    $max: map-get($breakpoints, $upper);
+    @if $min != null and $max != null {
+        @media (min-width: #{$min}px) and (max-width: #{$max - 1}px) { @content; }
+    } @else {
+        @error "❌ Ошибка! Один из брейкпоинтов `#{$lower}` или `#{$upper}` не найден в \$breakpoints.";
+    }
+}
+@mixin media-breakpoint-down($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value != null {
+        @media (max-width: #{$value - 1}px) { @content; }
+    } @else {
+        @error "❌ Ошибка! Breakpoint `#{$breakpoint}` не найден в \$breakpoints.";
+    }
+}
+@mixin media-breakpoint-up($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value != null {
+        @media (min-width: #{$value}px) { @content; }
+    } @else {
+        @error "❌ Ошибка! Breakpoint `#{$breakpoint}` не найден в \$breakpoints.";
+    }
 }
