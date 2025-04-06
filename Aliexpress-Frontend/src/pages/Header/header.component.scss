@@ -5,18 +5,13 @@
     background: $black;
     margin: 0 auto;
     width:px-to-rem(1720);
-    padding: px-to-rem(15 0);
+    padding: px-to-rem(15 50);
     border-radius: px-to-rem(0 0 60 60);
     box-shadow: 0 px-to-rem(5) px-to-rem(5) rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    position: relative;
 
-    .container {
-        padding: px-to-rem(0 50);
-        .header-content {
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-    }
     .logo {
         margin-right: auto;
     
@@ -81,8 +76,8 @@
             border-radius: px-to-rem(20);
             padding: px-to-rem(5 15);
             position: absolute;
-            top: 140%;
-            right: 80%;
+            top: px-to-rem(40);
+            right: px-to-rem(100);
             input {
                 background: transparent;
                 border: none;
@@ -104,8 +99,8 @@
                 cursor: pointer;
                 display: flex;
                 img {
-                    width: px-to-rem(30) !important;
-                    height: px-to-rem(30) !important;
+                    width: px-to-rem(30);
+                    height: px-to-rem(30);
                 }
             }
         }
