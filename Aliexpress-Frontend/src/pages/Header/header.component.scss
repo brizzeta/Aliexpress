@@ -3,105 +3,111 @@
 
 .pc-header {
     background: $black;
+    margin: 0 auto;
+    width:px-to-rem(1720);
     padding: px-to-rem(15 0);
-    border-radius: px-to-rem(0 0 80 80);
+    border-radius: px-to-rem(0 0 60 60);
     box-shadow: 0 px-to-rem(5) px-to-rem(5) rgba(0, 0, 0, 0.25);
+
     .container {
-        max-width: px-to-rem(1720);
-        margin: 0 auto;
-        padding: px-to-rem(0 30);
+        padding: px-to-rem(0 50);
         .header-content {
             display: flex;
             align-items: center;
             position: relative;
         }
     }
-}
-.logo {
-    margin-right: auto;
-    a { text-decoration: none; }
-    &-text {
-        font-size: px-to-rem(48);
-        font-weight: 500;
-        color: $white;
+    .logo {
+        margin-right: auto;
+    
+        a { text-decoration: none; }
+        &-text {
+            font-size: px-to-rem(48);
+            font-weight: 500;
+            color: $white;
+        }
+        &-highlight { color: $green; }
     }
-    &-highlight { color: $green; }
-}
-.main-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-grow: 1;
-    .nav-links {
+    .main-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-grow: 1;
+    
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: px-to-rem(30);
+            a {
+                color: $white;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: px-to-rem(24);
+                font-weight: 400;
+            }
+        }
+    } 
+    .header-controls {
+        position: relative;
         display: flex;
-        list-style: none;
-        gap: px-to-rem(30);
-        a {
+        grid-column: 3;
+        justify-self: end;
+        align-items: center;
+        gap: px-to-rem(15);
+        
+        .login-btn {
             color: $white;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: px-to-rem(24);
             font-weight: 400;
+            font-size: px-to-rem(24);
         }
-    }
-} 
-.header-controls {
-    position: relative;
-    display: flex;
-    grid-column: 3;
-    justify-self: end;
-    align-items: center;
-    gap: px-to-rem(15);
-    .login-btn {
-        color: $white;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: px-to-rem(24);
-    }
-    a {
-        color: $white;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    i {
-        width: px-to-rem(24);
-        height: px-to-rem(24);
-        background-color: $white;
-        border-radius: 50%;
-    }
-    .search-container {
-        display: flex;
-        align-items:center;
-        justify-content: space-evenly;
-        background-color: $green;
-        border-radius: px-to-rem(20);
-        padding: px-to-rem(5 15);
-        position: absolute;
-        top: 140%;
-        right: 80%;
-        input {
-            background: transparent;
-            border: none;
-            outline: none;
-            color: $black;
-            padding: px-to-rem(1 10);
-            width: px-to-rem(300);
-            font-size: px-to-rem(16);
-            font-weight:400;
-            &::placeholder {
-                color: $black;
-                opacity: 0.8;
-            }
-        }
-        button {
-            padding: px-to-rem(5);
-            background: transparent;
-            border: none;
-            cursor: pointer;
+        a {
+            color: $white;
+            text-decoration: none;
             display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: px-to-rem(24);
+            height: px-to-rem(24);
+        }
+        .search-container {
+            display: flex;
+            align-items:center;
+            justify-content: space-evenly;
+            background-color: $green;
+            border-radius: px-to-rem(20);
+            padding: px-to-rem(5 15);
+            position: absolute;
+            top: 140%;
+            right: 80%;
+            input {
+                background: transparent;
+                border: none;
+                outline: none;
+                color: $black;
+                padding: px-to-rem(1 10);
+                width: px-to-rem(300);
+                font-size: px-to-rem(16);
+                font-weight:400;
+                &::placeholder {
+                    color: $black;
+                    opacity: 0.8;
+                }
+            }
+            button {
+                padding: px-to-rem(5);
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                img {
+                    width: px-to-rem(30) !important;
+                    height: px-to-rem(30) !important;
+                }
+            }
         }
     }
 }
