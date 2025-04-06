@@ -2,15 +2,14 @@
 @use "../../assets/functions.scss" as *;
 
 .pc-header {
-    background: $black;
-    margin: 0 auto;
-    width:px-to-rem(1720);
-    padding: px-to-rem(15 50);
-    border-radius: px-to-rem(0 0 60 60);
-    box-shadow: 0 px-to-rem(5) px-to-rem(5) rgba(0, 0, 0, 0.25);
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
+    margin: 0 px-to-rem(100);
+    padding: px-to-rem(15 50);
+    background: $black;
+    border-radius: px-to-rem(0 0 60 60);
+    box-shadow: 0 px-to-rem(5) px-to-rem(5) rgba(0, 0, 0, 0.25);
 
     .logo {
         margin-right: auto;
@@ -74,7 +73,7 @@
             justify-content: space-evenly;
             background-color: $green;
             border-radius: px-to-rem(20);
-            padding: px-to-rem(5 15);
+            padding: px-to-rem(0 15);
             position: absolute;
             top: px-to-rem(40);
             right: px-to-rem(100);
@@ -83,7 +82,7 @@
                 border: none;
                 outline: none;
                 color: $black;
-                padding: px-to-rem(1 10);
+                padding: px-to-rem(0 10);
                 width: px-to-rem(300);
                 font-size: px-to-rem(16);
                 font-weight:400;
