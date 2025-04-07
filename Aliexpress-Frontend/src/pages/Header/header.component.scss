@@ -19,8 +19,26 @@
     .logo {
         margin-right: auto;
 
-        a { text-decoration: none; }
+        img {
+            width: px-to-rem(47);
+            height: px-to-rem(47);
+
+            @include media-breakpoint-between(md, 1520) {
+                width: px-to-rem(37);
+                height: px-to-rem(37);
+            }
+            @include media-breakpoint-down(md) {
+                width: px-to-rem(27);
+                height: px-to-rem(27); 
+            }
+        }
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none; 
+        }
         &-text {
+            margin-left: px-to-rem(7);
             color: $white;
             font-size: px-to-rem(48);
             font-weight: 500;
@@ -79,7 +97,7 @@
             }
         }
         #lang { @include media-breakpoint-down(md) { display: none; } }
-        #menu {
+        .switchable {
             display:none;
             @include media-breakpoint-down(md) { display: block; }
         }
