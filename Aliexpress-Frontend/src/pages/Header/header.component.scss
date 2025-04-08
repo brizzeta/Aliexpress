@@ -71,6 +71,11 @@
                 font-size: px-to-rem(24);
                 font-weight: 400;
 
+                &:hover {
+                    transform: scale(1.05);
+                    color:$green;
+                }
+                &:active { transform:scale(0.95); }
                 @include media-breakpoint-between(md, 1520) {
                     margin-right: px-to-rem(20);
                     font-size: px-to-rem(14);
@@ -90,7 +95,10 @@
             cursor: pointer;
             transition: .1s;
 
-            &:hover { transform: scale(1.05); }
+            &:hover {
+                transform: scale(1.05);
+                color:$green;
+            }
             &:active { transform:scale(0.95); }
             img {
                 width: px-to-rem(24);
