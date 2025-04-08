@@ -2,12 +2,12 @@
 @use "../../assets/functions.scss" as *;
 
 .pc-header {
-    align-items: center;
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 px-to-rem(100);
     padding: px-to-rem(15 37 20);
-    justify-content: space-between;
     background: $black;
     border-radius: px-to-rem(0 0 60 60);
     box-shadow: 0 px-to-rem(5) px-to-rem(5) rgba(0, 0, 0, 0.25);
@@ -36,7 +36,7 @@
             align-items: center;
             text-decoration: none; 
         }
-        &-text1 {
+        &-text {
             margin-left: px-to-rem(18);
             color: $white;
             font-size: px-to-rem(48);
@@ -45,13 +45,9 @@
             @include media-breakpoint-between(md, 1520) { font-size: px-to-rem(36); }
             @include media-breakpoint-down(md) { font-size: px-to-rem(24); }
         }
-        &-text2 { 
+        &-highlight { 
+            margin:0;
             color: $green; 
-            font-size: px-to-rem(48);
-            font-weight: 500;
-
-            @include media-breakpoint-between(md, 1520) { font-size: px-to-rem(36); }
-            @include media-breakpoint-down(md) { font-size: px-to-rem(24); }
         }
     }
     .main-nav {
@@ -61,14 +57,12 @@
 
         @include media-breakpoint-down(md) { display: none; }
         .nav-links {
-            padding: 0;
             display: flex;
             list-style: none;
             justify-content: space-between;
+            padding: 0;
 
-            @include media-breakpoint-between(md, 1520) {
-                margin-top:px-to-rem(17);
-            }
+            @include media-breakpoint-between(md, 1520) { margin-top:px-to-rem(17); }
             a {
                 margin-right: px-to-rem(60);
                 color: $white;
@@ -78,14 +72,11 @@
                 font-weight: 400;
 
                 @include media-breakpoint-between(md, 1520) {
-                    font-size: px-to-rem(14);
                     margin-right: px-to-rem(20);
+                    font-size: px-to-rem(14);
                 }
             }
-
-            li:last-child a {
-                margin-right: 0;
-            }
+            li:last-child a { margin-right: 0; }
         }
     } 
     .header-controls {
@@ -116,9 +107,7 @@
             font-weight: 400;
             font-size: px-to-rem(24);
 
-            @include media-breakpoint-between(md, 1520) {
-                font-size: px-to-rem(14);
-            }
+            @include media-breakpoint-between(md, 1520) { font-size: px-to-rem(14); }
             @include media-breakpoint-down(md) { display: none; }
         }
     }
