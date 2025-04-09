@@ -2,41 +2,27 @@
 @use "../../assets/functions.scss" as *;
 
 .banner-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: px-to-rem(39 100 0 100);
-    padding: px-to-rem(442);
-    max-height: px-to-rem(884);
+    padding: px-to-rem(68);
     background: $black;
     border-radius: px-to-rem(60);
 
-    @include media-breakpoint-between(1420, 1820) { padding: px-to-rem(380); }
-    @include media-breakpoint-between(md, 1420) { padding: px-to-rem(300); }
     @include media-breakpoint-down(md) { display: none; }
     .slogan {
-        position: absolute;
-        top: px-to-rem(108);
-        margin-left:px-to-rem(18); 
-
-        @include media-breakpoint-between(1420, 1820) { width: px-to-rem(1200); }
-        @include media-breakpoint-between(md, 1420) { width: px-to-rem(900); }
+        margin-top: px-to-rem(40);
+        width: 100%;
     }
     .banner-container {
-        position: absolute;
-        display:flex;
-        flex-direction:column;
-        bottom: px-to-rem(65);
+        display: flex;
+        flex-direction: column;
+        margin-top: px-to-rem(70);
+        padding: px-to-rem(0 9);
 
-        @include media-breakpoint-between(1420, 1820) { width: px-to-rem(1200); }
-        @include media-breakpoint-between(md, 1420) { width: px-to-rem(900); }
         a {
-            display:flex;
-            align-items:center;
-            gap:px-to-rem(13);
-            margin-bottom:px-to-rem(28);
+            display: flex;
+            align-items: center;
+            gap: px-to-rem(13);
+            margin-bottom: px-to-rem(5);
         }
     }
 }
