@@ -43,7 +43,10 @@
             font-weight: 500;
 
             @include media-breakpoint-between(md, 1520) { font-size: px-to-rem(36); }
-            @include media-breakpoint-down(md) { font-size: px-to-rem(24); }
+            @include media-breakpoint-down(md) {
+                margin:px-to-rem(-5 0 0 11);
+                font-size: px-to-rem(24); 
+            }
         }
         &-highlight { 
             margin:0;
