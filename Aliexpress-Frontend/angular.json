@@ -66,13 +66,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "Aliexpress-Front:build:production"
-            },
-            "development": {
-              "buildTarget": "Aliexpress-Front:build:development"
-            }
+            "production": { "buildTarget": "Aliexpress-Front:build:production" },
+            "development": { "buildTarget": "Aliexpress-Front:build:development" }
           },
+          "options": { "proxyConfig": "proxy.conf.json" },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

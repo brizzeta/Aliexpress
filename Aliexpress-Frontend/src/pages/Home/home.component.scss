@@ -1,0 +1,28 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+.banner-main {
+    margin: px-to-rem(39 100 0 100);
+    padding: px-to-rem(68);
+    background: $black;
+    border-radius: px-to-rem(60);
+
+    @include media-breakpoint-down(md) { display: none; }
+    .slogan {
+        margin-top: px-to-rem(40);
+        width: 100%;
+    }
+    .banner-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: px-to-rem(70);
+        padding: px-to-rem(0 9);
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: px-to-rem(13);
+            margin-bottom: px-to-rem(5);
+        }
+    }
+}
