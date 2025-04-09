@@ -16,6 +16,21 @@ body {
     -webkit-user-drag: none;
     user-select: none;
 }
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Футер всегда внизу экрана
+}
+
+router-outlet {
+    flex: 1 0 auto; // Контент растягивается
+}
+
+app-footer {
+    flex-shrink: 0; // Футер не сжимается
+}
+
 h1 {
     font-size: px-to-rem(128);
     font-weight: 400;
