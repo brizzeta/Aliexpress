@@ -22,7 +22,41 @@
             display: flex;
             align-items: center;
             gap: px-to-rem(13);
-            margin-bottom: px-to-rem(5);
+        }
+        .bolls-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: px-to-rem(15);
+            margin-top: px-to-rem(7);
+
+            .boll {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1 1 auto;
+                aspect-ratio: 1 / 1;
+                max-width: px-to-rem(286);
+                min-width: px-to-rem(70);
+                background: $grey;
+                border-radius: 50%;
+
+                .small-boll {
+                    position: absolute;
+                    top: px-to-rem(-2);
+                    right: px-to-rem(25);
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1 1 auto;
+                    aspect-ratio: 1 / 1;
+                    width: px-to-rem(54);
+                    background: $green;
+                    border-radius: 50%;
+                    font-size: px-to-rem(20);
+                    font-weight: 600;
+                }
+            }
         }
     }
 }

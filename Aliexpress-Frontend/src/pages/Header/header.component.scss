@@ -73,12 +73,9 @@
                 text-transform: uppercase;
                 font-size: px-to-rem(24);
                 font-weight: 400;
+                transition: .15s;
 
-                &:hover {
-                    transform: scale(1.05);
-                    color:$green;
-                }
-                &:active { transform:scale(0.95); }
+                &:hover { color: $light-green; }
                 @include media-breakpoint-between(md, 1520) {
                     margin-right: px-to-rem(20);
                     font-size: px-to-rem(14);
@@ -96,11 +93,11 @@
             color: $white;
             text-decoration: none;
             cursor: pointer;
-            transition: .1s;
+            transition: .15s;
 
             &:hover {
                 transform: scale(1.05);
-                color:$green;
+                color: $light-green;
             }
             &:active { transform:scale(0.95); }
             img {
@@ -132,7 +129,9 @@
         padding:px-to-rem(-10);
         background-color: $green;
         border-radius: px-to-rem(20);
+        transition: .2s;
 
+        &:hover { background:$light-green; }
         @include media-breakpoint-between(1521, 1775) { right: px-to-rem(130); }
         @include media-breakpoint-between(md, 1520) {
             top: px-to-rem(62);
@@ -154,11 +153,11 @@
             font-size: px-to-rem(16);
             font-weight:400;
 
-            @include media-breakpoint-between(md, 1520) { width: px-to-rem(200); }
             &::placeholder {
                 color: $black;
                 opacity: 0.8;
             }
+            @include media-breakpoint-between(md, 1520) { width: px-to-rem(200); }
         }
         button {
             display: flex;
@@ -166,7 +165,7 @@
             background: transparent;
             border: none;
             cursor: pointer;
-            transition:.1s;
+            transition: .15s;
 
             &:hover { transform: scale(1.1); }
             &:active { transform:scale(0.9); }
