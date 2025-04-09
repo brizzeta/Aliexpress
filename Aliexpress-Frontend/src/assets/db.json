@@ -2,7 +2,8 @@
     "roles": [
         { "id": 1, "role": "admin" },
         { "id": 2, "role": "seller" },
-        { "id": 3, "role": "buyer" }
+        { "id": 3, "role": "buyer" },
+        { "id": 4, "role": "super-admin" }
     ],
     "users": [{
         "id": 1,
