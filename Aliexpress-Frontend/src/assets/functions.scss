@@ -9,27 +9,28 @@
     @return $rems;
 }
 @mixin media-breakpoint-between($lower, $upper) {
-    $min: map-get($breakpoints, $lower);
-    $max: map-get($breakpoints, $upper);
+    $min: if(type-of($lower) == 'number', $lower, map-get($breakpoints, $lower));
+    $max: if(type-of($upper) == 'number', $upper, map-get($breakpoints, $upper));
+
     @if $min != null and $max != null {
         @media (min-width: #{$min}px) and (max-width: #{$max - 1}px) { @content; }
     } @else {
-        @error "❌ Ошибка! Один из брейкпоинтов `#{$lower}` или `#{$upper}` не найден в \$breakpoints.";
+        @error "❌ Ошибка! Один из брейкпоинтов `#{$lower}` или `#{$upper}` не найден и не является числом.";
     }
 }
 @mixin media-breakpoint-down($breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
+    $value: if(type-of($breakpoint) == 'number', $breakpoint, map-get($breakpoints, $breakpoint));
     @if $value != null {
         @media (max-width: #{$value - 1}px) { @content; }
     } @else {
-        @error "❌ Ошибка! Breakpoint `#{$breakpoint}` не найден в \$breakpoints.";
+        @error "❌ Ошибка! Breakpoint `#{$breakpoint}` не найден и не является числом.";
     }
 }
 @mixin media-breakpoint-up($breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
+    $value: if(type-of($breakpoint) == 'number', $breakpoint, map-get($breakpoints, $breakpoint));
     @if $value != null {
         @media (min-width: #{$value}px) { @content; }
     } @else {
-        @error "❌ Ошибка! Breakpoint `#{$breakpoint}` не найден в \$breakpoints.";
+        @error "❌ Ошибка! Breakpoint `#{$breakpoint}` не найден и не является числом.";
     }
 }
