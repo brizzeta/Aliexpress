@@ -27,7 +27,7 @@ namespace Domain.Entities
 
         public string? ShippingAddress { get; set; }
 
-        public ICollection<CategoryItem> CategoryItems { get; set; } = new List<CategoryItem>();
+        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
         public ICollection<Payment> Payments { get; set; } = new List<Payment>();
     }
 }

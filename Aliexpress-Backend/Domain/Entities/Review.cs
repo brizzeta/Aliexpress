@@ -15,7 +15,7 @@ namespace Domain.Entities
         public Product Product { get; set; } = null!;
         public int SellerID { get; set; }
         public User Seller { get; set; } = null!;
-        public decimal rating {  get; set; }
+        public decimal Rating {  get; set; }
 
         public string? Comment { get; set; }
         public DateTime? CreatedDate { get; set; } = DateTime.UtcNow;

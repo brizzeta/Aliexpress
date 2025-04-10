@@ -11,7 +11,7 @@ namespace Domain.Entities
     {
         public int Id { get; set; }
         public int RecepientID {  get; set; }
-        public User User { get; set; } = null!;
+        public User Recepient { get; set; } = null!;
         public NotificationType Type { get; set; } = NotificationType.Info;
         public bool IsRead { get; set; } = false;
         public string Message { get; set; } = null!;

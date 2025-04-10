@@ -19,7 +19,7 @@ namespace Infrastructure.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<CategoryItem> CategoryItems { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Chat> Chats { get; set; }
@@ -106,7 +106,7 @@ namespace Infrastructure.Data
             });
 
             // Configure OrderItem entity (renamed from CategoryItem)
-            modelBuilder.Entity<CategoryItem>(entity =>
+            modelBuilder.Entity<OrderItem>(entity =>
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.PricePerItem).HasPrecision(18, 2);
@@ -114,13 +114,13 @@ namespace Infrastructure.Data
 
                 // Configure relationship with Order
                 entity.HasOne(oi => oi.Order)
-                      .WithMany(o => o.CategoryItems)  // Note: This needs to be renamed in the Order class
+                      .WithMany(o => o.OrderItems)  // Note: This needs to be renamed in the Order class
                       .HasForeignKey(oi => oi.OrderID)
                       .OnDelete(DeleteBehavior.Cascade);
 
                 // Configure relationship with Product
                 entity.HasOne(oi => oi.Product)
-                      .WithMany(p => p.CategoryItem)  // Note: This needs to be renamed in the Product class
+                      .WithMany(p => p.OrderItem)  // Note: This needs to be renamed in the Product class
                       .HasForeignKey(oi => oi.ProductID)
                       .OnDelete(DeleteBehavior.Restrict);
             });
@@ -141,7 +141,7 @@ namespace Infrastructure.Data
             modelBuilder.Entity<Review>(entity =>
             {
                 entity.HasKey(e => e.Id);
-                entity.Property(e => e.rating).HasPrecision(3, 1);
+                entity.Property(e => e.Rating).HasPrecision(3, 1);
 
                 // Configure relationship with Buyer
                 entity.HasOne(r => r.Buyer)
@@ -203,7 +203,7 @@ namespace Infrastructure.Data
                 entity.Property(e => e.Message).IsRequired();
 
                 // Configure relationship with User (recipient)
-                entity.HasOne(n => n.User)
+                entity.HasOne(n => n.Recepient)
                       .WithMany(u => u.Notifications)
                       .HasForeignKey(n => n.RecepientID)
                       .OnDelete(DeleteBehavior.Cascade);

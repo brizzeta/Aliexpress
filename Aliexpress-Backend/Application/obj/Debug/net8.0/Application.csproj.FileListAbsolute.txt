@@ -18,4 +18,3 @@ C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Application\obj\Debu
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Application\obj\Debug\net8.0\refint\Application.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Application\obj\Debug\net8.0\Application.pdb
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Application\obj\Debug\net8.0\ref\Application.dll
-C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Application\bin\Debug\net8.0\appsettings.json

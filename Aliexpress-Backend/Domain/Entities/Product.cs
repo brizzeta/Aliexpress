@@ -34,7 +34,7 @@ namespace Domain.Entities
         public bool IsActive { get; set; } = true;
 
         public ICollection<Order> Order { get; set; } = new List<Order>();
-        public ICollection<CategoryItem> CategoryItem { get; set; } = new List<CategoryItem>();
+        public ICollection<OrderItem> OrderItem { get; set; } = new List<OrderItem>();
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
 
     }

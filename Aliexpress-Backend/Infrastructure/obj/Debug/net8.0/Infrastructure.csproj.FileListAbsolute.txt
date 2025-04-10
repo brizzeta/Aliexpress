@@ -18,4 +18,3 @@ C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Infrastructure\obj\D
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
-C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Infrastructure\bin\Debug\net8.0\appsettings.json
