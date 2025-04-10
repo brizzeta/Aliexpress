@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/2DhF2OVTSo=",
+  "dgSpecHash": "HJJWFE9zVGw=",
   "success": true,
   "projectFilePath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.13\\microsoft.entityframeworkcore.8.0.13.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.13\\microsoft.entityframeworkcore.abstractions.8.0.13.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.13\\microsoft.entityframeworkcore.analyzers.8.0.13.nupkg.sha512",
