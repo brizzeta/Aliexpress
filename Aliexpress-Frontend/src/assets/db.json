@@ -1,0 +1,127 @@
+{
+    "roles": [
+        { "id": 1, "role": "admin" },
+        { "id": 2, "role": "seller" },
+        { "id": 3, "role": "buyer" },
+        { "id": 4, "role": "super-admin" }
+    ],
+    "users": [{
+        "id": 1,
+        "name": "Alice Seller",
+        "email": "alice@example.com",
+        "password_hash": "hashed_pass_1",
+        "phone": "1234567890",
+        "role": 2,
+        "address": "Market Street 12",
+        "registration_date": "2023-01-01",
+        "profile_image_url": "/assets/img/alice.jpg",
+        "rating": 4.8,
+        "is_active": true
+    }, {
+        "id": 2,
+        "name": "Bob Buyer",
+        "email": "bob@example.com",
+        "password_hash": "hashed_pass_2",
+        "phone": "0987654321",
+        "role": 3,
+        "address": "River Road 5",
+        "registration_date": "2023-02-01",
+        "profile_image_url": "/assets/img/bob.jpg",
+        "rating": 4.2,
+        "is_active": true
+    }],
+    "categories": [{
+        "id": 1,
+        "parent": null,
+        "name": "Electronics",
+        "description": "Gadgets and devices"
+    }, {
+        "id": 2,
+        "parent": 1,
+        "name": "Smartphones",
+        "description": "Modern phones"
+    }],
+    "products": [ {
+        "id": 1,
+        "seller": 1,
+        "name": "iPhone 14",
+        "description": "Latest Apple smartphone",
+        "price": 1200.00,
+        "discount": 0.1,
+        "stock_quantity": 5,
+        "category": 2,
+        "image_urls": ["/assets/img/iphone.jpg"],
+        "created_date": "2023-03-01",
+        "updated_date": "2023-03-05",
+        "rating": 4.9,
+        "is_active": true
+    }],
+    "orders": [{
+        "id": 1,
+        "buyer": 2,
+        "total_price": 1080.00,
+        "status": "delivered",
+        "createde_date": "2023-03-10",
+        "updated_date": "2023-03-15",
+        "delivary_address": "River Road 5",
+        "payment_method": "card"
+    }],
+    "categoryItems": [{
+        "id": 1,
+        "order": 1,
+        "product": 1,
+        "quentity": 1,
+        "price_per_item": 1080.00,
+        "subtotal": 1080.00
+    }],
+    "reviews": [{
+        "id": 1,
+        "buyer": 2,
+        "product": 1,
+        "seller": 1,
+        "rating": 5,
+        "comment": "Excellent argument! Approved!",
+        "created_date": "2023-03-16"
+    }],
+    "payments": [{
+        "id": 1,
+        "order": 1,
+        "payment_method": "card",
+        "payment_status": "paid",
+        "price": 1080.00,
+        "transaction_id": "txn123456",
+        "created_date": "2023-03-10"
+    }],
+    "chats": [{
+        "id": 1,
+        "buyer": 2,
+        "seller": 1,
+        "created_date": "2023-03-09"
+    }],
+    "messages": [{
+        "id": 1,
+        "chat": 1,
+        "sender": 2,
+        "message": "Hi, is this iPhone available?",
+        "created_date": "2023-03-09T10:00:00"
+    }, {
+        "id": 2,
+        "chat": 1,
+        "sender": 1,
+        "message": "Yes, it is!",
+        "created_date": "2023-03-09T10:05:00"
+    }],
+    "notifications": [{
+        "id": 1,
+        "recipient": 2,
+        "type": "order_status",
+        "is_read": false,
+        "message": "Your order #1 has been shipped."
+    }, {
+        "id": 2,
+        "recipient": 1,
+        "type": "new_message",
+        "is_read": true,
+        "message": "You have a new message from Bob Buyer"
+    }]
+}

@@ -1,10 +1,18 @@
 <section class="banner-main">
-    <img src="../../assets/images/Slogan.svg" alt="slogan" class="slogan">
+    <picture class="slogan">
+        <source srcset="../../assets/images/SmallSlogan.svg" media="(max-width: 1024px)">
+        <img src="../../assets/images/Slogan.svg" alt="slogan">
+    </picture>
     <div class="banner-container">
         <a href="/">
-            <span>TOP OFFERS OF THE WEEK</span>
+            <p>TOP OFFERS OF THE WEEK</p>
             <img src="../../assets/images/Arrow.svg" alt="arrow">
         </a>
-        <img src="../../assets/images/BollsProduct.svg" alt="bolls">
+        <div class="bolls-wrapper">
+            <div class="boll" *ngFor="let item of bolls">
+                <div class="small-boll">{{ item.price }}</div>
+                <img [src]="item.img" [alt]="item.alt">
+            </div>
+        </div>
     </div>
 </section>
