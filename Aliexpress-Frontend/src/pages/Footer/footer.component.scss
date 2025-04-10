@@ -8,7 +8,7 @@
   width: 1720px;
   height: 327px;
   margin: 0 auto;
-  margin-top: px-to-rem(538);
+  margin-top: px-to-rem(238);
   border-radius: px-to-rem(60 60 0 0);
   display: flex;
   justify-content: center;
@@ -17,21 +17,18 @@
   /* lg: 1200–1919px */
   @include media-breakpoint-between(lg, xl) {
     width: 90%;
-    margin-top: px-to-rem(400);
     height: 300px;
   }
   /* md: 1024–1199px */
   @include media-breakpoint-between(md, lg) {
     width: 95%;
     height: 350px;
-    margin-top: px-to-rem(300);
     padding: px-to-rem(20 0);
   }
   /* sm: 768–1023px */
   @include media-breakpoint-between(sm, md) {
     width: 80%; /* Чуть шире для планшетов */
     height: auto; /* Растягиваем под содержимое */
-    margin-top: px-to-rem(200); /* Уменьшаем отступ сверху */
     padding: px-to-rem(40 20 50 20); /* Больше отступов для гармонии */
     border-radius: px-to-rem(40 40 0 0);
     display: block; /* Элементы в потоке */
@@ -40,7 +37,6 @@
   @include media-breakpoint-down(sm) {
     width: px-to-rem(375);
     height: px-to-rem(573);
-    margin-top: px-to-rem(124);
     border-radius: px-to-rem(60 60 0 0);
     padding: 0;
   }

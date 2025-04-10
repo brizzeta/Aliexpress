@@ -1,0 +1,392 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.main-container {
+    width: 1920px;
+    height: 1080px;
+    background-color: $white-grey;
+    margin-top: px-to-rem(50);
+    position: relative;
+    overflow: hidden;  /* Это гарантирует, что содержимое не выйдет за пределы секции */
+}
+
+.more-text {
+  position: absolute;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black; /* Цвет текста */
+  
+  /* Позиционирование относительно общего контейнера */
+  left: 1802px; /* Расстояние от левого края */
+  bottom: 27px; /* Расстояние от низа */
+
+  /* Делаем ссылку кликабельной */
+  .more-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: $black; /* Цвет текста */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+  }
+}
+
+
+.app-top-product {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+}
+
+.text-block {
+  width: 1088px;
+  height: 118px;
+  margin-left: px-to-rem(410);
+  margin-bottom: px-to-rem(60);
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+
+  .text {
+      font-family: Montserrat;
+      font-weight: 400; /* Устанавливаем жирность на 400 */
+      font-size: 48px; /* Точный размер шрифта */
+      line-height: 124%; /* Высота строки 100% */
+      letter-spacing: 0%; /* Убираем интервал между буквами */
+      color: $black;
+  }
+}
+
+
+
+.filters-container {
+  width: 994px;
+  height: 29px;
+  margin-top: px-to-rem(60);
+  margin-bottom: px-to-rem(42);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  .filter-item {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: px-to-rem(24);
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $black;  /* Цвет текста остаётся чёрным */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: font-weight 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 16.5px; /* Скругленные углы */
+
+    /* Изначально фон фильтра прозрачный */
+    background-color: transparent;
+    transform: translateY(0); /* Изначально нет сдвига */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное изменение прозрачности и сдвига */
+
+    &:hover {
+      font-weight: 700; /* Текст становится жирным при наведении */
+    }
+
+    &.active {
+      font-weight: 500;
+      color: $black; /* Цвет текста остаётся чёрным при активации */
+
+      /* При активации фильтра фон становится непрозрачным и зеленым */
+      background-color: $green;
+      opacity: 1; /* Фон становится полностью непрозрачным */
+      padding: 5px;
+      transform: translateY(-4px); /* Сдвиг фильтра вниз при активации */
+    }
+  }
+}
+
+/* Разделитель (devider) */
+.divider {
+  width: 1204px;
+  height: 2px;
+  background-color: $grey;  /* Цвет разделителя */
+  margin: 0 auto;  /* Центрируем разделитель */
+  margin-top: px-to-rem(40);  /* Отступ сверху */
+  margin-bottom: px-to-rem(40);  /* Отступ снизу */
+}
+
+.products-container {
+  width: 1846px;
+  height: 626px;
+  display: flex;
+  margin: 0 auto;
+
+  .left-side {
+    width: 622px;
+    height: 626px;
+    display: grid;
+    grid-template-columns: repeat(2, 286px); /* 2 колонки по 286px */
+    grid-template-rows: repeat(2, 288px); /* 2 строки по 288px */
+    gap: 50px; /* Пробелы между товарами */
+
+    .product-item {
+      position: relative;
+      width: 286px;
+      height: 288px;
+      border-radius: 50%; /* Скругляем сам контейнер товара */
+
+
+
+      /* Картинка товара */
+      .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;         // <-- Картинка становится круглой
+      }
+
+      .price-container {
+        position: absolute;
+        top: 0px; /* Отступ сверху */
+        right: 30px; /* Отступ справа */
+        z-index: 2;
+        width: 54px;  /* Ширина круга */
+        height: 54px; /* Высота круга */
+        background-color: $green; /* Зеленый фон */
+        border-radius: 50%;  /* Скругляем до круга */
+        display: flex;
+        justify-content: center;  /* Центрируем контент по горизонтали */
+        align-items: center; /* Центрируем контент по вертикали */
+      }
+
+      .price {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $black;
+      }
+
+      .cart-container {
+        position: absolute;
+        top: 0px; /* Изначально такой же top, как у price-container */
+        right: 30px; /* Отступ справа */
+        z-index: 1;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0; /* Скрыт по умолчанию */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        background-color: $green; /* Зеленый фон для корзины */
+        border-radius: 50%; /* Скругляем до круга */
+      }
+
+      .cart-icon {
+        width: 30px;  /* Размер иконки */
+        height: auto;
+      }
+
+      /* При наведении на весь product-item, cart-container перемещается вниз и становится видимым */
+      &:hover .cart-container {
+        transform: translateY(55px) translateX(45px); /* Перемещаем контейнер вниз и вправо */
+        opacity: 1; /* Делаем контейнер видимым */
+      }
+      
+      
+
+      &.top-left {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      &.top-right {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      &.bottom-left {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      &.bottom-right {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
+  }
+
+  /* Правый блок с первым большим товаром */
+  .right-side-top {
+    width: 576px;
+    height: 576px;
+    margin-left: 36px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+    .product-item {
+      position: relative;
+      width: 576px;
+      height: 576px;
+      border-radius: 50%; /* Скругляем сам контейнер товара */
+      z-index: 1;
+
+      /* Картинка товара */
+      .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;         // <-- Картинка становится круглой
+      }
+
+      .price-container {
+        position: absolute;
+        top: 40px;
+        right: 80px;
+        z-index: 2;
+        width: 54px;
+        height: 54px;
+        background-color: $green;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .price {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $black;
+      }
+
+      .cart-container {
+        position: absolute;
+        top: 40px;
+        right: 80px;
+        z-index: 1;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        background-color: $green;
+        border-radius: 50%;
+      }
+
+      .cart-icon {
+        width: 30px;
+        height: auto;
+      }
+
+      &:hover .cart-container {
+        transform: translateY(55px) translateX(45px);
+        opacity: 1;
+      }
+    }
+  }
+
+/* Правый блок с вторым большим товаром */
+.right-side-bottom {
+  width: 576px;
+  height: 576px;
+  margin-left: 36px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+
+  .product-item {
+    position: relative;
+    width: 576px;
+    height: 576px;
+    border-radius: 50%;
+
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;         // <-- Картинка становится круглой
+    }
+
+    .price-container {
+      position: absolute;
+      top: 40px;
+      right: 80px;
+      z-index: 2;
+      width: 54px;
+      height: 54px;
+      background-color: $green;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .price {
+      font-family: Montserrat;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $black;
+    }
+
+    .cart-container {
+      position: absolute;
+      top: 40px;
+      right: 80px;
+      z-index: 1;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+
+      background-color: $green;
+      border-radius: 50%;
+    }
+
+    .cart-icon {
+      width: 30px;
+      height: auto;
+    }
+
+    &:hover .cart-container {
+      transform: translateY(55px) translateX(45px);
+      opacity: 1;
+    }
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+

@@ -30,31 +30,115 @@
         "rating": 4.2,
         "is_active": true
     }],
-    "categories": [{
-        "id": 1,
-        "parent": null,
-        "name": "Electronics",
-        "description": "Gadgets and devices"
-    }, {
-        "id": 2,
-        "parent": 1,
-        "name": "Smartphones",
-        "description": "Modern phones"
-    }],
-    "products": [ {
-        "id": 1,
-        "seller": 1,
-        "name": "iPhone 14",
-        "description": "Latest Apple smartphone",
-        "price": 1200.00,
-        "discount": 0.1,
-        "stock_quantity": 5,
-        "category": 2,
-        "image_urls": ["/assets/img/iphone.jpg"],
-        "created_date": "2023-03-01",
-        "updated_date": "2023-03-05",
-        "rating": 4.9,
-        "is_active": true
+
+    "categories": [ {
+          "id": 1,
+          "parent": null,
+          "name": "All",
+          "description": "All categories"
+        },
+        {
+          "id": 2,
+          "parent": 1,
+          "name": "Home and Comfort",
+          "description": "Products for home and comfort"
+        },
+        {
+          "id": 3,
+          "parent": 1,
+          "name": "Kitchen",
+          "description": "Kitchen products"
+        },
+        {
+          "id": 4,
+          "parent": 1,
+          "name": "Beauty and Care",
+          "description": "Beauty and care products"
+        },
+        {
+          "id": 5,
+          "parent": 1,
+          "name": "Goods for Children",
+          "description": "Toys and goods for children"
+        },
+        {
+          "id": 6,
+          "parent": 1,
+          "name": "Office",
+          "description": "Office products"
+        }],
+
+"products": [{
+      "id": 1,
+      "name": "Luxury Sofa",
+      "category": 2,
+      "price": 1200.00,
+      "description": "A comfortable and stylish sofa for your living room.",
+      "image_urls": ["/assets/img/sofa.jpg"],
+      "created_date": "2023-04-01",
+      "updated_date": "2023-04-02",
+      "rating": 4.8,
+      "is_active": true
+    },
+    {
+      "id": 2,
+      "name": "Wooden Coffee Table",
+      "category": 2,
+      "price": 300.00,
+      "description": "A modern coffee table made of solid wood.",
+      "image_urls": ["/assets/img/coffee_table.jpg"],
+      "created_date": "2023-04-01",
+      "updated_date": "2023-04-02",
+      "rating": 4.7,
+      "is_active": true
+    },
+    {
+      "id": 3,
+      "name": "Designer Lamp",
+      "category": 2,
+      "price": 150.00,
+      "description": "Elegant lamp that adds a touch of class to any room.",
+      "image_urls": ["/assets/img/desk_lamp.jpg"],
+      "created_date": "2023-04-01",
+      "updated_date": "2023-04-02",
+      "rating": 4.6,
+      "is_active": true
+    },
+    {
+      "id": 4,
+      "name": "Plush Area Rug",
+      "category": 2,
+      "price": 250.00,
+      "description": "Soft and durable area rug for living rooms and bedrooms.",
+      "image_urls": ["/assets/img/rug.jpg"],
+      "created_date": "2023-04-01",
+      "updated_date": "2023-04-02",
+      "rating": 4.9,
+      "is_active": true
+    },
+    {
+      "id": 5,
+      "name": "Smart Thermostat",
+      "category": 2,
+      "price": 200.00,
+      "description": "Control the temperature of your home remotely with this smart thermostat.",
+      "image_urls": ["/assets/img/thermostat.jpg"],
+      "created_date": "2023-04-01",
+      "updated_date": "2023-04-02",
+      "rating": 4.8,
+      "is_active": true
+    },
+    {
+      "id": 6,
+      "name": "King Size Mattress",
+      "category": 2,
+      "price": 900.00,
+      "description": "Comfortable mattress for a great night’s sleep.",
+      "image_urls": ["/assets/img/mattress.jpg"],
+      "created_date": "2023-04-01",
+      "updated_date": "2023-04-02",
+      "rating": 4.7,
+      "is_active": true
     }],
     "orders": [{
         "id": 1,
