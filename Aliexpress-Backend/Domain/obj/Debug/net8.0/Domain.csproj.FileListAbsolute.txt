@@ -1,0 +1,12 @@
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\bin\Debug\net8.0\Domain.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\bin\Debug\net8.0\Domain.pdb
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\Domain.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\Domain.pdb
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Domain\obj\Debug\net8.0\ref\Domain.dll
