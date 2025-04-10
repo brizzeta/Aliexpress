@@ -20,7 +20,6 @@
     margin-top: px-to-rem(400);
     height: 300px;
   }
-
   /* md: 1024–1199px */
   @include media-breakpoint-between(md, lg) {
     width: 95%;
@@ -28,7 +27,6 @@
     margin-top: px-to-rem(300);
     padding: px-to-rem(20 0);
   }
-
   /* sm: 768–1023px */
   @include media-breakpoint-between(sm, md) {
     width: 80%; /* Чуть шире для планшетов */
@@ -38,7 +36,6 @@
     border-radius: px-to-rem(40 40 0 0);
     display: block; /* Элементы в потоке */
   }
-
   /* xs–sm: 350–767px */
   @include media-breakpoint-down(sm) {
     width: px-to-rem(375);
@@ -362,16 +359,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

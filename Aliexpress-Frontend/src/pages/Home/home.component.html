@@ -1,30 +1,17 @@
 <section class="banner-main">
-    <img src="../../assets/images/Slogan.svg" alt="slogan" class="slogan">
+    <picture class="slogan">
+        <source srcset="../../assets/images/SmallSlogan.svg" media="(max-width: 1024px)">
+        <img src="../../assets/images/Slogan.svg" alt="slogan">
+    </picture>
     <div class="banner-container">
         <a href="/">
             <p>TOP OFFERS OF THE WEEK</p>
             <img src="../../assets/images/Arrow.svg" alt="arrow">
         </a>
         <div class="bolls-wrapper">
-            <div class="boll">
-                <div class="small-boll">20$</div>
-                <img src="../../assets/images/Lamp.svg" alt="lamp">
-            </div>
-            <div class="boll">
-                <div class="small-boll">20$</div>
-                <img src="../../assets/images/Iron.svg" alt="iron">
-            </div>
-            <div class="boll">
-                <div class="small-boll">20$</div>
-                <img src="../../assets/images/Socks.svg" alt="socks">
-            </div>
-            <div class="boll">
-                <div class="small-boll">20$</div>
-                <img src="../../assets/images/Pencils.svg" alt="pencils">
-            </div>
-            <div class="boll">
-                <div class="small-boll">20$</div>
-                <img src="../../assets/images/Cup.svg" alt="cup">
+            <div class="boll" *ngFor="let item of bolls">
+                <div class="small-boll">{{ item.price }}</div>
+                <img [src]="item.img" [alt]="item.alt">
             </div>
         </div>
     </div>
