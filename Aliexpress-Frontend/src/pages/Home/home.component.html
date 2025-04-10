@@ -1,7 +1,7 @@
 <section class="banner-main">
     <picture class="slogan">
         <source srcset="../../assets/images/SmallSlogan.svg" media="(max-width: 1024px)">
-        <img src="../../assets/images/Slogan.svg" alt="slogan">
+        <img src="../../assets/images/Slogan.svg" alt="slogan" class="slogan">
     </picture>
     <div class="banner-container">
         <a href="/">
@@ -11,6 +11,9 @@
         <div class="bolls-wrapper">
             <div class="boll" *ngFor="let item of bolls">
                 <div class="small-boll">{{ item.price }}</div>
+                <div class="small-boll cart">
+                    <img src="../../assets/images/Trolley.svg" alt="trolley" />
+                </div>
                 <img [src]="item.img" [alt]="item.alt">
             </div>
         </div>

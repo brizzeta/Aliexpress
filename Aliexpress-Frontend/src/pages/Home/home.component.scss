@@ -33,7 +33,9 @@
             align-items: center;
             gap: px-to-rem(13);
             white-space: nowrap;
+            transition: .15s;
 
+            &:hover { color: $light-green; }
             @include media-breakpoint-down(md) { margin-left: px-to-rem(-7); }
         }
         .bolls-wrapper {
@@ -58,6 +60,10 @@
                 background: $grey;
                 border-radius: 50%;
 
+                @include media-breakpoint-between(md, 1540) {
+                    width: px-to-rem(220);
+                    height: px-to-rem(220);
+                }
                 .small-boll {
                     position: absolute;
                     top: px-to-rem(-2);
@@ -65,16 +71,32 @@
                     display:flex;
                     justify-content: center;
                     align-items: center;
-                    flex: 1 1 auto;
                     aspect-ratio: 1 / 1;
                     width: px-to-rem(54);
                     background: $green;
                     border-radius: 50%;
                     font-size: px-to-rem(20);
                     font-weight: 600;
+                    transition: .5s;
+                    z-index: 2;
+
+                    &.cart {
+                        opacity: 0;
+                        transform: translateY(-px-to-rem(10));
+                        pointer-events: none;
+    
+                        img { width: px-to-rem(30); }
+                    }
                 }
-                img {
-                    width: auto;
+                img { 
+                    @include media-breakpoint-between(md, 1540) { width: 60%; }
+                }
+                &:hover {
+                    .small-boll.cart {
+                        opacity: 1;
+                        transform: translate(px-to-rem(40), px-to-rem(50));
+                        pointer-events: auto;
+                    }
                 }
             }
         }
