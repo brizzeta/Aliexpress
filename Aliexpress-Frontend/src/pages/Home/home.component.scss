@@ -40,11 +40,11 @@
         }
         .bolls-wrapper {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            gap: px-to-rem(15);
+            gap: px-to-rem(27);
             margin-top: px-to-rem(7);
             width: 100%;
-            max-width: 100%;
 
             @include media-breakpoint-down(md) {
                 margin: px-to-rem(-3 0 -29 3);
@@ -54,21 +54,16 @@
                 position: relative;
                 text-align: center;
                 align-content: center;
-                flex-shrink: 0;
-                width: px-to-rem(286);
-                height: px-to-rem(286);
+                width: calc(20% - #{px-to-rem(27)});
+                aspect-ratio: 1/1;
                 background: $grey;
                 border-radius: 50%;
 
-                @include media-breakpoint-between(md, 1540) {
-                    width: px-to-rem(220);
-                    height: px-to-rem(220);
-                }
                 .small-boll {
                     position: absolute;
                     top: px-to-rem(-2);
-                    right: px-to-rem(25);
-                    display:flex;
+                    right: px-to-rem(27);
+                    display: flex;
                     justify-content: center;
                     align-items: center;
                     aspect-ratio: 1 / 1;
@@ -88,9 +83,14 @@
                         img { width: px-to-rem(30); }
                     }
                 }
-                img { 
-                    @include media-breakpoint-between(md, 1540) { width: 60%; }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    clip-path: circle(calc(50% - #{px-to-rem(35)}) at center);
                 }
+                
                 &:hover {
                     .small-boll.cart {
                         opacity: 1;
