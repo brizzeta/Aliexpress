@@ -1,0 +1,361 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+.backGround {
+  position: relative;
+  background-color: $black;
+  color: $white;
+  width: 1720px;
+  height: 327px;
+  margin: 0 auto;
+  margin-top: px-to-rem(538);
+  border-radius: px-to-rem(60 60 0 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* lg: 1200–1919px */
+  @include media-breakpoint-between(lg, xl) {
+    width: 90%;
+    margin-top: px-to-rem(400);
+    height: 300px;
+  }
+  /* md: 1024–1199px */
+  @include media-breakpoint-between(md, lg) {
+    width: 95%;
+    height: 350px;
+    margin-top: px-to-rem(300);
+    padding: px-to-rem(20 0);
+  }
+  /* sm: 768–1023px */
+  @include media-breakpoint-between(sm, md) {
+    width: 80%; /* Чуть шире для планшетов */
+    height: auto; /* Растягиваем под содержимое */
+    margin-top: px-to-rem(200); /* Уменьшаем отступ сверху */
+    padding: px-to-rem(40 20 50 20); /* Больше отступов для гармонии */
+    border-radius: px-to-rem(40 40 0 0);
+    display: block; /* Элементы в потоке */
+  }
+  /* xs–sm: 350–767px */
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+    height: px-to-rem(573);
+    margin-top: px-to-rem(124);
+    border-radius: px-to-rem(60 60 0 0);
+    padding: 0;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: px-to-rem(35);
+    left: px-to-rem(35);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1;
+
+    @include media-breakpoint-between(md, lg) {
+      top: px-to-rem(25);
+      left: px-to-rem(25);
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      position: static; /* Убираем абсолютное позиционирование */
+      margin: 0 auto; /* Центрируем */
+      width: px-to-rem(275);
+      height: px-to-rem(59);
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: px-to-rem(275);
+      height: px-to-rem(59);
+      top: px-to-rem(39);
+      left: px-to-rem(41);
+    }
+  }
+
+  .logo {
+    font-family: Montserrat;
+    font-size: px-to-rem(48);
+    font-weight: 500;
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      align-items: center;
+    }
+
+    .vector-logo {
+      display: none;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        width: px-to-rem(47);
+        height: px-to-rem(46);
+        margin-right: px-to-rem(16);
+      }
+
+      @include media-breakpoint-between(sm, md) {
+        margin-top: px-to-rem(5);
+        margin-bottom: px-to-rem(5);
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: px-to-rem(7);
+        margin-bottom: px-to-rem(6);
+      }
+    }
+
+    .logo-text {
+      color: $white;
+      margin-right: 0;
+    }
+    .logo-highlight {
+      color: $green;
+      margin-left: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      span + span {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .empty-container-left {
+    width: px-to-rem(260);
+    height: 100%;
+
+    @include media-breakpoint-between(lg, xl) {
+      width: px-to-rem(200);
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      width: px-to-rem(150);
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .empty-container-right {
+    width: px-to-rem(260);
+    height: 100%;
+
+    @include media-breakpoint-between(lg, xl) {
+      width: px-to-rem(200);
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      width: px-to-rem(150);
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .footer-divider {
+    width: 1204px;
+    height: 2px;
+    background-color: $grey;
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 27px;
+
+    @include media-breakpoint-between(lg, xl) {
+      width: 80%;
+      bottom: 80px;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      width: 85%;
+      bottom: 70px;
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      width: 80%; /* Чуть шире для гармонии */
+      position: static; /* Убираем абсолютное позиционирование */
+      margin: 40px auto 0; /* Центрируем */
+      display: block; /* Убеждаемся, что элемент центрируется */
+      transform: translateX(0%);
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: px-to-rem(262.5);
+      height: px-to-rem(2.9);
+      bottom: px-to-rem(50);
+      left: px-to-rem(57);
+      transform: none;
+      margin-top: 0;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    width: px-to-rem(979);
+    position: absolute;
+    top: px-to-rem(101);
+    left: 50%;
+    transform: translateX(-50%);
+    gap: px-to-rem(41);
+
+    @include media-breakpoint-between(lg, xl) {
+      top: px-to-rem(90);
+      gap: px-to-rem(30);
+      left: 50%;
+      top: px-to-rem(90);
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      width: 85%;
+      top: px-to-rem(120);
+      gap: px-to-rem(20);
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      width: 100%; /* Полная ширина внутри контейнера */
+      position: static; /* Убираем абсолютное позиционирование */
+      margin: px-to-rem(20) 0 0 0; /* Отступ сверху */
+      transform: none;
+      flex-direction: column;
+      gap: px-to-rem(30); /* Больше пространства между секциями */
+      align-items: center; /* Центрируем содержимое */
+      text-align: center; /* Центрируем текст внутри секций */
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: px-to-rem(268);
+      height: px-to-rem(359);
+      top: px-to-rem(127);
+      left: px-to-rem(41);
+      transform: none;
+      flex-direction: column;
+      gap: px-to-rem(23);
+    }
+
+    .footer-section {
+      h4 {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: px-to-rem(24);
+        color: $white;
+        white-space: nowrap;
+        margin-top: 0 !important;
+        margin-bottom: px-to-rem(25);
+
+        @include media-breakpoint-between(sm, md) {
+          margin-bottom: px-to-rem(15); /* Меньше отступ снизу */
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: px-to-rem(24);
+        }
+      }
+
+      a {
+        display: block;
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: px-to-rem(16);
+        color: $light-grey;
+        margin-top: px-to-rem(15);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        @include media-breakpoint-between(sm, md) {
+          display: inline-block;
+          margin-top: 0;
+          margin-right: px-to-rem(15);
+        }
+
+        @include media-breakpoint-down(sm) {
+          display: inline-block;
+          margin-top: 0;
+          margin-right: px-to-rem(10);
+          margin-bottom: 0;
+        }
+      }
+
+      &.connect {
+        .social-icons {
+          margin-top: px-to-rem(18);
+          display: flex;
+          gap: px-to-rem(40);
+
+          @include media-breakpoint-between(md, lg) {
+            gap: px-to-rem(30);
+          }
+
+          @include media-breakpoint-between(sm, md) {
+            margin-top: px-to-rem(20);
+            gap: px-to-rem(30); /* Чуть больше пространства */
+            justify-content: center; /* Центрируем иконки */
+          }
+
+          @include media-breakpoint-down(sm) {
+            margin-top: px-to-rem(24);
+            gap: px-to-rem(40);
+          }
+
+          a {
+            width: px-to-rem(30);
+            height: px-to-rem(30);
+            margin-top: 0;
+
+            img {
+              width: 100%;
+              height: 100%;
+              margin-bottom: px-to-rem(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: px-to-rem(16);
+    color: $light-grey;
+    position: absolute;
+    bottom: px-to-rem(0);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 45px;
+
+    @include media-breakpoint-between(lg, xl) {
+      bottom: px-to-rem(10);
+      margin-bottom: 35px;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      bottom: px-to-rem(10);
+      margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-between(sm, md) {
+      position: static; /* Убираем абсолютное позиционирование */
+      display: block; /* Убеждаемся, что элемент центрируется */
+      width: 100%; /* Растягиваем на всю ширину */
+      margin: px-to-rem(30) auto 0; /* Центрируем */
+      text-align: center; /* Текст уже центрирован */
+      transform: translateX(0%);
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: px-to-rem(169);
+      height: px-to-rem(18);
+      bottom: px-to-rem(15);
+      left: px-to-rem(103);
+      transform: none;
+      margin-bottom: 0;
+    }
+  }
+}

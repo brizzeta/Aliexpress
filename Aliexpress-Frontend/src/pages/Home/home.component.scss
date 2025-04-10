@@ -2,41 +2,81 @@
 @use "../../assets/functions.scss" as *;
 
 .banner-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: px-to-rem(39 100 0 100);
-    padding: px-to-rem(442);
-    max-height: px-to-rem(884);
+    padding: px-to-rem(68);
     background: $black;
     border-radius: px-to-rem(60);
 
-    @include media-breakpoint-between(1420, 1820) { padding: px-to-rem(380); }
-    @include media-breakpoint-between(md, 1420) { padding: px-to-rem(300); }
-    @include media-breakpoint-down(md) { display: none; }
-    .slogan {
-        position: absolute;
-        top: px-to-rem(108);
-        margin-left:px-to-rem(18); 
-
-        @include media-breakpoint-between(1420, 1820) { width: px-to-rem(1200); }
-        @include media-breakpoint-between(md, 1420) { width: px-to-rem(900); }
-    }
-    .banner-container {
-        position: absolute;
+    @include media-breakpoint-down(md) {
         display:flex;
         flex-direction:column;
-        bottom: px-to-rem(65);
+        align-items: center;
+        text-align: center;
+        margin: px-to-rem(42 16 0 16);
+        padding: px-to-rem(42 20);
+    }
+    .slogan {
+        margin-top: px-to-rem(40);
+        width: 100%;
 
-        @include media-breakpoint-between(1420, 1820) { width: px-to-rem(1200); }
-        @include media-breakpoint-between(md, 1420) { width: px-to-rem(900); }
+        @include media-breakpoint-down(md) { margin-top: px-to-rem(1); }
+    }
+    .banner-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: px-to-rem(70);
+        padding: px-to-rem(0 9);
+
+        @include media-breakpoint-down(md) { margin-top: px-to-rem(-11); }
         a {
-            display:flex;
-            align-items:center;
-            gap:px-to-rem(13);
-            margin-bottom:px-to-rem(28);
+            display: flex;
+            align-items: center;
+            gap: px-to-rem(13);
+            white-space: nowrap;
+
+            @include media-breakpoint-down(md) { margin-left: px-to-rem(-7); }
+        }
+        .bolls-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: px-to-rem(15);
+            margin-top: px-to-rem(7);
+            width: 100%;
+            max-width: 100%;
+
+            @include media-breakpoint-down(md) {
+                margin: px-to-rem(-3 0 -29 3);
+                .boll:not(:first-child) { display: none; }
+            }
+            .boll {
+                position: relative;
+                text-align: center;
+                align-content: center;
+                flex-shrink: 0;
+                width: px-to-rem(286);
+                height: px-to-rem(286);
+                background: $grey;
+                border-radius: 50%;
+
+                .small-boll {
+                    position: absolute;
+                    top: px-to-rem(-2);
+                    right: px-to-rem(25);
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1 1 auto;
+                    aspect-ratio: 1 / 1;
+                    width: px-to-rem(54);
+                    background: $green;
+                    border-radius: 50%;
+                    font-size: px-to-rem(20);
+                    font-weight: 600;
+                }
+                img {
+                    width: auto;
+                }
+            }
         }
     }
 }
