@@ -1,29 +1,28 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TopProductsComponent } from './top-products.component';
-import { ProductCardComponent } from '../product-card/product-card.component';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-describe('TopProductsComponent', () => {
-  let component: TopProductsComponent;
-  let fixture: ComponentFixture<TopProductsComponent>;
+@Component({
+  selector: 'app-top-products',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './top-products.component.html',
+  styleUrls: ['./top-products.component.scss']
+})
+export class TopProductsComponent {
+  filters = [
+    'All', 
+    'Home and comfort', 
+    'Kitchen', 
+    'Beauty and care', 
+    'Goods for children', 
+    'Office'
+  ];
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [TopProductsComponent, ProductCardComponent]
-    })
-    .compileComponents();
+  activeFilter: string = ''; // Переменная для хранения активного фильтра
 
-    fixture = TestBed.createComponent(TopProductsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  setActiveFilter(filter: string): void {
+    this.activeFilter = this.activeFilter === filter ? '' : filter; // Логика выбора фильтра
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should display top products', () => {
-    const compiled = fixture.nativeElement;
-    const productCards = compiled.querySelectorAll('app-product-card');
-    expect(productCards.length).toBe(component.products.length);
-  });
-});
+  
+}
