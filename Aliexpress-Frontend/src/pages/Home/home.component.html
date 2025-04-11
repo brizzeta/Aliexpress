@@ -11,9 +11,7 @@
         <div class="bolls-wrapper">
             <div class="boll" *ngFor="let item of bolls">
                 <div class="small-boll">{{ item.price }}</div>
-                <div class="small-boll cart">
-                    <img src="../../assets/images/Trolley.svg" alt="trolley" />
-                </div>
+                <div class="small-boll cart"></div>
                 <img [src]="item.img" [alt]="item.alt">
             </div>
         </div>

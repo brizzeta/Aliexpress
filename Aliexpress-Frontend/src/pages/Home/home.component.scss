@@ -46,8 +46,14 @@
             margin-top: px-to-rem(7);
             width: 100%;
 
-            @include media-breakpoint-down(md) {
-                margin: px-to-rem(-3 0 -29 3);
+            @include media-breakpoint-between(md, lg) {
+                .boll:nth-child(n+5) { display: none; }
+            }
+            @include media-breakpoint-between(sm, md) {
+                .boll:nth-child(n+3) { display: none; }
+            }
+            @include media-breakpoint-down(sm) {
+                margin: px-to-rem(0 0 -29 3);
                 .boll:not(:first-child) { display: none; }
             }
             .boll {
@@ -59,6 +65,7 @@
                 background: $grey;
                 border-radius: 50%;
 
+                @include media-breakpoint-down(sm) { width:px-to-rem(286); }
                 .small-boll {
                     position: absolute;
                     top: px-to-rem(-2);
@@ -75,12 +82,14 @@
                     transition: .5s;
                     z-index: 2;
 
+                    @include media-breakpoint-between(md, 1600) { width: px-to-rem(44); }
                     &.cart {
                         opacity: 0;
                         transform: translateY(-px-to-rem(10));
-                        pointer-events: none;
-    
-                        img { width: px-to-rem(30); }
+                        background-image: url(../../assets/images/Trolley.svg);
+                        background-size: px-to-rem(30);
+                        background-repeat: no-repeat;
+                        background-position: center;
                     }
                 }
                 img {
@@ -90,7 +99,6 @@
                     display: block;
                     clip-path: circle(calc(50% - #{px-to-rem(35)}) at center);
                 }
-                
                 &:hover {
                     .small-boll.cart {
                         opacity: 1;
