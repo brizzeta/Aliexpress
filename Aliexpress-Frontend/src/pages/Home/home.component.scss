@@ -13,7 +13,7 @@
         align-items: center;
         text-align: center;
         margin: px-to-rem(42 16 0 16);
-        padding: px-to-rem(42 20);
+        padding: px-to-rem(42 20 13 20);
     }
     .slogan {
         margin-top: px-to-rem(40);
@@ -29,21 +29,33 @@
 
         @include media-breakpoint-down(md) { margin-top: px-to-rem(-11); }
         a {
-            display: flex;
-            align-items: center;
-            gap: px-to-rem(13);
-            white-space: nowrap;
+            margin: px-to-rem(14 0 0 -4);
+            display: inline-block;
+            text-decoration: none;
             transition: .15s;
 
-            &:hover { color: $light-green; }
-            @include media-breakpoint-down(md) { margin-left: px-to-rem(-7); }
+            @include media-breakpoint-down(sm) { margin: px-to-rem(17 0 0 -6); }
+            .link-content {
+                display: inline-flex;
+                align-items: center;
+                gap: px-to-rem(13);
+                padding: px-to-rem(4);
+                border-bottom: px-to-rem(2) solid $green;
+                white-space: nowrap;
+            }
+            &:hover {
+                .link-content {
+                    color: $light-green;
+                    border-color: $light-green;
+                }
+            }
         }
         .bolls-wrapper {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: px-to-rem(27);
-            margin-top: px-to-rem(7);
+            margin-top: px-to-rem(23);
             width: 100%;
 
             @include media-breakpoint-between(md, lg) {
@@ -53,7 +65,7 @@
                 .boll:nth-child(n+3) { display: none; }
             }
             @include media-breakpoint-down(sm) {
-                margin: px-to-rem(0 0 -29 3);
+                margin: px-to-rem(12 0 0 8.5);
                 .boll:not(:first-child) { display: none; }
             }
             .boll {
