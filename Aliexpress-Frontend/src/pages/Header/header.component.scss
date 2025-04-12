@@ -89,9 +89,12 @@
         align-items: center;
         gap: px-to-rem(15);
         
-        a {
+        button {
+            padding: 0;
+            background: none;
+            border: none;
             color: $white;
-            text-decoration: none;
+            font-weight: 400;
             cursor: pointer;
             transition: .15s;
 
@@ -132,7 +135,7 @@
         transition: .2s;
 
         &:hover { background:$light-green; }
-        @include media-breakpoint-between(1521, 1775) { right: px-to-rem(130); }
+        @include media-breakpoint-between(1521, 1775) { right: px-to-rem(160); }
         @include media-breakpoint-between(md, 1520) {
             top: px-to-rem(62);
             right: px-to-rem(130);
@@ -157,6 +160,7 @@
                 color: $black;
                 opacity: 0.8;
             }
+            @include media-breakpoint-between(1521, 1775) { width: px-to-rem(220); }
             @include media-breakpoint-between(md, 1520) { width: px-to-rem(200); }
         }
         button {
@@ -175,5 +179,58 @@
                 height: px-to-rem(25);
             }
         }
+    }
+    .language-container {
+        position: absolute;
+        top: px-to-rem(77);
+        right: px-to-rem(-85);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: px-to-rem(10 5 0 5);
+        background: $white;
+        border-radius: px-to-rem(12);
+        font-size: px-to-rem(16);
+        pointer-events: none;
+        opacity: 0;
+        transition: .4s;
+
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        &.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        @include media-breakpoint-between(md, 1520) { top: px-to-rem(62); }
+        @include media-breakpoint-down(md) { display: none; }
+        ul {
+            margin-top: px-to-rem(14);
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin: px-to-rem(-1 0);
+                display: flex;
+                align-items: center;
+                padding: px-to-rem(0 16);
+                width: px-to-rem(266);
+                height: px-to-rem(40);
+                border: px-to-rem(1) solid $border-white;
+                border-radius: px-to-rem(8);
+
+                @include media-breakpoint-between(1521, 1775) {
+                    width: px-to-rem(225);
+                    height: px-to-rem(35); 
+                }
+                @include media-breakpoint-between(md, 1520) {
+                    width: px-to-rem(200);
+                    height: px-to-rem(32); 
+                }
+            }
+            img { margin-right: px-to-rem(15); }
+        }
+        .currency-text { margin: px-to-rem(2 0 0 2); }
     }
 }
