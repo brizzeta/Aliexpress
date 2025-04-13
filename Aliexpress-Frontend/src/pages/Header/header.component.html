@@ -4,6 +4,7 @@
             <span class="logo-text">KLIK<span class="logo-highlight">AVA</span></span>
         </a>
     </div>
+    <!-- Меню хедера -->
     <nav class="main-nav">
         <ul class="nav-links">
             <li><a href="/discounts">DISCOUNTS</a></li>
@@ -11,6 +12,7 @@
             <li><a href="/categories" class="not-first">CATEGORIES</a></li>
         </ul>
     </nav>
+    <!-- Кнопки хедера -->
     <div class="header-controls">
         <button class="login-btn">LOG IN</button>
         <button class="switchable"><img src="../../assets/images/svg/Person.svg" alt="person"></button>
@@ -18,17 +20,43 @@
         <button id="lang" (click)="toggleLanguageDropdown()">
             <img src="../../assets/images/svg/Language.svg" alt="language">
         </button>
-        <button class="switchable"><img src="../../assets/images/svg/Menu.svg" alt="menu"></button>
+        <button class="switchable" (click)="toggleMenuDropdown()">
+            <img src="../../assets/images/svg/Menu.svg" alt="menu">
+        </button>
     </div>
+    <!-- Поле поиска -->
     <div class="search-container">
         <input type="text" placeholder="SEARCH...">
         <button ><img src="../../assets/images/svg/Search.svg" alt="cart"></button>
     </div>
+    <!-- Язык и валюта -->
     <section class="language-container" 
         [class.active]="isLangActive"
-        [class.fade-out]="isFadingOut"
+        [class.fade-out]="isLangFadingOut"
         #langContainer>
         <span>Language</span>
+        <ul class="languages">
+            <li><img src="../../assets/images/svg/America.svg" alt="english">English</li>
+            <li><img src="../../assets/images/svg/Russia.svg" alt="russian">Russian</li>
+            <li><img src="../../assets/images/svg/Ukraine.svg" alt="ukrainian">Ukrainian</li>
+        </ul>
+        <span class="currency-text">Currency</span>
+        <ul class="currency">
+            <li><img src="../../assets/images/svg/America.svg" alt="usd">USD</li>
+            <li><img src="../../assets/images/svg/Ukraine.svg" alt="uah">UAH</li>
+        </ul>
+    </section>
+    <!-- Выпадающее меню телефонной версии -->
+    <section class="menu-container"
+        [class.active]="isMenuActive"
+        [class.fade-out]="isMenuFadingOut"
+        #menuContainer>
+        <ul class="links-li">
+            <li><a href="/discounts">CATEGORIES</a></li>
+            <li><a href="/top-products" class="not-first">TOP PRODUCTS</a></li>
+            <li><a href="/categories" class="not-first">DISCOUNTS</a></li>
+        </ul>
+        <span class="language-text">Language</span>
         <ul class="languages">
             <li><img src="../../assets/images/svg/America.svg" alt="english">English</li>
             <li><img src="../../assets/images/svg/Russia.svg" alt="russian">Russian</li>

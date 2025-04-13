@@ -95,7 +95,7 @@
                     font-size: px-to-rem(20);
                     font-weight: 600;
                     transition: .5s;
-                    z-index: 2;
+                    z-index: 1;
 
                     @include media-breakpoint-between(sm, 1600) { width: px-to-rem(44); }
                     @include media-breakpoint-between(1250, 1600) {

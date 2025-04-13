@@ -9,21 +9,37 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 })
 export class HeaderComponent {
   isLangActive = false;
-  isFadingOut = false;
+  isMenuActive = false;
+  isLangFadingOut = false;
+  isMenuFadingOut = false;
 
   @ViewChild('langContainer') langContainer!: ElementRef;
+  @ViewChild('menuContainer') menuContainer!: ElementRef;
 
   toggleLanguageDropdown(): void {
     if (this.isLangActive) {
-      this.isFadingOut = true;
+      this.isLangFadingOut = true;
 
       setTimeout(() => {
         this.isLangActive = false;
-        this.isFadingOut = false;
+        this.isLangFadingOut = false;
       }, 400);
     } else {
       this.isLangActive = true;
-      this.isFadingOut = false;
+      this.isLangFadingOut = false;
+    }
+  }
+  toggleMenuDropdown(): void {
+    if (this.isMenuActive) {
+      this.isMenuFadingOut = true;
+
+      setTimeout(() => {
+        this.isMenuActive = false;
+        this.isMenuFadingOut = false;
+      }, 400);
+    } else {
+      this.isMenuActive = true;
+      this.isMenuFadingOut = false;
     }
   }
 }

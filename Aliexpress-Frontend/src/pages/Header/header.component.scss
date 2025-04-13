@@ -70,9 +70,7 @@
                 margin-right: px-to-rem(60);
                 color: $white;
                 text-decoration: none;
-                text-transform: uppercase;
                 font-size: px-to-rem(24);
-                font-weight: 400;
                 transition: .15s;
 
                 &:hover { color: $light-green; }
@@ -132,6 +130,7 @@
         padding:px-to-rem(-10);
         background-color: $green;
         border-radius: px-to-rem(20);
+        z-index: 3;
         transition: .2s;
 
         &:hover { background:$light-green; }
@@ -210,6 +209,7 @@
             padding: 0;
             list-style: none;
 
+            li:first-child { background: $border-white;}
             li {
                 margin: px-to-rem(-1 0);
                 display: flex;
@@ -232,5 +232,86 @@
             img { margin-right: px-to-rem(15); }
         }
         .currency-text { margin: px-to-rem(2 0 0 2); }
+    }
+    .menu-container {
+        position: absolute;
+        top: px-to-rem(95);
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        height: px-to-rem(499);
+        width: 100%;
+        background: $white;
+        font-size: px-to-rem(16);
+        pointer-events: none;
+        opacity: 0;
+        z-index: 2;
+        transition: .4s;
+
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        &.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        @include media-breakpoint-down(md) { display: flex; }
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+        .links-li {
+            margin-top: px-to-rem(30);
+
+            li:not(:first-child) { margin-top: px-to-rem(22.5); }
+            a {
+                color: black;
+                text-decoration: none;
+                font-size: px-to-rem(24);
+                transition: .25s;
+
+                &:hover { color: $light-green; }
+            }
+        }
+        .language-text { margin: px-to-rem(11 0 0 8); }
+        .languages {
+            margin: px-to-rem(14 0 0 6);
+
+            li:first-child { background: $border-white;}
+            li {
+                margin: px-to-rem(-1 0);
+                display: flex;
+                align-items: center;
+                padding: px-to-rem(0 16);
+                width: px-to-rem(266);
+                height: px-to-rem(40);
+                border: px-to-rem(1) solid $border-white;
+                border-radius: px-to-rem(8);
+
+                img { margin-right: px-to-rem(15); }
+            }
+        }
+        .currency-text { margin: px-to-rem(16 0 0 8); }
+        .currency {
+            margin: px-to-rem(14 0 0 6);
+
+            li:first-child { background: $border-white;}
+            li {
+                margin: px-to-rem(-1 0);
+                display: flex;
+                align-items: center;
+                padding: px-to-rem(0 16);
+                width: px-to-rem(266);
+                height: px-to-rem(40);
+                border: px-to-rem(1) solid $border-white;
+                border-radius: px-to-rem(8);
+
+                img { margin-right: px-to-rem(15); }
+            }
+        }
     }
 }
