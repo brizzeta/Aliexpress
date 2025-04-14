@@ -1,3 +1,4 @@
+<div class="menu-overlay" [class.active]="isMenuActive"></div>
 <header class="pc-header">
     <div class="logo">
         <a href="/"><img src="../../assets/images/svg/Logo.svg" alt="logo">
@@ -9,9 +10,47 @@
         <ul class="nav-links">
             <li><a href="/discounts">DISCOUNTS</a></li>
             <li><a href="/top-products" class="not-first">TOP PRODUCTS</a></li>
-            <li><a href="/categories" class="not-first">CATEGORIES</a></li>
+            <li><a href="#" class="not-first" (click)="toggleCatalogDropdown()">CATEGORIES</a></li>
         </ul>
     </nav>
+    <!-- Выпадающее окно каталога категорий -->
+    <section class="catalog-container"
+        [class.active]="isCatalogActive"
+        [class.fade-out]="isCatalogFadingOut"
+        #catalogContainer>
+        <div class="left-container">
+            <ul>
+                <li>Mobile phones</li>
+                <li>Computers</li>
+                <li>Electronics</li>
+                <li>Home Appliances</li>
+                <li>Home Improvement & Tools</li>
+                <li>Security & Protection</li>
+                <li>Automobiles & Motorcycles</li>
+                <li>Home, Garden & Office</li>
+                <li>Furniture</li>
+                <li>Clothing</li>
+                <li>Shoes</li>
+                <li>Accesoires</li>
+                <li>Luggage & Bags</li>
+                <li>Sports & Entertainment</li>
+                <li>Mother & Kids</li>
+                <li>Toys & Hobbies</li>
+                <li>Beauty & Health</li>
+                <li>18+</li>
+                <li>Pet Products</li>
+                <li>Food</li>
+            </ul>
+        </div>
+        <div class="right-container">
+            <span>Mobile Phones</span><hr>
+            <div class="catalog">
+                <ul>
+                    <li>Mobile Phones</li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <!-- Кнопки хедера -->
     <div class="header-controls">
         <button class="login-btn">LOG IN</button>

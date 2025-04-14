@@ -1,6 +1,24 @@
 @use "../../assets/variables.scss" as *;
 @use "../../assets/functions.scss" as *;
 
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(px-to-rem(6));
+    background-color: rgba(0, 0, 0, 0.3); // можно подкорректировать
+    z-index: 4; // меньше чем у .menu-container (у неё должен быть z-index: 4)
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
 .pc-header {
     position: relative;
     display: flex;
@@ -11,6 +29,7 @@
     background: $black;
     border-radius: px-to-rem(0 0 60 60);
     box-shadow: 0 px-to-rem(5) px-to-rem(5) rgba(0, 0, 0, 0.25);
+    z-index: 10;
 
     @include media-breakpoint-down(md) {
         margin:0;
@@ -81,7 +100,122 @@
             }
             li:last-child a { margin-right: 0; }
         }
-    } 
+    }
+    .catalog-container {
+        position: absolute;
+        top: px-to-rem(77);
+        left: 50%;
+        transform: translateX(-49.4%);
+        display: flex;
+        padding: px-to-rem(20);
+        height: px-to-rem(537);
+        width: px-to-rem(1082);
+        background: $white;
+        border-radius: px-to-rem(12);
+        z-index: 12;
+        transition: .4s;
+        opacity: 0;
+        pointer-events: none;
+
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        &.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        @include media-breakpoint-between(md, 1400) {
+            top: px-to-rem(62);
+            height: px-to-rem(650);
+            width: px-to-rem(800);
+        }
+        @include media-breakpoint-down(md) { display: none; }
+        .left-container {
+            margin-left: px-to-rem(5);
+            padding-right: px-to-rem(25);
+            font-size: px-to-rem(16);
+            overflow: auto;
+
+            @include media-breakpoint-between(md, 1400) { font-size: px-to-rem(13); }
+            ul {
+                margin-top: 0;
+                padding: 0;
+                list-style: none;
+
+                li:first-child { background: $border-white; }
+                li:not(:first-child) { margin-top: px-to-rem(10); }
+                li {
+                    align-content: center;
+                    padding: px-to-rem(6);
+                    height: px-to-rem(40);
+                    width: px-to-rem(245);
+                    border-radius: px-to-rem(10);
+
+                    @include media-breakpoint-between(md, 1400) {
+                        height: px-to-rem(30);
+                        width: px-to-rem(200);
+                    }
+                }
+            }
+        }
+        .right-container{
+            display: flex;
+            flex-direction: column;
+            margin: px-to-rem(-4 0 0 22);
+
+            span {
+                color: $grey;
+                font-size: px-to-rem(32);
+                font-weight: 600;
+
+                @include media-breakpoint-between(md, 1400) { font-size: px-to-rem(24); }
+            }
+            hr {
+                margin-top: px-to-rem(4);
+                width: px-to-rem(735);
+
+                @include media-breakpoint-between(md, 1400) { width: px-to-rem(500); }
+            }
+            .catalog {
+                margin: px-to-rem(-9 0 0 6);
+                column-width: px-to-rem(245);
+                column-gap: px-to-rem(20);
+                overflow: hidden;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap; 
+                    gap: px-to-rem(8);
+                    max-height: px-to-rem(450);
+                    padding: 0;
+                    list-style: none;
+                    break-inside: avoid;
+                    font-size: px-to-rem(16);
+
+                    @include media-breakpoint-between(md, 1400) {
+                        font-size: px-to-rem(13); 
+                        max-height: px-to-rem(600);
+                    }
+                    li {
+                        align-content: center;
+                        break-inside: avoid;
+                        padding: px-to-rem(6);
+                        height: px-to-rem(40);
+                        width: px-to-rem(245);
+                        border-radius: px-to-rem(10);
+                        background: $body-white;
+
+                        @include media-breakpoint-between(md, 1400) {
+                            height: px-to-rem(30);
+                            width: px-to-rem(200);
+                        }
+                    }
+                }
+            }
+        }
+    }
     .header-controls {
         display: flex;
         align-items: center;
@@ -127,10 +261,9 @@
         justify-content: space-evenly;
         top: px-to-rem(77);
         right: px-to-rem(225);
-        padding:px-to-rem(-10);
         background-color: $green;
         border-radius: px-to-rem(20);
-        z-index: 3;
+        z-index: 7;
         transition: .2s;
 
         &:hover { background:$light-green; }
@@ -247,7 +380,7 @@
         font-size: px-to-rem(16);
         pointer-events: none;
         opacity: 0;
-        z-index: 2;
+        z-index: 5;
         transition: .4s;
 
         &.active {
