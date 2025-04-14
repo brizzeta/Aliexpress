@@ -3,10 +3,22 @@
   "WorkspaceRootPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -223,7 +235,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -295,7 +307,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\PaymentService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\PaymentService.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T20:47:05.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IPaymentService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IPaymentService.cs",
+              "RelativeToolTip": "..\\Application\\Interfaces\\IPaymentService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA3wAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T20:44:27.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\OrderService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\OrderService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T20:33:04.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "..\\Application\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T20:32:49.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Interfaces\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IUnitOfWork.cs",
@@ -303,12 +367,11 @@
               "RelativeToolTip": "..\\Domain\\Interfaces\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T13:00:36.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T13:00:36.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Interfaces\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IGenericRepository.cs",
@@ -316,38 +379,37 @@
               "RelativeToolTip": "..\\Domain\\Interfaces\\IGenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T13:00:28.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T13:00:28.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\UnitOfWork.cs",
               "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\UnitOfWork.cs",
               "RelativeToolTip": "..\\Infrastructure\\Data\\UnitOfWork.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T12:53:41.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\GenericRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\GenericRepository.cs",
               "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\GenericRepository.cs",
               "RelativeToolTip": "..\\Infrastructure\\Data\\GenericRepository.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA6wCoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T12:52:57.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "PaginationFilterDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\PaginationFilterDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Common\\PaginationFilterDto.cs",
@@ -359,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ReviewUpdateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Review\\ReviewUpdateDto.cs",
@@ -371,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "UserCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserCreateDto.cs",
@@ -383,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserDto.cs",
@@ -395,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "UserLoginDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserLoginDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserLoginDto.cs",
@@ -407,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "UserPasswordChangeDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserPasswordChangeDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserPasswordChangeDto.cs",
@@ -419,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Mappings\\MappingProfile.cs",
               "RelativeDocumentMoniker": "..\\Application\\Mappings\\MappingProfile.cs",
@@ -431,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ReviewDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Review\\ReviewDto.cs",
@@ -443,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "PaginatedResultDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\PaginatedResultDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Common\\PaginatedResultDto.cs",
@@ -455,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "UserUpdateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserUpdateDto.cs",
@@ -467,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "ReviewCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Review\\ReviewCreateDto.cs",
@@ -479,7 +541,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "ReviewDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ReviewDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ReviewDto.cs",
@@ -491,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "ProductUpdateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductUpdateDto.cs",
@@ -503,7 +565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "ProductFilterDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductFilterDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductFilterDto.cs",
@@ -515,7 +577,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "ProductDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductDto.cs",
@@ -527,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "ProductDetailDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductDetailDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductDetailDto.cs",
@@ -539,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "ProductCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductCreateDto.cs",
@@ -551,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "ProductSimpleDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\ProductSimpleDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\ProductSimpleDto.cs",
@@ -563,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "PaymentDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\PaymentDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\PaymentDto.cs",
@@ -575,7 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "PaymentCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\PaymentCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\PaymentCreateDto.cs",
@@ -587,7 +649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "OrderUpdateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderUpdateDto.cs",
@@ -599,7 +661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "OrderStatusUpdateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderStatusUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderStatusUpdateDto.cs",
@@ -611,7 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "OrderItemDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderItemDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderItemDto.cs",
@@ -623,7 +685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "OrderItemCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderItemCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderItemCreateDto.cs",
@@ -635,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "OrderDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderDto.cs",
@@ -647,7 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "OrderCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderCreateDto.cs",
@@ -659,7 +721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "OrderDetailDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderDetailDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderDetailDto.cs",
@@ -671,7 +733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "NotificationUpdateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Notification\\NotificationUpdateDto.cs",
@@ -683,7 +745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "NotificationDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Notification\\NotificationDto.cs",
@@ -695,7 +757,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "NotificationCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Notification\\NotificationCreateDto.cs",
@@ -707,7 +769,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "MessageDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\MessageDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\MessageDto.cs",
@@ -719,7 +781,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "MessageCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\MessageCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\MessageCreateDto.cs",
@@ -731,7 +793,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "ChatListItemDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatListItemDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\ChatListItemDto.cs",
@@ -743,7 +805,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "ChatDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\ChatDto.cs",
@@ -755,7 +817,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "ChatCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\ChatCreateDto.cs",
@@ -767,7 +829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "CategoryUpdateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryUpdateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryUpdateDto.cs",
@@ -779,7 +841,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "CategoryListItemDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryListItemDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryListItemDto.cs",
@@ -791,7 +853,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "CategoryDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryDto.cs",
@@ -803,7 +865,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "CategoryCreateDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryCreateDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryCreateDto.cs",
@@ -815,7 +877,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "ApiResponseDto.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\ApiResponseDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\DTOs\\Common\\ApiResponseDto.cs",
@@ -827,7 +889,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "Application.csproj",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "..\\Application\\Application.csproj",
@@ -839,7 +901,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "Domain.csproj",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj",
               "RelativeDocumentMoniker": "..\\Domain\\Domain.csproj",
@@ -851,7 +913,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "20250410094558_RenameField.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Migrations\\20250410094558_RenameField.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250410094558_RenameField.cs",
@@ -863,7 +925,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Review.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Review.cs",
@@ -875,7 +937,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Product.cs",
@@ -887,7 +949,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Payment.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Payment.cs",
@@ -899,7 +961,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\User.cs",
@@ -911,7 +973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "NotificationType.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\NotificationType.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Enums\\NotificationType.cs",
@@ -923,7 +985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "PaymentMethod.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\PaymentMethod.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Enums\\PaymentMethod.cs",
@@ -935,7 +997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "OrderStatus.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\OrderStatus.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Enums\\OrderStatus.cs",
@@ -947,7 +1009,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "PaymentStatus.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\PaymentStatus.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Enums\\PaymentStatus.cs",
@@ -959,7 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\UserRole.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Enums\\UserRole.cs",
@@ -971,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "KlikavaDbContext.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\KlikavaDbContext.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\KlikavaDbContext.cs",
@@ -983,7 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\OrderItem.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\OrderItem.cs",
@@ -995,7 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Order.cs",
@@ -1007,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "Notifications.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Notifications.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Notifications.cs",
@@ -1019,7 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "Messages.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Messages.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Messages.cs",
@@ -1031,7 +1093,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "Chat.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Chat.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Chat.cs",
@@ -1043,7 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Category.cs",
@@ -1055,7 +1117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "20250409222306_InitialCreate.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Migrations\\20250409222306_InitialCreate.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250409222306_InitialCreate.cs",
@@ -1067,7 +1129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "Infrastructure.csproj",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Infrastructure.csproj",
@@ -1079,7 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -1091,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "Aliexpress-Backend.csproj",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
               "RelativeDocumentMoniker": "Aliexpress-Backend.csproj",
@@ -1103,7 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "Shared.csproj",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj",
               "RelativeDocumentMoniker": "..\\Shared\\Shared.csproj",
@@ -1115,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -1127,7 +1189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "Container.targets",
               "DocumentMoniker": "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\build\\Container.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Users\\Lenovo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\build\\Container.targets",
