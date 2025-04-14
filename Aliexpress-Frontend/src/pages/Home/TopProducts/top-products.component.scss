@@ -12,7 +12,7 @@ $breakpoints: (
 ) !default;
 
 .main-container {
-  width: px-to-rem(1920);
+  width: 100%;
   height: px-to-rem(1080);
   background-color: $white-grey;
   margin-top: px-to-rem(50);
@@ -75,7 +75,7 @@ $breakpoints: (
   color: $black;
   left: px-to-rem(1802);
   bottom: px-to-rem(27);
-
+  
   .more-link {
     text-decoration: none;
     color: $black;
