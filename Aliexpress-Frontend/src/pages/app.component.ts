@@ -4,7 +4,8 @@ import { HeaderComponent } from './Header/header.component';
 import { FooterComponent } from './Footer/footer.component';
 import { HomeComponent } from './Home/home.component';
 import { TopProductsComponent } from './Home/TopProducts/top-products.component';
-import { DiscountsComponent } from './Home/Discounts/discounts.component'; // Добавляем импорт
+import { DiscountsComponent } from './Home/Discounts/discounts.component'; 
+import { ProductCardComponent } from './Home/ProductCard/product-card.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { DiscountsComponent } from './Home/Discounts/discounts.component'; // Д
     FooterComponent,
     HomeComponent,
     TopProductsComponent,
-    DiscountsComponent // Добавляем в imports
+    DiscountsComponent,
+    ProductCardComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
