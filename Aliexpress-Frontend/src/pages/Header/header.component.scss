@@ -8,8 +8,8 @@
     width: 100%;
     height: 100%;
     backdrop-filter: blur(px-to-rem(6));
-    background-color: rgba(0, 0, 0, 0.3); // можно подкорректировать
-    z-index: 4; // меньше чем у .menu-container (у неё должен быть z-index: 4)
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 4;
     opacity: 0;
     pointer-events: none;
     transition: .4s;
@@ -32,9 +32,9 @@
     z-index: 10;
 
     @include media-breakpoint-down(md) {
-        margin:0;
+        margin: 0;
         padding: px-to-rem(33 14);
-        border-radius:0;
+        border-radius: 0;
     }
     .logo {
         img {
@@ -77,6 +77,7 @@
         left: 50%;
         transform: translateX(-50%);
 
+        @include media-breakpoint-between(md, 1085) { transform: translateX(-45%); }
         @include media-breakpoint-down(md) { display: none; }
         .nav-links {
             display: flex;
@@ -228,16 +229,21 @@
             color: $white;
             font-weight: 400;
             cursor: pointer;
-            transition: .15s;
+            transition: .25s ease-in-out;
 
             &:hover {
                 transform: scale(1.05);
                 color: $light-green;
+                
+                img {
+                    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(150deg) contrast(1);
+                }
             }
             &:active { transform:scale(0.95); }
             img {
                 width: px-to-rem(24);
                 height: px-to-rem(24);
+                filter: brightness(0) invert(1);
             }
         }
         #lang { @include media-breakpoint-down(md) { display: none; } }

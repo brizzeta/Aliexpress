@@ -58,8 +58,11 @@
             margin-top: px-to-rem(23);
             width: 100%;
 
-            @include media-breakpoint-between(md, lg) {
+            @include media-breakpoint-between(1235, lg) {
                 .boll:nth-child(n+5) { display: none; }
+            }
+            @include media-breakpoint-between(md, 1235) {
+                .boll:nth-child(n+4) { display: none; }
             }
             @include media-breakpoint-between(sm, md) {
                 gap: px-to-rem(75);
@@ -78,7 +81,7 @@
                 background: $grey;
                 border-radius: 50%;
 
-                @include media-breakpoint-between(1000, lg) { width:px-to-rem(150); }
+                @include media-breakpoint-between(md, lg) { width:px-to-rem(200); }
                 @include media-breakpoint-between(sm, md) { width:px-to-rem(300); }
                 @include media-breakpoint-down(sm) { width:px-to-rem(286); }
                 .small-boll {
@@ -123,7 +126,7 @@
                     clip-path: circle(calc(50% - #{px-to-rem(35)}) at center);
 
                     @include media-breakpoint-between(md, lg) {
-                        clip-path: circle(calc(50% - #{px-to-rem(17)}) at center);
+                        clip-path: circle(calc(50% - #{px-to-rem(25)}) at center);
                     }
                 }
                 &:hover {
