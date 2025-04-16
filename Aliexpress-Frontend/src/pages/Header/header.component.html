@@ -20,34 +20,17 @@
         #catalogContainer>
         <div class="left-container">
             <ul>
-                <li>Mobile phones</li>
-                <li>Computers</li>
-                <li>Electronics</li>
-                <li>Home Appliances</li>
-                <li>Home Improvement & Tools</li>
-                <li>Security & Protection</li>
-                <li>Automobiles & Motorcycles</li>
-                <li>Home, Garden & Office</li>
-                <li>Furniture</li>
-                <li>Clothing</li>
-                <li>Shoes</li>
-                <li>Accesoires</li>
-                <li>Luggage & Bags</li>
-                <li>Sports & Entertainment</li>
-                <li>Mother & Kids</li>
-                <li>Toys & Hobbies</li>
-                <li>Beauty & Health</li>
-                <li>18+</li>
-                <li>Pet Products</li>
-                <li>Food</li>
+                <li *ngFor="let category of categories" 
+                    [ngClass]="{'selected-category': isSelected(category)}"
+                    (click)="selectCategory(category)">
+                    {{ category }}
+                </li>
             </ul>
         </div>
         <div class="right-container">
-            <span>Mobile Phones</span><hr>
+            <span>{{ selectedCategory }}</span><hr>
             <div class="catalog">
-                <ul>
-                    <li>Mobile Phones</li>
-                </ul>
+                <ul><li *ngFor="let item of getSelectedCategoryContent()">{{ item }}</li></ul>
             </div>
         </div>
     </section>
