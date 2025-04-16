@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.Entities;
-using Domain.Enums;
+using Application.DTOs.Common;
+using Application.DTOs.Order;
 
 namespace Application.Interfaces
 {
     public interface IOrderService
     {
-        Task<Order> GetOrderByIdAsync(int id);
-        Task<IEnumerable<Order>> GetOrdersByBuyerIdAsync(int buyerId);
-        Task<IEnumerable<Order>> GetOrdersForProductAsync(int productId);
-        Task<Order> CreateOrderAsync(Order order);
-        Task UpdateOrderStatusAsync(int orderId, OrderStatus status);
-        Task<bool> DeleteOrderAsync(int id);
-        Task<IEnumerable<Order>> GetAllOrdersAsync();
+        Task<ApiResponseDto<OrderDetailDto>> GetOrderByIdAsync(int id);
+        Task<ApiResponseDto<IEnumerable<OrderDto>>> GetOrdersByBuyerIdAsync(int buyerId);
+        Task<ApiResponseDto<IEnumerable<OrderDto>>> GetOrdersForProductAsync(int productId);
+        Task<ApiResponseDto<OrderDto>> CreateOrderAsync(OrderCreateDto orderCreateDto);
+        Task<ApiResponseDto<bool>> UpdateOrderStatusAsync(int orderId, OrderStatusUpdateDto statusUpdateDto);
+        Task<ApiResponseDto<bool>> UpdateOrderAsync(int orderId, OrderUpdateDto orderUpdateDto);
+        Task<ApiResponseDto<bool>> DeleteOrderAsync(int id);
+        Task<ApiResponseDto<IEnumerable<OrderDto>>> GetAllOrdersAsync();
     }
 }
