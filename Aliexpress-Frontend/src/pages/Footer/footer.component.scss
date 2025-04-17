@@ -8,7 +8,7 @@
   width: 1720px;
   height: 327px;
   margin: 0 auto;
-  margin-top: px-to-rem(538);
+  margin-top: px-to-rem(238);
   border-radius: px-to-rem(60 60 0 0);
   display: flex;
   justify-content: center;
@@ -17,21 +17,18 @@
   /* lg: 1200–1919px */
   @include media-breakpoint-between(lg, xl) {
     width: 90%;
-    margin-top: px-to-rem(400);
     height: 300px;
   }
   /* md: 1024–1199px */
   @include media-breakpoint-between(md, lg) {
     width: 95%;
     height: 350px;
-    margin-top: px-to-rem(300);
     padding: px-to-rem(20 0);
   }
   /* sm: 768–1023px */
   @include media-breakpoint-between(sm, md) {
     width: 80%; /* Чуть шире для планшетов */
     height: auto; /* Растягиваем под содержимое */
-    margin-top: px-to-rem(200); /* Уменьшаем отступ сверху */
     padding: px-to-rem(40 20 50 20); /* Больше отступов для гармонии */
     border-radius: px-to-rem(40 40 0 0);
     display: block; /* Элементы в потоке */
@@ -40,7 +37,6 @@
   @include media-breakpoint-down(sm) {
     width: px-to-rem(375);
     height: px-to-rem(573);
-    margin-top: px-to-rem(124);
     border-radius: px-to-rem(60 60 0 0);
     padding: 0;
   }
@@ -234,6 +230,7 @@
       transform: none;
       flex-direction: column;
       gap: px-to-rem(23);
+      white-space: nowrap;
     }
 
     .footer-section {
@@ -277,8 +274,21 @@
         @include media-breakpoint-down(sm) {
           display: inline-block;
           margin-top: 0;
-          margin-right: px-to-rem(10);
+          margin-right: px-to-rem(27);
           margin-bottom: 0;
+          white-space: nowrap;
+        }
+
+        &.blog-link {
+          @include media-breakpoint-down(sm) {
+            margin-right: px-to-rem(35);
+          }
+        }
+
+        &.sales-link {
+          @include media-breakpoint-down(sm) {
+            margin-right: px-to-rem(17);
+          }
         }
       }
 
@@ -294,24 +304,27 @@
 
           @include media-breakpoint-between(sm, md) {
             margin-top: px-to-rem(20);
-            gap: px-to-rem(30); /* Чуть больше пространства */
-            justify-content: center; /* Центрируем иконки */
+            gap: px-to-rem(30);
+            justify-content: center;
           }
 
           @include media-breakpoint-down(sm) {
-            margin-top: px-to-rem(24);
-            gap: px-to-rem(40);
-          }
+            margin-top: px-to-rem(8);
+            gap: px-to-rem(48);
+            flex-wrap: nowrap;
 
-          a {
-            width: px-to-rem(30);
-            height: px-to-rem(30);
-            margin-top: 0;
+            a {
+              width: px-to-rem(40);
+              height: px-to-rem(40);
+              margin-right: 0;
+              margin-top: 0;
+              margin-bottom: 0;
 
-            img {
-              width: 100%;
-              height: 100%;
-              margin-bottom: px-to-rem(0);
+              img {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+              }
             }
           }
         }
