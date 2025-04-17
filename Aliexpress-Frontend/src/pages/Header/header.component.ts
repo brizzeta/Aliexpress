@@ -17,6 +17,8 @@ export class HeaderComponent {
   isCatalogFadingOut = false;
   isLangFadingOut = false;
   isMenuFadingOut = false;
+  // Флаг для отображения категорий
+  isCategoriesVisible = false;
 
   selectedCategory = 'Mobile phones'; // Выбранная категория каталога
   categories = [ // Список всех категорий
@@ -114,6 +116,7 @@ export class HeaderComponent {
       setTimeout(() => {
         this.isMenuActive = false;
         this.isMenuFadingOut = false;
+        this.isCategoriesVisible = false; // Сбрасываем отображение категорий при закрытии меню
       }, 400);
     } else {
       this.isMenuActive = true;
@@ -144,5 +147,8 @@ export class HeaderComponent {
   }
   getSelectedCategoryContent(): string[] { // Получает список подкатегорий выбранной категории
     return this.catalogContent[this.selectedCategory] || [];
+  }
+  toggleCategoriesView(): void { // Метод переключения отображения меню мобильной версии
+    this.isCategoriesVisible = !this.isCategoriesVisible;
   }
 }

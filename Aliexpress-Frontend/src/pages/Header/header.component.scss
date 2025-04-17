@@ -387,6 +387,7 @@
         width: 100%;
         background: $white;
         font-size: px-to-rem(16);
+        overflow: auto;
         pointer-events: none;
         opacity: 0;
         z-index: 5;
@@ -453,6 +454,29 @@
                 border-radius: px-to-rem(8);
 
                 img { margin-right: px-to-rem(15); }
+            }
+        }
+        .catalog {
+            margin-top: px-to-rem(35);
+            padding: 0;
+            list-style: none;
+            text-align: left;
+            color: $grey;
+
+            li:not(:first-child) { margin-top: px-to-rem(10); }
+            li {
+                align-content: center;
+                padding-left: px-to-rem(6);
+                height: px-to-rem(40);
+                width: px-to-rem(245);
+                border-radius: px-to-rem(10);
+                transition: .25s;
+
+                &:hover { background-color: $body-white; }
+                @include media-breakpoint-between(md, 1400) {
+                    height: px-to-rem(30);
+                    width: px-to-rem(200);
+                }
             }
         }
     }

@@ -73,21 +73,32 @@
         [class.active]="isMenuActive"
         [class.fade-out]="isMenuFadingOut"
         #menuContainer>
-        <ul class="links-li">
-            <li><a href="/discounts">CATEGORIES</a></li>
-            <li><a href="/top-products" class="not-first">TOP PRODUCTS</a></li>
-            <li><a href="/categories" class="not-first">DISCOUNTS</a></li>
-        </ul>
-        <span class="language-text">Language</span>
-        <ul class="languages">
-            <li><img src="../../assets/images/svg/America.svg" alt="english">English</li>
-            <li><img src="../../assets/images/svg/Russia.svg" alt="russian">Russian</li>
-            <li><img src="../../assets/images/svg/Ukraine.svg" alt="ukrainian">Ukrainian</li>
-        </ul>
-        <span class="currency-text">Currency</span>
-        <ul class="currency">
-            <li><img src="../../assets/images/svg/America.svg" alt="usd">USD</li>
-            <li><img src="../../assets/images/svg/Ukraine.svg" alt="uah">UAH</li>
-        </ul>
+        <ng-container *ngIf="!isCategoriesVisible">
+            <ul class="links-li">
+                <li><a href="#" (click)="$event.preventDefault(); toggleCategoriesView()">CATEGORIES</a></li>
+                <li><a href="#" class="not-first">TOP PRODUCTS</a></li>
+                <li><a href="#" class="not-first">DISCOUNTS</a></li>
+            </ul>
+            <span class="language-text">Language</span>
+            <ul class="languages">
+                <li><img src="../../assets/images/svg/America.svg" alt="english">English</li>
+                <li><img src="../../assets/images/svg/Russia.svg" alt="russian">Russian</li>
+                <li><img src="../../assets/images/svg/Ukraine.svg" alt="ukrainian">Ukrainian</li>
+            </ul>
+            <span class="currency-text">Currency</span>
+            <ul class="currency">
+                <li><img src="../../assets/images/svg/America.svg" alt="usd">USD</li>
+                <li><img src="../../assets/images/svg/Ukraine.svg" alt="uah">UAH</li>
+            </ul>
+        </ng-container>
+        <ng-container *ngIf="isCategoriesVisible">
+            <ul class="catalog">
+                <li *ngFor="let category of categories" 
+                    [ngClass]="{'selected-category': isSelected(category)}"
+                    (click)="selectCategory(category)">
+                    {{ category }}
+                </li>
+            </ul>
+        </ng-container>
     </section>
 </header>
