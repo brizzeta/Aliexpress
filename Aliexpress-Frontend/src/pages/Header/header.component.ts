@@ -1,10 +1,11 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NgFor, NgClass, CommonModule } from '@angular/common';
+import { LoginComponent } from '../Login/login.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgFor, NgClass, CommonModule],
+  imports: [NgFor, NgClass, CommonModule, LoginComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -13,10 +14,12 @@ export class HeaderComponent {
   isCatalogActive = false;
   isLangActive = false;
   isMenuActive = false;
+  isLoginActive = false;
   // Флаги для анимации "исчезновения" (fade-out)
   isCatalogFadingOut = false;
   isLangFadingOut = false;
   isMenuFadingOut = false;
+  isLoginFadingOut = false;
   // Флаг для отображения категорий
   isCategoriesVisible = false;
 
@@ -93,6 +96,13 @@ export class HeaderComponent {
         this.isMenuFadingOut = false;
       }, 400);
     }
+    if (except !== 'login' && this.isLoginActive) {
+      this.isLoginFadingOut = true;
+      setTimeout(() => {
+        this.isLoginActive = false;
+        this.isLoginFadingOut = false;
+      }, 400);
+    }
   }
 
   toggleLanguageDropdown(): void { // Переключение отображения language-container
@@ -137,6 +147,27 @@ export class HeaderComponent {
       this.isCatalogFadingOut = false;
       this.selectedCategory = 'Mobile phones';
     }
+  }
+
+  toggleLoginModal(): void { // Переключение отображения модального компонента login
+    if (this.isLoginActive) {
+      this.isLoginFadingOut = true;
+      setTimeout(() => {
+        this.isLoginActive = false;
+        this.isLoginFadingOut = false;
+      }, 400);
+    } else {
+      this.closeOtherContainers('login');
+      this.isLoginActive = true;
+      this.isLoginFadingOut = false;
+    }
+  }
+  closeLoginModal(): void {
+    this.isLoginFadingOut = true;
+    setTimeout(() => {
+      this.isLoginActive = false;
+      this.isLoginFadingOut = false;
+    }, 400);
   }
 
   selectCategory(category: string): void { // Устанавливает выбранную категорию

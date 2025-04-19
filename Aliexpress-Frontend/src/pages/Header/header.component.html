@@ -1,4 +1,7 @@
-<div class="menu-overlay" [class.active]="isMenuActive"></div>
+<!-- Слои эффектов при открытии окон -->
+<div class="overlay blur" [class.active]="isMenuActive"></div>
+<div class="overlay blackout" [class.active]="isCatalogActive"></div>
+<!-- Хедер -->
 <header class="pc-header">
     <div class="logo">
         <a href="/"><img src="../../assets/images/svg/Logo.svg" alt="logo">
@@ -36,7 +39,7 @@
     </section>
     <!-- Кнопки хедера -->
     <div class="header-controls">
-        <button class="login-btn">LOG IN</button>
+        <button class="login-btn" (click)="toggleLoginModal()">LOG IN</button>
         <button class="switchable"><img src="../../assets/images/svg/Person.svg" alt="person"></button>
         <button><img src="../../assets/images/svg/Cart.svg" alt="cart"></button>
         <button id="lang" (click)="toggleLanguageDropdown()">
@@ -102,3 +105,5 @@
         </ng-container>
     </section>
 </header>
+<!-- Открывающий логин -->
+<app-login *ngIf="isLoginActive || isLoginFadingOut" [class.fade-out]="isLoginFadingOut" (close)="closeLoginModal()"></app-login>

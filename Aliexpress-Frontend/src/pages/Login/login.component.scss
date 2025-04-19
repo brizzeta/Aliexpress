@@ -1,0 +1,102 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+:host {
+    &.active {
+        .overlay { animation: fadeIn 0.4s forwards; }
+    }
+    &.fade-out {
+        .overlay { animation: fadeOut 0.4s forwards; }
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+
+    .login-container {
+        position: absolute;
+        text-align: center;
+        margin-top: px-to-rem(12);
+        padding: px-to-rem(15 40 40 40);
+        width: px-to-rem(452);
+        background: $white;
+        border-radius: px-to-rem(10);
+        
+        p { font-size: px-to-rem(24); }
+        input:first-of-type { margin-top: px-to-rem(-5); }
+        input {
+            margin-top: px-to-rem(10);
+            padding: px-to-rem(11 158 11 7);
+            background: $body-white;
+            border: none;
+            border-radius: px-to-rem(10);
+            outline: none;
+            font-size: px-to-rem(16);
+            transition: .25s;
+    
+            &:focus { outline: px-to-rem(2) solid $light-grey; }
+            &::placeholder { color: $grey; }
+        }
+        button {
+            margin-top: px-to-rem(18);
+            padding: px-to-rem(10.5 160.5);
+            background: $black;
+            border: none;
+            border-radius: px-to-rem(10);
+            color: $white;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { background: $grey; }
+            &:active { transform: scale(0.95); }
+        }
+        .a-container {
+            display: flex;
+            justify-content: center;
+            gap: px-to-rem(85);
+            margin-top: px-to-rem(15);
+
+            a {
+                font-size: px-to-rem(12);
+                color: $grey;
+                font-weight: 600;
+                transition: .25s;
+
+                &:hover { transform: scale(1.025); }
+                &:active { transform: scale(0.975); }
+            }
+        }
+        .google-btn {
+            display: flex;
+            align-items: center;
+            gap: px-to-rem(10);
+            margin: px-to-rem(18) auto 0 auto;
+            padding: px-to-rem(10 82);
+            background: none;
+            border: px-to-rem(1) solid black;
+            color: $grey;
+
+            &:hover {
+                color: black; 
+                background: none;
+            }
+        }
+    }
+}

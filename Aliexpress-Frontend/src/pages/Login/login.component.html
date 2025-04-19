@@ -1,0 +1,16 @@
+<div class="overlay" (click)="closeModal()">
+    <section class="login-container" (click)="preventClose($event)">
+        <p>LOG IN</p>
+        <input type="text" placeholder="Email or phone">
+        <input type="password" placeholder="Password">
+        <button>Log In</button>
+        <div class="a-container">
+            <a href="#">Create an account</a>
+            <a href="#">Forgont password?</a>
+        </div>
+        <button class="google-btn">
+            <img src="../../assets/images/svg/Google.svg" alt="google">
+            Continue with google
+        </button>
+    </section>
+</div>
