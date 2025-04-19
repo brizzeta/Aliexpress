@@ -25,5 +25,6 @@ namespace Application.Interfaces
         Task<ApiResponseDto<IEnumerable<ProductDto>>> GetTopRatedProductsAsync(int count = 10);
         Task<ApiResponseDto<IEnumerable<ProductDto>>> GetRelatedProductsAsync(int productId, int count = 5);
         Task<ApiResponseDto<bool>> UpdateProductImagesAsync(int productId, List<string> imageUrls);
+        Task<ApiResponseDto<bool>> UpdateProductRatingAsync(int productId);
     }
 }

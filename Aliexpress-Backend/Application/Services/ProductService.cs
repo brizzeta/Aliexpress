@@ -309,5 +309,36 @@ namespace Application.Services
                 return ApiResponseDto<bool>.FailureResult("Error updating product stock", new List<string> { ex.Message });
             }
         }
+
+        public async Task<ApiResponseDto<bool>> UpdateProductRatingAsync(int productId)
+        {
+            try
+            {
+                var product = await uof.Products.GetByIdAsync(productId);
+                if (product == null)
+                    return ApiResponseDto<bool>.FailureResult($"Product with ID {productId} not found");
+
+                var reviews = await uof.Reviews.FindAsync(r => r.ProductID == productId);
+                if (reviews.Any())
+                {
+                    product.Rating = reviews.Average(r => r.Rating);
+                }
+                else
+                {
+                    product.Rating = 0;
+                }
+
+                product.UpdatedDate = DateTime.UtcNow;
+                uof.Products.Update(product);
+                await uof.CompleteAsync();
+
+                return ApiResponseDto<bool>.SuccessResult(true, "Product rating updated successfully");
+            }
+            catch (Exception ex)
+            {
+                return ApiResponseDto<bool>.FailureResult("Error updating product rating", new List<string> { ex.Message });
+            }
+        }
     }
+
 }

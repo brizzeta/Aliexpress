@@ -18,7 +18,7 @@ namespace Domain.Entities
         public string Address { get; set; } = null!;
         public DateTime RegistrationDate { get; set; }
         public string? ProfileImageUrl { get; set; }
-        public double Rating { get; set; }
+        public decimal Rating { get; set; }
         public bool IsActive { get; set; }
 
         public ICollection<Review> Reviews { get; set; } = new List<Review>();

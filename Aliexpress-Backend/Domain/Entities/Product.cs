@@ -29,7 +29,7 @@ namespace Domain.Entities
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedDate { get; set; }
 
-        public double? Rating { get; set; }
+        public decimal? Rating { get; set; }
 
         public bool IsActive { get; set; } = true;
 
