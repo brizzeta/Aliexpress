@@ -2923,23 +2923,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\Owner\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
+      "projectUniqueName": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
       "projectName": "Aliexpress-Backend",
-      "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\obj\\",
+      "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
+      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+      "outputPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2954,17 +2954,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj": {
-              "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj"
+            "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj": {
+              "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj"
             },
-            "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj"
+            "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj"
             },
-            "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj"
             },
-            "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj"
+            "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj"
             }
           }
         }
@@ -2977,9 +2977,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -3019,30 +3019,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
     {
-      "code": "NU1903",
+      "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net8.0"
-      ]
+      "message": "Problem reading the cache file C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
