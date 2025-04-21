@@ -12,7 +12,20 @@ export class LoginComponent {
   @Output() close = new EventEmitter<void>();
   @HostBinding('class.active') active = true;
   @Input() 
+  isLoginForm = true;
+  isRecoveryForm = false;
+
   closeModal(): void { this.close.emit(); } // Метод закрытия окна
   // Метод для предотвращения закрытия при клике на login-container
   preventClose(event: Event): void { event.stopPropagation(); }
+  toggleForm(): void {
+    if (this.isRecoveryForm) {
+      this.isLoginForm = true;
+      this.isRecoveryForm = false;
+    } else { this.isLoginForm = !this.isLoginForm; }
+  }
+  showRecoveryForm(): void {
+    this.isLoginForm = false;
+    this.isRecoveryForm = true;
+  }
 }

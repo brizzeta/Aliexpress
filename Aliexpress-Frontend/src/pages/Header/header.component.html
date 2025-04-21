@@ -40,7 +40,9 @@
     <!-- Кнопки хедера -->
     <div class="header-controls">
         <button class="login-btn" (click)="toggleLoginModal()">LOG IN</button>
-        <button class="switchable"><img src="../../assets/images/svg/Person.svg" alt="person"></button>
+        <button class="switchable" (click)="toggleLoginModal()">
+            <img src="../../assets/images/svg/Person.svg" alt="person">
+        </button>
         <button><img src="../../assets/images/svg/Cart.svg" alt="cart"></button>
         <button id="lang" (click)="toggleLanguageDropdown()">
             <img src="../../assets/images/svg/Language.svg" alt="language">

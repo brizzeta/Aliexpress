@@ -30,16 +30,42 @@
     z-index: 100;
 
     .login-container {
-        position: absolute;
         text-align: center;
         margin-top: px-to-rem(12);
-        padding: px-to-rem(15 40 40 40);
+        height: px-to-rem(367);
         width: px-to-rem(452);
         background: $white;
         border-radius: px-to-rem(10);
         
-        p { font-size: px-to-rem(24); }
-        input:first-of-type { margin-top: px-to-rem(-5); }
+        @include media-breakpoint-down(md) {
+            margin-top: px-to-rem(-54);
+            height: px-to-rem(267);
+            width: px-to-rem(300);
+        }
+        &.register-margin {
+            margin-top: px-to-rem(-90); 
+            @include media-breakpoint-down(md) { margin-top: px-to-rem(-92); }
+        }
+        &.register-height {
+            height: px-to-rem(267); 
+            @include media-breakpoint-down(md) { height: px-to-rem(227); }
+        }
+        &.recovery-margin { margin-top: px-to-rem(-130); }
+        &.recovery-height {
+            height: px-to-rem(229); 
+            @include media-breakpoint-down(md) { height: px-to-rem(189); }
+        }
+        span {
+            display: block;
+            margin-top: px-to-rem(40);
+            font-size: px-to-rem(24); 
+
+            @include media-breakpoint-down(md) { margin-top: px-to-rem(20); }
+        }
+        input:first-of-type {
+            margin-top: px-to-rem(19); 
+            @include media-breakpoint-down(md) { margin-top: px-to-rem(20); }
+        }
         input {
             margin-top: px-to-rem(10);
             padding: px-to-rem(11 158 11 7);
@@ -52,6 +78,7 @@
     
             &:focus { outline: px-to-rem(2) solid $light-grey; }
             &::placeholder { color: $grey; }
+            @include media-breakpoint-down(md) { padding: px-to-rem(10 70 10 7); }
         }
         button {
             margin-top: px-to-rem(18);
@@ -66,18 +93,25 @@
 
             &:hover { background: $grey; }
             &:active { transform: scale(0.95); }
+
+            @include media-breakpoint-down(md) {
+                margin-top: px-to-rem(21.5);
+                padding: px-to-rem(10.25 115);
+            }
         }
         .a-container {
             display: flex;
             justify-content: center;
             gap: px-to-rem(85);
-            margin-top: px-to-rem(15);
+            margin-top: px-to-rem(-5);
 
+            @include media-breakpoint-down(md) { gap: px-to-rem(45); }
             a {
                 font-size: px-to-rem(12);
                 color: $grey;
                 font-weight: 600;
                 transition: .25s;
+                white-space: nowrap;
 
                 &:hover { transform: scale(1.025); }
                 &:active { transform: scale(0.975); }
@@ -97,6 +131,26 @@
                 color: black; 
                 background: none;
             }
+            @include media-breakpoint-down(md) { display: none; }
+        }
+        .continue {
+            padding: px-to-rem(10.5 149); 
+
+            @include media-breakpoint-down(md) {
+                margin-top: px-to-rem(19);
+                padding: px-to-rem(10.5 103);  
+            }
+        }
+        a {
+            display: block;
+            margin-top: px-to-rem(20);
+            font-size: px-to-rem(12);
+            color: $grey;
+            font-weight: 600;
+            transition: .25s;
+
+            &:hover { transform: scale(1.025); }
+            &:active { transform: scale(0.975); }
         }
     }
 }

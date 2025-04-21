@@ -154,6 +154,7 @@
                     height: px-to-rem(40);
                     width: px-to-rem(245);
                     border-radius: px-to-rem(10);
+                    cursor: pointer;
                     transition: .25s;
 
                     &:hover { background-color: $body-white; }
@@ -211,6 +212,7 @@
                         height: px-to-rem(40);
                         width: px-to-rem(245);
                         border-radius: px-to-rem(10);
+                        cursor: pointer;
                         transition: .25s;
 
                         &:hover { background-color: $body-white; }

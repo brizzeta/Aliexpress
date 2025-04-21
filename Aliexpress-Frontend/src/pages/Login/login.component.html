@@ -1,16 +1,42 @@
 <div class="overlay" (click)="closeModal()">
-    <section class="login-container" (click)="preventClose($event)">
-        <p>LOG IN</p>
-        <input type="text" placeholder="Email or phone">
-        <input type="password" placeholder="Password">
-        <button>Log In</button>
-        <div class="a-container">
-            <a href="#">Create an account</a>
-            <a href="#">Forgont password?</a>
-        </div>
-        <button class="google-btn">
-            <img src="../../assets/images/svg/Google.svg" alt="google">
-            Continue with google
-        </button>
+    <section class="login-container"
+    (click)="preventClose($event)"
+    [ngClass]="{
+        'register-margin': !isLoginForm && !isRecoveryForm,
+        'register-height': !isLoginForm && !isRecoveryForm,
+        'recovery-margin': isRecoveryForm,
+        'recovery-height': isRecoveryForm
+    }">
+        <!-- Форма логина -->
+        <ng-container *ngIf="isLoginForm && !isRecoveryForm; else otherForms">
+            <span>LOG IN</span>
+            <input type="text" placeholder="Email or phone">
+            <input type="password" placeholder="Password">
+            <button>Log In</button>
+            <div class="a-container">
+                <a href="#" (click)="toggleForm()">Create an account</a>
+                <a href="#" (click)="showRecoveryForm()">Forgot password?</a>
+            </div>
+            <button class="google-btn">
+                <img src="../../assets/images/svg/Google.svg" alt="google">
+                Continue with google
+            </button>
+        </ng-container>
+        <!-- Другие формы -->
+        <ng-template #otherForms>
+            <!-- Форма регистрации -->
+            <ng-container *ngIf="!isLoginForm && !isRecoveryForm">
+                <span>Create account</span>
+                <input type="text" placeholder="Email or phone">
+                <button class="continue">Continue</button>
+                <a href="#" (click)="toggleForm()">Already have an account?</a>
+            </ng-container>
+            <!-- Форма восстановления пароля -->
+            <ng-container *ngIf="isRecoveryForm">
+                <span>Recover password</span>
+                <input type="text" placeholder="Email or phone">
+                <button class="continue">Continue</button>
+            </ng-container>
+        </ng-template>
     </section>
 </div>
