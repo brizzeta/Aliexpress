@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-reviews',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   templateUrl: './reviews.component.html',
-  styleUrl: './reviews.component.scss'
+  styleUrls: ['./reviews.component.scss']
 })
-export class ReviewsComponent {
-
-}
+export class ReviewsComponent {}

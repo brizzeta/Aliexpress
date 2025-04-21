@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-coupons',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   templateUrl: './coupons.component.html',
-  styleUrl: './coupons.component.scss'
+  styleUrls: ['./coupons.component.scss']
 })
-export class CouponsComponent {
-
-}
+export class CouponsComponent {}

@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-history',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   templateUrl: './history.component.html',
-  styleUrl: './history.component.scss'
+  styleUrls: ['./history.component.scss']
 })
-export class HistoryComponent {
-
-}
+export class HistoryComponent {}
