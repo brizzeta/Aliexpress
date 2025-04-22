@@ -14,7 +14,7 @@ export class HeaderComponent {
   isCatalogActive = false;
   isLangActive = false;
   isMenuActive = false;
-  isLoginActive = true;
+  isLoginActive = false;
   // Флаги для анимации "исчезновения" (fade-out)
   isCatalogFadingOut = false;
   isLangFadingOut = false;

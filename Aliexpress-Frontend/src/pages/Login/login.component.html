@@ -2,30 +2,34 @@
     <section class="login-container"
     (click)="preventClose($event)"
     [ngClass]="{
-        'register-margin': !isLoginForm && !isRecoveryForm,
-        'register-height': !isLoginForm && !isRecoveryForm,
-        'recovery-margin': isRecoveryForm,
-        'recovery-height': isRecoveryForm
+        'register-margin': !isLoginForm && !isRecoveryForm && !isCodeForm,
+        'register-height': !isLoginForm && !isRecoveryForm && !isCodeForm,
+        'recovery-margin': isRecoveryForm && !isCodeForm,
+        'recovery-height': isRecoveryForm && !isCodeForm,
+        'code-margin': isCodeForm,
+        'code-height': isCodeForm,
+        'password-margin': isPasswordForm,
+        'password-height': isPasswordForm
     }">
         <!-- Форма логина -->
-        <ng-container *ngIf="isLoginForm && !isRecoveryForm; else otherForms">
+        <ng-container *ngIf="isLoginForm && !isRecoveryForm && !isCodeForm && !isPasswordForm; else otherForms">
             <span>LOG IN</span>
             <input type="text" placeholder="Email or phone">
             <input type="password" placeholder="Password">
             <button>Log In</button>
             <div class="a-container">
-                <a href="#" (click)="toggleForm()">Create an account</a>
-                <a href="#" (click)="showRecoveryForm()">Forgot password?</a>
+            <a href="#" (click)="toggleForm()">Create an account</a>
+            <a href="#" (click)="showRecoveryForm()">Forgot password?</a>
             </div>
             <button class="google-btn">
-                <img src="../../assets/images/svg/Google.svg" alt="google">
-                Continue with google
+            <img src="../../assets/images/svg/Google.svg" alt="google">
+            Continue with google
             </button>
         </ng-container>
         <!-- Другие формы -->
         <ng-template #otherForms>
             <!-- Форма регистрации -->
-            <ng-container *ngIf="!isLoginForm && !isRecoveryForm">
+            <ng-container *ngIf="!isLoginForm && !isRecoveryForm && !isCodeForm && !isPasswordForm">
                 <span>Create account</span>
                 <input type="text" placeholder="Email or phone">
                 <button class="continue">Continue</button>
@@ -35,7 +39,30 @@
             <ng-container *ngIf="isRecoveryForm">
                 <span>Recover password</span>
                 <input type="text" placeholder="Email or phone">
+                <button class="continue" (click)="showCodeForm()">Continue</button>
+            </ng-container>
+            <!-- Форма ввода кода -->
+            <ng-container *ngIf="isCodeForm">
+                <span>Enter code</span>
+                <div class="inputs">
+                    <input type="text" maxlength="1" (input)="onInputChange($event, 0)" #input0>
+                    <input type="text" maxlength="1" (input)="onInputChange($event, 1)" #input1>
+                    <input type="text" maxlength="1" (input)="onInputChange($event, 2)" #input2>
+                    <input type="text" maxlength="1" (input)="onInputChange($event, 3)" #input3>
+                </div>
+                <button class="continue" (click)="showPasswordForm()">Continue</button>
+                <a href="#">Send the code again</a>
+            </ng-container>
+            <!-- Форма установки нового пароля -->
+            <ng-container *ngIf="isPasswordForm">
+                <span>Create a new password</span>
+                <div class="pass-text">
+                    It must contain at least one digit and two Latin letters of each case. Use 8 to 20 characters.
+                </div>
+                <input class="sec" type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm password">
                 <button class="continue">Continue</button>
+                <a href="#"  (click)="showLoginForm()">Already have an account?</a>
             </ng-container>
         </ng-template>
     </section>

@@ -55,12 +55,43 @@
             height: px-to-rem(229); 
             @include media-breakpoint-down(md) { height: px-to-rem(189); }
         }
+        &.code-margin {
+            margin-top: px-to-rem(-195);
+            @include media-breakpoint-down(md) { margin-top: px-to-rem(-90); }
+        }
+        &.code-height {
+            height: px-to-rem(267);
+            @include media-breakpoint-down(md) { height: px-to-rem(227); }
+        }
+        &.password-margin {
+            margin-top: px-to-rem(-1);
+            @include media-breakpoint-down(md) { margin-top: px-to-rem(-35); }
+        }
+        &.password-height {
+            height: px-to-rem(359);
+            @include media-breakpoint-down(md) { height: px-to-rem(285); }
+        }
         span {
             display: block;
             margin-top: px-to-rem(40);
-            font-size: px-to-rem(24); 
+            color: $black;
+            font-size: px-to-rem(24);
 
             @include media-breakpoint-down(md) { margin-top: px-to-rem(20); }
+        }
+        .pass-text {
+            margin: px-to-rem(9 0 0 62);
+            padding: px-to-rem(0 20);
+            width: px-to-rem(350);
+            text-align: left;
+            color: $grey;
+            font-size: px-to-rem(12);
+            font-weight: 600;
+
+            @include media-breakpoint-down(md) {
+                margin: px-to-rem(9 0 0 -27);
+                padding: px-to-rem(0 40);
+            }
         }
         input:first-of-type {
             margin-top: px-to-rem(19); 
@@ -80,6 +111,7 @@
             &::placeholder { color: $grey; }
             @include media-breakpoint-down(md) { padding: px-to-rem(10 70 10 7); }
         }
+        .sec { margin-top: px-to-rem(12) !important; }
         button {
             margin-top: px-to-rem(18);
             padding: px-to-rem(10.5 160.5);
@@ -93,7 +125,6 @@
 
             &:hover { background: $grey; }
             &:active { transform: scale(0.95); }
-
             @include media-breakpoint-down(md) {
                 margin-top: px-to-rem(21.5);
                 padding: px-to-rem(10.25 115);
@@ -141,6 +172,7 @@
                 padding: px-to-rem(10.5 103);  
             }
         }
+        .secnd { margin-top: px-to-rem(20.5);}
         a {
             display: block;
             margin-top: px-to-rem(20);
@@ -151,6 +183,29 @@
 
             &:hover { transform: scale(1.025); }
             &:active { transform: scale(0.975); }
+        }
+        .inputs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: px-to-rem(10);
+            margin-top: px-to-rem(20);
+
+            @include media-breakpoint-down(md) {
+                margin-top: px-to-rem(17);
+                gap: px-to-rem(7); 
+            }
+            input {
+                margin: 0;
+                padding: 0;
+                height: px-to-rem(40);
+                width: px-to-rem(50);
+                border-radius: px-to-rem(10);
+                text-align: center;
+                font-size: px-to-rem(24);
+
+                @include media-breakpoint-down(md) { width: px-to-rem(37.44); }
+            }
         }
     }
 }
