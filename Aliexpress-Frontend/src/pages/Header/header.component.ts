@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { NgFor, NgClass, CommonModule } from '@angular/common';
 import { LoginComponent } from '../Login/login.component';
 
@@ -22,6 +22,7 @@ export class HeaderComponent {
   isLoginFadingOut = false;
   // Флаг для отображения категорий
   isCategoriesVisible = false;
+  isSubcategoriesVisible = false;
 
   selectedCategory = 'Mobile phones'; // Выбранная категория каталога
   categories = [ // Список всех категорий
@@ -73,6 +74,10 @@ export class HeaderComponent {
   @ViewChild('catalogContainer') catalogContainer!: ElementRef;
   @ViewChild('langContainer') langContainer!: ElementRef;
   @ViewChild('menuContainer') menuContainer!: ElementRef;
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    this.handleOutsideClick(event);
+  }
 
   closeOtherContainers(except: string): void { // Закрывает все выпадающие окна, кроме указанного
     if (except !== 'catalog' && this.isCatalogActive) {
@@ -104,7 +109,6 @@ export class HeaderComponent {
       }, 400);
     }
   }
-
   toggleLanguageDropdown(): void { // Переключение отображения language-container
     this.closeOtherContainers('lang');
     if (this.isLangActive) {
@@ -118,7 +122,6 @@ export class HeaderComponent {
       this.isLangFadingOut = false;
     }
   }
-
   toggleMenuDropdown(): void { // Переключение отображения menu-container
     this.closeOtherContainers('menu');
     if (this.isMenuActive) {
@@ -126,16 +129,17 @@ export class HeaderComponent {
       setTimeout(() => {
         this.isMenuActive = false;
         this.isMenuFadingOut = false;
-        this.isCategoriesVisible = false; // Сбрасываем отображение категорий при закрытии меню
+        this.isCategoriesVisible = false;
+        this.isSubcategoriesVisible = false; // Сбрасываем все состояния при закрытии
       }, 400);
     } else {
       this.isMenuActive = true;
       this.isMenuFadingOut = false;
     }
   }
-
-  toggleCatalogDropdown(): void { // Переключение отображения catalog-container
+  toggleCatalogDropdown(event?: MouseEvent): void {
     this.closeOtherContainers('catalog');
+    
     if (this.isCatalogActive) {
       this.isCatalogFadingOut = true;
       setTimeout(() => {
@@ -147,8 +151,8 @@ export class HeaderComponent {
       this.isCatalogFadingOut = false;
       this.selectedCategory = 'Mobile phones';
     }
+    if (event) { event.stopPropagation(); } // Предотвращаем всплытие события, если оно передано
   }
-
   toggleLoginModal(): void { // Переключение отображения модального компонента login
     if (this.isLoginActive) {
       this.isLoginFadingOut = true;
@@ -162,11 +166,34 @@ export class HeaderComponent {
       this.isLoginFadingOut = false;
     }
   }
+
   closeLoginModal(): void {
     this.isLoginFadingOut = true;
     setTimeout(() => {
       this.isLoginActive = false;
       this.isLoginFadingOut = false;
+    }, 400);
+  }
+  showSubcategories(category: string): void { // Метод для показа подкатегорий
+    this.selectCategory(category);
+    this.isSubcategoriesVisible = true;
+  }
+
+  handleOutsideClick(event: MouseEvent): void {
+    if (this.isCatalogActive && this.catalogContainer) { // Проверка для catalog-container
+      const catalogElement = this.catalogContainer.nativeElement;
+      const clickedOnCatalog = catalogElement.contains(event.target as Node);
+      // Проверяем также, не был ли клик на ссылке, открывающей каталог
+      const catalogToggleLink = document.querySelector('a[href="#"][class$="not-first"]');
+      const clickedOnToggleLink = catalogToggleLink ? catalogToggleLink.contains(event.target as Node) : false;
+      if (!clickedOnCatalog && !clickedOnToggleLink) { this.closeCatalog(); }
+    }
+  }
+  closeCatalog(): void {
+    this.isCatalogFadingOut = true;
+    setTimeout(() => {
+      this.isCatalogActive = false;
+      this.isCatalogFadingOut = false;
     }, 400);
   }
 
@@ -180,6 +207,7 @@ export class HeaderComponent {
     return this.catalogContent[this.selectedCategory] || [];
   }
   toggleCategoriesView(): void { // Метод переключения отображения меню мобильной версии
-    this.isCategoriesVisible = !this.isCategoriesVisible;
+    this.isCategoriesVisible = true;
+    this.isSubcategoriesVisible = false;
   }
 }

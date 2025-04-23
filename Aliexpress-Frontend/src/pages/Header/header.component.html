@@ -13,14 +13,15 @@
         <ul class="nav-links">
             <li><a href="/discounts">DISCOUNTS</a></li>
             <li><a href="/top-products" class="not-first">TOP PRODUCTS</a></li>
-            <li><a href="#" class="not-first" (click)="toggleCatalogDropdown()">CATEGORIES</a></li>
+            <li><a href="#" class="not-first" (click)="$event.stopPropagation(); toggleCatalogDropdown()">CATEGORIES</a></li>
         </ul>
     </nav>
     <!-- Выпадающее окно каталога категорий -->
     <section class="catalog-container"
         [class.active]="isCatalogActive"
         [class.fade-out]="isCatalogFadingOut"
-        #catalogContainer>
+        #catalogContainer
+        (click)="$event.stopPropagation()">
         <div class="left-container">
             <ul>
                 <li *ngFor="let category of categories" 
@@ -75,10 +76,12 @@
     </section>
     <!-- Выпадающее меню телефонной версии -->
     <section class="menu-container"
-        [class.active]="isMenuActive"
-        [class.fade-out]="isMenuFadingOut"
-        #menuContainer>
-        <ng-container *ngIf="!isCategoriesVisible">
+    [class.active]="isMenuActive"
+    [class.fade-out]="isMenuFadingOut"
+    #menuContainer
+    (click)="$event.stopPropagation()">
+        <!-- Основное меню -->
+        <ng-container *ngIf="!isCategoriesVisible && !isSubcategoriesVisible">
             <ul class="links-li">
                 <li><a href="#" (click)="$event.preventDefault(); toggleCategoriesView()">CATEGORIES</a></li>
                 <li><a href="#" class="not-first">TOP PRODUCTS</a></li>
@@ -96,16 +99,23 @@
                 <li><img src="../../assets/images/svg/Ukraine.svg" alt="uah">UAH</li>
             </ul>
         </ng-container>
-        <ng-container *ngIf="isCategoriesVisible">
-            <ul class="catalog">
+        <!-- Список категорий -->
+        <ng-container *ngIf="isCategoriesVisible && !isSubcategoriesVisible">
+            <ul class="catalog categories">
                 <li *ngFor="let category of categories" 
                     [ngClass]="{'selected-category': isSelected(category)}"
-                    (click)="selectCategory(category)">
+                    (click)="showSubcategories(category)">
                     {{ category }}
                 </li>
             </ul>
         </ng-container>
-    </section>
+        <!-- Подкатегории выбранной категории -->
+        <ng-container *ngIf="isSubcategoriesVisible">
+            <ul class="catalog subcategories">
+                <li *ngFor="let subcategory of getSelectedCategoryContent()">{{ subcategory }}</li>
+            </ul>
+        </ng-container>
+</section>
 </header>
 <!-- Открывающий логин -->
 <app-login *ngIf="isLoginActive || isLoginFadingOut" [class.fade-out]="isLoginFadingOut" (close)="closeLoginModal()"></app-login>

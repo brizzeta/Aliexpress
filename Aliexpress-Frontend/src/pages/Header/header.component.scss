@@ -484,5 +484,20 @@
                 }
             }
         }
+        .categories {
+            li { margin: px-to-rem(3 0 0 -48); }
+        }
+        .subcategories {
+            li { margin: px-to-rem(22 0 0 -48); }
+        }
+        .menu-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: px-to-rem(10 15);
+            margin-top: px-to-rem(10);
+        }
+        .subcategories { margin-top: px-to-rem(15); }
     }
 }
