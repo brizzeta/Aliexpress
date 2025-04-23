@@ -1,261 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\",
+  "WorkspaceRootPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\infrastructure\\data\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\interfaces\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> volkov
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\infrastructure\\data\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\infrastructure\\data\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> volkov
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\infrastructure\\data\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\application\\services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\application\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\application\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\technologies\\projects\\aliexpress\\aliexpress-backend\\application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\user\\userpasswordchangedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\user\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\user\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\review\\reviewupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\review\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\review\\reviewcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\product\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\product\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\product\\productfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\product\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\product\\productdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\product\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\productsimpledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\paymentcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\orderupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\orderstatusupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\orderitemcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\ordercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\order\\orderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\notification\\notificationupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\notification\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\notification\\notificationcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\chat\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\chat\\messagecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\chat\\chatlistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\chat\\chatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\chat\\chatcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\category\\categoryupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\category\\categorylistitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\category\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\category\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\dtos\\common\\apiresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\migrations\\20250410094558_renamefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\data\\klikavadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\enums\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\notifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\migrations\\20250409222306_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7B4E5CD0-E065-4B3D-9C51-69EDD1A7E48F}|..\\Shared\\Shared.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\shared\\shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{039BCE0E-AE52-48F3-A259-7D92AEFCFC1E}|..\\Infrastructure\\Infrastructure.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\aliexpress-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\aliexpress-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\aliexpress-backend\\aliexpress-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|solutionrelative:aliexpress-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\build\\Container.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
->>>>>>> volkov
+      "AbsoluteMoniker": "D:0:0:{8CBB47BE-F9A2-4D08-8D29-2DDAB1326FAE}|..\\Application\\Application.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -338,1150 +110,111 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
               "Title": "NotificationRepository.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\NotificationRepository.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\NotificationRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\NotificationRepository.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\NotificationRepository.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\NotificationRepository.cs",
               "RelativeToolTip": "..\\Infrastructure\\Data\\NotificationRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:12:29.302Z",
-=======
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\UserService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAUwKsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T15:19:08.253Z",
+              "WhenOpened": "2025-04-20T21:03:10.314Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MessageRepository.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\MessageRepository.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\MessageRepository.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\MessageRepository.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Data\\MessageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T21:03:10.414Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T15:18:41.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReviewService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ReviewService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\ReviewService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ReviewService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\ReviewService.cs",
-              "ViewState": "AgIAAPcAAAAAAAAAAAA6wNcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T14:12:13.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IReviewService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IReviewService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IReviewService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IReviewService.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\IReviewService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T14:11:48.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\UnitOfWork.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\UnitOfWork.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\UnitOfWork.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAcwEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T12:53:41.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\ProductService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ProductService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\ProductService.cs",
-              "ViewState": "AgIAADQBAAAAAAAAAAAuwFQBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T14:03:50.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Product.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAwwB8AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:38:38.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Review.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Review.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Review.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Review.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Review.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T09:21:38.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\User.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\User.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA7wBQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:37:06.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\PaymentService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\PaymentService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\PaymentService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\PaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T20:47:05.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IProductService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAjwAsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T14:03:20.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Interfaces\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IGenericRepository.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Interfaces\\IGenericRepository.cs",
-              "RelativeToolTip": "..\\Domain\\Interfaces\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T13:00:28.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Interfaces\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Interfaces\\IUnitOfWork.cs",
-              "RelativeToolTip": "..\\Domain\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T13:00:36.829Z",
->>>>>>> volkov
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "MessageRepository.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\MessageRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\MessageRepository.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\MessageRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\MessageRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-=======
-              "DocumentIndex": 10,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\OrderService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\OrderService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAIBJwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T20:33:04.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IPaymentService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IPaymentService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IPaymentService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IPaymentService.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\IPaymentService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvxcAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T20:44:27.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IOrderService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IOrderService.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Interfaces\\IOrderService.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\IOrderService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAIBJwBMAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T20:32:49.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\GenericRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\GenericRepository.cs",
               "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\GenericRepository.cs",
               "RelativeToolTip": "..\\Infrastructure\\Data\\GenericRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAiwCoAAAAMAAAAAAAAAA==",
->>>>>>> volkov
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:12:26.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\GenericRepository.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\GenericRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\GenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:12:24.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:03:10.418Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ChatRepository.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\ChatRepository.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\ChatRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\ChatRepository.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\ChatRepository.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\ChatRepository.cs",
               "RelativeToolTip": "..\\Infrastructure\\Data\\ChatRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:12:20.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:03:10.421Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "OrderItemService.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderItemService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderItemService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\OrderItemService.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderItemService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\OrderItemService.cs",
               "RelativeToolTip": "..\\Application\\Services\\OrderItemService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:12:03.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:03:10.423Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 5,
               "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\NotificationService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\NotificationService.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\NotificationService.cs",
               "RelativeToolTip": "..\\Application\\Services\\NotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:12:01.395Z",
-=======
-              "DocumentIndex": 13,
-              "Title": "NotificationType.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\NotificationType.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Enums\\NotificationType.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\NotificationType.cs",
-              "RelativeToolTip": "..\\Domain\\Enums\\NotificationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:26:38.5Z",
->>>>>>> volkov
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:03:10.43Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 6,
               "Title": "MessageService.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\MessageService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\MessageService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\MessageService.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\MessageService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\MessageService.cs",
               "RelativeToolTip": "..\\Application\\Services\\MessageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:11:58.52Z",
-=======
-              "DocumentIndex": 19,
-              "Title": "PaginationFilterDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\PaginationFilterDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Common\\PaginationFilterDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\PaginationFilterDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Common\\PaginationFilterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:57:16.85Z",
->>>>>>> volkov
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:03:10.433Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 7,
               "Title": "ChatService.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ChatService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ChatService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\ChatService.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ChatService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\ChatService.cs",
               "RelativeToolTip": "..\\Application\\Services\\ChatService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:11:56.648Z",
-=======
-              "DocumentIndex": 26,
-              "Title": "ReviewUpdateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewUpdateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Review\\ReviewUpdateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewUpdateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Review\\ReviewUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:38:56.176Z",
->>>>>>> volkov
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:03:10.437Z"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 8,
               "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\CategoryService.cs",
+              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "..\\Application\\Services\\CategoryService.cs",
-              "ToolTip": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Services\\CategoryService.cs",
               "RelativeToolTip": "..\\Application\\Services\\CategoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T22:11:53.439Z",
-=======
-              "DocumentIndex": 25,
-              "Title": "UserCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\User\\UserCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:16:49.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\User\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:16:21.255Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UserLoginDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserLoginDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserLoginDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserLoginDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\User\\UserLoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:17:33.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UserPasswordChangeDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserPasswordChangeDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserPasswordChangeDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserPasswordChangeDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\User\\UserPasswordChangeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:17:51.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Mappings\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Mappings\\MappingProfile.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Mappings\\MappingProfile.cs",
-              "RelativeToolTip": "..\\Application\\Mappings\\MappingProfile.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwC8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:45:41.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ReviewDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Review\\ReviewDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Review\\ReviewDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:38:16.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PaginatedResultDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\PaginatedResultDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Common\\PaginatedResultDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\PaginatedResultDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Common\\PaginatedResultDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:57:01.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UserUpdateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserUpdateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\User\\UserUpdateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\User\\UserUpdateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\User\\UserUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:17:12.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ReviewCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Review\\ReviewCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Review\\ReviewCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Review\\ReviewCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:38:36.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ReviewDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ReviewDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ReviewDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ReviewDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Product\\ReviewDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:14:41.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ProductUpdateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductUpdateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductUpdateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductUpdateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Product\\ProductUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:13:46.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ProductFilterDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductFilterDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductFilterDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductFilterDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Product\\ProductFilterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:14:10.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "ProductDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Product\\ProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T11:55:22.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ProductDetailDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductDetailDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductDetailDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductDetailDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Product\\ProductDetailDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAwwAoAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:12:57.175Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ProductCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Product\\ProductCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Product\\ProductCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Product\\ProductCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T11:55:50.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "ProductSimpleDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\ProductSimpleDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\ProductSimpleDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\ProductSimpleDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\ProductSimpleDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:23:44.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "PaymentDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\PaymentDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\PaymentDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\PaymentDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\PaymentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:23:00.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "PaymentCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\PaymentCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\PaymentCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\PaymentCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\PaymentCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:23:18.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "OrderUpdateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderUpdateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderUpdateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderUpdateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\OrderUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:21:42.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "OrderStatusUpdateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderStatusUpdateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderStatusUpdateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderStatusUpdateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\OrderStatusUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:22:00.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "OrderItemDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderItemDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderItemDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderItemDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\OrderItemDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:22:18.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "OrderItemCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderItemCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderItemCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderItemCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\OrderItemCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:22:37.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "OrderDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\OrderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:20:41.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "OrderCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\OrderCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:21:18.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "OrderDetailDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderDetailDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Order\\OrderDetailDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Order\\OrderDetailDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Order\\OrderDetailDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:21:02.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "NotificationUpdateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationUpdateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Notification\\NotificationUpdateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationUpdateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Notification\\NotificationUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:42:16.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "NotificationDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Notification\\NotificationDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Notification\\NotificationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:41:42.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "NotificationCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Notification\\NotificationCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Notification\\NotificationCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Notification\\NotificationCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:41:58.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "MessageDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\MessageDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\MessageDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\MessageDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Chat\\MessageDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:40:55.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "MessageCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\MessageCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\MessageCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\MessageCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Chat\\MessageCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:41:13.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "ChatListItemDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatListItemDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\ChatListItemDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatListItemDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Chat\\ChatListItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:40:03.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ChatDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\ChatDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Chat\\ChatDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:39:42.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "ChatCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Chat\\ChatCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Chat\\ChatCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Chat\\ChatCreateDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAkAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:40:34.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "CategoryUpdateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryUpdateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryUpdateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryUpdateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Category\\CategoryUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:19:10.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "CategoryListItemDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryListItemDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryListItemDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryListItemDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Category\\CategoryListItemDto.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:18:30.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "CategoryDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Category\\CategoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:19:58.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "CategoryCreateDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryCreateDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Category\\CategoryCreateDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Category\\CategoryCreateDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Category\\CategoryCreateDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:18:49.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "ApiResponseDto.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\ApiResponseDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\Common\\ApiResponseDto.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\DTOs\\Common\\ApiResponseDto.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\Common\\ApiResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T12:52:22.273Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Application.csproj",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj",
-              "RelativeDocumentMoniker": "..\\Application\\Application.csproj",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj",
-              "RelativeToolTip": "..\\Application\\Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-10T12:45:06.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "Domain.csproj",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj",
-              "RelativeDocumentMoniker": "..\\Domain\\Domain.csproj",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj",
-              "RelativeToolTip": "..\\Domain\\Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-09T14:19:48.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "20250410094558_RenameField.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Migrations\\20250410094558_RenameField.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250410094558_RenameField.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Migrations\\20250410094558_RenameField.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Migrations\\20250410094558_RenameField.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T09:45:58.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Payment.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Payment.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Payment.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Payment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:37:54.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "PaymentMethod.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\PaymentMethod.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Enums\\PaymentMethod.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\PaymentMethod.cs",
-              "RelativeToolTip": "..\\Domain\\Enums\\PaymentMethod.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:04:00.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "OrderStatus.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\OrderStatus.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Enums\\OrderStatus.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\OrderStatus.cs",
-              "RelativeToolTip": "..\\Domain\\Enums\\OrderStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T14:55:04.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "PaymentStatus.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\PaymentStatus.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Enums\\PaymentStatus.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\PaymentStatus.cs",
-              "RelativeToolTip": "..\\Domain\\Enums\\PaymentStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:03:40.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\UserRole.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Enums\\UserRole.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\UserRole.cs",
-              "RelativeToolTip": "..\\Domain\\Enums\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T14:20:06.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "KlikavaDbContext.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\KlikavaDbContext.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\KlikavaDbContext.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Data\\KlikavaDbContext.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\KlikavaDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T14:07:48.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\OrderItem.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\OrderItem.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\OrderItem.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T14:56:36.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Order.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Order.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Order.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwB0AAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:37:49.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "Notifications.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Notifications.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Notifications.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Notifications.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Notifications.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:23:59.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "Messages.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Messages.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Messages.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Messages.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Messages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:22:19.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "Chat.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Chat.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Chat.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Chat.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Chat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:36:44.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Category.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Entities\\Category.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:35:00.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "20250409222306_InitialCreate.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Migrations\\20250409222306_InitialCreate.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250409222306_InitialCreate.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Migrations\\20250409222306_InitialCreate.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Migrations\\20250409222306_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T22:23:06.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "Infrastructure.csproj",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Infrastructure.csproj",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj",
-              "RelativeToolTip": "..\\Infrastructure\\Infrastructure.csproj",
-              "ViewState": "AgIAAA4AAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-09T21:54:54.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T21:53:54.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "Aliexpress-Backend.csproj",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
-              "RelativeDocumentMoniker": "Aliexpress-Backend.csproj",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
-              "RelativeToolTip": "Aliexpress-Backend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-09T22:09:05.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "Shared.csproj",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj",
-              "RelativeDocumentMoniker": "..\\Shared\\Shared.csproj",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj",
-              "RelativeToolTip": "..\\Shared\\Shared.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-09T22:19:49.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T22:50:38.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "Container.targets",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\build\\Container.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Users\\Lenovo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\build\\Container.targets",
-              "ToolTip": "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\build\\Container.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Users\\Lenovo\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\build\\Container.targets",
-              "ViewState": "AgIAAPIAAAAAAAAAAAAqwOkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-04-08T20:27:17.601Z",
->>>>>>> volkov
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T21:03:10.44Z"
             }
           ]
         }

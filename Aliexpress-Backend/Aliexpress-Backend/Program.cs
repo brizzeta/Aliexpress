@@ -1,3 +1,6 @@
+using Application.Interfaces;
+using Application.Services;
+using Domain.Interfaces;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,6 +29,15 @@ builder.Services.AddDbContext<KlikavaDbContext>(options =>
     options.EnableDetailedErrors(); // ¬ключаем подробные ошибки дл€ отладки
     options.EnableSensitiveDataLogging(); // ¬ключаем логирование чувствительных данных дл€ отладки (отключите в production)
 });
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
