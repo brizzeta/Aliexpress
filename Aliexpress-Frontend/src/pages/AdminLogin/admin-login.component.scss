@@ -1,0 +1,68 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: px-to-rem(40);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    z-index: 100;
+
+    img { margin-top: px-to-rem(-135); }
+    .admin-form {
+        text-align: center;
+        height: px-to-rem(270);
+        width: px-to-rem(452);
+        background: $grey;
+        border-radius: px-to-rem(10);
+
+
+        input:first-of-type { margin-top: px-to-rem(40); }
+        input {
+            margin-top: px-to-rem(9.5);
+            padding: px-to-rem(10.5 157 10.5 10);
+            background: $white;
+            border: none;
+            border-radius: px-to-rem(10);
+            outline: none;
+            font-size: px-to-rem(16);
+            transition: .25s;
+    
+            &:hover { background: $body-white; }
+            &:focus { outline: px-to-rem(2) solid $light-grey; }
+            &::placeholder { color: $grey; }
+        }
+        button {
+            margin-top: px-to-rem(20.5);
+            padding: px-to-rem(10.5 160.5);
+            background: $black;
+            border: none;
+            border-radius: px-to-rem(10);
+            color: $white;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.025); }
+            &:active { transform: scale(0.975); }
+        }
+        a {
+            display: block;
+            margin-top: px-to-rem(20);
+            font-size: px-to-rem(16);
+            color: $white;
+            transition: .25s;
+
+            &:hover { transform: scale(1.025); }
+            &:active { transform: scale(0.975); }
+        }
+    }
+}

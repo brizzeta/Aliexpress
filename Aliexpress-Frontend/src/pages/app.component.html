@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-    <app-header></app-header>
+    <app-header *ngIf="!shouldHideHeaderFooter()"></app-header>
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
-  </div>
+    <app-footer *ngIf="!shouldHideHeaderFooter()"></app-footer>
+</div>
