@@ -1,9 +1,25 @@
 <div class="overlay">
-    <img src="../../assets/images/svg/FullLogo.svg" alt="logo">
-    <section class="admin-form">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button>Log In</button>
-        <a href="#">Create an account</a>
+    <img src="../../assets/images/svg/FullLogo.svg" alt="logo" [ngClass]="{'registration-logo': showRegistrationForm}">
+    <section class="admin-form" [ngClass]="{'registration-form': showRegistrationForm}">
+        <!-- Форма логина -->
+        <ng-container *ngIf="!showRegistrationForm">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Log In</button>
+            <a href="#" (click)="toggleForm(); $event.preventDefault()">Create an account</a>
+        </ng-container>
+        <!-- Форма регистрации -->
+        <ng-container *ngIf="showRegistrationForm">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <input type="number" placeholder="Phone">
+            <input type="text" placeholder="Country">
+            <input type="text" placeholder="City">
+            <input type="text" placeholder="Address">
+            <button class="reg">Register</button>
+            <a href="#" class="reg-a" (click)="toggleForm(); $event.preventDefault()">Already have an account?</a>
+        </ng-container>
     </section>
 </div>

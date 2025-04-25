@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet, RouterModule, Router, NavigationEnd } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { HeaderComponent } from './Header/header.component';
 import { FooterComponent } from './Footer/footer.component';
@@ -9,7 +10,15 @@ import { LoginComponent } from './Login/login.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, HeaderComponent, FooterComponent, HomeComponent, LoginComponent],
+  imports: [ 
+    RouterOutlet, 
+    RouterModule, 
+    HeaderComponent, 
+    FooterComponent, 
+    HomeComponent, 
+    LoginComponent, 
+    CommonModule
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None

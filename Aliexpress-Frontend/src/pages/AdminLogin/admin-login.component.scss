@@ -16,14 +16,20 @@
     background: $black;
     z-index: 100;
 
-    img { margin-top: px-to-rem(-135); }
+    img {
+        margin-top: px-to-rem(-135); 
+
+        &.registration-logo {
+            margin-top: px-to-rem(-260); 
+            @include media-breakpoint-down(1910) { margin-top: px-to-rem(10); }
+        }
+    }
     .admin-form {
         text-align: center;
         height: px-to-rem(270);
         width: px-to-rem(452);
         background: $grey;
         border-radius: px-to-rem(10);
-
 
         input:first-of-type { margin-top: px-to-rem(40); }
         input {
@@ -63,6 +69,29 @@
 
             &:hover { transform: scale(1.025); }
             &:active { transform: scale(0.975); }
+        }
+        &.registration-form {
+            height: px-to-rem(568);
+            
+            @include media-breakpoint-down(1910) {
+                height: px-to-rem(485);
+
+                input:first-of-type { margin-top: px-to-rem(30); }
+                input {
+                    margin-top: px-to-rem(7);
+                    padding: px-to-rem(9 157 9 10);
+                }
+                button {
+                    margin-top: px-to-rem(10);
+                    padding: px-to-rem(9 160.5);
+                }
+                a { margin-top: px-to-rem(10); }
+            }
+            .reg {
+                margin-top: px-to-rem(22);
+                padding: px-to-rem(10.5 153);
+            }
+            .reg-a { font-size: px-to-rem(12); }
         }
     }
 }
