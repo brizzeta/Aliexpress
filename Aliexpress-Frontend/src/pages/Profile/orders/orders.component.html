@@ -1,66 +1,15 @@
-<section class="orders">
-    <div class="orders-container">
-      <!-- Заголовок -->
-      <h1 class="title">My Orders</h1>
-  
-      <!-- Вкладки -->
-      <div class="tabs">
-        <button 
-          class="tab" 
-          [class.active]="activeTab === 'all'" 
-          (click)="setActiveTab('all')">
-          All Orders
-        </button>
-        <button 
-          class="tab" 
-          [class.active]="activeTab === 'processing'" 
-          (click)="setActiveTab('processing')">
-          Processing
-        </button>
-        <button 
-          class="tab" 
-          [class.active]="activeTab === 'delivered'" 
-          (click)="setActiveTab('delivered')">
-          Delivered
-        </button>
-      </div>
-  
-      <!-- Контент вкладок -->
-      <div class="tab-content">
-        <!-- Вкладка "All Orders" -->
-        <div *ngIf="activeTab === 'all'" class="content">
-          <h2>All Orders</h2>
-          <p>Here you can see all your orders.</p>
-          <!-- Пример списка заказов -->
-          <div class="order-item">
-            <p>Order #1234 - Delivered</p>
-            <p>Date: April 10, 2025</p>
-          </div>
-          <div class="order-item">
-            <p>Order #1235 - Processing</p>
-            <p>Date: April 15, 2025</p>
-          </div>
-        </div>
-  
-        <!-- Вкладка "Processing" -->
-        <div *ngIf="activeTab === 'processing'" class="content">
-          <h2>Processing Orders</h2>
-          <p>These orders are currently being processed.</p>
-          <div class="order-item">
-            <p>Order #1235 - Processing</p>
-            <p>Date: April 15, 2025</p>
-          </div>
-        </div>
-  
-        <!-- Вкладка "Delivered" -->
-        <div *ngIf="activeTab === 'delivered'" class="content">
-          <h2>Delivered Orders</h2>
-          <p>These orders have been delivered.</p>
-          <div class="order-item">
-            <p>Order #1234 - Delivered</p>
-            <p>Date: April 10, 2025</p>
-          </div>
-        </div>
-      </div>
+<div class="orders-container">
+  <div class="tabs-wrapper" *ngIf="showTabs">
+    <div class="tabs">
+      <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+      <a routerLink="orders-tab" routerLinkActive="active">Orders</a>
+      <a routerLink="processing" routerLinkActive="active">Processing</a>
+      <a routerLink="sent" routerLinkActive="active">Sent</a>
+      <a routerLink="delivered" routerLinkActive="active">Delivered</a>
+      <a routerLink="return" routerLinkActive="active">Return</a>
     </div>
-  </section>
+  </div>
+  <div class="tab-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

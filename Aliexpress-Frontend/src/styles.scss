@@ -13,6 +13,7 @@ body {
     -webkit-user-drag: none;
     user-select: none;
     overflow-x: hidden;
+    background-color: $greyish;
 
     
 
@@ -90,10 +91,15 @@ body {
     min-height: 100vh; // Футер всегда внизу экрана
 }
 
-router-outlet {
-    flex: 1 0 auto; // Контент растягивается
-}
 
+router-outlet {
+    flex: 0.55 0 auto; // Контент растягивается
+
+    @include media-breakpoint-down(sm) {
+        flex: 0 0 0; // Делаем router-outlet нулевым по размеру
+        height: 0; 
+    }
+}
 app-footer {
     flex-shrink: 0; // Футер не сжимается
 }

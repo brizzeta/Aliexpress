@@ -1,8 +1,20 @@
-<section class="address-section">
-    <div class="container">
-        <h2></h2>
-        <div class="section-content">
-            <p>&nbsp;profile works!</p>
-        </div>
-    </div>
-</section>
+<div class="profile-container">
+  <div class="sidebar" *ngIf="isMenuVisible">
+    <ul class="menu">
+      <li><a routerLink="/profile/orders" (click)="showContent()">Orders</a></li>
+      <li><a routerLink="/profile/favorites" (click)="showContent()">Favorites</a></li>
+      <li><a routerLink="/profile/history" (click)="showContent()">Browsing history</a></li>
+      <li><a routerLink="/profile/coupons" (click)="showContent()">Coupons</a></li>
+      <li><a routerLink="/profile/chat" (click)="showContent()">Chat</a></li>
+      <li><a routerLink="/profile/reviews" (click)="showContent()">Your feedback</a></li>
+      <li><a routerLink="/profile/addresses" (click)="showContent()">Delivery addresses</a></li>
+      <li><a routerLink="/profile/saved-cards" (click)="showContent()">Saved cards</a></li>
+      <li><a routerLink="/profile/personal" (click)="showContent()">Personal info</a></li>
+      <li><a routerLink="/profile/support" (click)="showContent()">Support</a></li>
+      <li><a routerLink="/profile/logout" (click)="showContent()">Log out</a></li>
+    </ul>
+  </div>
+  <div class="content" [ngClass]="{'full-width': !isMenuVisible}">
+    <router-outlet></router-outlet>
+  </div>
+</div>

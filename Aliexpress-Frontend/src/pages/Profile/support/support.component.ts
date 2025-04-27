@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-notifications',
+  selector: 'app-support',
   standalone: true,
   imports: [
     CommonModule,
     RouterModule
   ],
-  templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.scss']
+  templateUrl: './support.component.html',
+  styleUrls: ['./support.component.scss']
 })
-export class NotificationsComponent {}
+export class SupportComponent {}

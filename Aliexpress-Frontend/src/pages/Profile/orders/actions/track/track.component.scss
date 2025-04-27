@@ -1,0 +1,362 @@
+@use "../../../../../assets/variables.scss" as *;
+@use "../../../../../assets/functions.scss" as *;
+
+// Десктопные стили (базовые, для lg и выше, ≥ 1500px)
+.track-container {
+  width: px-to-rem(510);
+  height: px-to-rem(803);
+  margin-top: px-to-rem(-40);
+  margin-left: px-to-rem(-40);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  .back-arrow {
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-left: px-to-rem(20);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: px-to-rem(36);
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $black;
+  }
+}
+
+.track-graph {
+  margin-top: px-to-rem(37);
+  margin-left: px-to-rem(30);
+  width: px-to-rem(481);
+  height: px-to-rem(702);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  .graph {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    height: px-to-rem(665);
+
+    img[src$="Line_grey.svg"] {
+      margin-left: px-to-rem(7);
+    }
+  }
+
+  .labels {
+    display: flex;
+    flex-direction: column;
+    margin-left: px-to-rem(30);
+    height: px-to-rem(690);
+    justify-content: space-between;
+
+    .label-item {
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: px-to-rem(24);
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        color: $deepgrey;
+        height: px-to-rem(24);
+        display: flex;
+        align-items: center;
+      }
+
+      .delivered {
+        color: #00A751;
+      }
+
+      .sublabel {
+        margin-top: px-to-rem(17);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: px-to-rem(16);
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        color: $deepgrey;
+        height: px-to-rem(16);
+        display: flex;
+        align-items: center;
+      }
+
+      .sublabel.delivered {
+        color: $black;
+      }
+    }
+  }
+}
+
+// Мобильная версия (xs: 0-767px)
+@include media-breakpoint-down(sm) {
+  .track-container {
+    width: px-to-rem(375);
+    height: px-to-rem(812);
+    margin-left: 0;
+  }
+
+  .header {
+    margin-left: px-to-rem(20);
+
+    .back-arrow {
+      width: px-to-rem(15);
+      height: px-to-rem(25);
+    }
+
+    h2 {
+      margin-left: px-to-rem(20);
+      font-size: px-to-rem(36);
+    }
+  }
+
+  .track-graph {
+    margin-top: px-to-rem(0);
+    margin-left: px-to-rem(20);
+    width: px-to-rem(335);
+    height: px-to-rem(419);
+
+    .graph {
+      height: px-to-rem(419);
+
+      img[src$="Line_grey.svg"] {
+        height: px-to-rem(50);
+        margin-left: px-to-rem(7);
+      }
+
+      img[src$="circle_green.svg"],
+      img[src$="circle_grey.svg"] {
+        width: px-to-rem(17);
+        height: px-to-rem(17);
+      }
+    }
+
+    .labels {
+      margin-left: px-to-rem(30);
+      height: px-to-rem(419);
+      justify-content: space-between;
+
+      .label-item {
+        .label {
+          font-size: px-to-rem(15);
+          height: px-to-rem(15);
+        }
+
+        .sublabel {
+          margin-top: px-to-rem(17);
+          font-size: px-to-rem(13);
+          height: px-to-rem(13);
+        }
+      }
+    }
+  }
+}
+
+// Промежуточные диапазоны
+
+// 768px – 1023px (sm – md)
+@include media-breakpoint-between(sm, md) {
+  .track-container {
+    width: px-to-rem(450);
+    height: px-to-rem(700);
+    margin-top: px-to-rem(-20);
+    margin-left: px-to-rem(-20);
+  }
+
+  .header {
+    margin-left: px-to-rem(25);
+
+    .back-arrow {
+      width: px-to-rem(13);
+      height: px-to-rem(22);
+    }
+
+    h2 {
+      margin-left: px-to-rem(18);
+      font-size: px-to-rem(32);
+    }
+  }
+
+  .track-graph {
+    margin-top: px-to-rem(30);
+    margin-left: px-to-rem(25);
+    width: px-to-rem(410);
+    height: px-to-rem(550);
+
+    .graph {
+      height: px-to-rem(500);
+
+      img[src$="Line_grey.svg"] {
+        height: px-to-rem(60);
+        margin-left: px-to-rem(6);
+      }
+
+      img[src$="circle_green.svg"],
+      img[src$="circle_grey.svg"] {
+        width: px-to-rem(15);
+        height: px-to-rem(15);
+      }
+    }
+
+    .labels {
+      margin-left: px-to-rem(25);
+      height: px-to-rem(520);
+      justify-content: space-between;
+
+      .label-item {
+        .label {
+          font-size: px-to-rem(18);
+          height: px-to-rem(18);
+        }
+
+        .sublabel {
+          margin-top: px-to-rem(15);
+          font-size: px-to-rem(14);
+          height: px-to-rem(14);
+        }
+      }
+    }
+  }
+}
+
+// 1024px – 1499px (md – lg)
+@include media-breakpoint-between(md, lg) {
+  .track-container {
+    width: px-to-rem(480);
+    height: px-to-rem(750);
+    margin-top: px-to-rem(-30);
+    margin-left: px-to-rem(-30);
+  }
+
+  .header {
+    margin-left: px-to-rem(28);
+
+    .back-arrow {
+      width: px-to-rem(14);
+      height: px-to-rem(23);
+    }
+
+    h2 {
+      margin-left: px-to-rem(19);
+      font-size: px-to-rem(34);
+    }
+  }
+
+  .track-graph {
+    margin-top: px-to-rem(34);
+    margin-left: px-to-rem(28);
+    width: px-to-rem(440);
+    height: px-to-rem(620);
+
+    .graph {
+      height: px-to-rem(600);
+
+      img[src$="Line_grey.svg"] {
+        height: px-to-rem(80);
+        margin-left: px-to-rem(6);
+      }
+
+      img[src$="circle_green.svg"],
+      img[src$="circle_grey.svg"] {
+        width: px-to-rem(16);
+        height: px-to-rem(16);
+      }
+    }
+
+    .labels {
+      margin-left: px-to-rem(28);
+      height: px-to-rem(620);
+      justify-content: space-between;
+
+      .label-item {
+        .label {
+          font-size: px-to-rem(22);
+          height: px-to-rem(22);
+        }
+
+        .sublabel {
+          margin-top: px-to-rem(16);
+          font-size: px-to-rem(15);
+          height: px-to-rem(15);
+        }
+      }
+    }
+  }
+}
+
+// 1500px – 1919px (lg – xl)
+@include media-breakpoint-between(lg, xl) {
+  .track-container {
+    width: px-to-rem(500);
+    height: px-to-rem(790);
+    margin-top: px-to-rem(-35);
+    margin-left: px-to-rem(-35);
+  }
+
+  .header {
+    margin-left: px-to-rem(29);
+
+    .back-arrow {
+      width: px-to-rem(14);
+      height: px-to-rem(24);
+    }
+
+    h2 {
+      margin-left: px-to-rem(19);
+      font-size: px-to-rem(35);
+    }
+  }
+
+  .track-graph {
+    margin-top: px-to-rem(35);
+    margin-left: px-to-rem(29);
+    width: px-to-rem(470);
+    height: px-to-rem(680);
+
+    .graph {
+      height: px-to-rem(650);
+
+      img[src$="Line_grey.svg"] {
+        height: px-to-rem(88);
+        margin-left: px-to-rem(7);
+      }
+
+      img[src$="circle_green.svg"],
+      img[src$="circle_grey.svg"] {
+        width: px-to-rem(16);
+        height: px-to-rem(16);
+      }
+    }
+
+    .labels {
+      margin-left: px-to-rem(29);
+      height: px-to-rem(670);
+      justify-content: space-between;
+
+      .label-item {
+        .label {
+          font-size: px-to-rem(23);
+          height: px-to-rem(23);
+        }
+
+        .sublabel {
+          margin-top: px-to-rem(16);
+          font-size: px-to-rem(16);
+          height: px-to-rem(16);
+        }
+      }
+    }
+  }
+}

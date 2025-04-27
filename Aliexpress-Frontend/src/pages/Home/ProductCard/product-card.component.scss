@@ -35,6 +35,8 @@
     justify-content: flex-start;
     text-align: left;
   }
+
+
 }
 
 /* Блок с карточками товаров */
@@ -302,5 +304,20 @@
 
   &:hover {
     background-color: darken($green, 10%);
+  }
+}
+
+@include media-breakpoint-between(lg, xl) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: px-to-rem(20);
+    max-width: px-to-rem(1400);
+    margin: 0 auto;
+  }
+
+  .product-card {
+    width: 100%;      // растягиваем по ячейке
+    max-width: none;  // отменяем старое ограничение
   }
 }

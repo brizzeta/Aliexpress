@@ -241,17 +241,16 @@
 .arrow {
     position: absolute;
     top: px-to-rem(600); 
-    width: px-to-rem(100); 
     height: px-to-rem(100);
     cursor: pointer; 
   }
   
   .left-arrow {
-    left: px-to-rem(-32); 
+    left: px-to-rem(0); 
   }
   
   .right-arrow {
-    right: px-to-rem(-32);
+    right: px-to-rem(0);
   }
 
 .bottom-black {
@@ -928,5 +927,14 @@
     height: px-to-rem(110);
   }
 }
+
+// на всех экранах от 768px до 1919px — выравниваем заголовки влево
+@include media-breakpoint-between(sm, xl) {
+  .title,
+  .subtitle {
+    text-align: left !important;
+  }
+}
+
 
 
