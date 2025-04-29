@@ -14,5 +14,8 @@ namespace Application.DTOs.Chat
 
         [Required]
         public string Message { get; set; } = null!;
+
+        [Required]
+        public int SenderId { get; set; }
     }
 }

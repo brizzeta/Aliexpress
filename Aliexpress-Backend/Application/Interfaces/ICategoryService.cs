@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    internal interface ICategoryService
+    public interface ICategoryService
     {
         Task<ApiResponseDto<IEnumerable<CategoryDto>>> GetAllCategoriesAsync();
         Task<ApiResponseDto<CategoryDto>> GetCategoryByIdAsync(int id);
