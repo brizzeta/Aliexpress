@@ -17,6 +17,8 @@ namespace Application.DTOs.Order
         public int Quantity { get; set; }
 
         public string? ShippingAddress { get; set; }
+        public int BuyerId { get; set; }
+
 
         [Required]
         public List<OrderItemCreateDto> OrderItems { get; set; } = new List<OrderItemCreateDto>();
