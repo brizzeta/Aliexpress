@@ -17,11 +17,13 @@ namespace Application.Services
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
+        private readonly IJwtTokenService _jwtTokenService;
 
-        public UserService(IUnitOfWork uow, IMapper mapper)
+        public UserService(IUnitOfWork uow, IMapper mapper, IJwtTokenService jwtTokenService)
         {
             _uow = uow;
             _mapper = mapper;
+            _jwtTokenService = jwtTokenService;
         }
 
         public async Task<ApiResponseDto<UserDto>> RegisterUserAsync(UserCreateDto userCreateDto)
@@ -63,8 +65,11 @@ namespace Application.Services
                 if (!user.IsActive)
                     return ApiResponseDto<UserDto>.FailureResult("Account is deactivated");
 
+                var token = _jwtTokenService.GenerateToken(user);
                 var userDto = _mapper.Map<UserDto>(user);
-                return ApiResponseDto<UserDto>.SuccessResult(userDto, "Authentication successful");
+                userDto.Token = token;
+
+                return ApiResponseDto<UserDto>.SuccessResult(userDto, "Login successful");
             }
             catch (Exception ex)
             {

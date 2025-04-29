@@ -19,5 +19,7 @@ namespace Application.DTOs.User
         public string? ProfileImageUrl { get; set; }
         public double Rating { get; set; }
         public bool IsActive { get; set; }
+        public string? Token { get; set; }
+
     }
 }

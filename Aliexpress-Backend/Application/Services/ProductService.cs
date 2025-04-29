@@ -10,7 +10,6 @@ using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
 using Domain.Interfaces;
-using Infrastructure.Data;
 
 namespace Application.Services
 {

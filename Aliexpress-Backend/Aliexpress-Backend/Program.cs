@@ -1,8 +1,13 @@
+using System.Text;
 using Application.Interfaces;
 using Application.Services;
 using Domain.Interfaces;
 using Infrastructure.Data;
+using Infrastructure.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Shared.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +34,30 @@ builder.Services.AddDbContext<KlikavaDbContext>(options =>
     options.EnableDetailedErrors(); // ¬ключаем подробные ошибки дл€ отладки
     options.EnableSensitiveDataLogging(); // ¬ключаем логирование чувствительных данных дл€ отладки (отключите в production)
 });
+
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    var jwt = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwt.Issuer,
+        ValidAudience = jwt.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.SecretKey))
+    };
+});
+
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 

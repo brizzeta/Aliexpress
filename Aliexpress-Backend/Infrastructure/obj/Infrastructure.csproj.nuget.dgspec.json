@@ -1,23 +1,102 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj": {
+    "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\obj\\",
+        "projectUniqueName": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,9 +121,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -65,24 +144,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\obj\\",
+        "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,11 +176,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj"
+              "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Application\\Application.csproj"
               },
-              "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj"
+              "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Domain.csproj"
+              },
+              "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj"
               }
             }
           }
@@ -114,14 +196,18 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.13, )"
@@ -163,24 +249,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj": {
+    "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Technologies\\Projects\\Aliexpress\\Aliexpress-Backend\\Shared\\obj\\",
+        "projectPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -205,9 +291,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -228,7 +314,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -124,3 +124,13 @@ C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\b
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\AutoMapper.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
