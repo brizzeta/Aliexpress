@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Home/home.component';
 import { AdminLoginComponent } from './AdminLogin/admin-login.component';
+import { AdminSidebarComponent } from './AdminLogin/admin-sidebar/admin-sidebar.component';
 import { ProfileComponent } from './Profile/profile.component';
 import { LoginComponent } from './Profile/login/login.component';
 import { OrdersComponent } from './Profile/orders/orders.component';
@@ -16,7 +17,13 @@ import { NotificationsComponent } from './Profile/notifications/notifications.co
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'admin', component: AdminLoginComponent },
+  {
+    path: 'admin', 
+    children: [
+      { path: '', component: AdminLoginComponent },
+      { path: 'sidebar', component: AdminSidebarComponent },
+    ]
+  },
   { 
     path: 'profile', 
     children: [
