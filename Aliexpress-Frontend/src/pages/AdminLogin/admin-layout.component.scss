@@ -1,0 +1,12 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+.admin-layout {
+    display: flex;
+    height: 100vh;
+}
+.sidebar { width: px-to-rem(349); }
+.admin-content {
+    flex-grow: 1;
+    box-sizing: border-box;
+}

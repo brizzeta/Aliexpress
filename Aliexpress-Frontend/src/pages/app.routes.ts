@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Home/home.component';
 import { AdminLoginComponent } from './AdminLogin/admin-login.component';
 import { AdminSidebarComponent } from './AdminLogin/admin-sidebar/admin-sidebar.component';
+import { AdminLayoutComponent } from './AdminLogin/admin-layout.component';
+import { AdminUsersComponent } from './AdminLogin/admin-users/admin-users.component';
 import { ProfileComponent } from './Profile/profile.component';
 import { LoginComponent } from './Profile/login/login.component';
 import { OrdersComponent } from './Profile/orders/orders.component';
@@ -18,10 +20,16 @@ import { NotificationsComponent } from './Profile/notifications/notifications.co
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'admin', 
+    path: 'admin',
     children: [
       { path: '', component: AdminLoginComponent },
-      { path: 'sidebar', component: AdminSidebarComponent },
+      {
+        path: '',
+        component: AdminLayoutComponent,
+        children: [
+          { path: 'users', component: AdminUsersComponent },
+        ]
+      }
     ]
   },
   { 
