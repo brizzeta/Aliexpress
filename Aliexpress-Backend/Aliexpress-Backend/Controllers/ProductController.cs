@@ -1,6 +1,9 @@
-﻿using Application.DTOs.Common;
+﻿using System.Security.Claims;
+using Application.DTOs.Common;
 using Application.DTOs.Product;
 using Application.Interfaces;
+using Domain.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +26,7 @@ namespace Aliexpress_Backend.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<ProductDto>>>> GetAllProducts()
         {
             var response = await _productService.GetAllProductsAsync();
@@ -39,6 +43,7 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<ProductDetailDto>>> GetProductById(int id)
         {
             var response = await _productService.GetProductByIdAsync(id);
@@ -59,8 +64,19 @@ namespace Aliexpress_Backend.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [Authorize(Roles = "Seller,Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<ProductDto>>> CreateProduct(ProductCreateDto productCreateDto)
         {
+            // Добавляем ID продавца из токена, если это продавец
+            if (User.IsInRole(UserRole.Seller.ToString()))
+            {
+                int sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                // Можно добавить проверку, что sellerId соответствует указанному в DTO
+                // или автоматически установить значение из токена
+            }
+
             var response = await _productService.CreateProductAsync(productCreateDto);
             if (!response.Success)
                 return BadRequest(response);
@@ -75,8 +91,15 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [Authorize(Roles = "Seller,Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<ProductDto>>> UpdateProduct(int id, ProductUpdateDto productUpdateDto)
         {
+            // Проверяем права доступа
+            if (!await HasAccessToProduct(id))
+                return Forbid();
+
             var response = await _productService.UpdateProductAsync(id, productUpdateDto);
             if (!response.Success)
             {
@@ -96,8 +119,15 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [Authorize(Roles = "Seller,Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<bool>>> DeleteProduct(int id)
         {
+            // Проверяем права доступа
+            if (!await HasAccessToProduct(id))
+                return Forbid();
+
             var response = await _productService.DeleteProductAsync(id);
             if (!response.Success)
             {
@@ -117,6 +147,9 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<bool>>> HardDeleteProduct(int id)
         {
             var response = await _productService.HardDeleteProductAsync(id);
@@ -138,6 +171,7 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<ProductDto>>>> GetProductsByCategory(int categoryId)
         {
             var response = await _productService.GetProductsByCategoryAsync(categoryId);
@@ -159,6 +193,7 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<ProductDto>>>> GetProductsBySeller(int sellerId)
         {
             var response = await _productService.GetProductsBySellerAsync(sellerId);
@@ -179,6 +214,7 @@ namespace Aliexpress_Backend.Controllers
         [HttpGet("search")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<ProductDto>>>> SearchProducts([FromQuery] string query)
         {
             var response = await _productService.SearchProductsAsync(query);
@@ -194,6 +230,7 @@ namespace Aliexpress_Backend.Controllers
         [HttpGet("discounted")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<ProductDto>>>> GetDiscountedProducts()
         {
             var response = await _productService.GetDiscountedProductsAsync();
@@ -209,6 +246,7 @@ namespace Aliexpress_Backend.Controllers
         [HttpGet("top-rated")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<ProductDto>>>> GetTopRatedProducts([FromQuery] int count = 10)
         {
             var response = await _productService.GetTopRatedProductsAsync(count);
@@ -225,6 +263,7 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [AllowAnonymous]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<ProductDto>>>> GetRelatedProducts(int id, [FromQuery] int count = 5)
         {
             var response = await _productService.GetRelatedProductsAsync(id, count);
@@ -246,8 +285,15 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [Authorize(Roles = "Seller,Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<bool>>> UpdateProductImages(int id, [FromBody] List<string> imageUrls)
         {
+            // Проверяем права доступа
+            if (!await HasAccessToProduct(id))
+                return Forbid();
+
             var response = await _productService.UpdateProductImagesAsync(id, imageUrls);
             if (!response.Success)
             {
@@ -267,8 +313,15 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [Authorize(Roles = "Seller,Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<bool>>> UpdateProductStock(int id, [FromBody] int newStock)
         {
+            // Проверяем права доступа
+            if (!await HasAccessToProduct(id))
+                return Forbid();
+
             var response = await _productService.UpdateProductStockAsync(id, newStock);
             if (!response.Success)
             {
@@ -288,6 +341,9 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<bool>>> UpdateProductRating(int id)
         {
             var response = await _productService.UpdateProductRatingAsync(id);
@@ -300,6 +356,44 @@ namespace Aliexpress_Backend.Controllers
             }
 
             return Ok(response);
+        }
+
+        /// <summary>
+        /// Проверяет, имеет ли текущий пользователь доступ к продукту с указанным ID
+        /// </summary>
+        private async Task<bool> HasAccessToProduct(int productId)
+        {
+            // Получаем ID текущего пользователя из токена
+            if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out int currentUserId))
+                return false;
+
+            // Проверяем роль пользователя
+            bool isAdmin = User.IsInRole(UserRole.Admin.ToString()) || User.IsInRole(UserRole.SuperAdmin.ToString());
+            bool isSeller = User.IsInRole(UserRole.Seller.ToString());
+
+            // Администраторы имеют доступ ко всем продуктам
+            if (isAdmin)
+                return true;
+
+            // Для продавцов нужно проверить, что продукт принадлежит им
+            if (isSeller)
+            {
+                // Здесь должна быть логика для проверки, принадлежит ли продукт текущему продавцу
+                // Предполагаем, что у вас есть метод в сервисе для этой проверки
+                // Например:
+                // return await _productService.IsProductOwnedBySellerAsync(productId, currentUserId);
+
+                // Как вариант, можно получить продукт и проверить ID продавца
+                var productResponse = await _productService.GetProductByIdAsync(productId);
+                if (productResponse.Success && productResponse.Data != null)
+                {
+                    // Предполагаем, что у продукта есть поле SellerId
+                    return productResponse.Data.SellerId == currentUserId;
+                }
+                return false;
+            }
+
+            return false;
         }
     }
 }

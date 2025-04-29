@@ -91,7 +91,10 @@ namespace Application.Mappings
             CreateMap<OrderItemCreateDto, OrderItem>();
 
             // Payment mappings
-            CreateMap<Payment, PaymentDto>();
+            CreateMap<Payment, PaymentDto>()
+                .ForMember(dest => dest.BuyerId, opt => opt.MapFrom(src => src.Order.BuyerId))
+                .ForMember(dest => dest.SellerId, opt => opt.MapFrom(src => src.Order.Product.SellerId));
+
             CreateMap<PaymentCreateDto, Payment>()
                 .ForMember(dest => dest.PaymentDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(_ => PaymentStatus.Pending));
