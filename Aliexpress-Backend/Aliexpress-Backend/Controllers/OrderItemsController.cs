@@ -22,6 +22,9 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("byOrder/{orderId}")]
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<OrderItemDto>>>> GetOrderItems(int orderId)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -50,7 +53,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPost("{orderId}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Buyer,Admin,SuperAdmin")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -83,7 +86,7 @@ namespace Aliexpress_Backend.Controllers
 
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Buyer,Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<bool>>> DeleteOrderItem(int id)
         {
             var response = await _orderItemService.DeleteOrderItemAsync(id);

@@ -19,6 +19,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("unread")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<NotificationDto>>> GetCurrentUserUnreadNotifications()
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -27,7 +28,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("unread/{userId}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<NotificationDto>>> GetUserUnreadNotifications(int userId)
         {
             var notifications = await _notificationService.GetUnreadNotificationsAsync(userId);
@@ -35,6 +36,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPost("markAsRead")]
+        [Authorize]
         public async Task<ActionResult> MarkCurrentUserNotificationsAsRead()
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -43,7 +45,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPost("markAsRead/{userId}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<ActionResult> MarkUserNotificationsAsRead(int userId)
         {
             await _notificationService.MarkAllAsReadAsync(userId);
@@ -51,7 +53,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<ActionResult> AddNotification([FromBody] NotificationCreateDto notificationDto)
         {
             if (!ModelState.IsValid)
