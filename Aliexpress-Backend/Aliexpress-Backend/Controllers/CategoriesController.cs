@@ -8,6 +8,7 @@ namespace Aliexpress_Backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
@@ -36,7 +37,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<CategoryDto>>> CreateCategory([FromBody] CategoryCreateDto dto)
         {
             if (!ModelState.IsValid)
@@ -51,7 +52,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<CategoryDto>>> UpdateCategory(int id, [FromBody] CategoryUpdateDto dto)
         {
             if (!ModelState.IsValid)
@@ -66,7 +67,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<ActionResult<ApiResponseDto<bool>>> DeleteCategory(int id)
         {
             var response = await _categoryService.DeleteCategoryAsync(id);

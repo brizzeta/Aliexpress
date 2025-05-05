@@ -21,6 +21,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<ChatDto>> GetChat(int id)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -37,6 +38,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("user")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<ChatDto>>> GetCurrentUserChats()
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -45,6 +47,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("buyer/{buyerId}")]
+        [Authorize(Roles ="Buyer")]
         public async Task<ActionResult<IEnumerable<ChatDto>>> GetBuyerChats(int buyerId)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -58,6 +61,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("seller/{sellerId}")]
+        [Authorize(Roles = "Seller")]
         public async Task<ActionResult<IEnumerable<ChatDto>>> GetSellerChats(int sellerId)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -71,6 +75,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult> CreateChat([FromBody] ChatCreateDto chatDto)
         {
             if (!ModelState.IsValid)
@@ -87,6 +92,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<ActionResult> DeleteChat(int id)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));

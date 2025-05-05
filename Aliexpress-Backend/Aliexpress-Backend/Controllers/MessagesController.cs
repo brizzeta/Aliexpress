@@ -21,6 +21,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("chat/{chatId}")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<MessageDto>>> GetChatMessages(int chatId)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -38,6 +39,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpGet("chat/{chatId}/recent/{count}")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<MessageDto>>> GetRecentChatMessages(int chatId, int count)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -55,6 +57,7 @@ namespace Aliexpress_Backend.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult> SendMessage([FromBody] MessageCreateDto messageDto)
         {
             if (!ModelState.IsValid)
