@@ -72,9 +72,15 @@ namespace Aliexpress_Backend.Controllers
             // Добавляем ID продавца из токена, если это продавец
             if (User.IsInRole(UserRole.Seller.ToString()))
             {
-                int sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-                // Можно добавить проверку, что sellerId соответствует указанному в DTO
-                // или автоматически установить значение из токена
+                if (int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out int sellerId))
+                {
+                    // Автоматически устанавливаем значение SellerId из токена
+                    productCreateDto.SellerId = sellerId;
+                }
+                else
+                {
+                    return BadRequest(ApiResponseDto<ProductDto>.FailureResult("Invalid user ID in token"));
+                }
             }
 
             var response = await _productService.CreateProductAsync(productCreateDto);
@@ -375,24 +381,21 @@ namespace Aliexpress_Backend.Controllers
             if (isAdmin)
                 return true;
 
-            // Для продавцов нужно проверить, что продукт принадлежит им
+            // Для продавцов проверяем, принадлежит ли продукт им
             if (isSeller)
             {
-                // Здесь должна быть логика для проверки, принадлежит ли продукт текущему продавцу
-                // Предполагаем, что у вас есть метод в сервисе для этой проверки
-                // Например:
-                // return await _productService.IsProductOwnedBySellerAsync(productId, currentUserId);
-
-                // Как вариант, можно получить продукт и проверить ID продавца
+                // Получаем продукт для проверки
                 var productResponse = await _productService.GetProductByIdAsync(productId);
-                if (productResponse.Success && productResponse.Data != null)
-                {
-                    // Предполагаем, что у продукта есть поле SellerId
-                    return productResponse.Data.SellerId == currentUserId;
-                }
-                return false;
+
+                // Если продукт не найден, возвращаем false
+                if (!productResponse.Success || productResponse.Data == null)
+                    return false;
+
+                // Проверяем, принадлежит ли продукт текущему продавцу
+                return productResponse.Data.SellerId == currentUserId;
             }
 
+            // Для всех остальных ролей (покупатели и т.д.) доступ запрещен
             return false;
         }
     }
