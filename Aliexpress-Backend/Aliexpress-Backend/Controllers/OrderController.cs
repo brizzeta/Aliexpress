@@ -77,7 +77,6 @@ namespace Aliexpress_Backend.Controllers
             return Ok(response);
         }
 
-
         /// <summary>
         /// Получить заказы текущего покупателя
         /// </summary>
@@ -88,7 +87,7 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<OrderDto>>>> GetMyOrders()
         {
-            int buyerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int buyerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
             var response = await _orderService.GetOrdersByBuyerIdAsync(buyerId);
 
             if (response.Success)
@@ -125,20 +124,39 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ApiResponseDto<IEnumerable<OrderDto>>>> GetOrdersForProduct(int productId)
         {
-            // Для продавцов нужна дополнительная проверка, что это их товар
-            string userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+            string userRole = User.FindFirst(ClaimTypes.Role)?.Value!;
+            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
             bool isAdmin = userRole == UserRole.Admin.ToString() || userRole == UserRole.SuperAdmin.ToString();
 
-            if (!isAdmin)
+            // Для продавцов проверяем принадлежность товара путем получения заказов
+            // и проверки первого заказа (если он есть)
+            if (!isAdmin && userRole == UserRole.Seller.ToString())
             {
-                // Здесь должна быть проверка, что продукт принадлежит продавцу
-                // Для этого потребуется дополнительный сервис
-                // Пример реализации:
-                // int sellerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-                // bool isOwner = await _productService.IsProductOwnedBySellerAsync(productId, sellerId);
-                // if (!isOwner) return Forbid();
+                // Получаем ответ с заказами по данному productId
+                var tempResponse = await _orderService.GetOrdersForProductAsync(productId);
+
+                // Если нет заказов или произошла ошибка - проверить владение нельзя
+                // (здесь имеет смысл вернуть пустой список успешно, так как заказов просто нет)
+                if (!tempResponse.Success)
+                    return BadRequest(tempResponse);
+
+                // Если есть заказы, проверяем принадлежность товара продавцу
+                // по первому из них (все заказы относятся к одному продукту с одним продавцом)
+                var orders = tempResponse.Data.ToList();
+                if (orders.Any())
+                {
+                    // Получаем детальную информацию о заказе для проверки sellerId
+                    var orderDetail = await _orderService.GetOrderByIdAsync(orders.First().Id);
+                    if (orderDetail.Success && orderDetail.Data?.Product != null &&
+                        orderDetail.Data.Product.SellerId != userId)
+                    {
+                        return Forbid();
+                    }
+                }
+                // Если заказов нет, получаем пустой список
             }
 
             var response = await _orderService.GetOrdersForProductAsync(productId);
@@ -160,7 +178,7 @@ namespace Aliexpress_Backend.Controllers
         public async Task<ActionResult<ApiResponseDto<OrderDto>>> CreateOrder([FromBody] OrderCreateDto orderCreateDto)
         {
             // Устанавливаем ID покупателя из токена
-            int buyerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            int buyerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
             orderCreateDto.BuyerId = buyerId;
 
             var response = await _orderService.CreateOrderAsync(orderCreateDto);
@@ -184,7 +202,7 @@ namespace Aliexpress_Backend.Controllers
         public async Task<ActionResult<ApiResponseDto<bool>>> UpdateOrder(int id, [FromBody] OrderUpdateDto orderUpdateDto)
         {
             // Проверяем, что пользователь имеет право обновлять этот заказ
-            string userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+            string userRole = User.FindFirst(ClaimTypes.Role)?.Value!;
             bool isAdmin = userRole == UserRole.Admin.ToString() || userRole == UserRole.SuperAdmin.ToString();
 
             if (!isAdmin)
@@ -194,7 +212,7 @@ namespace Aliexpress_Backend.Controllers
                 if (!orderCheck.Success || orderCheck.Data == null)
                     return NotFound(new ApiResponseDto<bool> { Success = false, Message = "Order not found" });
 
-                int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+                int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
                 if (orderCheck.Data.BuyerId != userId)
                     return Forbid();
             }
@@ -224,7 +242,7 @@ namespace Aliexpress_Backend.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ApiResponseDto<bool>>> UpdateOrderStatus(int id, [FromBody] OrderStatusUpdateDto statusUpdateDto)
         {
-            string userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+            string userRole = User.FindFirst(ClaimTypes.Role)?.Value!;
             bool isAdmin = userRole == UserRole.Admin.ToString() || userRole == UserRole.SuperAdmin.ToString();
 
             if (!isAdmin && userRole == UserRole.Seller.ToString())
@@ -233,9 +251,9 @@ namespace Aliexpress_Backend.Controllers
                 if (!orderCheck.Success || orderCheck.Data == null)
                     return NotFound(new ApiResponseDto<bool> { Success = false, Message = "Order not found" });
 
-                int currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value!);
+                int currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 
-                // ✅ сравниваем с SellerId товара, связанного с заказом
+                // Сравниваем с SellerId товара, связанного с заказом
                 if (orderCheck.Data.Product == null || orderCheck.Data.Product.SellerId != currentUserId)
                     return Forbid();
             }
