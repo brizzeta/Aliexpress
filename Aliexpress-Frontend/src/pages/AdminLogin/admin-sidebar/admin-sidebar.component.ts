@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
 export class AdminSidebarComponent {
   menuItems = [
     { name: 'Users', path: '/admin/users' },
+    { name: 'Admins', path: '/admin/admins' },
     { name: 'Products', path: '/admin/products' },
-    { name: 'Admins', path: '/admin/admins' }
+    { name: 'Categories', path: '/admin/categories' }
   ];
 }

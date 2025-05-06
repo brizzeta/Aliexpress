@@ -35,13 +35,6 @@ export class AdminUsersComponent implements OnInit {
       { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'admin' },
       { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
       { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'customer' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' }
     ];
     document.body.style.overflow = 'hidden';
     this.updateTotalPages();
@@ -102,8 +95,6 @@ export class AdminUsersComponent implements OnInit {
   }
   toggleSelectAll(): void { // Выбор всех пользователей на странице
     this.allSelected = !this.allSelected;
-    this.paginatedUsers.forEach(user => {
-      user.selected = this.allSelected;
-    });
+    this.paginatedUsers.forEach(user => { user.selected = this.allSelected; });
   }
 }

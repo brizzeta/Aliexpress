@@ -4,8 +4,9 @@ import { HomeComponent } from './Home/home.component';
 import { AdminLoginComponent } from './AdminLogin/admin-login.component';
 import { AdminLayoutComponent } from './AdminLogin/admin-layout.component';
 import { AdminUsersComponent } from './AdminLogin/admin-users/admin-users.component';
-import { AdminProductsComponent } from './AdminLogin/admin-products/admin-products.component';
 import { AdminAdminsComponent } from './AdminLogin/admin-admins/admin-admins.component';
+import { AdminProductsComponent } from './AdminLogin/admin-products/admin-products.component';
+import { AdminCategoriesComponent } from './AdminLogin/admin-categories/admin-categories.component';
 import { ProfileComponent } from './Profile/profile.component';
 import { LoginComponent } from './Profile/login/login.component';
 import { OrdersComponent } from './Profile/orders/orders.component';
@@ -29,8 +30,9 @@ export const routes: Routes = [
         component: AdminLayoutComponent,
         children: [
           { path: 'users', component: AdminUsersComponent },
+          { path: 'admins', component: AdminAdminsComponent },
           { path: 'products', component: AdminProductsComponent },
-          { path: 'admins', component: AdminAdminsComponent }
+          { path: 'categories', component: AdminCategoriesComponent }
         ]
       }
     ]
