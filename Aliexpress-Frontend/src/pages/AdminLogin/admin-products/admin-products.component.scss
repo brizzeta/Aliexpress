@@ -197,6 +197,11 @@
                 outline: none;
                 border: none;
                 font-size: px-to-rem(36);
+                cursor: pointer;
+                transition: .25s;
+
+                &:hover { transform: scale(1.1); }
+                &:active { transform: scale(0.9); }
             }
         }
     }

@@ -18,7 +18,7 @@ interface User {
   styleUrl: './admin-users.component.scss'
 })
 export class AdminUsersComponent implements OnInit {
-  users: User[] = [];   // Массив пользователей
+  users: User[] = []; // Массив пользователей
   // Для фильтрации
   globalSearchText: string = '';
   searchText: string = '';
@@ -34,7 +34,7 @@ export class AdminUsersComponent implements OnInit {
       { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'super admin' },
       { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'admin' },
       { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'seller' },
-      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'customer' },
+      { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'customer' }
     ];
     document.body.style.overflow = 'hidden';
     this.updateTotalPages();
@@ -49,7 +49,6 @@ export class AdminUsersComponent implements OnInit {
         user.lastName.toLowerCase().includes(globalFilter) ||
         user.email.toLowerCase().includes(globalFilter) ||
         user.role.toLowerCase().includes(globalFilter);
-        
       const matchesSpecific = !specificFilter || // Проверяем конкретный поиск
         user.firstName.toLowerCase().includes(specificFilter) ||
         user.lastName.toLowerCase().includes(specificFilter) ||
@@ -66,7 +65,7 @@ export class AdminUsersComponent implements OnInit {
     const startIndex = (this.currentPage - 1) * this.pageSize;
     return filteredData.slice(startIndex, startIndex + this.pageSize);
   }
-  updateTotalPages(filteredCount?: number): void {   // Обновление общего количества страниц
+  updateTotalPages(filteredCount?: number): void { // Обновление общего количества страниц
     const count = filteredCount !== undefined ? filteredCount : this.users.length;
     this.totalPages = Math.ceil(count / this.pageSize);
     // Если текущая страница больше общего количества страниц, переходим на последнюю

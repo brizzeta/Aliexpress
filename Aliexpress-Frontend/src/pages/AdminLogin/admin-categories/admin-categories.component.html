@@ -1,1 +1,65 @@
-<p>Admin-categories!</p>
+<section class="users-panel">
+    <div class="top-search">
+        <img id="search" src="../../../assets/images/svg/GlobalSearch.svg" alt="search">
+        <input type="text" placeholder="Global search..." [(ngModel)]="globalSearchText">
+        <img src="../../../assets/images/svg/User.svg" alt="user">
+    </div>
+    <div class="bottom-search">
+        <div class="input-wrapper">
+            <img id="search" src="../../../assets/images/svg/GlobalSearch.svg" alt="search">
+            <input type="text" placeholder="Search..." [(ngModel)]="searchText">
+            <img id="settings" src="../../../assets/images/svg/Settings.svg" alt="settings">
+        </div>
+        <button>Add New</button>
+    </div>
+    <div class="catalog-container">
+        <table>
+            <colgroup>
+                <col style="width: 5.6%">
+                <col style="width: 32.2%">
+                <col style="width: 69%">
+                <col style="width: 25.5%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" [checked]="allSelected" (change)="toggleSelectAll()"></th>
+                    <th>Name</th>
+                    <th>Subcategory</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let category of paginatedCategories">
+                    <td><input type="checkbox"></td>
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.subcategory }}</td>
+                    <td>
+                        <div class="action-icons">
+                            <img src="../../../assets/images/svg/Edit.svg" alt="edit">
+                            <img src="../../../assets/images/svg/Close.svg" alt="close">
+                        </div>
+                    </td>
+                </tr>
+                <tr *ngIf="paginatedCategories.length === 0">
+                    <td colspan="6" class="no-data">No categories found</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="bottom-buttons">
+        <button>Trash selected</button>
+        <button>Filter selected</button>
+    </div>
+    <div class="pagination">
+        <span>Rows per page:</span>
+        <select name="pages" [ngModel]="pageSize" (change)="onPageSizeChange($event)">
+            <option *ngFor="let size of pageSizeOptions" [value]="size">{{ size }}</option>
+        </select>
+        <span id="page-info">{{ pageInfo }}</span>
+        <div class="arrows">
+            <button (click)="goToFirstPage()" [disabled]="currentPage === 1">&laquo;</button>
+            <button (click)="goToPreviousPage()" [disabled]="currentPage === 1">&lsaquo;</button>
+            <button (click)="goToNextPage()" [disabled]="currentPage === totalPages">&rsaquo;</button>
+            <button (click)="goToLastPage()" [disabled]="currentPage === totalPages">&raquo;</button>
+        </div>
+    </div>
+</section>
