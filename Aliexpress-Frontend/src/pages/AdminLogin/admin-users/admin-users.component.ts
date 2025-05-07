@@ -9,6 +9,10 @@ interface User {
   role: string;
   selected?: boolean;
 }
+interface FilterButton {
+  name: string;
+  isSelected: boolean;
+}
 
 @Component({
   selector: 'app-admin-users',
@@ -28,6 +32,12 @@ export class AdminUsersComponent implements OnInit {
   pageSizeOptions: number[] = [1, 3, 5];
   totalPages: number = 1;
   allSelected: boolean = false; // Выбор чекбоксов
+  isFormVisible: boolean = false; // смена флага формы фильтрации
+  isFormClosing: boolean = false; // флаг для анимации закрытия
+  filterButtons: FilterButton[] = [ // Добавим состояние для кнопок фильтрации
+    { name: 'Customer', isSelected: false },
+    { name: 'Seller', isSelected: false }
+  ];
   
   ngOnInit(): void { // Инициализация массива пользователей
     this.users = [
@@ -38,6 +48,24 @@ export class AdminUsersComponent implements OnInit {
     ];
     document.body.style.overflow = 'hidden';
     this.updateTotalPages();
+  }
+
+  toggleFilterButton(index: number): void { // Метод переключения выбора кнопки фильтра
+    this.filterButtons[index].isSelected = !this.filterButtons[index].isSelected;
+  }
+  openForm(): void { // Метод открытия формы
+    this.isFormVisible = true; 
+    this.isFormClosing = false;
+  }
+  closeForm(event: MouseEvent): void { // Метод закрытия формы
+    const target = event.target as HTMLElement; // Проверяем, что клик был по оверлею
+    if (target.classList.contains('form-overlay')) { 
+      this.isFormClosing = true; // Сначала активируем анимацию закрытия
+      setTimeout(() => {
+        this.isFormVisible = false; // Фактически скрываем форму после анимации
+        this.isFormClosing = false;
+      }, 300); // Время анимации fadeOut в миллисекундах
+    }
   }
   
   get filteredUsers(): User[] { // Фильтрация пользователей

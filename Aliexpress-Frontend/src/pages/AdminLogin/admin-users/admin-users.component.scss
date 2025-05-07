@@ -1,6 +1,134 @@
 @use "../../../assets/variables.scss" as *;
 @use "../../../assets/functions.scss" as *;
 
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    &.closing {
+        animation: fadeOut 0.3s ease-out forwards;
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    }
+    form {
+        text-align: center;
+        margin-top: px-to-rem(-97);
+        height: px-to-rem(302);
+        width: px-to-rem(456);
+        background: $white;
+        border-radius: px-to-rem(10);
+        transform: translateY(px-to-rem(-20));
+        opacity: 0;
+        animation: slideIn 0.4s ease-out 0.1s forwards;
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(px-to-rem(-20));
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        &.closing {
+            animation: slideOut 0.3s ease-out forwards;
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateY(px-to-rem(20));
+                    opacity: 0;
+                }
+            }
+        }
+        span {
+            display: block;
+            margin-top: px-to-rem(25);
+            color: $black;
+            font-size: px-to-rem(24);
+        }
+        span:nth-of-type(2) {
+            text-align: left;
+            margin: px-to-rem(25 0 0 43);
+            color: $grey;
+            font-size: px-to-rem(12);
+            font-weight: 600;
+        }
+        button {
+            margin-top: px-to-rem(25);
+            width: px-to-rem(376);
+            height: px-to-rem(40);
+            background: $black;
+            outline: none;
+            border:none;
+            border-radius: px-to-rem(10);
+            color: $white;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.015); }
+            &:active { transform: scale(0.985); }
+        }
+        .select {
+            position: relative;
+            align-content: center;
+            text-align: left;
+            margin-top: px-to-rem(13);
+            padding: px-to-rem(0 10);
+            background: $button-white;
+            color: $grey;
+            
+            .check-icon {
+                position: absolute;
+                right: px-to-rem(10);
+                width: px-to-rem(16);
+                height: px-to-rem(16);
+            }
+        }
+        .select:nth-of-type(2) { margin-top: px-to-rem(10); }
+        .selected { background: $body-white; }
+    }
+}
+.profile {
+    position: absolute;
+    top: px-to-rem(20);
+    right: px-to-rem(35);
+    height: px-to-rem(191);
+    width: px-to-rem(183);
+    background: $menu-white;
+    border-radius: px-to-rem(4);
+    box-shadow: px-to-rem(0 5 4) rgba(0, 0, 0, 0.3);
+    z-index: 10;
+
+    .first-column {
+        display: flex;
+        align-items: center;
+
+        span { display: block; }
+    }
+}
 .users-panel {
     position: relative;
     display: flex;
@@ -34,6 +162,13 @@
             transition: .25s;
 
             &:focus { box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.1); }
+        }
+        #user {
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.05); }
+            &:active{ transform: scale(0.95); }
         }
     }
     .bottom-search {
@@ -74,6 +209,14 @@
                 top: 50%;
                 transform: translateY(-50%);
                 right: px-to-rem(10);
+                cursor: pointer;
+                transition: .25s;
+                
+                &:hover {
+                    filter: brightness(1.2) sepia(0.5) hue-rotate(100deg) saturate(3);
+                    transform: translateY(-50%) scale(1.1);
+                }
+                &:active { transform: translateY(-50%) scale(0.95); }
             }
         }
         button {
