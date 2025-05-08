@@ -20,6 +20,28 @@
         <button>Select</button>
     </form>
 </div>
+<div class="edit-form-overlay" 
+    *ngIf="isEditFormVisible" 
+    [class.closing]="isEditFormClosing" 
+    (click)="closeEditForm($event)">
+    <form [class.closing]="isEditFormClosing">
+        <span>Filter</span>
+        <span>Role</span>
+        <button 
+            *ngFor="let button of editFilterButtons; let i = index" 
+            class="select" 
+            [class.selected]="button.isSelected"
+            (click)="toggleEditFilterButton(i)">
+            {{ button.name }}
+            <img 
+                *ngIf="button.isSelected" 
+                src="../../../assets/images/svg/Check.svg" 
+                alt="selected" 
+                class="check-icon">
+        </button>
+        <button>Edit</button>
+    </form>
+</div>
 <div class="profile" *ngIf="isProfileVisible" [class.profile-closing]="isProfileClosing">
     <div class="first-column">
         <span>User Name</span>
@@ -83,7 +105,7 @@
                     <td>{{ admin.role }}</td>
                     <td>
                         <div class="action-icons">
-                            <img src="../../../assets/images/svg/Edit.svg" alt="edit">
+                            <img src="../../../assets/images/svg/Edit.svg" alt="edit" (click)="openEditForm()">
                             <img src="../../../assets/images/svg/Close.svg" alt="close">
                         </div>
                     </td>

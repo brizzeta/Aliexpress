@@ -36,7 +36,13 @@ export class AdminAdminsComponent implements OnInit {
   isProfileClosing: boolean = false;
   isFilterFormVisible: boolean = false; // смена флага формы фильтрации
   isFilterFormClosing: boolean = false; // флаг для анимации закрытия
+  isEditFormVisible: boolean = false;
+  isEditFormClosing: boolean = false;
   filterButtons: FilterButton[] = [ // Добавим состояние для кнопок фильтрации
+    { name: 'Admin', isSelected: false },
+    { name: 'Super Admin', isSelected: false }
+  ];
+  editFilterButtons: FilterButton[] = [
     { name: 'Admin', isSelected: false },
     { name: 'Super Admin', isSelected: false }
   ];
@@ -67,6 +73,25 @@ export class AdminAdminsComponent implements OnInit {
       setTimeout(() => {
         this.isFilterFormVisible = false; // Фактически скрываем форму после анимации
         this.isFilterFormClosing = false;
+      }, 300); // Время анимации fadeOut в миллисекундах
+    }
+  }
+
+  toggleEditFilterButton(index: number): void {
+    this.editFilterButtons.forEach(button => { button.isSelected = false; });     // Убираем выделение со всех кнопок
+    this.editFilterButtons[index].isSelected = true; // Делаем выбранную кнопку активной
+  }
+  openEditForm(): void {
+    this.isEditFormVisible = true; 
+    this.isEditFormClosing = false;
+  }
+  closeEditForm(event: MouseEvent): void {
+    const target = event.target as HTMLElement; // Проверяем, что клик был по оверлею
+    if (target.classList.contains('edit-form-overlay')) { 
+      this.isEditFormClosing = true; // Сначала активируем анимацию закрытия
+      setTimeout(() => {
+        this.isEditFormVisible = false; // Фактически скрываем форму после анимации
+        this.isEditFormClosing = false;
       }, 300); // Время анимации fadeOut в миллисекундах
     }
   }

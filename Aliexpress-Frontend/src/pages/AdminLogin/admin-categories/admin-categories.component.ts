@@ -28,6 +28,10 @@ export class AdminCategoriesComponent implements OnInit {
   allSelected: boolean = false; // Выбор чекбоксов
   isProfileVisible: boolean = false;
   isProfileClosing: boolean = false;
+  isAddFormVisible: boolean = false; // смена флага формы добавления
+  isAddFormClosing: boolean = false; // флаг для анимации закрытия
+  isEditFormVisible: boolean = false; // смена флага формы добавления
+  isEditFormClosing: boolean = false; // флаг для анимации закрытия
 
   ngOnInit(): void { // Инициализация массива категорий
     this.categories = [
@@ -41,6 +45,35 @@ export class AdminCategoriesComponent implements OnInit {
     document.body.style.overflow = 'hidden';
     document.addEventListener('click', this.handleDocumentClick.bind(this));
     this.updateTotalPages();
+  }
+
+  openAddForm(): void { // Метод открытия формы
+    this.isAddFormVisible = true; 
+    this.isAddFormClosing = false;
+  }
+  closeAddForm(event: MouseEvent): void { // Метод закрытия формы
+    const target = event.target as HTMLElement; // Проверяем, что клик был по оверлею
+    if (target.classList.contains('new-form-overlay')) { 
+      this.isAddFormClosing = true; // Сначала активируем анимацию закрытия
+      setTimeout(() => {
+        this.isAddFormVisible = false; // Фактически скрываем форму после анимации
+        this.isAddFormClosing = false;
+      }, 300); // Время анимации fadeOut в миллисекундах
+    }
+  }
+  openEditForm(): void { 
+    this.isEditFormVisible = true; 
+    this.isEditFormClosing = false;
+  }
+  closeEditForm(event: MouseEvent): void {
+    const target = event.target as HTMLElement; // Проверяем, что клик был по оверлею
+    if (target.classList.contains('edit-form-overlay')) { 
+      this.isEditFormClosing = true; // Сначала активируем анимацию закрытия
+      setTimeout(() => {
+        this.isEditFormVisible = false; // Фактически скрываем форму после анимации
+        this.isEditFormClosing = false;
+      }, 300); // Время анимации fadeOut в миллисекундах
+    }
   }
 
   toggleProfile(): void {

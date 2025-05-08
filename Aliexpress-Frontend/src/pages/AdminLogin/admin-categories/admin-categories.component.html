@@ -1,3 +1,29 @@
+<div class="new-form-overlay" 
+    *ngIf="isAddFormVisible" 
+    [class.closing]="isAddFormClosing" 
+    (click)="closeAddForm($event)">
+    <form [class.closing]="isAddFormClosing">
+        <span>New categories</span>
+        <span>Name category</span>
+        <input type="text">
+        <span>Name subcategory</span>
+        <input type="text">
+        <button>Add</button>
+    </form>
+</div>
+<div class="edit-form-overlay" 
+    *ngIf="isEditFormVisible" 
+    [class.closing]="isEditFormClosing" 
+    (click)="closeEditForm($event)">
+    <form [class.closing]="isEditFormClosing">
+        <span>Edit category</span>
+        <span>Name category</span>
+        <input type="text">
+        <span>Name subcategory</span>
+        <input type="text">
+        <button>Edit</button>
+    </form>
+</div>
 <div class="profile" *ngIf="isProfileVisible" [class.profile-closing]="isProfileClosing">
     <div class="first-column">
         <span>User Name</span>
@@ -32,7 +58,7 @@
             <input type="text" placeholder="Search..." [(ngModel)]="searchText">
             <img id="settings" src="../../../assets/images/svg/Settings.svg" alt="settings">
         </div>
-        <button>Add New</button>
+        <button (click)="openAddForm()">Add New</button>
     </div>
     <div class="catalog-container">
         <table>
@@ -56,7 +82,7 @@
                     <td>{{ category.subcategory }}</td>
                     <td>
                         <div class="action-icons">
-                            <img src="../../../assets/images/svg/Edit.svg" alt="edit">
+                            <img src="../../../assets/images/svg/Edit.svg" alt="edit" (click)="openEditForm()">
                             <img src="../../../assets/images/svg/Close.svg" alt="close">
                         </div>
                     </td>

@@ -1,7 +1,7 @@
 @use "../../../assets/variables.scss" as *;
 @use "../../../assets/functions.scss" as *;
 
-.form-overlay {
+.form-overlay, .edit-form-overlay {
     position: absolute;
     top: 0;
     left: 0;

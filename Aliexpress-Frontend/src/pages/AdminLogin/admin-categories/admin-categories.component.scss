@@ -1,6 +1,111 @@
 @use "../../../assets/variables.scss" as *;
 @use "../../../assets/functions.scss" as *;
 
+.new-form-overlay, .edit-form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    &.closing {
+        animation: fadeOut 0.3s ease-out forwards;
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    }
+    form {
+        text-align: center;
+        margin-top: px-to-rem(-100);
+        height: px-to-rem(340);
+        width: px-to-rem(456);
+        background: $white;
+        border-radius: px-to-rem(10);
+        transform: translateY(px-to-rem(-20));
+        opacity: 0;
+        animation: slideIn 0.4s ease-out 0.1s forwards;
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(px-to-rem(-20));
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        &.closing {
+            animation: slideOut 0.3s ease-out forwards;
+            @keyframes slideOut {
+                from {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateY(px-to-rem(20));
+                    opacity: 0;
+                }
+            }
+        }
+        span {
+            display: block;
+            margin-top: px-to-rem(25);
+            color: $black;
+            font-size: px-to-rem(24);
+        }
+        span:nth-of-type(2), span:nth-of-type(3) {
+            text-align: left;
+            margin: px-to-rem(22 0 0 43);
+            color: $grey;
+            font-size: px-to-rem(12);
+            font-weight: 600;
+        }
+        input {
+            margin-top: px-to-rem(13);
+            padding: px-to-rem(0 10);
+            height: px-to-rem(40);
+            width: px-to-rem(376);
+            outline: none;
+            border: px-to-rem(1) solid #D9D9D9;
+            border-radius: px-to-rem(10);
+            box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.075);
+            transition: .25s;
+
+            &:hover { box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.2); }
+            &:active { transform: scale(0.975); }
+            &:focus { border: px-to-rem(2) solid $light-grey;}
+        }
+        button {
+            margin-top: px-to-rem(22.5);
+            width: px-to-rem(376);
+            height: px-to-rem(40);
+            background: $black;
+            outline: none;
+            border:none;
+            border-radius: px-to-rem(10);
+            color: $white;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.015); }
+            &:active { transform: scale(0.985); }
+        }
+    }
+}
 .profile {
     position: absolute;
     top: px-to-rem(20);
