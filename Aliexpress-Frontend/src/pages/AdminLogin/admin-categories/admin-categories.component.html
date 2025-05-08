@@ -1,8 +1,30 @@
+<div class="profile" *ngIf="isProfileVisible" [class.profile-closing]="isProfileClosing">
+    <div class="first-column">
+        <span>User Name</span>
+        <img src="../../../assets/images/svg/User.svg" alt="user">
+    </div>
+    <ul>
+        <li>
+            <img src="../../../assets/images/svg/Settings2.svg" alt="settings2">
+            <span>Settings</span>
+            <span>&#9658;</span>
+        </li>
+        <li>
+            <img src="../../../assets/images/svg/Network.svg" alt="network">
+            <span>Languages</span>
+        </li>
+        <li>
+            <img src="../../../assets/images/svg/Logout.svg" alt="logout">
+            <span>Log out</span>
+            <span>&#9658;</span>
+        </li>
+    </ul>
+</div>
 <section class="users-panel">
     <div class="top-search">
         <img id="search" src="../../../assets/images/svg/GlobalSearch.svg" alt="search">
         <input type="text" placeholder="Global search..." [(ngModel)]="globalSearchText">
-        <img src="../../../assets/images/svg/User.svg" alt="user">
+        <img id="user" src="../../../assets/images/svg/User.svg" alt="user" (click)="toggleProfile()">
     </div>
     <div class="bottom-search">
         <div class="input-wrapper">

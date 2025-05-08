@@ -9,6 +9,11 @@ interface Admin {
   role: string;
   selected?: boolean;
 }
+interface FilterButton {
+  name: string;
+  isSelected: boolean;
+}
+
 @Component({
   selector: 'app-admin-admins',
   standalone: true,
@@ -27,6 +32,14 @@ export class AdminAdminsComponent implements OnInit {
   pageSizeOptions: number[] = [1, 3, 5];
   totalPages: number = 1;
   allSelected: boolean = false; // Выбор чекбоксов
+  isProfileVisible: boolean = false;
+  isProfileClosing: boolean = false;
+  isFilterFormVisible: boolean = false; // смена флага формы фильтрации
+  isFilterFormClosing: boolean = false; // флаг для анимации закрытия
+  filterButtons: FilterButton[] = [ // Добавим состояние для кнопок фильтрации
+    { name: 'Admin', isSelected: false },
+    { name: 'Super Admin', isSelected: false }
+  ];
 
   ngOnInit(): void { // Инициализация массива админов
     this.admins = [
@@ -36,8 +49,51 @@ export class AdminAdminsComponent implements OnInit {
       { firstName: 'Женя', lastName: 'Тимофеев', email: 'lokider6@gmail.com', role: 'admin' },
     ];
     document.body.style.overflow = 'hidden';
+    document.addEventListener('click', this.handleDocumentClick.bind(this));
     this.updateTotalPages();
   }
+
+  toggleFilterButton(index: number): void { // Метод переключения выбора кнопки фильтра
+    this.filterButtons[index].isSelected = !this.filterButtons[index].isSelected;
+  }
+  openFilterForm(): void { // Метод открытия формы
+    this.isFilterFormVisible = true; 
+    this.isFilterFormClosing = false;
+  }
+  closeFilterForm(event: MouseEvent): void { // Метод закрытия формы
+    const target = event.target as HTMLElement; // Проверяем, что клик был по оверлею
+    if (target.classList.contains('form-overlay')) { 
+      this.isFilterFormClosing = true; // Сначала активируем анимацию закрытия
+      setTimeout(() => {
+        this.isFilterFormVisible = false; // Фактически скрываем форму после анимации
+        this.isFilterFormClosing = false;
+      }, 300); // Время анимации fadeOut в миллисекундах
+    }
+  }
+
+  toggleProfile(): void {
+    if (this.isProfileVisible)  this.closeProfile();
+    else  this.openProfile();
+  }
+  openProfile(): void {
+    this.isProfileVisible = true;
+    this.isProfileClosing = false;
+  }
+  closeProfile(): void {
+    this.isProfileClosing = true;
+    setTimeout(() => {
+      this.isProfileVisible = false;
+      this.isProfileClosing = false;
+    }, 300);
+  }
+  handleDocumentClick(event: MouseEvent): void { // Обработчик клика по документу
+    const target = event.target as HTMLElement;
+    const profileContainer = document.querySelector('.profile');
+    const userIcon = document.querySelector('#user');
+    // Если клик не по профилю и не по иконке пользователя, закрываем профиль
+    if (this.isProfileVisible && profileContainer && userIcon && !profileContainer.contains(target) &&  target !== userIcon) this.closeProfile();
+  }
+
   get filteredAdmins(): Admin[] { // Фильтрация админов
     const globalFilter = this.globalSearchText.toLowerCase();
     const specificFilter = this.searchText.toLowerCase();

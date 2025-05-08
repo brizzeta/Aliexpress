@@ -1,6 +1,83 @@
 @use "../../../assets/variables.scss" as *;
 @use "../../../assets/functions.scss" as *;
 
+.profile {
+    position: absolute;
+    top: px-to-rem(20);
+    right: px-to-rem(35);
+    height: px-to-rem(191);
+    width: px-to-rem(183);
+    background: $menu-white;
+    border-radius: px-to-rem(4);
+    box-shadow: px-to-rem(0 5 4) rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: profileFadeIn 0.3s ease-out forwards;
+
+    @include media-breakpoint-down(1900) {
+        top: px-to-rem(16);
+        right: px-to-rem(32);
+    }
+    @keyframes profileFadeIn {
+        from { 
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to { 
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    &.profile-closing {
+        animation: profileFadeOut 0.3s ease-out forwards;
+        
+        @keyframes profileFadeOut {
+            from { 
+                    opacity: 1;
+                    transform: translateY(0);
+            }
+            to { 
+                    opacity: 0;
+                    transform: translateY(-10px);
+            }
+        }
+    }
+    .first-column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: px-to-rem(18);
+        margin-top: px-to-rem(14);
+    }
+    ul {
+        margin-top: px-to-rem(15);
+        padding: 0;
+        list-style: none;
+        white-space: nowrap;
+        font-size: px-to-rem(16);
+
+        li {
+            padding: px-to-rem(0 16);
+            display: flex;
+            align-items: center;
+            gap: px-to-rem(15);
+            height: px-to-rem(37);
+            width: 100%;
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { background: #E9E9EF; }
+            span:nth-of-type(2) {
+                margin: px-to-rem(-2 0 0 26);
+                font-size: px-to-rem(9);
+            }
+        }
+        li:nth-of-type(3) {
+            span:nth-of-type(2) { margin: px-to-rem(2 0 0 30); }
+        }
+    }
+}
 .users-panel {
     position: relative;
     display: flex;
@@ -34,6 +111,13 @@
             transition: .25s;
 
             &:focus { box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.1); }
+        }
+        #user {
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.05); }
+            &:active{ transform: scale(0.95); }
         }
     }
     .bottom-search {
@@ -74,6 +158,14 @@
                 top: 50%;
                 transform: translateY(-50%);
                 right: px-to-rem(10);
+                cursor: pointer;
+                transition: .25s;
+                
+                &:hover {
+                    filter: brightness(1.2) sepia(0.5) hue-rotate(100deg) saturate(3);
+                    transform: translateY(-50%) scale(1.1);
+                }
+                &:active { transform: translateY(-50%) scale(0.95); }
             }
         }
         button {
