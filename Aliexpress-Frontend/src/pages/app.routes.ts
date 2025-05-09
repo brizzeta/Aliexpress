@@ -7,6 +7,8 @@ import { AdminUsersComponent } from './AdminLogin/admin-users/admin-users.compon
 import { AdminAdminsComponent } from './AdminLogin/admin-admins/admin-admins.component';
 import { AdminProductsComponent } from './AdminLogin/admin-products/admin-products.component';
 import { AdminCategoriesComponent } from './AdminLogin/admin-categories/admin-categories.component';
+import { AdminProfileComponent } from './AdminLogin/admin-profile/admin-profile.component';
+import { AdminSettingsComponent } from './AdminLogin/admin-settings/admin-settings.component';
 import { ProfileComponent } from './Profile/profile.component';
 import { LoginComponent } from './Profile/login/login.component';
 import { OrdersComponent } from './Profile/orders/orders.component';
@@ -32,7 +34,9 @@ export const routes: Routes = [
           { path: 'users', component: AdminUsersComponent },
           { path: 'admins', component: AdminAdminsComponent },
           { path: 'products', component: AdminProductsComponent },
-          { path: 'categories', component: AdminCategoriesComponent }
+          { path: 'categories', component: AdminCategoriesComponent },
+          { path: 'profile', component: AdminProfileComponent },
+          { path: 'settings', component: AdminSettingsComponent }
         ]
       }
     ]

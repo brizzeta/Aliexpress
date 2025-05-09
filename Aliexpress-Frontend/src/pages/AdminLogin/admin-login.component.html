@@ -5,7 +5,7 @@
         <ng-container *ngIf="!showRegistrationForm">
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
-            <button>Log In</button>
+            <button [routerLink]="['/admin/users']">Log In</button>
             <a href="#" (click)="toggleForm(); $event.preventDefault()">Create an account</a>
         </ng-container>
         <!-- Форма регистрации -->
@@ -18,7 +18,7 @@
             <input type="text" placeholder="Country">
             <input type="text" placeholder="City">
             <input type="text" placeholder="Address">
-            <button class="reg">Register</button>
+            <button class="reg" [routerLink]="['/admin/users']">Register</button>
             <a href="#" class="reg-a" (click)="toggleForm(); $event.preventDefault()">Already have an account?</a>
         </ng-container>
     </section>
