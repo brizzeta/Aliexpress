@@ -1,2 +1,114 @@
 @use "../../../assets/variables.scss" as *;
 @use "../../../assets/functions.scss" as *;
+
+.settings-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .caption {
+        margin-top: px-to-rem(113);
+        color: $black;
+        font-size: px-to-rem(48);
+        font-weight: 600;
+
+        @include media-breakpoint-down(1900) { margin-top: px-to-rem(20); }
+    }
+    .inputs-container {
+        display: flex;
+        margin-top: px-to-rem(44);
+        width: px-to-rem(1153);
+        
+        @include media-breakpoint-down(1900) { margin-top: px-to-rem(25); }
+        .right-inputs { margin-left: px-to-rem(30); }
+        .left-inputs, .right-inputs {
+            display: flex;
+            flex-direction: column;
+            width: 49.5%;
+
+            span {
+                margin-left: px-to-rem(10);
+                color: $grey;
+                font-size: px-to-rem(16);
+                font-weight: 400;
+            }
+            span:not(:first-of-type) {
+                margin: px-to-rem(52 0 0 10);
+                @include media-breakpoint-down(1900) { margin: px-to-rem(35 0 0 10); }
+            }
+            button {
+                position: relative;
+                text-align: left;
+                margin-top: px-to-rem(10);
+                padding: px-to-rem(0 10);
+                height: px-to-rem(44);
+                width: px-to-rem(561);
+                background: $white;
+                outline: none;
+                border: none;
+                border-radius: px-to-rem(10);
+                color: $grey;
+                font-size: px-to-rem(16);
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: px-to-rem(10);
+                    cursor: pointer;
+                    transition: .25s;
+                    
+                    &:hover {
+                        filter: brightness(1.2) sepia(0.5) hue-rotate(100deg) saturate(3);
+                        transform: translateY(-50%) scale(1.1);
+                    }
+                    &:active { transform: translateY(-50%) scale(0.95); }
+                }
+            }
+            .bottom-buttons {
+                display: flex;
+                justify-content: flex-end;
+                gap: px-to-rem(40);
+                margin-top: px-to-rem(288);
+                width: 100%;
+
+                @include media-breakpoint-down(1900) { margin-top: px-to-rem(100); }
+                .delete {
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    height: px-to-rem(40);
+                    width: px-to-rem(243);
+                    background: #FF3C3C;
+                    color:$white;
+                    font-family: "PublicSans", sans-serif;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    transition: .25s;
+
+                    &:hover { transform: scale(1.025); }
+                    &:active { transform: scale(0.975); }
+                }
+                .save{
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    height: px-to-rem(40);
+                    width: px-to-rem(114);
+                    background: $black;
+                    color:$white;
+                    font-family: "PublicSans", sans-serif;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    transition: .25s;
+
+                    &:hover { transform: scale(1.025); }
+                    &:active { transform: scale(0.975); }
+                }
+            }
+        }
+    }
+}
