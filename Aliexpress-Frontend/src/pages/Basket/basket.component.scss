@@ -1,0 +1,68 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+.top-section {
+    margin: px-to-rem(52 100 0 100);
+    display: flex;
+    justify-content: space-between;
+    gap: px-to-rem(30);
+
+    .cart-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: px-to-rem(16);
+        height: px-to-rem(180);
+        max-width: px-to-rem(1152);
+        flex: 2;
+        background: $white;
+        border-radius: px-to-rem(20);
+
+        span {
+            display: block;
+            color: $black;
+            font-size: px-to-rem(36);
+            @include media-breakpoint-down(1300) { font-size: px-to-rem(28); }
+        }
+        span:nth-of-type(2) {
+            color: #8E8E8E;
+            font-size: px-to-rem(20);
+            @include media-breakpoint-down(1300) { font-size: px-to-rem(16); }
+        }
+    }
+    .login-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: px-to-rem(20);
+        height: px-to-rem(180);
+        max-width: px-to-rem(528);
+        flex: 1;
+        background: $white;
+        border-radius: px-to-rem(20);
+        
+        button {
+            height: px-to-rem(40);
+            width: calc(100% - px-to-rem(40));
+            max-width: px-to-rem(448);
+            background: $black;
+            outline: none;
+            border: none;
+            border-radius: px-to-rem(10);
+            color: $white;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.025); }
+            &:active { transform: scale(0.975); }
+        }
+        button:nth-of-type(2) {
+            background: $white;
+            border: px-to-rem(1) solid $body-white;
+            color: $black;
+        }
+    }
+}
