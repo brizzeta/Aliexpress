@@ -66,3 +66,63 @@
         }
     }
 }
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: px-to-rem(20);
+    margin: px-to-rem(40 100 0 100);
+    padding: px-to-rem(0 16);
+    width: 60%;
+
+    .card-item {
+        display: flex;
+        flex-direction: column;
+        padding: px-to-rem(10);
+        height: px-to-rem(400);
+        width: px-to-rem(360);
+        background: $white;
+        border-radius: px-to-rem(20);
+
+        .image-section {
+            height: px-to-rem(224);
+            width: px-to-rem(338);
+            border-radius: px-to-rem(20);
+        }
+        span {
+            display: block;
+            text-align: justify;
+            margin-top: px-to-rem(32);
+            font-size: px-to-rem(24);
+            font-weight: 600;
+        }
+        .top-info {
+            display: flex;
+            align-items: center;
+            margin-top: px-to-rem(10);
+
+            span {
+                margin: px-to-rem(0 0 0 7);
+                font-size: px-to-rem(20); 
+            }
+            span:nth-of-type(2) { 
+                margin: px-to-rem(0 0 0 20);
+                font-size: px-to-rem(15);
+                font-weight: 400;
+            }
+        }
+        .bottom-info {
+            display: flex;
+            align-items: center;
+            margin-top: px-to-rem(5);
+
+            span {
+                margin: 0;
+                font-size: px-to-rem(15);
+                font-weight: 400;
+                white-space: nowrap;
+            }
+            img { margin: px-to-rem(-5 0 0 6); }
+            img:first-of-type { margin-left: px-to-rem(107); }
+        }
+    }
+}
