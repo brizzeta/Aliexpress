@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aliexpress-Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+715fbe7a2af812e67981c53239e7d3177e37e2d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+759a7be0c4d4197d413582ce5528a4cbc8fd5310")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aliexpress-Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aliexpress-Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,7 @@
 <div class="top-section">
     <div class="cart-info">
         <span>There is nothing in the cart</span>
-        <span>Select products or log in if you previously added items to cart</span>
+        <span></span>
     </div>
     <div class="login-info">
         <button>Log In</button>
@@ -9,16 +9,21 @@
     </div>
 </div>
 <div class="cards-section">
-    <div class="card-item">
-        <div class="image-section"><img src="../../assets/images/svg/TestBasket.svg" alt="baskettest"></div>
-        <span>NUOYAQI Men's Corduroy Crossbody Bag</span>
+    <div class="card-item" *ngFor="let product of products">
+        <div class="image-section">
+            <img [src]="product.imagePath" [alt]="product.name">
+        </div>
+        <span>{{ product.name }}</span>
         <div class="top-info">
             <img src="../../assets/images/svg/Clock.svg" alt="clock">
-            <span>68 $</span>
-            <span>422 sold</span>
+            <span>{{ product.price }} $</span>
+            <span class="sold">{{ product.soldCount }} sold</span>
+            <div class="stars">
+                <span *ngFor="let star of [1,2,3,4,5]; let i = index" [style.color]="i < product.rating ? '#FFD942' : '#D9D9D9'">★</span>
+            </div>
         </div>
         <div class="bottom-info">
-            <span>Lowest recent price: 80$</span>
+            <span>Lowest recent price: {{ product.lowestPrice }}$</span>
             <img src="../../assets/images/svg/Favorite.svg" alt="favorite">
             <img src="../../assets/images/svg/BlackCart.svg" alt="cart">
         </div>
