@@ -1,6 +1,14 @@
 @use "../../assets/variables.scss" as *;
 @use "../../assets/functions.scss" as *;
 
+.mini-caption {
+    display: block;
+    margin: px-to-rem(40 0 0 100);
+    font-size: px-to-rem(24);
+    font-weight: 600;
+
+    @include media-breakpoint-down(1024) { display: none; }
+}
 .top-section {
     margin: px-to-rem(52 100 0 100);
     display: flex;
@@ -59,6 +67,7 @@
         align-items: center;
         justify-content: center;
         gap: px-to-rem(20);
+        //gap: px-to-rem(35);
         height: px-to-rem(180);
         max-width: px-to-rem(528);
         flex: 1;
@@ -69,6 +78,11 @@
             margin: 0;
             width: px-to-rem(335); 
             flex: none;
+        }
+        span {
+            color: #8E8E8E;
+            font-size: px-to-rem(20);
+            font-weight: 600;
         }
         button {
             height: px-to-rem(40);
@@ -87,12 +101,20 @@
             &:active { transform: scale(0.975); }
             @include media-breakpoint-down(1024) { width: px-to-rem(284); }
         }
-        button:nth-of-type(2) {
+        .to-main {
             background: $white;
             border: px-to-rem(1) solid $body-white;
             color: $black;
         }
     }
+}
+.cards-section.browsing { 
+    gap: px-to-rem(35);
+    margin: px-to-rem(17 100 0 100);
+    padding: 0;
+
+    @include media-breakpoint-down(1024) { display: none; }
+    .card-item { height: px-to-rem(443); }
 }
 .cards-section {
     display: flex;
@@ -100,6 +122,7 @@
     justify-content: center; 
     gap: px-to-rem(20);
     margin: px-to-rem(40 100 0 100);
+    //margin: px-to-rem(20 100 0 100);
     padding: px-to-rem(0 16);
     width: 100%;
     max-width: px-to-rem(1152);
