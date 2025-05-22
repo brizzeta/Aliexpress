@@ -21,10 +21,12 @@ import { AddressesComponent } from './Profile/addresses/addresses.component';
 import { PersonalComponent } from './Profile/personal/personal.component';
 import { NotificationsComponent } from './Profile/notifications/notifications.component';
 import { BasketComponent } from './Basket/basket.component';
+import { WhatIsComponent } from './WhatIs/whatis.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'basket', component: BasketComponent },
+  { path: 'whatis', component: WhatIsComponent },
   {
     path: 'admin',
     children: [
