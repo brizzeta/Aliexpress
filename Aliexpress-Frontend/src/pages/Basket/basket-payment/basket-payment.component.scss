@@ -1,3 +1,41 @@
-@use "../../assets/variables.scss" as *;
-@use "../../assets/functions.scss" as *;
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
 
+span {
+    display: block;
+    margin: px-to-rem(24 0 0 105);
+    color: $black;
+    font-size: px-to-rem(16);
+    font-weight: 600;
+}
+.page-section {
+    margin: px-to-rem(8 100 0 100);
+    display: flex;
+    justify-content: space-between;
+    gap: px-to-rem(30);
+
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: px-to-rem(16);
+        height: px-to-rem(593);
+        max-width: px-to-rem(1152);
+        flex: 2;
+        background: $white;
+        border-radius: px-to-rem(20);
+    }
+    .cart-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: px-to-rem(20);
+        height: px-to-rem(373);
+        max-width: px-to-rem(528);
+        flex: 1;
+        background: $white;
+        border-radius: px-to-rem(20);
+    }
+}
