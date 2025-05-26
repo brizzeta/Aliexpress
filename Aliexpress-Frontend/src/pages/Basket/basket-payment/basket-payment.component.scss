@@ -17,25 +17,129 @@ span {
     .left-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: px-to-rem(16);
-        height: px-to-rem(593);
         max-width: px-to-rem(1152);
         flex: 2;
-        background: $white;
-        border-radius: px-to-rem(20);
+
+        .address-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: px-to-rem(35);
+            width: 100%;
+            height: px-to-rem(593);
+            background: $white;
+            border-radius: px-to-rem(20);
+
+            .caption {
+                position: absolute;
+                top: px-to-rem(15);
+                left: 50%;
+                transform: translateX(-82%);
+                font-size: px-to-rem(36);
+                white-space: nowrap;
+            }
+            .left-inputs { padding-left: px-to-rem(40); }
+            .right-inputs { padding-right: px-to-rem(40); }
+            .left-inputs, .right-inputs {
+                margin-top: px-to-rem(35);
+                width: 50%;
+                height: 70%;
+
+                span { margin: px-to-rem(0 0 0 9); }
+                span:not(:first-of-type) { margin: px-to-rem(40 0 0 9); }
+                input:not(:first-of-type) { margin-top: px-to-rem(11); }
+                input {
+                    margin-top: px-to-rem(8);
+                    padding: px-to-rem(0 8);
+                    width: 100%;
+                    height: px-to-rem(40);
+                    background: $body-white;
+                    outline: none;
+                    border: none;
+                    border-radius: px-to-rem(10);
+                    font-size: px-to-rem(14);
+                    transition: .25s;
+                    
+                    &:active { transform: scale(0.975); }
+                    &:focus { box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.15); }
+                }
+            }
+            button {
+                position: absolute;
+                bottom: px-to-rem(25);
+                left: 50%;
+                transform: translateX(-50%);
+                width: px-to-rem(120);
+                height: px-to-rem(40);
+                background: $black;
+                outline: none;
+                border: none;
+                border-radius: px-to-rem(10);
+                color: $white;
+                font-size: px-to-rem(16);
+                cursor: pointer;
+                transition: .25s;
+
+                &:hover { transform: translateX(-50%) scale(1.025); }
+                &:active { transform: translateX(-50%) scale(0.975); }
+            }
+        }
+
+        .newcard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: px-to-rem(20);
+            width: 100%;
+            height: px-to-rem(467);
+            background: $white;
+            border-radius: px-to-rem(20);
+        }
     }
     .cart-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: px-to-rem(20);
+        padding: px-to-rem(40);
         height: px-to-rem(373);
         max-width: px-to-rem(528);
         flex: 1;
         background: $white;
         border-radius: px-to-rem(20);
+
+        img {
+            width: px-to-rem(126);
+            height: px-to-rem(101);
+        }
+        .text-row:first-of-type { margin-top: px-to-rem(38); }
+        .text-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: px-to-rem(18);
+            width: 100%;
+            
+            span {
+                display: block;
+                margin: 0;
+                font-size: px-to-rem(18);
+                font-weight: 600;
+            }
+        }
+        .bottom-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: px-to-rem(40);
+            padding: px-to-rem(0 15.5);
+            width: 100%;
+            height: px-to-rem(53);
+            background: $black;
+            border-radius: px-to-rem(10);
+
+            span {
+                margin: 0;
+                color: $white;
+            }
+        }
     }
 }
