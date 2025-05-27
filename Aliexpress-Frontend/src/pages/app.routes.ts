@@ -21,7 +21,7 @@ import { AddressesComponent } from './Profile/addresses/addresses.component';
 import { PersonalComponent } from './Profile/personal/personal.component';
 import { NotificationsComponent } from './Profile/notifications/notifications.component';
 import { BasketComponent } from './Basket/basket.component';
-import { BasketPaymentComponent } from './Basket/basket-payment/basket-payment.component';
+import { BasketAddPaymentComponent } from './Basket/basket-add-payment/basket-add-payment.component';
 import { WhatIsComponent } from './WhatIs/whatis.component';
 
 export const routes: Routes = [
@@ -31,7 +31,7 @@ export const routes: Routes = [
     path: 'basket', 
     children: [
       { path: '', component: BasketComponent },
-      { path: 'payment', component: BasketPaymentComponent },
+      { path: 'add', component: BasketAddPaymentComponent },
     ]
   },
   {
