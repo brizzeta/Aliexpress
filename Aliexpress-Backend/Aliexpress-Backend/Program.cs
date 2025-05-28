@@ -28,6 +28,8 @@ builder.Services.AddDbContext<KlikavaDbContext>(options =>
     )
 );
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 // Увеличиваем таймаут команд для работы с удаленной базой данных
 builder.Services.AddDbContext<KlikavaDbContext>(options =>
 {
