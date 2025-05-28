@@ -1,0 +1,275 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+span {
+    display: block;
+    margin: px-to-rem(24 0 0 105);
+    color: $black;
+    font-size: px-to-rem(16);
+    font-weight: 600;
+}
+.page-section {
+    margin: px-to-rem(8 100 0 100);
+    display: flex;
+    justify-content: space-between;
+    gap: px-to-rem(30);
+
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        max-width: px-to-rem(1152);
+        flex: 2;
+
+        .address-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: px-to-rem(40);
+            width: 100%;
+            height: px-to-rem(324);
+            background: $white;
+            border-radius: px-to-rem(20);
+
+            .top-inputs {
+                display: flex;
+                gap: px-to-rem(20);
+                width: 100%;
+
+                button {
+                    text-align: left;
+                    padding: px-to-rem(0 10);
+                    flex: 2;
+                    max-width: px-to-rem(598.52);
+                    height: px-to-rem(38);
+                    background: $body-white;
+                    outline: none;
+                    border: none;
+                    border-radius: px-to-rem(10);
+                    color: $grey;
+                    font-size: px-to-rem(16);
+                }
+                button:nth-of-type(2) {
+                    flex: 1;
+                    max-width: px-to-rem(393.47);
+                }
+                button:nth-of-type(3) {
+                    flex: 0.2;
+                    max-width: px-to-rem(38.14);
+                    background: $white;
+                    border: px-to-rem(1) solid $body-white;
+                }
+            }
+            .address {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: px-to-rem(12);
+                margin-top: px-to-rem(10);
+                padding: px-to-rem(0 22);
+                width: 100%;
+                height: px-to-rem(70);
+                border: px-to-rem(1) solid $body-white;
+                border-radius: px-to-rem(10);
+
+                span {
+                    margin: 0;
+                    color: $grey;
+                    font-weight: 400;
+                }
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                gap: px-to-rem(10);
+                margin-top: px-to-rem(21);
+                width:100%;
+
+                button {
+                    flex: 2;
+                    max-width: px-to-rem(699.74);
+                    height: px-to-rem(40);
+                    background: none;
+                    outline: none;
+                    border: px-to-rem(1) solid $body-white;
+                    border-radius: px-to-rem(10);
+                    color: $grey;
+                    font-size: px-to-rem(16);
+                    cursor: pointer;
+                    transition: .25s;
+
+                    &:hover { box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.15); }
+                    &:active { transform: scale(0.975); }
+                }
+                button:nth-of-type(2) {
+                    flex: 1;
+                    max-width: px-to-rem(327.87);
+                }
+            }
+            .more {
+                position: absolute;
+                right: px-to-rem(40);
+                bottom: px-to-rem(75);
+                margin: 0;
+                color: $grey;
+                font-weight: 400;
+            }
+            .add {
+                position: absolute;
+                bottom: px-to-rem(25);
+                left: 50%;
+                transform: translateX(-50%);
+                width: px-to-rem(120);
+                height: px-to-rem(40);
+                background: $black;
+                outline: none;
+                border: none;
+                border-radius: px-to-rem(10);
+                color: $white;
+                font-size: px-to-rem(16);
+                cursor: pointer;
+                transition: .25s;
+
+                &:hover { transform: translateX(-50%) scale(1.025); }
+                &:active { transform: translateX(-50%) scale(0.975); }
+            }
+        }
+        .card-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-top: px-to-rem(20);
+            padding: px-to-rem(40);
+            width: 100%;
+            height: px-to-rem(247);
+            background: $white;
+            border-radius: px-to-rem(20);
+
+            .cards-info {
+                display: flex;
+                width: 100%;
+
+                .cards {
+                    display: flex;
+                    gap: px-to-rem(20);
+                    margin-right: px-to-rem(68);
+
+                    .info {
+                        display: flex;
+                        align-items: center;
+                        flex: 2;
+                        padding: px-to-rem(10);
+                        width: px-to-rem(159);
+                        height: px-to-rem(38);
+                        background: $body-white;
+                        border-radius: px-to-rem(10);
+
+                        span {
+                            margin: px-to-rem(0 0 0 10);
+                            color: $grey;
+                            font-weight: 400;
+                        }
+                    }
+                    .info:nth-of-type(2) {
+                        justify-content: center;
+                        flex: 1;
+                        max-width: px-to-rem(69);
+                    }
+                }
+            }
+            .buttons-row {
+                display: flex;
+                margin-top: px-to-rem(20);
+                width: 100%;
+
+                .buttons {
+                    display: flex;
+                    gap: px-to-rem(15);
+                    margin-right: px-to-rem(68);
+
+                    button {
+                        flex: 1;
+                        width: px-to-rem(116.8);
+                        height: px-to-rem(40);
+                        background: none;
+                        outline: none;
+                        border: px-to-rem(1) solid $body-white;
+                        border-radius: px-to-rem(10);
+                        color: $grey;
+                        white-space: nowrap;
+                        font-size: px-to-rem(16);
+                        cursor: pointer;
+                        transition: .25s;
+
+                        &:hover { box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.15); }
+                        &:active { transform: scale(0.975); }
+                    }
+                }
+            }
+            .add {
+                position: absolute;
+                bottom: px-to-rem(25);
+                left: 50%;
+                transform: translateX(-50%);
+                width: px-to-rem(120);
+                height: px-to-rem(40);
+                background: $black;
+                outline: none;
+                border: none;
+                border-radius: px-to-rem(10);
+                color: $white;
+                font-size: px-to-rem(16);
+                cursor: pointer;
+                transition: .25s;
+
+                &:hover { transform: translateX(-50%) scale(1.025); }
+                &:active { transform: translateX(-50%) scale(0.975); }
+            }
+        }
+    }
+    .cart-container {
+        display: flex;
+        flex-direction: column;
+        padding: px-to-rem(40);
+        height: px-to-rem(373);
+        max-width: px-to-rem(528);
+        flex: 1;
+        background: $white;
+        border-radius: px-to-rem(20);
+
+        img {
+            width: px-to-rem(126);
+            height: px-to-rem(101);
+        }
+        .text-row:first-of-type { margin-top: px-to-rem(38); }
+        .text-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: px-to-rem(18);
+            width: 100%;
+            
+            span {
+                display: block;
+                margin: 0;
+                font-size: px-to-rem(18);
+                font-weight: 600;
+            }
+        }
+        .bottom-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: px-to-rem(40);
+            padding: px-to-rem(0 15.5);
+            width: 100%;
+            height: px-to-rem(53);
+            background: $black;
+            border-radius: px-to-rem(10);
+
+            span {
+                margin: 0;
+                color: $white;
+            }
+        }
+    }
+}
