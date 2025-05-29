@@ -14,12 +14,18 @@ span {
     justify-content: space-between;
     gap: px-to-rem(30);
 
+    @include media-breakpoint-down(1235) { justify-content: center; }
     .left-container {
         display: flex;
         flex-direction: column;
         max-width: px-to-rem(1152);
         flex: 2;
 
+        @include media-breakpoint-down(1235) {
+            margin: 0;
+            max-width: px-to-rem(950);
+            flex: 1;
+        }
         .address-container {
             position: relative;
             display: flex;
@@ -225,6 +231,121 @@ span {
                 &:active { transform: translateX(-50%) scale(0.975); }
             }
         }
+        .product-info {
+            display: flex;
+            gap: px-to-rem(21);
+            margin-top: px-to-rem(20);
+            padding: px-to-rem(40);
+            width: 100%;
+            height: px-to-rem(247);
+            background: $white;
+            border-radius: px-to-rem(20);
+
+            img { height: 100%; }
+            .right-info {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                span {
+                    margin: 0;
+                    color: black;
+                    font-size: px-to-rem(24);
+                    font-weight: 600;
+                }
+                .first-row {
+                    display: flex;
+                    align-items: center;
+                    margin-top: px-to-rem(10);
+
+                    img { height: px-to-rem(20); }
+                    span {
+                        margin: px-to-rem(0 0 0 5);
+                        font-size: px-to-rem(20);
+                    }
+                    span:nth-of-type(2) {
+                        margin: px-to-rem(0 0 0 20);
+                        color: $black;
+                        font-size: px-to-rem(15);
+                        font-weight: 400;
+                    }
+                }
+                .second-row {
+                    display: flex;
+                    align-items: center;
+                    margin-top: px-to-rem(7);
+
+                    span {
+                        color: $black;
+                        font-size: px-to-rem(15);
+                        font-weight: 400;
+                    }
+                    .stars {
+                        margin-left: px-to-rem(75);
+                        color: #FFD942;
+                        font-size: px-to-rem(20);
+                        line-height: 1;
+                    }
+                    i {
+                        color: #D9D9D9; 
+                        font-style: normal;
+                    }
+                }
+                .third-row {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    margin-top: px-to-rem(35);
+
+                    span {
+                        margin: px-to-rem(0 0 0 20);
+                        color: $grey;
+                        font-size: px-to-rem(16);
+                        font-weight: 400;
+                    }
+                    button {
+                        flex: 2;
+                        max-width: px-to-rem(165);
+                        height: px-to-rem(40);
+                        background: none;
+                        outline: none;
+                        border: px-to-rem(1) solid $body-white;
+                        border-radius: px-to-rem(10);
+                        color: $grey;
+                        font-size: px-to-rem(16);
+                        cursor: pointer;
+                        transition: .25s;
+
+                        &:hover { box-shadow: px-to-rem(2 2 5) rgba(0, 0, 0, 0.15); }
+                        &:active { transform: scale(0.975); }
+                    }
+                    button:nth-of-type(2) {
+                        margin-left: px-to-rem(10);
+                        flex: 1;
+                        max-width: px-to-rem(43);
+                    }
+                    button:nth-of-type(3) {
+                        margin-left: px-to-rem(22);
+                        flex: 1;
+                        max-width: px-to-rem(43);
+                    }
+                    .ftext {
+                        position: absolute;
+                        top: px-to-rem(11);
+                        right: px-to-rem(108);
+                        color: $black;
+                        font-size: px-to-rem(15);
+                    }
+                    .stext {
+                        position: absolute;
+                        top: px-to-rem(11);
+                        right: 0;
+                        color: $black;
+                        font-size: px-to-rem(15);
+                    }
+                }
+            }
+        }
     }
     .cart-container {
         display: flex;
@@ -236,6 +357,7 @@ span {
         background: $white;
         border-radius: px-to-rem(20);
 
+        @include media-breakpoint-down(1450) { display: none; }
         img {
             width: px-to-rem(126);
             height: px-to-rem(101);
