@@ -12,7 +12,8 @@ import { filter } from 'rxjs/operators';
 })
 export class OrdersTabComponent implements AfterViewInit, OnInit {
   @ViewChild('slider', { static: false }) slider!: ElementRef;
-  public showOrdersTab: boolean = true; // Добавляем переменную для управления отображением карточек
+  public showOrdersTab: boolean = true;
+  public isNoactiveRoute: boolean = false; // Добавляем переменную для маршрута /noactive
 
   constructor(private router: Router) {}
 
@@ -30,11 +31,13 @@ export class OrdersTabComponent implements AfterViewInit, OnInit {
 
   private checkRoute(): void {
     const url = this.router.url;
-    // Показываем карточки заказов только если нет дочерних маршрутов (track, review, return-refund, buy-again)
+    // Показываем карточки заказов только если нет дочерних маршрутов (track, review, return-refund, buy-again, noactive)
     this.showOrdersTab = !url.includes('track') && 
                         !url.includes('review') && 
                         !url.includes('return-refund') && 
-                        !url.includes('buy-again');
+                        !url.includes('buy-again') && 
+                        !url.includes('noactive');
+    this.isNoactiveRoute = url.includes('noactive');
   }
 
   ngAfterViewInit() {
@@ -84,5 +87,11 @@ export class OrdersTabComponent implements AfterViewInit, OnInit {
         }
       }
     }
+  }
+
+  // Обработчик события активации router-outlet
+  onOutletActivated(component: any) {
+    this.isNoactiveRoute = !!component; // Если компонент загружен в router-outlet, это noactive
+    this.showOrdersTab = !this.isNoactiveRoute; // Скрываем основной контент, если загружен noactive
   }
 }

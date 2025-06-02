@@ -5,7 +5,7 @@
   display: flex;
   width: px-to-rem(1720);
   margin: 0 auto;
-  padding-top: px-to-rem(20);
+  padding-top: px-to-rem(40);
 
   @include media-breakpoint-down(sm) {
     width: px-to-rem(375);

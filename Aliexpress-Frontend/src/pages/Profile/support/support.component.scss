@@ -1,0 +1,1109 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.support-container {
+  width: px-to-rem(1255);
+  margin-left: px-to-rem(23);
+  margin-top: px-to-rem(3);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(550);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(600);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(750);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(1255);
+    margin-left: px-to-rem(23);
+    margin-top: px-to-rem(3);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(1255);
+    margin-left: px-to-rem(23);
+    margin-top: px-to-rem(3);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tabs-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tabs {
+  width: px-to-rem(877);
+  height: px-to-rem(44);
+  margin-left: px-to-rem(17);
+  margin-top: px-to-rem(25);
+  margin-bottom: px-to-rem(40);
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    margin-bottom: px-to-rem(40);
+    padding-left: 0;
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%;
+    height: px-to-rem(40);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(15);
+    margin-bottom: px-to-rem(40);
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(550);
+    height: px-to-rem(42);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(40);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(750);
+    height: px-to-rem(44);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(40);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(877);
+    height: px-to-rem(44);
+    margin-left: px-to-rem(17);
+    margin-top: px-to-rem(25);
+    margin-bottom: px-to-rem(40);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(877);
+    height: px-to-rem(44);
+    margin-left: px-to-rem(17);
+    margin-top: px-to-rem(25);
+    margin-bottom: px-to-rem(40);
+    max-width: 90%;
+  }
+}
+
+.back-arrow {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(30);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    display: none;
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    display: none;
+  }
+}
+
+.title {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(36);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(32);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(32);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(34);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+    margin-left: 25px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+}
+
+.main-support-container {
+  width: px-to-rem(1238);
+  height: px-to-rem(700);
+  border-radius: px-to-rem(20);
+  border: px-to-rem(1) solid #D0D0D0;
+  margin-left: px-to-rem(17);
+  background-color: $white;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(345);
+    height: px-to-rem(500);
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(500);
+    height: px-to-rem(600);
+    margin-left: px-to-rem(25);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(550);
+    height: px-to-rem(650);
+    margin-left: px-to-rem(25);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(750);
+    height: px-to-rem(680);
+    margin-left: px-to-rem(25);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(1238);
+    height: px-to-rem(700);
+    margin-left: px-to-rem(17);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(1238);
+    height: px-to-rem(700);
+    margin-left: px-to-rem(17);
+    max-width: 90%;
+  }
+}
+
+.support-content {
+  display: flex;
+  width: 100%;
+  height: px-to-rem(700);
+
+  @include media-breakpoint-down(sm) {
+    height: px-to-rem(500);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    height: px-to-rem(600);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    height: px-to-rem(650);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    height: px-to-rem(680);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    height: px-to-rem(700);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    height: px-to-rem(700);
+  }
+}
+
+.right-panel {
+  width: 100%; /* Теперь занимает всю ширину, так как левой панели нет */
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 100%;
+  }
+}
+
+.messages-container {
+  @include media-breakpoint-down(sm) {
+    max-height: px-to-rem(350);
+    overflow-y: auto;
+    padding-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    max-height: px-to-rem(450);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    max-height: px-to-rem(500);
+    overflow-x: auto;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    max-height: px-to-rem(550);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    max-height: px-to-rem(600);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-height: px-to-rem(600);
+  }
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  margin-left: px-to-rem(20);
+  margin-top: px-to-rem(14);
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(12);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(14);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(14);
+  }
+}
+
+.header-divider {
+  width: 100%; /* Растягиваем на всю ширину */
+  height: px-to-rem(1);
+  background-color: #D0D0D0;
+  margin-top: px-to-rem(14);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-top: px-to-rem(12);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-top: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-top: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    margin-top: px-to-rem(14);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-top: px-to-rem(14);
+  }
+}
+
+.message-date {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  display: block;
+  text-align: center;
+  margin-top: px-to-rem(33);
+  width: 100%;
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(12);
+    margin-top: px-to-rem(25);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(12);
+    margin-top: px-to-rem(30);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(12);
+    margin-top: px-to-rem(33);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    font-size: px-to-rem(12);
+    margin-top: px-to-rem(33);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: px-to-rem(12);
+    margin-top: px-to-rem(33);
+  }
+}
+
+.message {
+  width: px-to-rem(175);
+  height: px-to-rem(72);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  margin-left: px-to-rem(20);
+  margin-top: px-to-rem(25);
+  position: relative;
+  display: inline-block;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(290);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(250);
+    height: px-to-rem(70);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(175);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+    display: inline-block;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(175);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(355);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(175);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+  }
+}
+
+.message-time {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  margin-left: px-to-rem(30);
+  margin-top: px-to-rem(5);
+  display: block;
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(11);
+    margin-left: px-to-rem(25);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(12);
+    margin-left: px-to-rem(30);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(12);
+    margin-left: px-to-rem(30);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    font-size: px-to-rem(12);
+    margin-left: px-to-rem(30);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: px-to-rem(12);
+    margin-left: px-to-rem(30);
+  }
+}
+
+.user-message {
+  width: px-to-rem(324);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  background-color: #F9F9F9;
+  margin-left: auto;
+  margin-right: px-to-rem(20);
+  margin-top: px-to-rem(20);
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(290);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(250);
+    height: px-to-rem(38);
+    margin-right: px-to-rem(15);
+    margin-top: px-to-rem(18);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(324);
+    height: px-to-rem(40);
+    margin-right: px-to-rem(20);
+    margin-top: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(324);
+    height: px-to-rem(40);
+    margin-right: px-to-rem(20);
+    margin-top: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(324);
+    height: px-to-rem(40);
+    margin-right: px-to-rem(20);
+    margin-top: px-to-rem(20);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(324);
+    height: px-to-rem(40);
+    margin-right: px-to-rem(20);
+    margin-top: px-to-rem(20);
+  }
+}
+
+.user-text {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  position: absolute;
+  left: px-to-rem(10);
+  top: px-to-rem(10);
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.user-time {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  margin-right: px-to-rem(30);
+  margin-top: px-to-rem(5);
+  display: block;
+  text-align: right;
+}
+
+.adaptive-message {
+  width: px-to-rem(352);
+  height: px-to-rem(72);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  margin-left: px-to-rem(20);
+  margin-top: px-to-rem(20);
+  position: relative;
+  display: inline-block;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(290);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(270);
+    height: px-to-rem(70);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(18);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(352);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(20);
+    display: inline-block;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(352);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(352);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(20);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(352);
+    height: px-to-rem(72);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(20);
+  }
+}
+
+.new-message {
+  width: px-to-rem(384);
+  height: px-to-rem(91);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  margin-left: px-to-rem(20);
+  position: relative;
+  display: inline-block;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(290);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(280);
+    height: px-to-rem(85);
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(384);
+    height: px-to-rem(91);
+    margin-left: px-to-rem(20);
+    display: inline-block;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(384);
+    height: px-to-rem(91);
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(384);
+    height: px-to-rem(91);
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(384);
+    height: px-to-rem(91);
+    margin-left: px-to-rem(20);
+  }
+}
+
+.message-logo {
+  width: px-to-rem(22);
+  height: px-to-rem(22);
+  margin-left: px-to-rem(10);
+  margin-top: px-to-rem(10);
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(20);
+    height: px-to-rem(20);
+    margin-left: px-to-rem(8);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(22);
+    height: px-to-rem(22);
+    margin-left: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(22);
+    height: px-to-rem(22);
+    margin-left: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(22);
+    height: px-to-rem(22);
+    margin-left: px-to-rem(10);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(22);
+    height: px-to-rem(22);
+    margin-left: px-to-rem(10);
+  }
+}
+
+.message-sender {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: px-to-rem(15);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  position: absolute;
+  left: px-to-rem(42);
+  top: px-to-rem(10);
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(14);
+    left: px-to-rem(38);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(15);
+    left: px-to-rem(42);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(15);
+    left: px-to-rem(42);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    font-size: px-to-rem(15);
+    left: px-to-rem(42);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: px-to-rem(15);
+    left: px-to-rem(42);
+  }
+}
+
+.message-text {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  position: absolute;
+  left: px-to-rem(10);
+  top: px-to-rem(42);
+  width: px-to-rem(364);
+  white-space: normal;
+  overflow-wrap: break-word;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(260);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(15);
+    width: px-to-rem(230);
+    top: px-to-rem(40);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(16);
+    width: px-to-rem(364);
+    top: px-to-rem(42);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(16);
+    width: px-to-rem(364);
+    top: px-to-rem(42);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    font-size: px-to-rem(16);
+    width: px-to-rem(364);
+    top: px-to-rem(42);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: px-to-rem(16);
+    width: px-to-rem(364);
+    top: px-to-rem(42);
+  }
+}
+
+.additional-logo {
+  width: px-to-rem(48);
+  height: px-to-rem(48);
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(40);
+    height: px-to-rem(40);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(45);
+    height: px-to-rem(45);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(48);
+    height: px-to-rem(48);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(48);
+    height: px-to-rem(48);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(48);
+    height: px-to-rem(48);
+  }
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: px-to-rem(15); /* Увеличил отступ, чтобы текст не накладывался */
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(12);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: px-to-rem(15);
+  }
+}
+
+.additional-support-name {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: px-to-rem(20);
+  line-height: 120%; /* Увеличил line-height, чтобы текст не слипался */
+  letter-spacing: 0%;
+  color: $black;
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(18);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(19);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    font-size: px-to-rem(20);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: px-to-rem(20);
+  }
+}
+
+.additional-help-text {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(15);
+  line-height: 120%; /* Увеличил line-height */
+  letter-spacing: 0%;
+  color: $black;
+  margin-top: px-to-rem(10); /* Увеличил отступ сверху */
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(14);
+    margin-top: px-to-rem(8);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(15);
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(15);
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    font-size: px-to-rem(15);
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: px-to-rem(15);
+    margin-top: px-to-rem(10);
+  }
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: px-to-rem(90);
+  margin-left: px-to-rem(22);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-top: px-to-rem(15);
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-top: px-to-rem(20);
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-top: px-to-rem(25);
+    margin-left: px-to-rem(22);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    margin-top: px-to-rem(90);
+    margin-left: px-to-rem(142);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-top: px-to-rem(90);
+    margin-left: px-to-rem(22);
+  }
+}
+
+.attach-icon {
+  width: px-to-rem(12.5);
+  height: px-to-rem(20);
+  cursor: pointer;
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(11);
+    height: px-to-rem(18);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(12);
+    height: px-to-rem(19);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(12.5);
+    height: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(12.5);
+    height: px-to-rem(20);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(12.5);
+    height: px-to-rem(20);
+  }
+}
+
+.input-field {
+  width: px-to-rem(797);
+  height: px-to-rem(37);
+  border-radius: px-to-rem(10);
+  background-color: #F9F9F9;
+  margin-left: px-to-rem(10);
+  padding: px-to-rem(10);
+  border: none;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(14);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(220);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(300);
+    height: px-to-rem(35);
+    font-size: px-to-rem(13);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(400);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(500);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(797);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(797);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+
+  &::placeholder {
+    color: #8B8B8B;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.send-button {
+  width: px-to-rem(54);
+  height: px-to-rem(37);
+  border-radius: px-to-rem(10);
+  background-color: #504C4C;
+  margin-left: px-to-rem(10);
+  border: none;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: px-to-rem(14);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $white;
+  cursor: pointer;
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(50);
+    height: px-to-rem(35);
+    font-size: px-to-rem(13);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(52);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(54);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: px-to-rem(54);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: px-to-rem(54);
+    height: px-to-rem(37);
+    font-size: px-to-rem(14);
+  }
+}

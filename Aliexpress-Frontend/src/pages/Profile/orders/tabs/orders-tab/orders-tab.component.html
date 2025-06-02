@@ -1,53 +1,61 @@
-<div class="orders-tab" *ngIf="showOrdersTab">
-  <!-- Первый блок -->
-  <div class="order-item">
-    <div class="order-image">
-      <img src="assets/images/Bear.jpg" alt="Bear">
-    </div>
-    <div class="order-actions">
-      <a routerLink="./track">Track</a>
-      <a routerLink="./review">Leave a review</a>
-      <a routerLink="./return-refund">Return/Refund</a>
-      <a routerLink="./buy-again">Buy this again</a>
-    </div>
-    <div class="order-info">
-      <span class="info-item">1 item: 3 $</span>
-      <span class="info-time">Order Time: Nov 6, 2024</span>
-      <span class="info-id">Order ID: PO-130-14393975201832636</span>
-    </div>
+<div class="tab"></div>
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
   </div>
-
-  <!-- Второй блок -->
-  <div class="order-item order-item-second">
-    <div class="order-image-slider" #slider>
-      <div class="slider-content">
-        <div class="image-wrapper">
-          <img src="assets/images/Crocodile.jpg" alt="Crocodile">
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="orders-tab" *ngIf="showOrdersTab && !isNoactiveRoute">
+      <!-- Первый блок -->
+      <div class="order-item">
+        <div class="order-image">
+          <img src="assets/images/Bear.jpg" alt="Bear">
         </div>
-        <div class="image-wrapper">
-          <img src="assets/images/Knife.jpg" alt="Knife">
+        <div class="order-actions">
+          <a routerLink="./track">Track</a>
+          <a routerLink="./review">Leave a review</a>
+          <a routerLink="./return-refund">Return/Refund</a>
+          <a routerLink="./buy-again">Buy this again</a>
         </div>
-        <div class="image-wrapper">
-          <img src="assets/images/Katle.jpg" alt="Katle">
-        </div>
-        <div class="image-wrapper">
-          <img src="assets/images/GumToy.jpg" alt="GumToy">
+        <div class="order-info">
+          <span class="info-item">1 item: 3 $</span>
+          <span class="info-time">Order Time: Nov 6, 2024</span>
+          <span class="info-id">Order ID: PO-130-14393975201832636</span>
         </div>
       </div>
-      <img class="slider-arrow-left" src="assets/images/LeftArrow.png" alt="Left Arrow" (click)="scrollLeft()">
-      <img class="slider-arrow" src="assets/images/RightArrow.png" alt="Right Arrow" (click)="scrollRight()">
+
+      <!-- Второй блок -->
+      <div class="order-item order-item-second">
+        <div class="order-image-slider" #slider>
+          <div class="slider-content">
+            <div class="image-wrapper">
+              <img src="assets/images/Crocodile.jpg" alt="Crocodile">
+            </div>
+            <div class="image-wrapper">
+              <img src="assets/images/Knife.jpg" alt="Knife">
+            </div>
+            <div class="image-wrapper">
+              <img src="assets/images/Katle.jpg" alt="Katle">
+            </div>
+            <div class="image-wrapper">
+              <img src="assets/images/GumToy.jpg" alt="GumToy">
+            </div>
+          </div>
+          <img class="slider-arrow-left" src="assets/images/LeftArrow.png" alt="Left Arrow" (click)="scrollLeft()">
+          <img class="slider-arrow" src="assets/images/RightArrow.png" alt="Right Arrow" (click)="scrollRight()">
+        </div>
+        <div class="order-actions">
+          <a routerLink="./track">Track</a>
+          <a routerLink="./review">Leave a review</a>
+          <a routerLink="./return-refund">Return/Refund</a>
+          <a routerLink="./buy-again">Buy this again</a>
+        </div>
+        <div class="order-info">
+          <span class="info-item">1 item: 3 $</span>
+          <span class="info-time">Order Time: Nov 6, 2024</span>
+          <span class="info-id">Order ID: PO-130-14393975201832636</span>
+        </div>
+      </div>
     </div>
-    <div class="order-actions">
-      <a routerLink="./track">Track</a>
-      <a routerLink="./review">Leave a review</a>
-      <a routerLink="./return-refund">Return/Refund</a>
-      <a routerLink="./buy-again">Buy this again</a>
-    </div>
-    <div class="order-info">
-      <span class="info-item">1 item: 3 $</span>
-      <span class="info-time">Order Time: Nov 6, 2024</span>
-      <span class="info-id">Order ID: PO-130-14393975201832636</span>
-    </div>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
   </div>
-</div>
-<router-outlet></router-outlet>

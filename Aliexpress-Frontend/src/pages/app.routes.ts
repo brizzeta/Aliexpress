@@ -22,6 +22,23 @@ import { AddressesComponent } from './Profile/addresses/addresses.component';
 import { PersonalComponent } from './Profile/personal/personal.component';
 import { SupportComponent } from './Profile/support/support.component';
 import { SavedCardsComponent } from './Profile/savedCards/savedCards.component';
+import { NewaddressComponent } from './Profile/addresses/newaddress/newaddress.component';
+import { CreateaddressComponent } from './Profile/addresses/createaddress/createaddress.component';
+import { OrdersNoactiveComponent } from './Profile/orders/noactive/orders-noactive.component';
+import { DeliveredTabNoactiveComponent } from './Profile/orders/tabs/delivered-tab/noactive/delivered-tab-noactive.component';
+import { OrdersTabNoactiveComponent } from './Profile/orders/tabs/orders-tab/noactive/orders-tab-noactive.component';
+import { ProcessingTabNoactiveComponent } from './Profile/orders/tabs/processing-tab/noactive/processing-tab-noactive.component';
+import { ReturnTabNoactiveComponent } from './Profile/orders/tabs/return-tab/noactive/return-tab-noactive.component';
+import { SentTabNoactiveComponent } from './Profile/orders/tabs/sent-tab/noactive/sent-tab-noactive.component';
+import { FavoritesNoactiveComponent } from './Profile/favorites/noactive/favorites-noactive.component';
+import { HistoryNoactiveComponent } from './Profile/history/noactive/history-noactive.component';
+import { CouponsNoactiveComponent } from './Profile/coupons/noactive/coupons-noactive.component';
+import { ChatNoactiveComponent } from './Profile/chat/noactive/chat-noactive.component';
+import { ReviewsNoactiveComponent } from './Profile/reviews/noactive/reviews-noactive.component';
+import { AddressesNoactiveComponent } from './Profile/addresses/noactive/addresses-noactive.component';
+import { SavedCardsNoactiveComponent } from './Profile/savedCards/noactive/savedcards-noactive.component';
+import { PersonalNoactiveComponent } from './Profile/personal/noactive/personal-noactive.component';
+import { SupportNoactiveComponent } from './Profile/support/noactive/support-noactive.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -43,23 +60,116 @@ export const routes: Routes = [
               { path: 'review', component: ReviewComponent },
               { path: 'return-refund', component: ReturnRefundComponent },
               { path: 'buy-again', component: BuyAgainComponent },
+              { path: 'noactive', component: OrdersTabNoactiveComponent }
             ]
           },
-          { path: 'processing', component: ProcessingTabComponent },
-          { path: 'sent', component: SentTabComponent },
-          { path: 'delivered', component: DeliveredTabComponent },
-          { path: 'return', component: ReturnTabComponent },
+          { 
+            path: 'processing', 
+            component: ProcessingTabComponent,
+            children: [
+              { path: 'track', component: TrackComponent },
+              { path: 'buy-again', component: BuyAgainComponent },
+              { path: 'noactive', component: ProcessingTabNoactiveComponent }
+            ]
+          },
+          { 
+            path: 'sent', 
+            component: SentTabComponent,
+            children: [
+              { path: 'track', component: TrackComponent },
+              { path: 'buy-again', component: BuyAgainComponent },
+              { path: 'noactive', component: SentTabNoactiveComponent }
+            ]
+          },
+          { 
+            path: 'delivered', 
+            component: DeliveredTabComponent,
+            children: [
+              { path: 'track', component: TrackComponent },
+              { path: 'review', component: ReviewComponent },
+              { path: 'return-refund', component: ReturnRefundComponent },
+              { path: 'buy-again', component: BuyAgainComponent },
+              { path: 'noactive', component: DeliveredTabNoactiveComponent }
+            ]
+          },
+          { 
+            path: 'return', 
+            component: ReturnTabComponent,
+            children: [
+              { path: 'track', component: TrackComponent },
+              { path: 'review', component: ReviewComponent },
+              { path: 'buy-again', component: BuyAgainComponent },
+              { path: 'noactive', component: ReturnTabNoactiveComponent }
+            ]
+          },
+          { path: 'noactive', component: OrdersNoactiveComponent }
         ]
       },
-      { path: 'favorites', component: FavoritesComponent },
-      { path: 'history', component: HistoryComponent },
-      { path: 'coupons', component: CouponsComponent },
-      { path: 'chat', component: ChatComponent },
-      { path: 'reviews', component: ReviewsComponent },
-      { path: 'addresses', component: AddressesComponent },
-      { path: 'saved-cards', component: SavedCardsComponent },
-      { path: 'personal', component: PersonalComponent },
-      { path: 'support', component: SupportComponent },
+      { 
+        path: 'favorites', 
+        component: FavoritesComponent,
+        children: [
+          { path: 'noactive', component: FavoritesNoactiveComponent }
+        ]
+      },
+      { 
+        path: 'history', 
+        component: HistoryComponent,
+        children: [
+          { path: 'noactive', component: HistoryNoactiveComponent }
+        ]
+      },
+      { 
+        path: 'coupons', 
+        component: CouponsComponent,
+        children: [
+          { path: 'noactive', component: CouponsNoactiveComponent }
+        ]
+      },
+      { 
+        path: 'chat', 
+        component: ChatComponent,
+        children: [
+          { path: 'noactive', component: ChatNoactiveComponent }
+        ]
+      },
+      { 
+        path: 'reviews', 
+        component: ReviewsComponent,
+        children: [
+          { path: 'noactive', component: ReviewsNoactiveComponent }
+        ]
+      },
+      { 
+        path: 'addresses', 
+        component: AddressesComponent,
+        children: [
+          { path: 'noactive', component: AddressesNoactiveComponent },
+          { path: 'newaddress', component: NewaddressComponent },
+          { path: 'createaddress/:id', component: CreateaddressComponent }
+        ]
+      },
+      { 
+        path: 'saved-cards', 
+        component: SavedCardsComponent,
+        children: [
+          { path: 'noactive', component: SavedCardsNoactiveComponent }
+        ]
+      },
+      { 
+        path: 'personal', 
+        component: PersonalComponent,
+        children: [
+          { path: 'noactive', component: PersonalNoactiveComponent }
+        ]
+      },
+      { 
+        path: 'support', 
+        component: SupportComponent,
+        children: [
+          { path: 'noactive', component: SupportNoactiveComponent }
+        ]
+      },
       { path: 'login', component: LoginComponent },
       { path: 'logout', component: LogoutComponent },
     ]
