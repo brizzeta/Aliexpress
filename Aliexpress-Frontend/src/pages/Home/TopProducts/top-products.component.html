@@ -1,6 +1,100 @@
-<section class="top-products">
-    <div class="product-list">
-      <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+<section class="main-container">
+  <div class="text-block">
+    <p class="text">
+      We have collected for you the most popular <br>
+      products that have won over our customers!
+    </p>
+  </div>  
+
+  <section class="filters-container">
+    <div *ngFor="let filter of filters; let i = index" 
+         class="filter-item"
+         [ngClass]="{'active': activeFilter === filter}"
+         (click)="setActiveFilter(filter)">
+      {{ filter }}
     </div>
   </section>
   
+  <div class="divider"></div>
+
+  <section class="products-container">
+    <!-- Секция с 4 товарами -->
+    <div class="left-side">
+      <div class="product-item small top-left">
+        <img src="assets/images/Bear.png" alt="Lamp" class="product-img"/>
+          <div class="price-container">
+            <span class="price">20$</span>
+          </div>
+          <div class="cart-container">
+            <img src="assets/images/black-cart.svg" alt="Cart" class="cart-icon"/>
+          </div>
+      </div>
+      <div class="product-item small top-right">
+        <div class="product-background"></div>
+        <img src="assets/images/Bear.png" alt="Lamp" class="product-img"/>
+          <div class="price-container">
+            <span class="price">20$</span>
+          </div>
+          <div class="cart-container">
+            <img src="assets/images/black-cart.svg" alt="Cart" class="cart-icon"/>
+          </div>
+      </div>
+      <div class="product-item small bottom-left">
+        <div class="product-background"></div>
+        <img src="assets/images/Bear.png" alt="Lamp" class="product-img"/>
+          <div class="price-container">
+            <span class="price">20$</span>
+          </div>
+          <div class="cart-container">
+            <img src="assets/images/black-cart.svg" alt="Cart" class="cart-icon"/>
+          </div>
+      </div>
+      <div class="product-item small bottom-right">
+        <div class="product-background"></div>
+        <img src="assets/images/Bear.png" alt="Lamp" class="product-img"/>
+          <div class="price-container">
+            <span class="price">20$</span>
+          </div>
+          <div class="cart-container">
+            <img src="assets/images/black-cart.svg" alt="Cart" class="cart-icon"/>
+          </div>
+        </div>
+    </div>
+  
+    <!-- Контейнер для первого большого товара -->
+    <div class="right-side-top">
+      <div class="product-item large">
+        <img src="assets/images/Bear.png" alt="Lamp" class="product-img"/>
+          <div class="price-container">
+            <span class="price">20$</span>
+          </div>
+          <div class="cart-container">
+            <img src="assets/images/black-cart.svg" alt="Cart" class="cart-icon"/>
+          </div>
+        </div>
+    </div>
+  
+    <!-- Контейнер для второго большого товара -->
+    <div class="right-side-bottom">
+      <div class="product-item large">
+        <div class="product-background"></div>
+        <img src="assets/images/Bear.png" alt="Lamp" class="product-img"/>
+          <div class="price-container">
+            <span class="price">20$</span>
+          </div>
+          <div class="cart-container">
+            <img src="assets/images/black-cart.svg" alt="Cart" class="cart-icon"/>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <div class="more-text">
+    <a href="#" class="more-link">More...</a>
+  </div>
+
+
+
+
+</section>
+

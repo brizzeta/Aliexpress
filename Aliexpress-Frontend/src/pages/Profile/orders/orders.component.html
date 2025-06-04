@@ -1,8 +1,15 @@
-<section class="address-section">
-    <div class="container">
-        <h2></h2>
-        <div class="section-content">
-            <p>&nbsp;orders works!</p>
-        </div>
+<div class="orders-container">
+  <div class="tabs-wrapper" *ngIf="showTabs">
+    <div class="tabs">
+      <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+      <a routerLink="orders-tab" routerLinkActive="active">Orders</a>
+      <a routerLink="processing" routerLinkActive="active">Processing</a>
+      <a routerLink="sent" routerLinkActive="active">Sent</a>
+      <a routerLink="delivered" routerLinkActive="active">Delivered</a>
+      <a routerLink="return" routerLinkActive="active">Return</a>
     </div>
-</section>
+  </div>
+  <div class="tab-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

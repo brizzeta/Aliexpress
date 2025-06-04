@@ -1,0 +1,62 @@
+<div class="tab"></div>
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
+  </div>
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="support-container" *ngIf="showSupport && !isNoactiveRoute">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+          <span class="title">Support</span>
+        </div>
+      </div>
+      <div class="main-support-container">
+        <div class="support-content">
+          <div class="right-panel">
+            <!-- Контент для TechSupport -->
+            <div class="right-header">
+              <img src="assets/images/Klikavalogo.png" alt="Tech Avatar" class="additional-logo" />
+              <div class="additional-info">
+                <span class="additional-support-name">TechSupport</span>
+                <span class="additional-help-text">Technical Assistance</span>
+              </div>
+            </div>
+            <div class="header-divider"></div>
+            <div class="messages-container">
+              <span class="message-date">26.05.2025</span>
+              <div class="message">
+                <img src="assets/images/Klikavalogo.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">TechSupport</span>
+                <span class="message-text">Hi! How can we help with your tech issue?</span>
+              </div>
+              <span class="message-time">14:20</span>
+              <div class="message adaptive-message">
+                <img src="assets/images/Klikavalogo.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">TechSupport</span>
+                <span class="message-text">Please provide details about the problem.</span>
+              </div>
+              <span class="message-time">14:22</span>
+              <div class="user-message">
+                <span class="user-text">My app keeps crashing on startup.</span>
+              </div>
+              <span class="user-time">14:25</span>
+              <div class="message new-message">
+                <img src="assets/images/Klikavalogo.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">TechSupport</span>
+                <span class="message-text">Let’s try clearing the app cache. Can you follow these steps?</span>
+              </div>
+              <span class="message-time">14:30</span>
+            </div>
+            <div class="input-container">
+              <img src="assets/images/attach_file.png" alt="Attach File" class="attach-icon" />
+              <input type="text" class="input-field" placeholder="Enter your message" />
+              <button class="send-button">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
+  </div>

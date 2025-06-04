@@ -1,9 +1,51 @@
 <section class="discounts">
-    <div class="container">
-      <h2>Discounted Products</h2>
-      <app-product-card></app-product-card>
-      <app-product-card></app-product-card>
-      <app-product-card></app-product-card>
+  <div class="discounts-block">
+    <p class="title">Hot discounts!</p>
+    <p class="subtitle">Catch the benefit right now!</p>
+
+    <!-- Блок с товарами -->
+    <div class="products-block">
+      <div class="discounts-text">Discounts</div>
+
+      <!-- Блок с карточками товаров -->
+      <div class="products-container">
+        <div class="product-card" *ngFor="let product of visibleProducts">
+          <img [src]="product.image" alt="Product" class="product-image" />
+          <p class="product-name">{{ product.name }}</p>
+          <div class="product-info">
+            <img src="assets/images/Time.svg" alt="Time" class="time-icon" />
+            <span class="price">{{ product.price }}</span>
+            <span class="sales">{{ product.sales }}</span>
+            <div class="rating">
+              <span *ngFor="let star of product.rating">{{ star }}</span>
+            </div>
+          </div>
+          <div class="price-history">
+            <span class="old-price">Lowest recent price: <span class="strikethrough">{{ product.oldPrice }}</span></span>
+            <div class="icons">
+              <img src="assets/images/favorite.svg" alt="Favorite" class="favorite-icon" />
+              <img src="assets/images/Trolley.svg" alt="Cart" class="cart-icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-indicator">
+        <div class="indicator-dot" [class.active]="currentSlide === 0"></div>
+        <div class="indicator-dot" [class.active]="currentSlide === 1"></div>
+        <div class="indicator-dot" [class.active]="currentSlide === 2"></div>
+      </div>
+
+      <div class="more-text">More...</div>
     </div>
-  </section>
-  
+
+    <!-- Стрелки для слайдера -->
+    <img src="assets/images/LeftArrow.svg" alt="Previous" class="arrow left-arrow" (click)="prevSlide()" />
+    <img src="assets/images/RightArrow.svg" alt="Next" class="arrow right-arrow" (click)="nextSlide()" />
+  </div>
+
+  <div class="bottom-black"></div>
+</section>
+
+
+<div class="more-text">

@@ -1,0 +1,323 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.product-card-container {
+  width: 100%;
+  height: auto;
+  min-height: px-to-rem(100);
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(20);
+  box-sizing: border-box;
+  background-color: $greyish;
+  padding: px-to-rem(20);
+
+}
+
+.title-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(48);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: justify;
+  color: $black;
+  margin-top: px-to-rem(73);
+  margin-bottom: px-to-rem(55);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(36);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(20);
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+
+}
+
+/* Блок с карточками товаров */
+.products-container {
+  width: px-to-rem(1500); /* Ширина контейнера 1500px */
+  margin: 0 auto; /* Центрируем контейнер */
+  display: flex;
+  gap: px-to-rem(20); /* Расстояние между карточками 20px */
+  justify-content: space-between; /* Распределяем карточки с учётом gap */
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%;
+    max-width: px-to-rem(800);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px-to-rem(15);
+
+    .product-card {
+      width: px-to-rem(340);
+      height: px-to-rem(380);
+
+      .product-image {
+        width: px-to-rem(320);
+        height: px-to-rem(210);
+      }
+
+      .product-info,
+      .price-history {
+        width: px-to-rem(320);
+      }
+    }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 100%;
+    max-width: px-to-rem(1100);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px-to-rem(20);
+
+    .product-card {
+      width: px-to-rem(350);
+      height: px-to-rem(390);
+
+      .product-image {
+        width: px-to-rem(330);
+        height: px-to-rem(220);
+      }
+
+      .product-info,
+      .price-history {
+        width: px-to-rem(330);
+      }
+    }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 100%;
+    max-width: px-to-rem(1400);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px-to-rem(20);
+
+    .product-card {
+      width: px-to-rem(355);
+      height: px-to-rem(395);
+
+      .product-image {
+        width: px-to-rem(335);
+        height: px-to-rem(222);
+      }
+
+      .product-info,
+      .price-history {
+        width: px-to-rem(335);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 px-to-rem(10);
+
+    &:nth-child(n+4) {
+      display: none;
+    }
+  }
+
+  .product-card {
+    width: px-to-rem(360); /* Размер карточки 360x400px */
+    height: px-to-rem(400);
+    background-color: $white; 
+    border-radius: px-to-rem(20); 
+    
+    @include media-breakpoint-down(sm) {
+      width: px-to-rem(360);
+      height: px-to-rem(400);
+      border-radius: 0;
+      box-shadow: 0px 4px 4px 0px #00000040;
+      backdrop-filter: blur(4px);
+    }
+
+    .product-image {
+      width: px-to-rem(338);
+      height: px-to-rem(224);
+      margin-top: px-to-rem(11); 
+      margin-left: auto; 
+      margin-right: auto;
+      border-radius: px-to-rem(20); 
+      object-fit: cover; 
+      display: block; 
+
+      @include media-breakpoint-down(sm) {
+        width: px-to-rem(338);
+        height: px-to-rem(224);
+        border-radius: 0;
+      }
+    }
+
+    .product-name {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: px-to-rem(24);
+      line-height: 120%;
+      letter-spacing: 0%;
+      text-align: justify;
+      color: $black;
+      overflow: hidden;
+      margin-top: px-to-rem(32); 
+      margin-left: px-to-rem(11); 
+      margin-right: px-to-rem(11); 
+      display: -webkit-box;
+      -webkit-line-clamp: 2; 
+      -webkit-box-orient: vertical;
+      margin-bottom: 10px;
+    }
+
+    .product-info {
+      width: px-to-rem(338); 
+      height: px-to-rem(24); 
+      margin-top: px-to-rem(10); 
+      margin-left: px-to-rem(11); 
+      display: flex;
+      align-items: center; 
+
+      @include media-breakpoint-down(sm) {
+        width: px-to-rem(338);
+      }
+    }
+    
+    .time-icon {
+      width: px-to-rem(18); 
+      height: px-to-rem(18);
+    }
+    
+    .price {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: px-to-rem(18);
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $black;
+      margin-left: px-to-rem(7); 
+    }
+    
+    .sales {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: px-to-rem(15);
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $black;
+      margin-left: px-to-rem(19); 
+    }
+    
+    .rating {
+      margin-left: auto; 
+      font-size: px-to-rem(20); 
+      line-height: 100%;
+      color: #FFD942; 
+      display: flex; 
+      gap: px-to-rem(1); 
+
+      @include media-breakpoint-down(sm) {
+        margin-left: auto;
+      }
+    }
+
+    .price-history {
+      width: px-to-rem(338); 
+      height: px-to-rem(21); 
+      margin-top: px-to-rem(4); 
+      margin-left: px-to-rem(11); 
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+
+      @include media-breakpoint-down(sm) {
+        width: px-to-rem(338);
+      }
+    }
+
+    .old-price {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: px-to-rem(15); 
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $black;
+    }
+
+    .strikethrough {
+      text-decoration: line-through; 
+    }
+
+    .icons {
+      display: flex;
+      gap: px-to-rem(4); 
+
+      @include media-breakpoint-down(sm) {
+        gap: px-to-rem(3);
+      }
+    }
+
+    .favorite-icon,
+    .cart-icon {
+      width: px-to-rem(19); 
+      height: px-to-rem(19);
+    }
+  }
+}
+
+.desktop-only {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.see-more-button {
+  width: px-to-rem(294);
+  height: px-to-rem(62);
+  background-color: $green;
+  border-radius: px-to-rem(48);
+  margin: px-to-rem(55) auto 0;
+  margin-bottom: px-to-rem(55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    max-width: px-to-rem(294);
+    margin: px-to-rem(20) auto;
+  }
+
+  &:hover {
+    background-color: darken($green, 10%);
+  }
+}
+
+@include media-breakpoint-between(lg, xl) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: px-to-rem(20);
+    max-width: px-to-rem(1400);
+    margin: 0 auto;
+  }
+
+  .product-card {
+    width: 100%;      // растягиваем по ячейке
+    max-width: none;  // отменяем старое ограничение
+  }
+}

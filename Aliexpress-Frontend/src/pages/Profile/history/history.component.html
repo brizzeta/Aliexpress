@@ -1,8 +1,71 @@
-<section class="address-section">
-    <div class="container">
-        <h2></h2>
-        <div class="section-content">
-            <p>&nbsp;history works!</p>
+<div class="tab"></div>
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
+  </div>
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="history-container" *ngIf="showHistory && !isNoactiveRoute">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+          <span class="title">Browsing history</span>
         </div>
+      </div>
+      <div class="date-text">Apr 4, 2025</div>
+      <div class="cards-container">
+        <div class="card">
+          <img src="assets/images/Bear.jpg" alt="Product" class="product-image" />
+          <div class="content">
+            <p class="product-name">NUOYAQI Men's Corduroy Crossbody Bag</p>
+            <div class="product-info">
+              <img src="assets/images/Time.svg" alt="Time" class="time-icon" />
+              <span class="price">68$</span>
+              <span class="sales">422 sold</span>
+              <div class="rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="add-to-basket">Add to basket</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/Bear.jpg" alt="Product" class="product-image" />
+          <div class="content">
+            <p class="product-name">High-Quality Solid Color Leather Texture Phone</p>
+            <div class="product-info">
+              <img src="assets/images/Time.svg" alt="Time" class="time-icon" />
+              <span class="price">31$</span>
+              <span class="sales">422 sold</span>
+              <div class="rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="add-to-basket">Add to basket</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/Bear.jpg" alt="Product" class="product-image" />
+          <div class="content">
+            <p class="product-name">NUOYAQI Men's Corduroy Crossbody Bag</p>
+            <div class="product-info">
+              <img src="assets/images/Time.svg" alt="Time" class="time-icon" />
+              <span class="price">68$</span>
+              <span class="sales">422 sold</span>
+              <div class="rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="add-to-basket">Add to basket</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
+  </div>

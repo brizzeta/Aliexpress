@@ -1,0 +1,701 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.saved-cards-container {
+  width: px-to-rem(1255);
+  margin-left: px-to-rem(23);
+  margin-top: px-to-rem(3);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(550);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(750);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1000);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(15);
+  }
+}
+
+.tabs-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tabs {
+  width: px-to-rem(877);
+  height: px-to-rem(44);
+  margin-left: px-to-rem(17);
+  margin-top: px-to-rem(25);
+  margin-bottom: px-to-rem(20);
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    margin-bottom: px-to-rem(12);
+    padding-left: 0;
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(500);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(15);
+    margin-bottom: px-to-rem(15);
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(650);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(800);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+    margin-bottom: px-to-rem(25);
+  }
+}
+
+.back-arrow {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(30);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    display: none;
+  }
+}
+
+.title {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(36);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(32);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(34);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+}
+
+.cards-container {
+  margin-top: px-to-rem(40);
+  width: px-to-rem(1004);
+  height: px-to-rem(158);
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+    height: auto;
+    flex-direction: column;
+    gap: px-to-rem(20);
+    margin-left: 35px;
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(550);
+    height: auto;
+    flex-direction: column;
+    gap: px-to-rem(20);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(750);
+    height: auto;
+    flex-direction: column;
+    gap: px-to-rem(20);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1000);
+    height: auto;
+    flex-direction: column;
+    gap: px-to-rem(20);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card {
+  width: px-to-rem(308);
+  height: px-to-rem(158);
+  border-radius: px-to-rem(10);
+  border-width: px-to-rem(1);
+  border-style: solid;
+  border-color: $greyish;
+  background-color: $white;
+  position: relative;
+}
+
+.card-type {
+  width: px-to-rem(159);
+  height: px-to-rem(38);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: px-to-rem(30);
+  left: px-to-rem(30);
+
+  @include media-breakpoint-down(sm) {
+    left: px-to-rem(20);
+  }
+}
+
+.card-logo {
+  width: px-to-rem(38);
+  height: px-to-rem(26);
+}
+
+.card-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+}
+
+.card-number {
+  width: px-to-rem(69);
+  height: px-to-rem(38);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: px-to-rem(30);
+  left: px-to-rem(209);
+
+  @include media-breakpoint-down(sm) {
+    left: px-to-rem(199);
+  }
+}
+
+.number-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+}
+
+.buttons-container {
+  display: flex;
+  gap: px-to-rem(15);
+  position: absolute;
+  top: px-to-rem(88);
+  left: px-to-rem(30);
+  bottom: px-to-rem(30);
+
+  @include media-breakpoint-down(sm) {
+    left: px-to-rem(20);
+  }
+}
+
+.delete-button, .edit-button {
+  width: px-to-rem(117);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  border-width: px-to-rem(1);
+  border-style: solid;
+  border-color: $greyish;
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: $grey;
+  cursor: pointer;
+}
+
+.new-card-button-container {
+  margin-top: px-to-rem(480);
+  display: flex;
+  width: 100%;
+  margin-left: px-to-rem(20);
+
+  @include media-breakpoint-down(lg) {
+    margin-top: px-to-rem(50);
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: px-to-rem(50);
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: px-to-rem(50);
+    width: px-to-rem(335);
+    margin-left: auto;
+  }
+}
+
+.new-card-button {
+  width: px-to-rem(1117);
+  height: px-to-rem(49);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid $black;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: $black;
+
+  @include media-breakpoint-down(lg) {
+    width: px-to-rem(500);
+    font-size: px-to-rem(20);
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: px-to-rem(18);
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(295);
+    height: px-to-rem(49);
+    font-size: px-to-rem(16);
+  }
+}
+
+/* Стили для попапа */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  width: px-to-rem(452);
+  height: px-to-rem(450); /* Увеличил для нового контента */
+  border-width: px-to-rem(1);
+  border-style: solid;
+  border-color: $greyish;
+  background-color: $white;
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(20);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.popup-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-align: center;
+  margin-top: px-to-rem(20);
+}
+
+.card-info {
+  margin-right: 15px;
+  position: relative;
+  width: 100%;
+  height: px-to-rem(38);
+  margin-top: px-to-rem(25);
+}
+
+.card-info .card-type {
+  width: px-to-rem(159);
+  height: px-to-rem(38);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: px-to-rem(0);
+  left: px-to-rem(30);
+
+  @include media-breakpoint-down(sm) {
+    left: px-to-rem(20);
+  }
+}
+
+.card-info .card-number {
+  width: px-to-rem(69);
+  height: px-to-rem(38);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: px-to-rem(0);
+  left: px-to-rem(209);
+
+  @include media-breakpoint-down(sm) {
+    left: px-to-rem(199);
+  }
+}
+
+.expiration-wrapper {
+  width: px-to-rem(452);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.expiration-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+  margin-top: px-to-rem(10);
+}
+
+.expiration-container {
+  display: flex;
+  gap: px-to-rem(10);
+}
+
+.dropdown-field {
+  width: px-to-rem(179);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $greyish;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.month-select, .year-select {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  background: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  width: 100%;
+  padding-right: px-to-rem(20);
+}
+
+.dropdown-arrow {
+  width: px-to-rem(10);
+  height: px-to-rem(5);
+  position: absolute;
+  right: px-to-rem(10);
+  pointer-events: none;
+}
+
+.year-field {
+}
+
+.billing-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+  margin-top: px-to-rem(20);
+  text-align: left;
+}
+
+.billing-field {
+  width: px-to-rem(372);
+  height: px-to-rem(70);
+  border-radius: px-to-rem(10);
+  border-width: px-to-rem(1);
+  border-style: solid;
+  border-color: $greyish;
+  margin-top: px-to-rem(10);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: px-to-rem(10);
+}
+
+.billing-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+  margin-bottom: 10px;
+}
+
+.billing-address {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+}
+
+.billing-edit {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-offset: 0%;
+  text-decoration-thickness: 0%;
+  color: #A8A8A8;
+  position: absolute;
+  top: px-to-rem(10);
+  right: px-to-rem(10);
+}
+
+.save-button {
+  width: px-to-rem(372);
+  height: px-to-rem(40);
+  background-color: $black;
+  margin-top: px-to-rem(20);
+  border: none;
+  border-radius: px-to-rem(10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $white;
+}
+
+/* Стили для попапа "Add a new card" */
+.card-number-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+  margin-top: px-to-rem(25);
+}
+
+.card-number-field {
+  width: px-to-rem(372);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  align-items: center;
+  margin-top: px-to-rem(10);
+}
+
+.card-number-field .card-logo {
+  width: px-to-rem(38);
+  height: px-to-rem(26);
+}
+
+.card-number-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+}
+
+.labels-container {
+  width: px-to-rem(372);
+  display: flex;
+  justify-content: space-between;
+  margin-top: px-to-rem(20);
+  line-height: px-to-rem(12); /* Выравнивание по высоте текста */
+}
+
+.cvv-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+  margin-top: px-to-rem(10);
+  margin-right: px-to-rem(110);
+}
+
+.expiration-container {
+  width: px-to-rem(372);
+  display: flex;
+  margin-top: px-to-rem(10);
+  gap: px-to-rem(13); /* Отступ между первым и вторым */
+}
+
+.dropdown-field {
+  width: px-to-rem(104);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $greyish;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cvv-field {
+  width: px-to-rem(131);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  align-items: center;
+}
+
+.cvv-input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.cvv-input::placeholder {
+  color: $grey;
+}
+
+.add-button {
+  width: px-to-rem(372);
+  height: px-to-rem(40);
+  background-color: $black;
+  margin-top: px-to-rem(20);
+  border: none;
+  border-radius: px-to-rem(10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $white;
+}

@@ -1,8 +1,95 @@
-<section class="address-section">
-    <div class="container">
-        <h2></h2>
-        <div class="section-content">
-            <p>&nbsp;personal works!</p>
+<div class="tab"></div>
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
+  </div>
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="personal-container" *ngIf="showPersonal && !isNoactiveRoute">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+          <span class="title">Personal info</span>
         </div>
+      </div>
+      <div class="avatar-container">
+        <div class="avatar-wrapper">
+          <img src="assets/images/MiniBear.jpg" alt="Avatar" class="avatar-image">
+        </div>
+        <img src="assets/images/upload.png" alt="Upload" class="upload-icon">
+        <div class="info-wrapper">
+          <div class="info-section">
+            <div class="name-section">
+              <span class="name-label">first Name</span>
+              <div class="name-input">
+                <span class="name-text">Женя</span>
+                <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+              </div>
+            </div>
+            <div class="phone-section">
+              <span class="name-label">phone</span>
+              <div class="name-input phone-input">
+                <span class="name-text">+7 (999) 123-45-67</span>
+                <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+              </div>
+            </div>
+          </div>
+          <div class="additional-info-section">
+            <div class="last-name-section">
+              <span class="name-label">last Name</span>
+              <div class="name-input">
+                <span class="name-text">Тимофеев</span>
+                <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+              </div>
+            </div>
+            <div class="email-section">
+              <span class="name-label">Email</span>
+              <div class="name-input phone-input">
+                <span class="name-text">lokider6&#64;gmail.com</span>
+                <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="extra-info-section">
+          <div class="city-section">
+            <span class="name-label">city</span>
+            <div class="name-input phone-input">
+              <span class="name-text">odessa</span>
+              <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+            </div>
+          </div>
+          <div class="country-section">
+            <span class="name-label">country</span>
+            <div class="name-input phone-input">
+              <span class="name-text">Ukraine</span>
+              <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+            </div>
+          </div>
+        </div>
+        <div class="extra-info-section-two">
+          <div class="address-section">
+            <span class="name-label">Address</span>
+            <div class="name-input phone-input">
+              <span class="name-text">Pushkina 32</span>
+              <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+            </div>
+          </div>
+          <div class="password-section">
+            <span class="name-label">password</span>
+            <div class="name-input phone-input">
+              <span class="name-text" [ngClass]="{'hidden': showPassword, 'visible': !showPassword}">⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹⚹</span>
+              <span class="name-text" [ngClass]="{'hidden': !showPassword, 'visible': showPassword}">secret123</span>
+              <img src="assets/images/hide.png" alt="Toggle Password" class="eye-icon" (click)="togglePassword()">
+            </div>
+          </div>
+        </div>
+        <div class="buttons-section">
+          <button class="sellers-button">Account for sellers</button>
+          <button class="delete-button">Delete account permanently</button>
+          <button class="save-button">Save</button>
+        </div>
+      </div>
     </div>
-</section>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
+  </div>
