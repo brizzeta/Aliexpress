@@ -1,0 +1,10 @@
+<nav class="sidebar">
+    <img src="../../../assets/images/svg/FullLogo.svg" alt="logo">
+    <ul>
+        <li *ngFor="let item of menuItems"
+            [routerLink]="item.path"
+            routerLinkActive="selected">
+            {{ item.name }}
+        </li>
+    </ul>
+</nav>

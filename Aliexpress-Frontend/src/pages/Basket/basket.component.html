@@ -1,0 +1,88 @@
+<!-- Интерфейс неавторизированного пользователя -->
+<ng-container *ngIf="!isLoggedIn">
+    <div class="top-section">
+        <div class="cart-info">
+            <span>There is nothing in the cart</span>
+            <span></span>
+        </div>
+        <div class="login-info">
+            <button (click)="login()">Log In</button>
+            <button class="to-main">To the main</button>
+        </div>
+    </div>
+    <div class="cards-section">
+        <div class="card-item" *ngFor="let product of products">
+            <div class="image-section"><img [src]="product.imagePath" [alt]="product.name"></div>
+            <span>{{ product.name }}</span>
+            <div class="top-info">
+                <img src="../../assets/images/svg/Clock.svg" alt="clock">
+                <span>{{ product.price }} $</span>
+                <span class="sold">{{ product.soldCount }} sold</span>
+                <div class="stars">
+                    <span *ngFor="let star of [1,2,3,4,5]; let i = index"
+                    [style.color]="i < product.rating ? '#FFD942' : '#D9D9D9'">★</span>
+                </div>
+            </div>
+            <div class="bottom-info">
+                <span>Lowest recent price: {{ product.lowestPrice }}$</span>
+                <img src="../../assets/images/svg/Favorite.svg" alt="favorite">
+                <img src="../../assets/images/svg/BlackCart.svg" alt="cart">
+            </div>
+        </div>
+    </div>
+</ng-container>
+<!-- Интерфейс для авторизованного пользователя -->
+<ng-container *ngIf="isLoggedIn">
+    <div class="top-section">
+        <div class="cart-info">
+            <span>There is nothing in the cart</span>
+            <span></span>
+        </div>
+        <div class="login-info">
+            <span>The best place to start choosing</span>
+            <button class="to-main" (click)="toMain()">To the main</button>
+        </div>
+    </div>
+    <span class="mini-caption">Browsing history</span>
+    <div class="cards-section browsing">
+        <div class="card-item" *ngFor="let product of browsingProducts">
+            <div class="image-section"><img [src]="product.imagePath" [alt]="product.name"></div>
+            <span>{{ product.name }}</span>
+            <div class="top-info">
+                <img src="../../assets/images/svg/Clock.svg" alt="clock">
+                <span>{{ product.price }} $</span>
+                <span class="sold">{{ product.soldCount }} sold</span>
+                <div class="stars">
+                    <span *ngFor="let star of [1,2,3,4,5]; let i = index"
+                    [style.color]="i < product.rating ? '#FFD942' : '#D9D9D9'">★</span>
+                </div>
+            </div>
+            <div class="bottom-info">
+                <span>Lowest recent price: {{ product.lowestPrice }}$</span>
+                <img src="../../assets/images/svg/Favorite.svg" alt="favorite">
+                <img src="../../assets/images/svg/BlackCart.svg" alt="cart">
+            </div>
+        </div>
+    </div>
+    <span class="mini-caption">Selected for you</span>
+    <div class="cards-section">
+        <div class="card-item" *ngFor="let product of products">
+            <div class="image-section"><img [src]="product.imagePath" [alt]="product.name"></div>
+            <span>{{ product.name }}</span>
+            <div class="top-info">
+                <img src="../../assets/images/svg/Clock.svg" alt="clock">
+                <span>{{ product.price }} $</span>
+                <span class="sold">{{ product.soldCount }} sold</span>
+                <div class="stars">
+                    <span *ngFor="let star of [1,2,3,4,5]; let i = index"
+                    [style.color]="i < product.rating ? '#FFD942' : '#D9D9D9'">★</span>
+                </div>
+            </div>
+            <div class="bottom-info">
+                <span>Lowest recent price: {{ product.lowestPrice }}$</span>
+                <img src="../../assets/images/svg/Favorite.svg" alt="favorite">
+                <img src="../../assets/images/svg/BlackCart.svg" alt="cart">
+            </div>
+        </div>
+    </div>
+</ng-container>

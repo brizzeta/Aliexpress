@@ -1,5 +1,13 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './Home/home.component';
+import { AdminLoginComponent } from './AdminLogin/admin-login.component';
+import { AdminLayoutComponent } from './AdminLogin/admin-layout.component';
+import { AdminUsersComponent } from './AdminLogin/admin-users/admin-users.component';
+import { AdminAdminsComponent } from './AdminLogin/admin-admins/admin-admins.component';
+import { AdminProductsComponent } from './AdminLogin/admin-products/admin-products.component';
+import { AdminCategoriesComponent } from './AdminLogin/admin-categories/admin-categories.component';
+import { AdminProfileComponent } from './AdminLogin/admin-profile/admin-profile.component';
+import { AdminSettingsComponent } from './AdminLogin/admin-settings/admin-settings.component';
 import { ProfileComponent } from './Profile/profile.component';
 import { LoginComponent } from './Profile/login/login.component';
 import { LogoutComponent } from './Profile/logout/logout.component';
@@ -20,6 +28,11 @@ import { ChatComponent } from './Profile/chat/chat.component';
 import { ReviewsComponent } from './Profile/reviews/reviews.component';
 import { AddressesComponent } from './Profile/addresses/addresses.component';
 import { PersonalComponent } from './Profile/personal/personal.component';
+import { NotificationsComponent } from './Profile/notifications/notifications.component';
+import { BasketComponent } from './Basket/basket.component';
+import { BasketPaymentComponent } from './Basket/basket-payment/basket-payment.component';
+import { BasketAddPaymentComponent } from './Basket/basket-add-payment/basket-add-payment.component';
+import { WhatIsComponent } from './WhatIs/whatis.component';
 import { SupportComponent } from './Profile/support/support.component';
 import { SavedCardsComponent } from './Profile/savedCards/savedCards.component';
 import { NewaddressComponent } from './Profile/addresses/newaddress/newaddress.component';
@@ -42,6 +55,33 @@ import { SupportNoactiveComponent } from './Profile/support/noactive/support-noa
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'whatis', component: WhatIsComponent },
+  { 
+    path: 'basket', 
+    children: [
+      { path: '', component: BasketComponent },
+      { path: 'payment', component: BasketPaymentComponent },
+      { path: 'add', component: BasketAddPaymentComponent }
+    ]
+  },
+  {
+    path: 'admin',
+    children: [
+      { path: '', component: AdminLoginComponent },
+      {
+        path: '',
+        component: AdminLayoutComponent,
+        children: [
+          { path: 'users', component: AdminUsersComponent },
+          { path: 'admins', component: AdminAdminsComponent },
+          { path: 'products', component: AdminProductsComponent },
+          { path: 'categories', component: AdminCategoriesComponent },
+          { path: 'profile', component: AdminProfileComponent },
+          { path: 'settings', component: AdminSettingsComponent }
+        ]
+      }
+    ]
+  },
   { 
     path: 'profile', 
     component: ProfileComponent,

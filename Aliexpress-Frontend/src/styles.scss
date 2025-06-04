@@ -1,148 +1,161 @@
 @use "assets/variables.scss" as *;
 @use "assets/functions.scss" as *;
+
 @debug map-get($breakpoints, sm);
 
+// Подключение всех шрифтов
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PublicSans';
+  src: url('/assets/fonts/PublicSans/PublicSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+// Добавлены все веса Montserrat из версии dima
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-*, *::before, *::after { box-sizing: border-box; }
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    -webkit-user-drag: none;
-    user-select: none;
-    overflow-x: hidden;
-    background-color: $greyish;
-
-    
-
-
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
-        font-weight: 100;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
-        font-weight: 200;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
-        font-weight: 300;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
-        font-weight: 400;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
-        font-weight: 500;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
-        font-weight: 600;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
-        font-weight: 700;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
-        font-weight: 800;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url('/assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
-        font-weight: 900;
-        font-style: normal;
-    }
+  margin: 0;
+  padding: 0;
+  background: $body-white;
+  font-family: "Montserrat", sans-serif;
+  -webkit-user-drag: none;
+  user-select: none;
+  overflow-x: hidden;
+  background-color: $greyish;
 }
-* {
- 
-    
-  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; // Футер всегда внизу экрана
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
 
 router-outlet {
-    flex: 0.55 0 auto; // Контент растягивается
+  flex: 1 0 auto;
 
-    @include media-breakpoint-down(sm) {
-        flex: 0 0 0; // Делаем router-outlet нулевым по размеру
-        height: 0; 
-    }
+  @include media-breakpoint-down(sm) {
+    flex: 0 0 0;
+    height: 0;
+  }
 }
+
 app-footer {
-    flex-shrink: 0; // Футер не сжимается
+  flex-shrink: 0;
+}
+
+input, button {
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-    font-size: px-to-rem(128);
-    font-weight: 400;
-    color: $white;
+  font-size: px-to-rem(128);
+  font-weight: 400;
+  color: $white;
 }
 h2 {
-    font-size: px-to-rem(120);
-    font-weight: 700;
-    color: $green;
+  font-size: px-to-rem(120);
+  font-weight: 700;
+  color: $green;
 }
 h3 {
-    font-size: px-to-rem(64);
-    font-weight: 400;
-    color: $white;
+  font-size: px-to-rem(64);
+  font-weight: 400;
+  color: $white;
 }
 h4 {
-    font-size: px-to-rem(48);
-    font-weight: 500;
-    color: $white;
+  font-size: px-to-rem(48);
+  font-weight: 500;
+  color: $white;
 }
 h5, p {
-    font-size: px-to-rem(20);
-    font-weight: 500;
+  font-size: px-to-rem(20);
+  font-weight: 500;
 }
 h6 {
-    font-size: px-to-rem(16);
-    font-weight: 400;
-    color: $white;
+  font-size: px-to-rem(16);
+  font-weight: 400;
+  color: $white;
 }
 a {
-    font-size: px-to-rem(20);
-    font-weight: 500;
-    color: $green;
+  font-size: px-to-rem(20);
+  font-weight: 500;
+  color: $green;
 }
 header, nav {
-    font-size: px-to-rem(24);
-    font-weight: 400;
+  font-size: px-to-rem(24);
+  font-weight: 400;
 }
 button {
-    font-size: px-to-rem(24);
-    font-weight: 400;
+  font-size: px-to-rem(24);
+  font-weight: 400;
 }

@@ -1,0 +1,35 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.sidebar {
+    text-align: center;
+    height: 100vw;
+    width: px-to-rem(349);
+    background: $black;
+    box-shadow: px-to-rem(5 0 10 2) rgba(0, 0, 0, 0.3);
+
+    @include media-breakpoint-down(1900) { width: px-to-rem(280); }
+    img {
+        margin-top: px-to-rem(60); 
+        @include media-breakpoint-down(1900) { margin-top: px-to-rem(30); }
+    }
+    ul {
+        margin-top: px-to-rem(55);
+        padding: 0;
+        list-style: none;
+        color: $white;
+        font-size: px-to-rem(24);
+
+        @include media-breakpoint-down(1900) { margin-top: px-to-rem(30); }
+        li {
+            align-content: center;
+            width: 100%;
+            height: px-to-rem(46);
+            border: px-to-rem(1) solid $sidebar-grey;
+            cursor: pointer;
+            transition: .25s;
+
+            &.selected { background: $sidebar-grey; }
+        }
+    }
+}
