@@ -36,7 +36,6 @@ C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\o
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Aliexpress-Backend.props
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Aliexpress-Backend.props
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\staticwebassets.pack.json
-C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\Aliexpre.78B6E39D.Up2Date
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\Aliexpress-Backend.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\refint\Aliexpress-Backend.dll
@@ -134,3 +133,4 @@ C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\b
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
