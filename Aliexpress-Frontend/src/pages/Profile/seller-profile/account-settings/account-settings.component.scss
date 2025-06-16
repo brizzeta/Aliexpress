@@ -1,0 +1,321 @@
+@use "../../../../assets/variables.scss" as *;
+@use "../../../../assets/functions.scss" as *;
+
+.account-settings-container {
+  position: relative;
+  width: px-to-rem(1255);
+  margin: 0 auto;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(375);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(750);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1000);
+  }
+}
+
+.account-details-title {
+  position: absolute;
+  top: px-to-rem(110);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(48);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(32);
+    top: px-to-rem(80);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(32);
+    top: px-to-rem(80);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(40);
+    top: px-to-rem(90);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(48);
+    top: px-to-rem(110);
+  }
+}
+
+.fields-container {
+  display: flex;
+  position: absolute;
+  top: px-to-rem(250); /* 110px + 40px (изменено с 150px) */
+  left: px-to-rem(80); /* 200px от левого края (изменено с 200px) */
+  gap: px-to-rem(30); /* Между колонками 30px */
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    left: 0;
+    top: px-to-rem(120); /* Корректируем для мобильных */
+    width: 100%;
+    gap: px-to-rem(0);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    flex-direction: column;
+    left: 0;
+    top: px-to-rem(120);
+    width: 100%;
+    gap: px-to-rem(0);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    flex-direction: column;
+    left: 0;
+    top: px-to-rem(130);
+    width: 100%;
+    gap: px-to-rem(0);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    flex-direction: row;
+    left: px-to-rem(80);
+    top: px-to-rem(250);
+  }
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(50); /* Между парами полей 50px */
+
+  @include media-breakpoint-down(sm) {
+    gap: px-to-rem(30);
+    width: 100%;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    gap: px-to-rem(30);
+    width: 100%;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    gap: px-to-rem(40);
+    width: 100%;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    gap: px-to-rem(50);
+  }
+}
+
+.field-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  margin-left: px-to-rem(25);
+  margin-bottom: px-to-rem(10);
+}
+
+.field-input {
+  width: px-to-rem(561);
+  height: px-to-rem(44);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(400);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(561);
+  }
+}
+
+.field-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+}
+
+.tune-icon {
+  position: absolute;
+  right: px-to-rem(13);
+  width: px-to-rem(17.5);
+  height: px-to-rem(17.5);
+}
+
+.buttons-container {
+  position: absolute;
+  top: px-to-rem(800); /* 250px + 50px * 3 + 300px */
+  right: px-to-rem(20); /* Правый отступ для выравнивания в правой части */
+  display: flex;
+  gap: px-to-rem(40); /* Между кнопками 40px */
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    top: px-to-rem(600);
+    right: 0;
+    width: 100%;
+    gap: px-to-rem(20);
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    flex-direction: column;
+    top: px-to-rem(600);
+    right: 0;
+    width: 100%;
+    gap: px-to-rem(20);
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    flex-direction: column;
+    top: px-to-rem(650);
+    right: 0;
+    width: 100%;
+    gap: px-to-rem(30);
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    flex-direction: row;
+    top: px-to-rem(700);
+    right: px-to-rem(80);
+  }
+}
+
+.delete-button {
+  width: px-to-rem(243);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: #FF3C3C; /* Цвет фона кнопки */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap; /* Убираем перенос текста */
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $white; /* Цвет текста */
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(200);
+    height: px-to-rem(36);
+    padding: px-to-rem(6);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(200);
+    height: px-to-rem(36);
+    padding: px-to-rem(6);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(220);
+    height: px-to-rem(38);
+    padding: px-to-rem(7);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(243);
+    height: px-to-rem(40);
+    padding: px-to-rem(8);
+  }
+}
+
+.save-button {
+  width: px-to-rem(114);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: $grey; /* Цвет фона кнопки */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $white; /* Цвет текста */
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(100);
+    height: px-to-rem(36);
+    padding: px-to-rem(6);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(100);
+    height: px-to-rem(36);
+    padding: px-to-rem(6);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(100);
+    height: px-to-rem(38);
+    padding: px-to-rem(7);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(114);
+    height: px-to-rem(40);
+    padding: px-to-rem(8);
+  }
+}
