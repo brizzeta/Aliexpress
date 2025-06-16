@@ -19,7 +19,7 @@ namespace Application.Mappings
             // User mappings
             CreateMap<User, UserDto>();
             CreateMap<UserCreateDto, User>()
-                .ForMember(dest => dest.Password_hash, opt => opt.MapFrom(src => src.Password)) // Здесь должно быть хеширование пароля
+                .ForMember(dest => dest.Password_hash, opt => opt.MapFrom(src => src.Password))
                 .ForMember(dest => dest.RegistrationDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
                 .ForMember(dest => dest.IsActive, opt => opt.MapFrom(_ => true))
                 .ForMember(dest => dest.Rating, opt => opt.MapFrom(_ => 0.0));
@@ -91,7 +91,10 @@ namespace Application.Mappings
             CreateMap<OrderItemCreateDto, OrderItem>();
 
             // Payment mappings
-            CreateMap<Payment, PaymentDto>();
+            CreateMap<Payment, PaymentDto>()
+                .ForMember(dest => dest.BuyerId, opt => opt.MapFrom(src => src.Order.BuyerId))
+                .ForMember(dest => dest.SellerId, opt => opt.MapFrom(src => src.Order.Product.SellerId));
+
             CreateMap<PaymentCreateDto, Payment>()
                 .ForMember(dest => dest.PaymentDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(_ => PaymentStatus.Pending));
@@ -120,22 +123,24 @@ namespace Application.Mappings
                 .ForMember(dest => dest.SellerName, opt => opt.MapFrom(src => src.Seller.Name))
                 .ForMember(dest => dest.LastMessage, opt => opt.MapFrom(src =>
                     src.Messages.OrderByDescending(m => m.CreatedDate).FirstOrDefault()))
-                .ForMember(dest => dest.UnreadMessagesCount, opt => opt.Ignore()); // Это должно быть установлено в сервисе
+                .ForMember(dest => dest.UnreadMessagesCount, opt => opt.Ignore()); 
 
             CreateMap<ChatCreateDto, Chat>()
                 .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
-                .ForMember(dest => dest.Messages, opt => opt.Ignore()); // Сообщения добавляются отдельно
+                .ForMember(dest => dest.Messages, opt => opt.Ignore());
 
             CreateMap<Messages, MessageDto>()
                 .ForMember(dest => dest.SenderName, opt => opt.MapFrom(src => src.Sender.Name));
 
             CreateMap<MessageCreateDto, Messages>()
-                .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(_ => DateTime.UtcNow));
+                .ForMember(dest => dest.CreatedDate, opt => opt.MapFrom(_ => DateTime.UtcNow))
+                .ForMember(dest => dest.SenderId, opt => opt.MapFrom(src => src.SenderId));
+
 
             // Notification mappings
             CreateMap<Notifications, NotificationDto>()
                 .ForMember(dest => dest.RecepientName, opt => opt.MapFrom(src => src.Recepient.Name))
-                .ForMember(dest => dest.CreatedDate, opt => opt.Ignore()); // У вас нет поля CreatedDate в модели Notifications
+                .ForMember(dest => dest.CreatedDate, opt => opt.Ignore());
 
             CreateMap<NotificationCreateDto, Notifications>();
 

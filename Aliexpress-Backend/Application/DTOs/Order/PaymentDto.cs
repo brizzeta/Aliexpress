@@ -15,5 +15,7 @@ namespace Application.DTOs.Order
         public PaymentStatus Status { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
         public string? TransactionId { get; set; }
+        public int BuyerId { get; set; }      
+        public int SellerId { get; set; }
     }
 }
