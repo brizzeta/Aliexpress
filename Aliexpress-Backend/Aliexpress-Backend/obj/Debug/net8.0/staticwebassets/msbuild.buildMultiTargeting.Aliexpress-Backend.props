@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Aliexpress-Backend.props" />
+</Project>
