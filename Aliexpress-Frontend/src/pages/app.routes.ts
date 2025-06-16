@@ -51,6 +51,15 @@ import { AddressesNoactiveComponent } from './Profile/addresses/noactive/address
 import { SavedCardsNoactiveComponent } from './Profile/savedCards/noactive/savedcards-noactive.component';
 import { PersonalNoactiveComponent } from './Profile/personal/noactive/personal-noactive.component';
 import { SupportNoactiveComponent } from './Profile/support/noactive/support-noactive.component';
+import { SellerComponent } from './Profile/seller/seller.component';
+import { ProductsAllComponent } from './Profile/seller/products_all/products_all.component';
+import { ProductsAddComponent } from './Profile/seller/products_add/products_add.component';
+import { SellerOrdersComponent } from './Profile/seller/orders/orders.component';
+import { SellerProfileComponent } from './Profile/seller-profile/profile.component'; // Добавляем новый компонент
+import { MyProfileComponent } from './Profile/seller-profile/my-profile/my-profile.component';
+import { AccountSettingsComponent } from './Profile/seller-profile/account-settings/account-settings.component';
+import { StatisticComponent } from './Profile/seller-profile/statistic/statistic.component';
+import { DashboardComponent } from './Profile/seller-profile/dashboard/dashboard.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -211,6 +220,27 @@ export const routes: Routes = [
       },
       { path: 'login', component: LoginComponent },
       { path: 'logout', component: LogoutComponent },
+    ]
+  },
+  { 
+    path: 'profile/seller', 
+    component: SellerComponent,
+    children: [
+      { path: '', redirectTo: 'products_all', pathMatch: 'full' },
+      { path: 'products_all', component: ProductsAllComponent },
+      { path: 'products_add', component: ProductsAddComponent },
+      { path: 'orders', component: SellerOrdersComponent }
+    ]
+  },
+  { 
+    path: 'profile/seller-profile', 
+    component: SellerProfileComponent, // Новый компонент для меню
+    children: [
+      { path: '', redirectTo: 'my-profile', pathMatch: 'full' },
+      { path: 'my-profile', component: MyProfileComponent },
+      { path: 'account-settings', component: AccountSettingsComponent },
+      { path: 'statistic', component: StatisticComponent },
+      { path: 'dashboard', component: DashboardComponent }
     ]
   }
 ];

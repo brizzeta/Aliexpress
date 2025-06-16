@@ -1,0 +1,550 @@
+@use "../../../../assets/variables.scss" as *;
+@use "../../../../assets/functions.scss" as *;
+
+.my-profile-container {
+  position: relative;
+  width: px-to-rem(1255);
+  margin: 0 auto;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(375);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(750);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1000);
+  }
+}
+
+.avatar-container {
+  position: absolute;
+  left: px-to-rem(330 - 200); /* 130px */
+  top: px-to-rem(67);
+  position: relative; /* Для позиционирования upload-icon */
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: px-to-rem(20) auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: px-to-rem(20) auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: px-to-rem(20) auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    left: px-to-rem(130);
+    top: px-to-rem(67);
+  }
+}
+
+.avatar-wrapper {
+  width: px-to-rem(272);
+  height: px-to-rem(272);
+  background-color: $white;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(200);
+    height: px-to-rem(200);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(200);
+    height: px-to-rem(200);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(220);
+    height: px-to-rem(220);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(272);
+    height: px-to-rem(272);
+  }
+}
+
+.avatar-image {
+  width: px-to-rem(260);
+  height: px-to-rem(260);
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: px-to-rem(6);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(190);
+    height: px-to-rem(190);
+    margin: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(190);
+    height: px-to-rem(190);
+    margin: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(210);
+    height: px-to-rem(210);
+    margin: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(260);
+    height: px-to-rem(260);
+    margin: px-to-rem(6);
+  }
+}
+
+.upload-icon {
+  position: absolute;
+  width: px-to-rem(46);
+  height: px-to-rem(46);
+  cursor: pointer;
+  z-index: 2;
+  bottom: px-to-rem(20);
+  right: px-to-rem(1000);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(36);
+    height: px-to-rem(36);
+    bottom: px-to-rem(15);
+    right: px-to-rem(150);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(36);
+    height: px-to-rem(36);
+    bottom: px-to-rem(15);
+    right: px-to-rem(150);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(40);
+    height: px-to-rem(40);
+    bottom: px-to-rem(18);
+    right: px-to-rem(200);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(46);
+    height: px-to-rem(46);
+    bottom: px-to-rem(20);
+    right: px-to-rem(1000);
+  }
+}
+
+.info-section {
+  position: absolute;
+  left: px-to-rem((330 - 200) + 272 + 75); /* 477px */
+  top: px-to-rem(160);
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    left: px-to-rem(477);
+    top: px-to-rem(160);
+  }
+}
+
+.name-section {
+  display: block;
+  margin-bottom: px-to-rem(30);
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: px-to-rem(15);
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-bottom: px-to-rem(15);
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-bottom: px-to-rem(15);
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-bottom: px-to-rem(30);
+  }
+}
+
+.last-name-section {
+  display: block;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(561);
+  }
+}
+
+.public-address-section {
+  position: absolute;
+  left: px-to-rem(130); /* Выровнено по левой границе avatar-container */
+  top: px-to-rem(390); /* 272px (высота аватарки) + 55px */
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    left: px-to-rem(130);
+    top: px-to-rem(390);
+  }
+}
+
+.about-me-section {
+  position: absolute;
+  left: px-to-rem(130); /* Выровнено по левой границе avatar-container */
+  top: px-to-rem(500); /* 390px + 169px + 30px */
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    left: px-to-rem(130);
+    top: px-to-rem(589);
+  }
+}
+
+.save-button-section {
+  position: absolute;
+  left: px-to-rem(130); /* Выровнено по левой границе avatar-container */
+  top: px-to-rem(778); /* 589px + 169px + 20px */
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: px-to-rem(20);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    left: px-to-rem(130);
+    top: px-to-rem(778);
+  }
+}
+
+.name-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  margin-left: px-to-rem(25);
+}
+
+.name-input {
+  margin-top: px-to-rem(10);
+  width: px-to-rem(561);
+  height: px-to-rem(44);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(335);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(561);
+  }
+}
+
+.public-address-input-custom {
+  width: px-to-rem(910);
+  height: px-to-rem(44);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+    height: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335);
+    height: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(600);
+    height: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(856);
+    height: px-to-rem(20);
+  }
+}
+
+.about-me-input {
+  width: px-to-rem(910);
+  height: px-to-rem(169);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white;
+  margin-top: 10px;
+  color: $white; /* Цвет текста, но для пустого поля это не влияет, цвет фона задаётся через background-color */
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+    height: px-to-rem(150);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335);
+    height: px-to-rem(150);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(600);
+    height: px-to-rem(160);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(910);
+    height: px-to-rem(169);
+  }
+}
+
+.save-button {
+  width: px-to-rem(114);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: $grey; /* Фон кнопки */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $white; /* Цвет текста */
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(100);
+    height: px-to-rem(36);
+    padding: px-to-rem(6);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(100);
+    height: px-to-rem(36);
+    padding: px-to-rem(6);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(100);
+    height: px-to-rem(38);
+    padding: px-to-rem(7);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(114);
+    height: px-to-rem(40);
+    padding: px-to-rem(8);
+  }
+}
+
+.name-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+}
+
+.tune-icon {
+  position: absolute;
+  right: px-to-rem(13);
+  width: px-to-rem(17.5);
+  height: px-to-rem(17.5);
+}
