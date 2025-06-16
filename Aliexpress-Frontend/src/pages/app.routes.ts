@@ -28,7 +28,6 @@ import { ChatComponent } from './Profile/chat/chat.component';
 import { ReviewsComponent } from './Profile/reviews/reviews.component';
 import { AddressesComponent } from './Profile/addresses/addresses.component';
 import { PersonalComponent } from './Profile/personal/personal.component';
-import { NotificationsComponent } from './Profile/notifications/notifications.component';
 import { BasketComponent } from './Basket/basket.component';
 import { BasketPaymentComponent } from './Basket/basket-payment/basket-payment.component';
 import { BasketAddPaymentComponent } from './Basket/basket-add-payment/basket-add-payment.component';
