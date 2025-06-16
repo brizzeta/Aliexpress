@@ -1,0 +1,400 @@
+@use "../../../../assets/variables.scss" as *;
+@use "../../../../assets/functions.scss" as *;
+
+.dashboard-container {
+  padding-top: 130px; /* 130px сверху */
+  text-align: center; /* Центрирование заголовка по ширине */
+}
+
+.dashboard-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  margin-bottom: 65px; /* 65px ниже заголовка до .chart-field */
+
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: 48px;
+    margin-bottom: 65px;
+  }
+}
+
+.chart-field {
+  width: 1411px;
+  height: 646px;
+  border-radius: 10px;
+  background-color: $white;
+  position: relative;
+  margin-left: 190px; /* Обновлено с 429px на 80px */
+  margin-top: 128px; /* Корректируем top: 258px с учётом padding-top: 130px */
+
+  @include media-breakpoint-down(sm) {
+    width: 335px;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 335px;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 600px;
+    height: 500px;
+    margin-left: 50px;
+    margin-top: 150px;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 1411px;
+    height: 646px;
+    margin-left: 80px;
+    margin-top: 128px;
+  }
+}
+
+.mini-line {
+  width: 19px;
+  height: 3px;
+  background-color: $deepgrey;
+  position: absolute;
+  right: 0; /* В упор к правой стенке */
+  
+  &:nth-child(1) { top: 50px; } /* 50px от верха */
+  &:nth-child(3) { top: 150px; } /* 50px ниже первой */
+  &:nth-child(5) { top: 250px; } /* 50px ниже второй */
+  &:nth-child(7) { top: 350px; } /* 50px ниже третьей */
+
+  @include media-breakpoint-down(sm) {
+    width: 10px;
+    height: 2px;
+
+    &:nth-child(1) { top: 30px; }
+    &:nth-child(3) { top: 90px; }
+    &:nth-child(5) { top: 150px; }
+    &:nth-child(7) { top: 210px; }
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 10px;
+    height: 2px;
+
+    &:nth-child(1) { top: 30px; }
+    &:nth-child(3) { top: 90px; }
+    &:nth-child(5) { top: 150px; }
+    &:nth-child(7) { top: 210px; }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 15px;
+    height: 2px;
+
+    &:nth-child(1) { top: 40px; }
+    &:nth-child(3) { top: 120px; }
+    &:nth-child(5) { top: 200px; }
+    &:nth-child(7) { top: 280px; }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 19px;
+    height: 3px;
+
+    &:nth-child(1) { top: 50px; }
+    &:nth-child(3) { top: 150px; }
+    &:nth-child(5) { top: 250px; }
+    &:nth-child(7) { top: 350px; }
+  }
+}
+
+.full-line {
+  width: 1411px;
+  height: 3px;
+  background-color: $greyish;
+  position: absolute;
+  left: 0;
+  
+  &:nth-child(2) { top: 100px; } /* 50px ниже первой mini-line */
+  &:nth-child(4) { top: 200px; } /* 50px ниже второй mini-line */
+  &:nth-child(6) { top: 300px; } /* 50px ниже третьей mini-line */
+
+  @include media-breakpoint-down(sm) {
+    width: 335px;
+    height: 2px;
+
+    &:nth-child(2) { top: 60px; }
+    &:nth-child(4) { top: 120px; }
+    &:nth-child(6) { top: 180px; }
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 335px;
+    height: 2px;
+
+    &:nth-child(2) { top: 60px; }
+    &:nth-child(4) { top: 120px; }
+    &:nth-child(6) { top: 180px; }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 600px;
+    height: 2px;
+
+    &:nth-child(2) { top: 80px; }
+    &:nth-child(4) { top: 160px; }
+    &:nth-child(6) { top: 240px; }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 1411px;
+    height: 3px;
+
+    &:nth-child(2) { top: 100px; }
+    &:nth-child(4) { top: 200px; }
+    &:nth-child(6) { top: 300px; }
+  }
+}
+
+.new-full-line {
+  width: 1411px;
+  height: 3px;
+  background-color: #8F8F8F;
+  position: absolute;
+  left: 0;
+  top: 400px; /* 50px ниже последней mini-line (350px + 50px) */
+
+  @include media-breakpoint-down(sm) {
+    width: 335px;
+    height: 2px;
+    top: 250px; /* Адаптивная корректировка */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 335px;
+    height: 2px;
+    top: 250px; /* Адаптивная корректировка */
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 600px;
+    height: 2px;
+    top: 330px; /* Адаптивная корректировка */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 1411px;
+    height: 3px;
+    top: 400px; /* 50px ниже последней mini-line */
+  }
+}
+
+.tick-line {
+  width: 2px;
+  height: 19px;
+  background-color: #8F8F8F;
+  position: absolute;
+  margin-left: 70px;
+  z-index: 1;
+  top: 389px; /* 11px выше new-full-line (400px - 11px) для пересечения */
+  
+  @for $i from 0 through 7 { /* Индексация с 0 до 8 для 9 элементов */
+    &:nth-child(#{10 + $i}) { /* Начинаем с 10-го элемента (после new-full-line, которая 9-я) */
+      left: calc(#{$i} * (1411px / 8)); /* Равномерное распределение по 1411px для 9 черточек */
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 1px;
+    height: 12px;
+    top: 239px; /* Адаптивная корректировка */
+
+    @for $i from 0 through 8 {
+      &:nth-child(#{10 + $i}) {
+        left: calc(#{$i} * (335px / 8));
+      }
+    }
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 1px;
+    height: 12px;
+    top: 239px; /* Адаптивная корректировка */
+
+    @for $i from 0 through 8 {
+      &:nth-child(#{10 + $i}) {
+        left: calc(#{$i} * (335px / 8));
+      }
+    }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 1.5px;
+    height: 15px;
+    top: 319px;
+
+    @for $i from 0 through 8 {
+      &:nth-child(#{10 + $i}) {
+        left: calc(#{$i} * (600px / 8));
+      }
+    }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 2px;
+    height: 19px;
+    top: 389px; /* 11px выше нового full-line */
+
+    @for $i from 0 through 8 {
+      &:nth-child(#{10 + $i}) {
+        left: calc(#{$i} * (1411px / 8));
+      }
+    }
+  }
+}
+
+.tick-square {
+  width: 48px;
+  height: 49px;
+  background-color: #D9D9D9;
+  position: absolute;
+  top:351px;
+  left: 47px;
+}
+
+.sub-fields {
+  display: flex;
+  justify-content: space-between;
+  padding: px-to-rem(0) px-to-rem(15) px-to-rem(15) px-to-rem(15); /* 15px от краёв */
+  position: absolute;
+  top: 435px; /* 35px ниже new-full-line (400px + 35px) */
+  left: 0;
+  width: 100%; /* Чтобы соответствовать ширине chart-field */
+
+  @include media-breakpoint-down(sm) {
+    top: 285px; /* 35px ниже new-full-line (250px + 35px) */
+    padding: px-to-rem(0) px-to-rem(10) px-to-rem(10) px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    top: 285px;
+    padding: px-to-rem(0) px-to-rem(10) px-to-rem(10) px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    top: 365px; /* 35px ниже new-full-line (330px + 35px) */
+    padding: px-to-rem(0) px-to-rem(12) px-to-rem(12) px-to-rem(12);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    top: 435px;
+    padding: px-to-rem(0) px-to-rem(15) px-to-rem(15) px-to-rem(15);
+  }
+}
+
+.sub-field {
+  width: px-to-rem(277);
+  height: px-to-rem(161);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(150);
+    height: px-to-rem(120);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(150);
+    height: px-to-rem(120);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(200);
+    height: px-to-rem(140);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(277);
+    height: px-to-rem(161);
+  }
+}
+
+.sub-field-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  margin-bottom: px-to-rem(15); /* 15px между текстами */
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(16);
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(18);
+    margin-bottom: px-to-rem(12);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(24);
+    margin-bottom: px-to-rem(15);
+  }
+}
+
+.sub-field-value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(48);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(24);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(24);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(30);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(48);
+  }
+}

@@ -1,0 +1,51 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: px-to-rem(85) 12.86%;
+
+    @include media-breakpoint-down(768) { margin: px-to-rem(45) 9.87%; }
+    span {
+        display: block; 
+        width: 100%;
+        color: $black;
+        font-size: px-to-rem(24);
+        font-weight: 400;
+
+        @include media-breakpoint-down(768) { font-size: px-to-rem(14); }
+    }
+    span:nth-of-type(n+2) {
+        margin-top: px-to-rem(40); 
+        @include media-breakpoint-down(768) { margin: px-to-rem(12 0 0 -5); }
+    }
+    span:nth-of-type(3) {
+        margin-top: px-to-rem(10); 
+        white-space: nowrap;
+        @include media-breakpoint-down(768) { margin: px-to-rem(22 0 0 -25); }
+    }
+    span:nth-of-type(5) {
+        margin-top: px-to-rem(5); 
+        @include media-breakpoint-down(768) {
+            text-align: left; 
+            margin: px-to-rem(18 0 0 -27);
+        }
+    }
+    span:nth-of-type(7) {
+        @include media-breakpoint-down(768) { margin: px-to-rem(0 0 0 -10); }
+    }
+    .caption {
+        margin-left: px-to-rem(-15);
+        text-align: center;
+        font-size: px-to-rem(40);
+        font-weight: 600;
+
+        @include media-breakpoint-down(768) {
+            margin-left: px-to-rem(-5);
+            font-size: px-to-rem(24); 
+        }
+    }
+    ul { margin: px-to-rem(30 0 0 -5); }
+}

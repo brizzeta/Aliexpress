@@ -1,8 +1,114 @@
-<section class="address-section">
-    <div class="container">
-        <h2></h2>
-        <div class="section-content">
-            <p>&nbsp;chat works!</p>
+<div class="tab"></div>
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
+  </div>
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="chat-container" *ngIf="showChat && !isNoactiveRoute">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+          <span class="title">Chat</span>
         </div>
+      </div>
+      <div class="main-chat-container">
+        <div class="chat-content">
+          <div class="left-panel" *ngIf="!isMobile() || showLeftPanel">
+            <div class="user-info" [class.selected]="selectedChat === 'KlikAVASupport'" (click)="onChatSelect('KlikAVASupport')">
+              <img src="assets/images/Klikavalogo.png" alt="Logo" class="logo" />
+              <span class="support-name">KlikAVASupport</span>
+              <span class="time">12:10</span>
+            </div>
+            <span class="date">12.02.2025</span>
+            <div class="user-info" [class.selected]="selectedChat === 'CRAZYRACE Store'" (click)="onChatSelect('CRAZYRACE Store')">
+              <img src="assets/images/user_ava.png" alt="User Avatar" class="logo" />
+              <span class="support-name">CRAZYRACE Store</span>
+              <span class="time">15:45</span>
+            </div>
+          </div>
+          <div class="right-panel" *ngIf="!isMobile() || !showLeftPanel">
+            <!-- Контент для KlikAVASupport -->
+            <div class="right-header" *ngIf="selectedChat === 'KlikAVASupport'">
+              <img src="assets/images/Klikavalogo.png" alt="Additional Logo" class="additional-logo" />
+              <div class="additional-info">
+                <span class="additional-support-name">KlikAVASupport</span>
+                <span class="additional-help-text">Help and support</span>
+              </div>
+            </div>
+            <div class="header-divider" *ngIf="selectedChat"></div>
+            <div class="messages-container">
+              <span class="message-date" *ngIf="selectedChat === 'KlikAVASupport'">18.03.2025</span>
+              <div class="message" *ngIf="selectedChat === 'KlikAVASupport'">
+                <img src="assets/images/Klikavalogo.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">KlikAVASupport</span>
+                <span class="message-text">Hello, Zhenya!</span>
+              </div>
+              <span class="message-time" *ngIf="selectedChat === 'KlikAVASupport'">12:10</span>
+              <div class="message adaptive-message" *ngIf="selectedChat === 'KlikAVASupport'">
+                <img src="assets/images/Klikavalogo.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">KlikAVASupport</span>
+                <span class="message-text">Describe your problem or select an order.</span>
+              </div>
+              <span class="message-time" *ngIf="selectedChat === 'KlikAVASupport'">12:11</span>
+              <div class="user-message" *ngIf="selectedChat === 'KlikAVASupport'">
+                <span class="user-text">I have a problem and I need to solve it</span>
+              </div>
+              <span class="user-time" *ngIf="selectedChat === 'KlikAVASupport'">12:15</span>
+              <div class="message new-message" *ngIf="selectedChat === 'KlikAVASupport'">
+                <img src="assets/images/Klikavalogo.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">KlikAVASupport</span>
+                <span class="message-text">The question could not be recognized. Please formulate your request differently.</span>
+              </div>
+              <span class="message-time" *ngIf="selectedChat === 'KlikAVASupport'">12:20</span>
+            </div>
+            <div class="input-container" *ngIf="selectedChat === 'KlikAVASupport'">
+              <img src="assets/images/attach_file.png" alt="Attach File" class="attach-icon" />
+              <input type="text" class="input-field" placeholder="Enter your message" />
+              <button class="send-button">Send</button>
+            </div>
+            <!-- Контент для CRAZYRACE Store -->
+            <div class="right-header" *ngIf="selectedChat === 'CRAZYRACE Store'">
+              <img src="assets/images/user_ava.png" alt="Additional Logo" class="additional-logo" />
+              <div class="additional-info">
+                <span class="additional-support-name">CRAZYRACE Store</span>
+                <span class="additional-help-text">Online Store Support</span>
+              </div>
+            </div>
+            <div class="header-divider" *ngIf="selectedChat === 'CRAZYRACE Store'"></div>
+            <div class="messages-container">
+              <span class="message-date" *ngIf="selectedChat === 'CRAZYRACE Store'">20.03.2025</span>
+              <div class="message" *ngIf="selectedChat === 'CRAZYRACE Store'">
+                <img src="assets/images/user_ava.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">CRAZYRACE Store</span>
+                <span class="message-text">Hi! Your order is ready!</span>
+              </div>
+              <span class="message-time" *ngIf="selectedChat === 'CRAZYRACE Store'">15:00</span>
+              <div class="message adaptive-message" *ngIf="selectedChat === 'CRAZYRACE Store'">
+                <img src="assets/images/user_ava.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">CRAZYRACE Store</span>
+                <span class="message-text">Please check your order status.</span>
+              </div>
+              <span class="message-time" *ngIf="selectedChat === 'CRAZYRACE Store'">15:05</span>
+              <div class="user-message" *ngIf="selectedChat === 'CRAZYRACE Store'">
+                <span class="user-text">Thanks, how do I proceed?</span>
+              </div>
+              <span class="user-time" *ngIf="selectedChat === 'CRAZYRACE Store'">15:10</span>
+              <div class="message new-message" *ngIf="selectedChat === 'CRAZYRACE Store'">
+                <img src="assets/images/user_ava.png" alt="Message Logo" class="message-logo" />
+                <span class="message-sender">CRAZYRACE Store</span>
+                <span class="message-text">Visit our store or track online.</span>
+              </div>
+              <span class="message-time" *ngIf="selectedChat === 'CRAZYRACE Store'">15:15</span>
+            </div>
+            <div class="input-container" *ngIf="selectedChat === 'CRAZYRACE Store'">
+              <img src="assets/images/attach_file.png" alt="Attach File" class="attach-icon" />
+              <input type="text" class="input-field" placeholder="Enter your message" />
+              <button class="send-button">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
+  </div>

@@ -1,0 +1,154 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.profile-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .top-panel {
+        margin-top: px-to-rem(67);
+        display: flex;
+        justify-content: center;
+        gap: px-to-rem(80);
+        width: 100%;
+
+        @include media-breakpoint-down(1900) { margin-top: px-to-rem(20); }
+        .image-box {
+            position: relative;
+            padding: px-to-rem(6);
+            height: px-to-rem(272);
+            width: px-to-rem(272);
+            background: $white;
+            border-radius: 50%;
+
+            div {
+                position: absolute;
+                bottom: px-to-rem(15);
+                right: px-to-rem(10);
+                height: px-to-rem(56);
+                width: px-to-rem(56);
+                background: $body-white;
+                border-radius: 50%;
+
+                div {
+                    position: absolute;
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(+50%, +50%);
+                    align-content: center;
+                    text-align: center;
+                    height: px-to-rem(46);
+                    width: px-to-rem(46);
+                    background: $black;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .control-panel {
+            margin-top: px-to-rem(94);
+            display: flex;
+            flex-direction: column;
+
+            span {
+                margin-left: px-to-rem(8);
+                display: block;
+                color: $grey;
+                font-size: px-to-rem(16);
+            }
+            span:nth-of-type(2) { margin-top: px-to-rem(31); }
+            button {
+                position: relative;
+                text-align: left;
+                margin: px-to-rem(10 0 0 -5);
+                padding: px-to-rem(0 10);
+                height: px-to-rem(44);
+                width: px-to-rem(561);
+                background: $white;
+                outline: none;
+                border: none;
+                border-radius: px-to-rem(10);
+                color: $grey;
+                font-size: px-to-rem(16);
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: px-to-rem(10);
+                    cursor: pointer;
+                    transition: .25s;
+                    
+                    &:hover {
+                        filter: brightness(1.2) sepia(0.5) hue-rotate(100deg) saturate(3);
+                        transform: translateY(-50%) scale(1.1);
+                    }
+                    &:active { transform: translateY(-50%) scale(0.95); }
+                }
+            }
+        }
+    }
+    .bottom-panel {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+
+        @include media-breakpoint-down(1900) { margin-left: px-to-rem(-170); }
+        span {
+            display: block;
+            margin: px-to-rem(50 0 0 27);
+            color: $grey;
+            font-size: px-to-rem(16);
+
+            @include media-breakpoint-down(1900) { margin: px-to-rem(20 0 0 27); }
+        }
+        span:nth-of-type(2) {
+            margin: px-to-rem(37 0 0 26); 
+            @include media-breakpoint-down(1900) { margin: px-to-rem(17 0 0 27); }
+        }
+        button {
+            text-align: left;
+            margin: px-to-rem(9 0 0 15);
+            padding: px-to-rem(0 10);
+            height: px-to-rem(40);
+            width: px-to-rem(910);
+            background: $white;
+            outline: none;
+            border: none;
+            border-radius: px-to-rem(10);
+            color: $grey;
+            font-size: px-to-rem(16);
+        }
+        textarea {
+            margin: px-to-rem(9.5 0 0 15);
+            padding: px-to-rem(5 10);
+            height: px-to-rem(169);
+            width: px-to-rem(910);
+            outline: none;
+            border: none;
+            border-radius: px-to-rem(10);
+            color: $grey;
+            font-family: "Montserrat", sans-serif;
+            font-size: px-to-rem(14);
+            font-weight: bold;
+            resize: none;
+        }
+        .save {
+            text-align: center;
+            margin: px-to-rem(79 0 0 811.5);
+            padding: 0;
+            width: px-to-rem(114);
+            background: $black;
+            color: $white;
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.025); }
+            &:active { transform: scale(0.975); }
+            @include media-breakpoint-down(1900) { margin: px-to-rem(25 0 0 811.5); }
+        }
+    }
+}

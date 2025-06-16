@@ -1,0 +1,513 @@
+@use "../../../../assets/variables.scss" as *;
+@use "../../../../assets/functions.scss" as *;
+
+.statistic-container {
+  width: px-to-rem(1411);
+  padding: px-to-rem(70) 0 0 px-to-rem(80); /* 70px сверху, 80px слева */
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+    padding: px-to-rem(50) 0 0 px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335);
+    padding: px-to-rem(50) 0 0 px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(600);
+    padding: px-to-rem(60) 0 0 px-to-rem(30);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1411);
+    padding: px-to-rem(70) 0 0 px-to-rem(80);
+  }
+}
+
+.main-field {
+  width: px-to-rem(1411);
+  height: px-to-rem(267);
+  border-radius: px-to-rem(10);
+  background-color: $white;
+  padding-top: px-to-rem(15); /* Отступ сверху 15px, чтобы .header-field сместился вниз */
+  margin-bottom: px-to-rem(40); /* Отступ 40px между блоками */
+  
+  &:last-child {
+    margin-bottom: px-to-rem(40); /* Оставляем 40px для последнего блока, чтобы .pagination-row был на 40px ниже */
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+    height: px-to-rem(200);
+    padding-top: px-to-rem(10);
+    margin-bottom: px-to-rem(20);
+    &:last-child {
+      margin-bottom: px-to-rem(20);
+    }
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335);
+    height: px-to-rem(200);
+    padding-top: px-to-rem(10);
+    margin-bottom: px-to-rem(20);
+    &:last-child {
+      margin-bottom: px-to-rem(20);
+    }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(600);
+    height: px-to-rem(220);
+    padding-top: px-to-rem(12);
+    margin-bottom: px-to-rem(30);
+    &:last-child {
+      margin-bottom: px-to-rem(30);
+    }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1411);
+    height: px-to-rem(267);
+    padding-top: px-to-rem(15);
+    margin-bottom: px-to-rem(40);
+    &:last-child {
+      margin-bottom: px-to-rem(40);
+    }
+  }
+}
+
+.header-field {
+  width: px-to-rem(1386);
+  height: px-to-rem(49);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $greyish;
+  margin: 0 0 px-to-rem(15) px-to-rem(15); /* 15px снизу и слева */
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(305);
+    height: px-to-rem(40);
+    padding: px-to-rem(8);
+    margin: 0 0 px-to-rem(10) px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(305);
+    height: px-to-rem(40);
+    padding: px-to-rem(8);
+    margin: 0 0 px-to-rem(10) px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(560);
+    height: px-to-rem(45);
+    padding: px-to-rem(9);
+    margin: 0 0 px-to-rem(12) px-to-rem(12);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1386);
+    height: px-to-rem(49);
+    padding: px-to-rem(10);
+    margin: 0 0 px-to-rem(15) px-to-rem(15);
+  }
+}
+
+.product-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(18);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(18);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(24);
+  }
+}
+
+.sub-fields {
+  display: flex;
+  justify-content: space-between;
+  padding: px-to-rem(0) px-to-rem(15) px-to-rem(15) px-to-rem(15); /* 15px от краёв */
+}
+
+.sub-field {
+  width: px-to-rem(277);
+  height: px-to-rem(161);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(150);
+    height: px-to-rem(120);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(150);
+    height: px-to-rem(120);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(200);
+    height: px-to-rem(140);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(277);
+    height: px-to-rem(161);
+  }
+}
+
+.sub-field-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  margin-bottom: px-to-rem(15); /* 15px между текстами */
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(16);
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(16);
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(18);
+    margin-bottom: px-to-rem(12);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(24);
+    margin-bottom: px-to-rem(15);
+  }
+}
+
+.sub-field-value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(48);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(24);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(24);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(30);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(48);
+  }
+}
+
+.pagination-row {
+  display: flex;
+  align-items: center;
+  margin-left: px-to-rem(-40); /* Компенсируем padding-left: 80px от .statistic-container */
+  padding-left: px-to-rem(40); /* Восстанавливаем отступ слева, как в orders.component */
+  margin-top: px-to-rem(0); /* Отступ уже задан через margin-bottom в .main-field:last-child */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: px-to-rem(-20);
+    padding-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(-20);
+    padding-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(-30);
+    padding-left: px-to-rem(30);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(-40);
+    padding-left: px-to-rem(40);
+  }
+}
+
+.pagination-text {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $black;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(16);
+  }
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  width: px-to-rem(73);
+  height: px-to-rem(40);
+  border: 1px solid $black;
+  border-radius: px-to-rem(4);
+  padding: px-to-rem(8) px-to-rem(10);
+  margin-left: px-to-rem(25);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(60);
+    height: px-to-rem(35);
+    padding: px-to-rem(6) px-to-rem(8);
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(60);
+    height: px-to-rem(35);
+    padding: px-to-rem(6) px-to-rem(8);
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(65);
+    height: px-to-rem(38);
+    padding: px-to-rem(7) px-to-rem(9);
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(73);
+    height: px-to-rem(40);
+    padding: px-to-rem(8) px-to-rem(10);
+    margin-left: px-to-rem(25);
+  }
+}
+
+.dropdown-value {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  margin-left: px-to-rem(10);
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(14);
+    margin-left: px-to-rem(8);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(14);
+    margin-left: px-to-rem(8);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(15);
+    margin-left: px-to-rem(9);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(16);
+    margin-left: px-to-rem(10);
+  }
+}
+
+.dropdown-icon {
+  width: px-to-rem(24);
+  height: px-to-rem(24);
+  margin-left: auto;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(20);
+    height: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(20);
+    height: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(22);
+    height: px-to-rem(22);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(24);
+    height: px-to-rem(24);
+  }
+}
+
+.pagination-text:nth-child(3) {
+  margin-left: px-to-rem(160);
+
+  @include media-breakpoint-down(sm) {
+    margin-left: px-to-rem(80);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(80);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(100);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(160);
+  }
+}
+
+.nav-icon {
+  width: px-to-rem(12);
+  height: px-to-rem(12);
+
+  &:nth-child(4) {
+    margin-left: px-to-rem(72);
+  }
+
+  &:nth-child(5) {
+    margin-left: px-to-rem(30);
+  }
+
+  &:nth-child(6) {
+    margin-left: px-to-rem(30);
+  }
+
+  &:nth-child(7) {
+    margin-left: px-to-rem(30);
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(10);
+    height: px-to-rem(10);
+
+    &:nth-child(4) {
+      margin-left: px-to-rem(40);
+    }
+
+    &:nth-child(5) {
+      margin-left: px-to-rem(20);
+    }
+
+    &:nth-child(6) {
+      margin-left: px-to-rem(20);
+    }
+
+    &:nth-child(7) {
+      margin-left: px-to-rem(20);
+    }
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(10);
+    height: px-to-rem(10);
+
+    &:nth-child(4) {
+      margin-left: px-to-rem(40);
+    }
+
+    &:nth-child(5) {
+      margin-left: px-to-rem(20);
+    }
+
+    &:nth-child(6) {
+      margin-left: px-to-rem(20);
+    }
+
+    &:nth-child(7) {
+      margin-left: px-to-rem(20);
+    }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(11);
+    height: px-to-rem(11);
+
+    &:nth-child(4) {
+      margin-left: px-to-rem(50);
+    }
+
+    &:nth-child(5) {
+      margin-left: px-to-rem(25);
+    }
+
+    &:nth-child(6) {
+      margin-left: px-to-rem(25);
+    }
+
+    &:nth-child(7) {
+      margin-left: px-to-rem(25);
+    }
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(12);
+    height: px-to-rem(12);
+
+    &:nth-child(4) {
+      margin-left: px-to-rem(72);
+    }
+
+    &:nth-child(5) {
+      margin-left: px-to-rem(30);
+    }
+
+    &:nth-child(6) {
+      margin-left: px-to-rem(30);
+    }
+
+    &:nth-child(7) {
+      margin-left: px-to-rem(30);
+    }
+  }
+}

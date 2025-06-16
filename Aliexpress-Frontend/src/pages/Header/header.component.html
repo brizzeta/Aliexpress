@@ -1,25 +1,121 @@
+<!-- Слои эффектов при открытии окон -->
+<div class="overlay blur" [class.active]="isMenuActive"></div>
+<div class="overlay blackout" [class.active]="isCatalogActive"></div>
+<!-- Хедер -->
 <header class="pc-header">
     <div class="logo">
-        <a href="/"><img src="../../assets/images/Logo.svg" alt="logo">
+        <a href="/"><img src="../../assets/images/svg/Logo.svg" alt="logo">
             <span class="logo-text">KLIK<span class="logo-highlight">AVA</span></span>
         </a>
     </div>
+    <!-- Меню хедера -->
     <nav class="main-nav">
         <ul class="nav-links">
             <li><a href="/discounts">DISCOUNTS</a></li>
             <li><a href="/top-products" class="not-first">TOP PRODUCTS</a></li>
-            <li><a href="/categories" class="not-first">CATEGORIES</a></li>
+            <li><a href="#" class="not-first" (click)="$event.stopPropagation(); toggleCatalogDropdown()">CATEGORIES</a></li>
         </ul>
     </nav>
+    <!-- Выпадающее окно каталога категорий -->
+    <section class="catalog-container"
+        [class.active]="isCatalogActive"
+        [class.fade-out]="isCatalogFadingOut"
+        #catalogContainer
+        (click)="$event.stopPropagation()">
+        <div class="left-container">
+            <ul>
+                <li *ngFor="let category of categories" 
+                    [ngClass]="{'selected-category': isSelected(category)}"
+                    (click)="selectCategory(category)">
+                    {{ category }}
+                </li>
+            </ul>
+        </div>
+        <div class="right-container">
+            <span>{{ selectedCategory }}</span><hr>
+            <div class="catalog">
+                <ul><li *ngFor="let item of getSelectedCategoryContent()">{{ item }}</li></ul>
+            </div>
+        </div>
+    </section>
+    <!-- Кнопки хедера -->
     <div class="header-controls">
-        <a href="/login" class="login-btn">LOG IN</a>
-        <a href="/person" class="switchable"><img src="../../assets/images/Person.svg" alt="person"></a>
-        <a href="/cart"><img src="../../assets/images/Cart.svg" alt="cart"></a>
-        <a href="/language" id="lang"><img src="../../assets/images/Language.svg" alt="language"></a>
-        <a href="/menu" class="switchable"><img src="../../assets/images/Menu.svg" alt="menu"></a>
+        <button class="login-btn" (click)="toggleLoginModal()">LOG IN</button>
+        <button class="switchable" (click)="toggleLoginModal()">
+            <img src="../../assets/images/svg/Person.svg" alt="person">
+        </button>
+        <button><img src="../../assets/images/svg/Cart.svg" alt="cart"></button>
+        <button id="lang" (click)="toggleLanguageDropdown()">
+            <img src="../../assets/images/svg/Language.svg" alt="language">
+        </button>
+        <button class="switchable" (click)="toggleMenuDropdown()">
+            <img src="../../assets/images/svg/Menu.svg" alt="menu">
+        </button>
     </div>
+    <!-- Поле поиска -->
     <div class="search-container">
         <input type="text" placeholder="SEARCH...">
-        <button ><img src="../../assets/images/Search.svg" alt="cart"></button>
+        <button ><img src="../../assets/images/svg/Search.svg" alt="cart"></button>
     </div>
+    <!-- Язык и валюта -->
+    <section class="language-container" 
+        [class.active]="isLangActive"
+        [class.fade-out]="isLangFadingOut"
+        #langContainer>
+        <span>Language</span>
+        <ul class="languages">
+            <li><img src="../../assets/images/svg/America.svg" alt="english">English</li>
+            <li><img src="../../assets/images/svg/Russia.svg" alt="russian">Russian</li>
+            <li><img src="../../assets/images/svg/Ukraine.svg" alt="ukrainian">Ukrainian</li>
+        </ul>
+        <span class="currency-text">Currency</span>
+        <ul class="currency">
+            <li><img src="../../assets/images/svg/America.svg" alt="usd">USD</li>
+            <li><img src="../../assets/images/svg/Ukraine.svg" alt="uah">UAH</li>
+        </ul>
+    </section>
+    <!-- Выпадающее меню телефонной версии -->
+    <section class="menu-container"
+    [class.active]="isMenuActive"
+    [class.fade-out]="isMenuFadingOut"
+    #menuContainer
+    (click)="$event.stopPropagation()">
+        <!-- Основное меню -->
+        <ng-container *ngIf="!isCategoriesVisible && !isSubcategoriesVisible">
+            <ul class="links-li">
+                <li><a href="#" (click)="$event.preventDefault(); toggleCategoriesView()">CATEGORIES</a></li>
+                <li><a href="#" class="not-first">TOP PRODUCTS</a></li>
+                <li><a href="#" class="not-first">DISCOUNTS</a></li>
+            </ul>
+            <span class="language-text">Language</span>
+            <ul class="languages">
+                <li><img src="../../assets/images/svg/America.svg" alt="english">English</li>
+                <li><img src="../../assets/images/svg/Russia.svg" alt="russian">Russian</li>
+                <li><img src="../../assets/images/svg/Ukraine.svg" alt="ukrainian">Ukrainian</li>
+            </ul>
+            <span class="currency-text">Currency</span>
+            <ul class="currency">
+                <li><img src="../../assets/images/svg/America.svg" alt="usd">USD</li>
+                <li><img src="../../assets/images/svg/Ukraine.svg" alt="uah">UAH</li>
+            </ul>
+        </ng-container>
+        <!-- Список категорий -->
+        <ng-container *ngIf="isCategoriesVisible && !isSubcategoriesVisible">
+            <ul class="catalog categories">
+                <li *ngFor="let category of categories" 
+                    [ngClass]="{'selected-category': isSelected(category)}"
+                    (click)="showSubcategories(category)">
+                    {{ category }}
+                </li>
+            </ul>
+        </ng-container>
+        <!-- Подкатегории выбранной категории -->
+        <ng-container *ngIf="isSubcategoriesVisible">
+            <ul class="catalog subcategories">
+                <li *ngFor="let subcategory of getSelectedCategoryContent()">{{ subcategory }}</li>
+            </ul>
+        </ng-container>
+</section>
 </header>
+<!-- Открывающий логин -->
+<app-login *ngIf="isLoginActive || isLoginFadingOut" [class.fade-out]="isLoginFadingOut" (close)="closeLoginModal()"></app-login>

@@ -1,0 +1,355 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.history-container {
+  width: px-to-rem(1255);
+  margin-left: px-to-rem(23);
+  margin-top: px-to-rem(3);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(550);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(600);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(750);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(5);
+  }
+}
+
+.tabs-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tabs {
+  width: px-to-rem(877);
+  height: px-to-rem(44);
+  margin-left: px-to-rem(17);
+  margin-top: px-to-rem(25);
+  margin-bottom: px-to-rem(20);
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    margin-bottom: px-to-rem(40); // Отступ 40px до date-text
+    padding-left: 0;
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%;
+    height: px-to-rem(40);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(15);
+    margin-bottom: px-to-rem(15);
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(550);
+    height: px-to-rem(42);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(750);
+    height: px-to-rem(44);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(15);
+  }
+}
+
+.back-arrow {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(30);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(15);
+  }
+}
+
+.title {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(36);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(32);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(32);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(34);
+    white-space: nowrap;
+  }
+}
+
+.date-text {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  margin-left: px-to-rem(17);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: px-to-rem(40); // Отступ 40px от tabs
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20);
+  }
+}
+
+.cards-container {
+  margin-top: px-to-rem(20);
+  margin-left: px-to-rem(17);
+  display: flex;
+  gap: px-to-rem(40);
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 px-to-rem(10);
+    margin-left: 0;
+    gap: px-to-rem(20);
+    margin-top: px-to-rem(20); // Отступ 20px от date-text
+    overflow-y: auto;
+    max-height: calc(100vh - px-to-rem(100));
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: px-to-rem(20);
+  }
+}
+
+.card {
+  width: px-to-rem(360);
+  height: px-to-rem(443);
+  border: px-to-rem(1) solid $greyish;
+  border-radius: px-to-rem(10);
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(360);
+    height: px-to-rem(431);
+    border-radius: px-to-rem(20);
+    margin-left: 0;
+  }
+
+  .product-image {
+    width: px-to-rem(338);
+    height: px-to-rem(224);
+    margin-top: px-to-rem(11);
+    border-radius: px-to-rem(20);
+    object-fit: cover;
+
+    @include media-breakpoint-down(sm) {
+      width: px-to-rem(338);
+      border-radius: px-to-rem(20);
+    }
+  }
+
+  .content {
+    width: px-to-rem(338);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: px-to-rem(20);
+    }
+  }
+
+  .product-name {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: px-to-rem(24);
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: $black;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: px-to-rem(20);
+      text-align: left;
+    }
+  }
+
+  .product-info {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: px-to-rem(20);
+      width: px-to-rem(320); // Увеличиваем ширину для мобильной версии
+    }
+
+    .time-icon {
+      width: px-to-rem(18);
+      height: px-to-rem(18);
+      margin-right: px-to-rem(7);
+    }
+
+    .price {
+      font-family: 'Montserrat';
+      font-weight: 600;
+      font-size: px-to-rem(18);
+      line-height: 100%;
+      color: $black;
+      margin-right: px-to-rem(20);
+    }
+
+    .sales {
+      font-family: 'Montserrat';
+      font-weight: 400;
+      font-size: px-to-rem(15);
+      line-height: 100%;
+      color: $black;
+      margin-right: px-to-rem(89);
+      white-space: nowrap; // Запрещаем перенос текста
+    }
+
+    .rating {
+      font-size: px-to-rem(20);
+      line-height: 100%;
+      color: #FFD942;
+      display: flex;
+      gap: px-to-rem(1);
+
+      @include media-breakpoint-down(sm) {
+        margin-left: px-to-rem(15);
+      }
+    }
+  }
+
+  .buttons {
+    margin-top: px-to-rem(22);
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0; // Убираем лишний отступ
+      margin-right: px-to-rem(20);
+      justify-content: center; // Центрируем кнопку
+    }
+  }
+
+  .add-to-basket {
+    width: px-to-rem(339);
+    height: px-to-rem(40);
+    border: px-to-rem(1) solid $greyish;
+    border-radius: px-to-rem(10);
+    padding: px-to-rem(10);
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: px-to-rem(16);
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $black;
+    background-color: $white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: px-to-rem(10);
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+      width: px-to-rem(339); // Оставляем ширину как в десктопе
+      margin-left: px-to-rem(11); // Выравниваем по карточке
+      margin-right: px-to-rem(11);
+      margin-bottom: 10px;
+    }
+  }
+}

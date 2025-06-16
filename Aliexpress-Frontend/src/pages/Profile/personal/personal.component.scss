@@ -1,0 +1,881 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.personal-container {
+  width: px-to-rem(1255);
+  margin-top: px-to-rem(3);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375); // Ширина экрана телефона
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(375); // Как на телефоне
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(750);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1000);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(15);
+  }
+}
+
+.tabs-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tabs {
+  width: px-to-rem(877);
+  height: px-to-rem(44);
+  margin-left: px-to-rem(17);
+  margin-top: px-to-rem(25);
+  margin-bottom: px-to-rem(20);
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    margin-bottom: px-to-rem(12);
+    padding-left: 0;
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%; // Как на телефоне
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    margin-bottom: px-to-rem(12);
+    padding-left: 0;
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(650);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(800);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+    margin-bottom: px-to-rem(25);
+  }
+}
+
+.back-arrow {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(30);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    display: block; // Как на телефоне
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(30); // Как на телефоне
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    display: none;
+  }
+}
+
+.title {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(36);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(36); // Как на телефоне
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(34);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+}
+
+.avatar-container {
+  margin-top: px-to-rem(50); /* 50px ниже заголовка */
+  position: relative; /* Контекст для позиционирования */
+  display: flex; /* Горизонтальное выравнивание */
+  flex-direction: row; /* Аватарка и поля рядом */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column; /* Вертикальное расположение на мобильных */
+    align-items: center; /* Центрирование по горизонтали */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    flex-direction: column; // Как на телефоне
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    flex-direction: column; /* Вертикальное расположение для планшета (700px–1000px) */
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    flex-direction: row; /* Горизонтальное расположение для ноутбука (1000px–1920px) */
+    align-items: flex-start;
+  }
+}
+
+.avatar-wrapper {
+  width: px-to-rem(183);
+  height: px-to-rem(183);
+  background-color: $white;
+  border-radius: 50%;
+  overflow: hidden; /* Сохраняем обрезку для круглой формы */
+  position: relative;
+  margin-left: 0; /* Сдвигаем влево */
+  display: inline-block; /* Чтобы не растягивался */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(20); /* Отступ между аватаркой и полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 0; // Как на телефоне
+    margin-bottom: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(20); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: 0;
+    margin-bottom: 0; /* Без отступа для ноутбука */
+  }
+}
+
+.avatar-image {
+  width: px-to-rem(175);
+  height: px-to-rem(175);
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: px-to-rem(4); /* Смещение для видимости краёв белого круга */
+}
+
+.upload-icon {
+  position: absolute;
+  bottom: px-to-rem(30);
+  right: px-to-rem(1080);
+  width: px-to-rem(30); /* Размер иконки */
+  height: px-to-rem(30);
+  cursor: pointer;
+  z-index: 2; /* Выше аватарки */
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: px-to-rem(-70); /* Над аватаркой */
+    margin-left: px-to-rem(135); /* Центрируем относительно аватарки */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative; // Как на телефоне
+    right: auto;
+    bottom: auto;
+    margin-top: px-to-rem(-70);
+    margin-left: px-to-rem(135);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: px-to-rem(-70); /* Над аватаркой для планшета */
+    margin-left: px-to-rem(135);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    bottom: px-to-rem(30);
+    right: px-to-rem(900); /* Уменьшенное смещение для ноутбука */
+  }
+}
+
+.info-wrapper {
+  display: flex; /* Контейнер для info и additional-info */
+  flex-direction: column; /* Вертикальное расположение секций */
+
+  @include media-breakpoint-down(sm) {
+    width: 100%; /* Занимает всю ширину экрана */
+  }
+
+
+  @include media-breakpoint-between(lg, xl) {
+    width: 100%; /* Сохраняем ширину для ноутбука */
+  }
+}
+
+.info-section {
+  display: flex; /* Горизонтальное расположение */
+  flex-direction: row; /* Горизонтальный ряд */
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column; /* Вертикальное расположение */
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    flex-direction: column; // Как на телефоне
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    flex-direction: column; /* Вертикальное расположение для планшета */
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    flex-direction: row; /* Горизонтальное расположение для ноутбука */
+  }
+}
+
+.name-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-left: px-to-rem(63);
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 0; // Как на телефоне
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(63); /* Сохраняем для ноутбука */
+  }
+}
+
+.name-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  margin-left: px-to-rem(25);
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(25); /* Сохраняем для ноутбука */
+  }
+}
+
+.name-input {
+  margin-top: px-to-rem(10); /* 10px ниже заголовка */
+  width: px-to-rem(291);
+  height: px-to-rem(44);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white; /* Предполагаю белый фон */
+  position: relative; /* Контекст для иконки */
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335); /* Единая ширина для всех полей */
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335); // Как на телефоне
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(335); /* Единая ширина для планшета */
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(250); /* Уменьшенная ширина для ноутбука */
+    margin-left: 20px;
+    margin-right: 0;
+  }
+}
+
+.phone-input {
+  width: px-to-rem(561); /* Увеличенная ширина для phone */
+  margin-left: 0px;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335); /* Единая ширина для всех полей */
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(335); // Как на телефоне
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(335); /* Единая ширина для планшета */
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(450); /* Уменьшенная ширина для ноутбука */
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.name-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey; /* Исправлено с $gray на $grey */
+}
+
+.tune-icon {
+  position: absolute;
+  right: px-to-rem(13); /* 13px от правого борта */
+  width: px-to-rem(17.5);
+  height: px-to-rem(17.5);
+}
+
+.eye-icon {
+  position: absolute;
+  right: px-to-rem(13); /* 13px от правого борта */
+  width: px-to-rem(20); /* Размер глазка */
+  height: px-to-rem(20);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.phone-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-left: px-to-rem(20); /* Отступ между полями */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 0; // Как на телефоне
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20); /* Сохраняем для ноутбука */
+  }
+}
+
+.additional-info-section {
+  display: flex; /* Горизонтальное расположение */
+  flex-direction: row; /* Горизонтальный ряд */
+  margin-top: px-to-rem(40); /* 40px ниже info-section */
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column; /* Вертикальное расположение */
+    margin-top: px-to-rem(15);
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    flex-direction: column; // Как на телефоне
+    margin-top: px-to-rem(15);
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    flex-direction: column; /* Вертикальное расположение для планшета */
+    margin-top: px-to-rem(15);
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    flex-direction: row; /* Горизонтальное расположение для ноутбука */
+  }
+}
+
+.last-name-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-left: px-to-rem(63);
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 0; // Как на телефоне
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(63); /* Сохраняем для ноутбука */
+  }
+}
+
+.email-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-left: px-to-rem(20); /* Отступ между полями */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 0; // Как на телефоне
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20); /* Сохраняем для ноутбука */
+  }
+}
+
+.extra-info-section {
+  display: flex; /* Горизонтальное расположение */
+  flex-direction: row; /* Горизонтальный ряд */
+  position: absolute; /* Для точного позиционирования под аватаркой */
+  top: px-to-rem(183); /* Высота аватарки */
+  left: 0; /* Левая часть контейнера */
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column; /* Вертикальное расположение */
+    width: 100%;
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative; // Как на телефоне
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column; /* Вертикальное расположение для планшета */
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    top: px-to-rem(183);
+    left: 0;
+    flex-direction: row; /* Горизонтальное расположение для ноутбука */
+  }
+}
+
+.city-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-top: px-to-rem(40);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-top: 0; // Как на телефоне
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-top: px-to-rem(40); /* Сохраняем для ноутбука */
+  }
+}
+
+.country-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-left: px-to-rem(20); /* Отступ между полями */
+  margin-top: px-to-rem(40);
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 0; // Как на телефоне
+    margin-top: 0;
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20); /* Сохраняем для ноутбука */
+    margin-top: px-to-rem(40);
+  }
+}
+
+.extra-info-section-two {
+  display: flex; /* Горизонтальное расположение */
+  flex-direction: row; /* Горизонтальный ряд */
+  position: absolute; /* Для точного позиционирования под city/country */
+  top: px-to-rem(271); /* 183px (аватарка) + 40px (city) + 48px (высота поля) */
+  left: 0; /* Левая часть контейнера */
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column; /* Вертикальное расположение */
+    width: 100%;
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative; // Как на телефоне
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column; /* Вертикальное расположение для планшета */
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    top: px-to-rem(271);
+    left: 0;
+    flex-direction: row; /* Горизонтальное расположение для ноутбука */
+  }
+}
+
+.address-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-top: px-to-rem(80);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-top: 0; // Как на телефоне
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-top: px-to-rem(80); /* Сохраняем для ноутбука */
+  }
+}
+
+.password-section {
+  display: block; /* Блочный для вертикального расположения внутри */
+  margin-left: px-to-rem(20); /* Отступ между полями */
+  margin-top: px-to-rem(80);
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ между полями */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: 0; // Как на телефоне
+    margin-top: 0;
+    margin-bottom: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: px-to-rem(15); /* Отступ для планшета */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20); /* Сохраняем для ноутбука */
+    margin-top: px-to-rem(80);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inline;
+}
+
+.buttons-section {
+  position: absolute;
+  top: px-to-rem(599); /* 271px (extra-info-section-two) + 48px (высота поля) + 80px (margin-top) + 250px (отступ) */
+  left: 0;
+  width: px-to-rem(1142); /* 561px + 20px (отступ) + 561px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: px-to-rem(335); /* Единая ширина для всех полей */
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    align-items: stretch; /* Растягиваем кнопки по ширине */
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    position: relative; // Как на телефоне
+    top: 0;
+    left: 0;
+    width: px-to-rem(335);
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: px-to-rem(335); /* Единая ширина для планшета */
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    align-items: stretch;
+    margin-top: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    position: absolute;
+    top: px-to-rem(599);
+    left: 0;
+    width: px-to-rem(700); /* Уменьшенная ширина для ноутбука */
+    flex-direction: row; /* Горизонтальное расположение */
+    align-items: center;
+  }
+}
+
+.sellers-button {
+  width: px-to-rem(169);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: #65E4A3;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: $white;
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%; /* Занимает всю ширину контейнера */
+    margin-bottom: px-to-rem(10); /* Отступ между кнопками */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%; // Как на телефоне
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 100%; /* Занимает всю ширину для планшета */
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(169); /* Сохраняем для ноутбука */
+    margin-bottom: 0;
+  }
+}
+
+.delete-button {
+  width: px-to-rem(243);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: #FF3C3C;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: $white;
+  cursor: pointer;
+  margin-left: px-to-rem(450); /* Отступ от save-button */
+
+  @include media-breakpoint-down(sm) {
+    width: 100%; /* Занимает всю ширину контейнера */
+    margin-left: 0;
+    margin-bottom: px-to-rem(10); /* Отступ между кнопками */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%; // Как на телефоне
+    margin-left: 0;
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 100%; /* Занимает всю ширину для планшета */
+    margin-left: 0;
+    margin-bottom: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(243); /* Сохраняем для ноутбука */
+    margin-left: px-to-rem(450);
+    margin-bottom: 0;
+  }
+}
+
+.save-button {
+  width: px-to-rem(114);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: $black;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: $white;
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%; /* Занимает всю ширину контейнера */
+    margin-bottom: 0; /* Последняя кнопка без отступа снизу */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: 100%; // Как на телефоне
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: 100%; /* Занимает всю ширину для планшета */
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(114); /* Сохраняем для ноутбука */
+    margin-bottom: 0;
+  }
+}

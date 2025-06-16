@@ -1,0 +1,192 @@
+<div class="top-bar">
+  <div class="search-bar top">
+    <img src="assets/images/search.png" alt="Search" class="search-icon">
+    <input type="text" class="search-input" placeholder="Global search...">
+  </div>
+  <img src="assets/images/User.png" alt="Profile" class="profile-image" (click)="navigateToProfile()">
+</div>
+<div class="top-bar bottom">
+  <div class="search-bar">
+    <img src="assets/images/search.png" alt="Search" class="search-icon">
+    <input type="text" class="search-input" placeholder="Search...">
+    <img src="assets/images/tune.png" alt="Tune" class="tune-icon">
+  </div>
+  <button class="add-new-button"><span>Add New</span></button>
+</div>
+<div class="header-row">
+  <input type="checkbox" class="checkbox">
+  <span class="header-text">Name</span>
+  <span class="header-text">SKU</span>
+  <span class="header-text">Stoсk</span>
+  <span class="header-text">Price</span>
+  <span class="header-text">Categories</span>
+  <span class="header-text">Tags</span>
+  <span class="header-text">Date</span>
+</div>
+<div class="divider"></div>
+<div class="product-row">
+  <input type="checkbox" class="checkbox">
+  <span class="product-text">Product name</span>
+  <span class="product-text">-</span>
+  <span class="product-text">in stock</span>
+  <span class="product-text">90$</span>
+  <span class="product-text">-</span>
+  <span class="product-text">-</span>
+  <span class="product-text">07.04.25</span>
+  <img src="assets/images/edit.png" alt="Edit" class="edit-icon">
+  <img src="assets/images/close.png" alt="Close" class="close-icon">
+</div>
+<div class="new-divider"></div>
+<div class="product-row">
+  <input type="checkbox" class="checkbox">
+  <span class="product-text">Product name</span>
+  <span class="product-text">-</span>
+  <span class="product-text">in stock</span>
+  <span class="product-text">90$</span>
+  <span class="product-text">-</span>
+  <span class="product-text">-</span>
+  <span class="product-text">07.04.25</span>
+  <img src="assets/images/edit.png" alt="Edit" class="edit-icon">
+  <img src="assets/images/close.png" alt="Close" class="close-icon">
+</div>
+<div class="new-divider"></div>
+<div class="product-row">
+  <input type="checkbox" class="checkbox">
+  <span class="product-text">Product name</span>
+  <span class="product-text">-</span>
+  <span class="product-text">in stock</span>
+  <span class="product-text">90$</span>
+  <span class="product-text">-</span>
+  <span class="product-text">-</span>
+  <span class="product-text">07.04.25</span>
+  <img src="assets/images/edit.png" alt="Edit" class="edit-icon">
+  <img src="assets/images/close.png" alt="Close" class="close-icon">
+</div>
+<div class="new-divider"></div>
+<div class="product-row">
+  <input type="checkbox" class="checkbox">
+  <span class="product-text">Product name</span>
+  <span class="product-text">-</span>
+  <span class="product-text">in stock</span>
+  <span class="product-text">90$</span>
+  <span class="product-text">-</span>
+  <span class="product-text">-</span>
+  <span class="product-text">07.04.25</span>
+  <img src="assets/images/edit.png" alt="Edit" class="edit-icon">
+  <img src="assets/images/close.png" alt="Close" class="close-icon">
+</div>
+<div class="new-divider"></div>
+<div class="product-row">
+  <input type="checkbox" class="checkbox">
+  <span class="product-text">Product name</span>
+  <span class="product-text">-</span>
+  <span class="product-text">in stock</span>
+  <span class="product-text">90$</span>
+  <span class="product-text">-</span>
+  <span class="product-text">-</span>
+  <span class="product-text">07.04.25</span>
+  <img src="assets/images/edit.png" alt="Edit" class="edit-icon">
+  <img src="assets/images/close.png" alt="Close" class="close-icon">
+</div>
+<div class="new-divider"></div>
+<div class="product-row">
+  <input type="checkbox" class="checkbox">
+  <span class="product-text">Product name</span>
+  <span class="product-text">-</span>
+  <span class="product-text">in stock</span>
+  <span class="product-text">90$</span>
+  <span class="product-text">-</span>
+  <span class="product-text">-</span>
+  <span class="product-text">07.04.25</span>
+  <img src="assets/images/edit.png" alt="Edit" class="edit-icon">
+  <img src="assets/images/close.png" alt="Close" class="close-icon">
+</div>
+<div class="new-divider"></div>
+<div class="buttons-row">
+  <button class="action-button trash-button" (click)="togglePopup()"><span>Trash selected</span></button>
+  <button class="action-button filter-button"><span>Filter selected</span></button>
+</div>
+<div class="pagination-row">
+  <span class="pagination-text">rows per page</span>
+  <div class="dropdown-container">
+    <span class="dropdown-value">1</span>
+    <img src="assets/images/arrow_drop_down.png" alt="Dropdown" class="dropdown-icon">
+  </div>
+  <span class="pagination-text">1 - 10 of 406</span>
+  <img src="assets/images/first_page.png" alt="First Page" class="nav-icon">
+  <img src="assets/images/keyboard_arrow_left.png" alt="Previous" class="nav-icon">
+  <img src="assets/images/keyboard_arrow_right.png" alt="Next" class="nav-icon">
+  <img src="assets/images/last_page.png" alt="Last Page" class="nav-icon">
+</div>
+<div class="overlay" *ngIf="isPopupVisible" (click)="togglePopup()"></div>
+<div class="popup" *ngIf="isPopupVisible">
+  <h2 class="popup-title">Filter</h2>
+  <div class="filter-grid">
+    <div class="filter-item">
+      <span class="filter-label">Stock</span>
+      <div class="filter-select" (click)="toggleDropdown('stock')">
+        <span class="select-text">{{ dropdownStates.stock.selected }}</span>
+        <img src="assets/images/arrow_drop_down.png" alt="Dropdown" class="select-icon">
+      </div>
+      <div class="dropdown-menu" *ngIf="dropdownStates.stock.isOpen">
+        <div class="dropdown-option" (click)="selectOption('stock', 'In Stock')">In Stock</div>
+        <div class="dropdown-option" (click)="selectOption('stock', 'Out of Stock')">Out of Stock</div>
+        <div class="dropdown-option" (click)="selectOption('stock', 'Low Stock')">Low Stock</div>
+        <div class="dropdown-option" (click)="selectOption('stock', 'On Order')">On Order</div>
+      </div>
+    </div>
+    <div class="filter-item">
+      <span class="filter-label">Price</span>
+      <div class="filter-select" (click)="toggleDropdown('price')">
+        <span class="select-text">{{ dropdownStates.price.selected }}</span>
+        <img src="assets/images/arrow_drop_down.png" alt="Dropdown" class="select-icon">
+      </div>
+      <div class="dropdown-menu" *ngIf="dropdownStates.price.isOpen">
+        <div class="dropdown-option" (click)="selectOption('price', 'Under $50')">Under $50</div>
+        <div class="dropdown-option" (click)="selectOption('price', '$50 - $100')">$50 - $100</div>
+        <div class="dropdown-option" (click)="selectOption('price', '$100 - $200')">$100 - $200</div>
+        <div class="dropdown-option" (click)="selectOption('price', 'Over $200')">Over $200</div>
+      </div>
+    </div>
+    <div class="filter-item">
+      <span class="filter-label">Date</span>
+      <div class="filter-select" (click)="toggleDropdown('date')">
+        <span class="select-text">{{ dropdownStates.date.selected }}</span>
+        <img src="assets/images/arrow_drop_down.png" alt="Dropdown" class="select-icon">
+      </div>
+      <div class="dropdown-menu" *ngIf="dropdownStates.date.isOpen">
+        <div class="dropdown-option" (click)="selectOption('date', 'Last 7 Days')">Last 7 Days</div>
+        <div class="dropdown-option" (click)="selectOption('date', 'Last 30 Days')">Last 30 Days</div>
+        <div class="dropdown-option" (click)="selectOption('date', 'Last 90 Days')">Last 90 Days</div>
+        <div class="dropdown-option" (click)="selectOption('date', 'All Time')">All Time</div>
+      </div>
+    </div>
+    <div class="filter-item">
+      <span class="filter-label">Tags</span>
+      <div class="filter-select" (click)="toggleDropdown('tags')">
+        <span class="select-text">{{ dropdownStates.tags.selected }}</span>
+        <img src="assets/images/arrow_drop_down.png" alt="Dropdown" class="select-icon">
+      </div>
+      <div class="dropdown-menu" *ngIf="dropdownStates.tags.isOpen">
+        <div class="dropdown-option" (click)="selectOption('tags', 'New')">New</div>
+        <div class="dropdown-option" (click)="selectOption('tags', 'Sale')">Sale</div>
+        <div class="dropdown-option" (click)="selectOption('tags', 'Popular')">Popular</div>
+        <div class="dropdown-option" (click)="selectOption('tags', 'Limited')">Limited</div>
+      </div>
+    </div>
+  </div>
+  <div class="category-section">
+    <span class="category-label">Categories</span>
+    <div class="category-select" (click)="toggleDropdown('categories')">
+      <span class="select-text">{{ dropdownStates.categories.selected || 'Select' }}</span>
+      <img src="assets/images/arrow_drop_down.png" alt="Dropdown" class="select-icon">
+    </div>
+    <div class="dropdown-menu" *ngIf="dropdownStates.categories.isOpen">
+      <div class="dropdown-option" (click)="selectOption('categories', 'Electronics')">Electronics</div>
+      <div class="dropdown-option" (click)="selectOption('categories', 'Clothing')">Clothing</div>
+      <div class="dropdown-option" (click)="selectOption('categories', 'Books')">Books</div>
+      <div class="dropdown-option" (click)="selectOption('categories', 'Home')">Home</div>
+    </div>
+  </div>
+  <button class="submit-button"><span>Select</span></button>
+</div>

@@ -10,10 +10,10 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   bolls = [
-    { price: '20$', img: 'assets/images/Lamp.svg', alt: 'lamp' },
-    { price: '20$', img: 'assets/images/Iron.svg', alt: 'iron' },
-    { price: '20$', img: 'assets/images/Socks.svg', alt: 'socks' },
-    { price: '20$', img: 'assets/images/Pencils.svg', alt: 'pencils' },
-    { price: '20$', img: 'assets/images/Cup.svg', alt: 'cup' }
+    { price: '20$', img: 'assets/images/png/Lamp.png', alt: 'lamp' },
+    { price: '20$', img: 'assets/images/png/Iron.png', alt: 'iron' },
+    { price: '20$', img: 'assets/images/png/Socks.png', alt: 'socks' },
+    { price: '20$', img: 'assets/images/png/Pencils.png', alt: 'pencils' },
+    { price: '20$', img: 'assets/images/png/Cup.png', alt: 'cup' }
   ];
 }

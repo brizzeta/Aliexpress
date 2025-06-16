@@ -1,0 +1,30 @@
+<div class="profile-container">
+    <div class="tabs-wrapper">
+      <div class="header">
+        <img src="assets/images/Logo.svg" alt="Logo" class="logo">
+        <span class="title">
+          <span class="title-klik">KLIK</span>
+          <span class="title-ava">AVA</span>
+        </span>
+      </div>
+      <ul class="menu">
+        <li [class.active]="activeTab === 'my-profile'">
+          <a [routerLink]="['/profile/seller-profile/my-profile']">My profile</a>
+        </li>
+        <li [class.active]="activeTab === 'account-settings'">
+          <a [routerLink]="['/profile/seller-profile/account-settings']">Account settings</a>
+        </li>
+        <li [class.active]="activeTab === 'statistic'">
+          <a [routerLink]="['/profile/seller-profile/statistic']">Statistic</a>
+        </li>
+        <li [class.active]="activeTab === 'dashboard'">
+          <a [routerLink]="['/profile/seller-profile/dashboard']">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-content">
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

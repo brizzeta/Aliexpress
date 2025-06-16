@@ -1,8 +1,8 @@
 <div class="page-wrapper">
-  <app-header></app-header>
+  <app-header *ngIf="!shouldHideHeaderFooter()"></app-header>
   <router-outlet></router-outlet>
-  <app-top-products></app-top-products>
-  <app-discounts></app-discounts> 
-  <app-product-card></app-product-card>
-  <app-footer></app-footer>
+  <app-top-products *ngIf="showMainContent"></app-top-products>
+  <app-discounts *ngIf="showMainContent"></app-discounts>
+  <app-product-card *ngIf="showMainContent"></app-product-card>
+  <app-footer *ngIf="!shouldHideHeaderFooter()"></app-footer>
 </div>
