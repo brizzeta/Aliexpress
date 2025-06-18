@@ -1,0 +1,27 @@
+<div class="seller-container">
+    <div class="tabs-wrapper">
+      <div class="header">
+        <img src="assets/images/Logo.svg" alt="Logo" class="logo">
+        <span class="title">
+          <span class="title-klik">KLIK</span>
+          <span class="title-ava">AVA</span>
+        </span>
+      </div>
+      <ul class="menu">
+        <li [class.active]="activeTab === 'products_all'">
+          <a [routerLink]="['/profile/seller/products_all']">All products</a>
+        </li>
+        <li [class.active]="activeTab === 'products_add'">
+          <a [routerLink]="['/profile/seller/products_add']">Add products</a>
+        </li>
+        <li [class.active]="activeTab === 'orders'">
+          <a [routerLink]="['/profile/seller/orders']">Orders</a>
+        </li>
+      </ul>
+    </div>
+    <div class="seller-content">
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,114 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.tabs-wrapper {
+  width: 349px;
+  height: 1080px;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header {
+  margin-top: 60px;
+  margin-left: 37px;
+  display: flex;
+}
+
+.logo {
+  width: 47px;
+  height: 47px;
+  margin-right: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 62px;
+}
+
+.title-klik {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $white;
+}
+
+.title-ava {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $green;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    width: 349px;
+    height: 46px;
+    border: 1px solid $grey;
+    margin-bottom: 10px;
+    background-color: $black;
+
+    &.active {
+      background-color: #424242;
+      border: 1px solid $grey;
+
+      a {
+        color: $white;
+        font-weight: 600;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0;
+      width: 100%;
+    }
+
+    a:hover {
+      color: $white;
+    }
+  }
+}
+
+.profile-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+  background-color: $greyish;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+  min-width: 0;
+}

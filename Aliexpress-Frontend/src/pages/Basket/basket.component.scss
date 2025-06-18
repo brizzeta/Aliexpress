@@ -1,0 +1,224 @@
+@use "../../assets/variables.scss" as *;
+@use "../../assets/functions.scss" as *;
+
+.mini-caption {
+    display: block;
+    margin: px-to-rem(40 0 0 100);
+    font-size: px-to-rem(24);
+    font-weight: 600;
+
+    @include media-breakpoint-down(1024) { display: none; }
+}
+.top-section {
+    margin: px-to-rem(52 100 0 100);
+    display: flex;
+    justify-content: space-between;
+    gap: px-to-rem(30);
+
+    @include media-breakpoint-down(1024) {
+        flex-direction: column; 
+        align-items: center;
+        gap: px-to-rem(20);
+    }
+    .cart-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: px-to-rem(16);
+        height: px-to-rem(180);
+        max-width: px-to-rem(1152);
+        flex: 2;
+        background: $white;
+        border-radius: px-to-rem(20);
+
+        @include media-breakpoint-down(1024) {
+            margin-top: px-to-rem(-5);
+            height: px-to-rem(137);
+            width: px-to-rem(335);
+            flex: none;
+        }
+        span {
+            display: block;
+            color: $black;
+            font-size: px-to-rem(36);
+
+            @include media-breakpoint-between(1024, 1300) { font-size: px-to-rem(28); }
+            @include media-breakpoint-down(1024) {
+                margin-top: px-to-rem(5);
+                font-size: px-to-rem(16); 
+            }
+        }
+        span:nth-of-type(2) {
+            color: #8E8E8E;
+            font-size: px-to-rem(20);
+
+            &::after { content: "Select products or log in if you previously added items to cart"; }
+            @include media-breakpoint-down(1300) { font-size: px-to-rem(16); }
+            @include media-breakpoint-down(1024) {
+                font-size: px-to-rem(15); 
+                &::after { content: "Select products or log in"; }
+            }
+        }
+    }
+    .login-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: px-to-rem(20);
+        height: px-to-rem(180);
+        max-width: px-to-rem(528);
+        flex: 1;
+        background: $white;
+        border-radius: px-to-rem(20);
+        
+        @include media-breakpoint-down(1024) {
+            margin: 0;
+            width: px-to-rem(335); 
+            flex: none;
+        }
+        span {
+            color: #8E8E8E;
+            font-size: px-to-rem(20);
+            font-weight: 600;
+        }
+        button {
+            height: px-to-rem(40);
+            width: calc(100% - px-to-rem(40));
+            max-width: px-to-rem(448);
+            background: $black;
+            outline: none;
+            border: none;
+            border-radius: px-to-rem(10);
+            color: $white;
+            font-size: px-to-rem(16);
+            cursor: pointer;
+            transition: .25s;
+
+            &:hover { transform: scale(1.025); }
+            &:active { transform: scale(0.975); }
+            @include media-breakpoint-down(1024) { width: px-to-rem(284); }
+        }
+        .to-main {
+            background: $white;
+            border: px-to-rem(1) solid $body-white;
+            color: $black;
+        }
+    }
+}
+.cards-section.browsing { 
+    gap: px-to-rem(35);
+    margin: px-to-rem(17 100 0 100);
+    padding: 0;
+
+    @include media-breakpoint-down(1024) { display: none; }
+    .card-item { height: px-to-rem(443); }
+}
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: px-to-rem(20);
+    margin: px-to-rem(40 100 0 100);
+    //margin: px-to-rem(20 100 0 100);
+    padding: px-to-rem(0 16);
+    width: 100%;
+    max-width: px-to-rem(1152);
+
+    @include media-breakpoint-between(1700, 1850) { width: 57.5%; }
+    @include media-breakpoint-between(1450, 1700) { width: 56.5%; }
+    @include media-breakpoint-between(1175, 1450) { width: 55%; }
+    @include media-breakpoint-between(1024, 1175) { width: 52.5%; }
+    @include media-breakpoint-down(1024) {
+        flex-direction: column;
+        align-items: center;
+        margin: px-to-rem(20) auto;
+        padding: px-to-rem(0 10);
+    }
+    .card-item {
+        display: flex;
+        flex-direction: column;
+        padding: px-to-rem(10);
+        width: px-to-rem(360);
+        height: px-to-rem(400);
+        background: $white;
+        border-radius: px-to-rem(20);
+
+        @include media-breakpoint-down(1024) { width: px-to-rem(334); }
+        .image-section {
+            height: px-to-rem(224);
+            width: px-to-rem(338);
+            border-radius: px-to-rem(20);
+            overflow: hidden;
+
+            @include media-breakpoint-down(1024) { width: px-to-rem(313.59); }
+        }
+        span {
+            display: block;
+            text-align: justify;
+            margin-top: px-to-rem(32);
+            font-size: px-to-rem(24);
+            font-weight: 600;
+        }
+        .top-info {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: px-to-rem(10);
+
+            span {
+                margin: px-to-rem(0 0 0 7);
+                font-size: px-to-rem(20); 
+                white-space: nowrap;
+            }
+            .sold { 
+                margin: px-to-rem(0 0 0 20);
+                font-size: px-to-rem(15);
+                font-weight: 400;
+            }
+            .stars {
+                position: absolute;
+                top: px-to-rem(-3);
+                right: px-to-rem(3);
+                display: flex;
+
+                @include media-breakpoint-down(1024) {
+                    top: px-to-rem(-1);
+                    right: px-to-rem(-5);
+                }
+                span {
+                    margin: px-to-rem(0 0 0 3.5);
+                    font-size: px-to-rem(18);
+                }
+            }
+        }
+        .bottom-info {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: px-to-rem(5);
+
+            span {
+                margin: 0;
+                font-size: px-to-rem(15);
+                font-weight: 400;
+                white-space: nowrap;
+            }
+            img {
+                position: absolute;
+                top: px-to-rem(-3);
+                right: px-to-rem(3);
+
+                @include media-breakpoint-down(1024) {
+                    top: px-to-rem(-2);
+                    right: 0;
+                }
+            }
+            img:first-of-type {
+                right: px-to-rem(30); 
+                @include media-breakpoint-down(1024) { right: px-to-rem(25); }
+            }
+        }
+    }
+}

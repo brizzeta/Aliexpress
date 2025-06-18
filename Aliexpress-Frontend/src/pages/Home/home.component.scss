@@ -13,7 +13,7 @@
         align-items: center;
         text-align: center;
         margin: px-to-rem(42 16 0 16);
-        padding: px-to-rem(42 20);
+        padding: px-to-rem(42 20 13 20);
     }
     .slogan {
         margin-top: px-to-rem(40);
@@ -29,52 +29,112 @@
 
         @include media-breakpoint-down(md) { margin-top: px-to-rem(-11); }
         a {
-            display: flex;
-            align-items: center;
-            gap: px-to-rem(13);
-            white-space: nowrap;
+            margin: px-to-rem(14 0 0 -4);
+            display: inline-block;
+            text-decoration: none;
+            transition: .15s;
 
-            @include media-breakpoint-down(md) { margin-left: px-to-rem(-7); }
+            @include media-breakpoint-down(sm) { margin: px-to-rem(17 0 0 -6); }
+            .link-content {
+                display: inline-flex;
+                align-items: center;
+                gap: px-to-rem(13);
+                padding: px-to-rem(4);
+                border-bottom: px-to-rem(2) solid $green;
+                white-space: nowrap;
+            }
+            &:hover {
+                .link-content {
+                    color: $light-green;
+                    border-color: $light-green;
+                }
+            }
         }
         .bolls-wrapper {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            gap: px-to-rem(15);
-            margin-top: px-to-rem(7);
+            gap: px-to-rem(27);
+            margin-top: px-to-rem(23);
             width: 100%;
-            max-width: 100%;
 
-            @include media-breakpoint-down(md) {
-                margin: px-to-rem(-3 0 -29 3);
+            @include media-breakpoint-between(1235, lg) {
+                .boll:nth-child(n+5) { display: none; }
+            }
+            @include media-breakpoint-between(md, 1235) {
+                .boll:nth-child(n+4) { display: none; }
+            }
+            @include media-breakpoint-between(sm, md) {
+                gap: px-to-rem(75);
+                .boll:nth-child(n+3) { display: none; }
+            }
+            @include media-breakpoint-down(sm) {
+                margin: px-to-rem(12 0 0 8.5);
                 .boll:not(:first-child) { display: none; }
             }
             .boll {
                 position: relative;
                 text-align: center;
                 align-content: center;
-                flex-shrink: 0;
-                width: px-to-rem(286);
-                height: px-to-rem(286);
+                width: calc(20% - #{px-to-rem(27)});
+                aspect-ratio: 1/1;
                 background: $grey;
                 border-radius: 50%;
 
+                @include media-breakpoint-between(md, lg) { width:px-to-rem(200); }
+                @include media-breakpoint-between(sm, md) { width:px-to-rem(300); }
+                @include media-breakpoint-down(sm) { width:px-to-rem(286); }
                 .small-boll {
                     position: absolute;
                     top: px-to-rem(-2);
-                    right: px-to-rem(25);
-                    display:flex;
+                    right: px-to-rem(27);
+                    display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex: 1 1 auto;
                     aspect-ratio: 1 / 1;
                     width: px-to-rem(54);
                     background: $green;
                     border-radius: 50%;
                     font-size: px-to-rem(20);
                     font-weight: 600;
+                    transition: .5s;
+                    z-index: 1;
+
+                    @include media-breakpoint-between(sm, 1600) { width: px-to-rem(44); }
+                    @include media-breakpoint-between(1250, 1600) {
+                        top: px-to-rem(-3);
+                        right: px-to-rem(17);
+                    }
+                    @include media-breakpoint-between(md, 1250) {
+                        top: px-to-rem(-10);
+                        right: px-to-rem(8);
+                    }
+                    &.cart {
+                        opacity: 0;
+                        transform: translateY(-px-to-rem(10));
+                        background-image: url(../../assets/images/svg/Trolley.svg);
+                        background-size: px-to-rem(30);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
                 }
                 img {
-                    width: auto;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    clip-path: circle(calc(50% - #{px-to-rem(35)}) at center);
+
+                    @include media-breakpoint-between(md, lg) {
+                        clip-path: circle(calc(50% - #{px-to-rem(25)}) at center);
+                    }
+                }
+                &:hover {
+                    .small-boll.cart {
+                        opacity: 1;
+                        transform: translate(px-to-rem(40), px-to-rem(50));
+                        pointer-events: auto;
+                    }
                 }
             }
         }

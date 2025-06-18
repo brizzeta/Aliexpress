@@ -1,8 +1,62 @@
-<section class="address-section">
-    <div class="container">
-        <h2></h2>
-        <div class="section-content">
-            <p>&nbsp;addresses works!</p>
+<div class="tab"></div>
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
+  </div>
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="addresses-container" *ngIf="showAddresses && !isNoactiveRoute">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back to profile" (click)="goBackToProfile()">
+          <span class="title">Delivery addresses</span>
         </div>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="address-header">
+            <div class="name-field">Evgeniy Timofeev</div>
+            <div class="phone-selection-wrapper">
+              <div class="phone-field">+380 66 901 12 05</div>
+              <div class="selection-field" (click)="toggleSelection($event, 1)" [class.selected]="isSelected[1]">
+                <img *ngIf="isSelected[1]" src="assets/images/check.png" alt="Check" class="check-icon">
+              </div>
+            </div>
+          </div>
+          <div class="address-info">
+            <div class="city">Ismail 54</div>
+            <div class="address">с. Odesa, s/p. Odessa UA 65007, Ukraine</div>
+          </div>
+          <div class="buttons-container">
+            <button class="delete-button">Delete</button>
+            <button class="copy-button">Copy</button>
+            <button class="edit-button" (click)="goToEditAddress(1)">Edit</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="address-header">
+            <div class="name-field">Alexey Ivanov</div>
+            <div class="phone-selection-wrapper">
+              <div class="phone-field">+380 97 123 45 67</div>
+              <div class="selection-field" (click)="toggleSelection($event, 2)" [class.selected]="isSelected[2]">
+                <img *ngIf="isSelected[2]" src="assets/images/check.png" alt="Check" class="check-icon">
+              </div>
+            </div>
+          </div>
+          <div class="address-info">
+            <div class="city">Kyiv 12</div>
+            <div class="address">с. Kyiv, s/p. Kyiv UA 01001, Ukraine</div>
+          </div>
+          <div class="buttons-container">
+            <button class="delete-button">Delete</button>
+            <button class="copy-button">Copy</button>
+            <button class="edit-button" (click)="goToEditAddress(2)">Edit</button>
+          </div>
+        </div>
+      </div>
+      <div class="new-address-button-container">
+        <button class="new-address-button" (click)="goToNewAddress()">Add a new address</button>
+      </div>
     </div>
-</section>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
+  </div>

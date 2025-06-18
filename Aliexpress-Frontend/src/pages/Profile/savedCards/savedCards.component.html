@@ -1,0 +1,117 @@
+<div class="tab"></div>
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
+  </div>
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="saved-cards-container" *ngIf="showSavedCards && !isNoactiveRoute">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+          <span class="title">Saved cards</span>
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="card" *ngFor="let card of cards; let i = index" [attr.data-index]="i">
+          <div class="card-type">
+            <img [src]="'assets/images/' + card.type + '.png'" alt="{{ card.type }}" class="card-logo">
+            <span class="card-name">{{ card.type === 'master-card' ? 'Mastercard' : card.type }}</span>
+          </div>
+          <div class="card-number">
+            <span class="number-text">{{ card.number }}</span>
+          </div>
+          <div class="buttons-container">
+            <button class="delete-button">Delete</button>
+            <button class="edit-button" (click)="openPopup('edit', i)">Edit</button>
+          </div>
+        </div>
+      </div>
+      <div class="new-card-button-container">
+        <button class="new-card-button" (click)="openPopup('new')">Add a credit or debit card</button>
+      </div>
+
+      <!-- Попап для редактирования карты -->
+      <div class="popup-overlay" *ngIf="isPopupOpen && popupMode === 'edit' && selectedCardIndex !== null" (click)="closePopup()">
+        <div class="popup" (click)="$event.stopPropagation()">
+          <span class="popup-title">Edit your card</span>
+          <div class="card-info">
+            <div class="card-type">
+              <img [src]="'assets/images/' + cards[selectedCardIndex].type + '.png'" alt="{{ cards[selectedCardIndex].type }}" class="card-logo">
+              <span class="card-name">{{ cards[selectedCardIndex].type === 'master-card' ? 'Mastercard' : cards[selectedCardIndex].type }}</span>
+            </div>
+            <div class="card-number">
+              <span class="number-text">{{ cards[selectedCardIndex].number }}</span>
+            </div>
+          </div>
+          <div class="expiration-wrapper">
+            <span class="expiration-label">Expiration date</span>
+          </div>
+          <div class="expiration-container">
+            <div class="dropdown-field">
+              <select [(ngModel)]="cards[selectedCardIndex].month" class="month-select">
+                <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+              </select>
+              <img src="assets/images/arrow-down.png" alt="Dropdown" class="dropdown-arrow">
+            </div>
+            <div class="dropdown-field year-field">
+              <select [(ngModel)]="cards[selectedCardIndex].year" class="year-select">
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+              </select>
+              <img src="assets/images/arrow-down.png" alt="Dropdown" class="dropdown-arrow">
+            </div>
+          </div>
+          <span class="billing-label">Billing address</span>
+          <div class="billing-field">
+            <span class="billing-name">Ismail 54</span>
+            <span class="billing-address">с. Odesa, s/p. Odesa UA 65007, Ukraine</span>
+            <span class="billing-edit">Edit</span>
+          </div>
+          <button class="save-button" (click)="saveCard()">Save</button>
+        </div>
+      </div>
+
+      <!-- Попап для добавления новой карты -->
+      <div class="popup-overlay" *ngIf="isPopupOpen && popupMode === 'new'" (click)="closePopup()">
+        <div class="popup" (click)="$event.stopPropagation()">
+          <span class="popup-title">Add a new card</span>
+          <span class="card-number-label">Card number</span>
+          <div class="card-number-field">
+            <img [src]="'assets/images/' + newCard.type + '.png'" alt="{{ newCard.type }}" class="card-logo">
+            <span class="card-number-text">{{ newCard.number }}</span>
+          </div>
+          <div class="labels-container">
+            <span class="expiration-label">Expiration date</span>
+            <span class="cvv-label">CVV</span>
+          </div>
+          <div class="expiration-container">
+            <div class="dropdown-field">
+              <select [(ngModel)]="newCard.month" class="month-select">
+                <option value="" disabled selected>Month</option>
+                <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+              </select>
+              <img src="assets/images/arrow-down.png" alt="Dropdown" class="dropdown-arrow">
+            </div>
+            <div class="dropdown-field" style="margin-left: px-to-rem(13);">
+              <select [(ngModel)]="newCard.year" class="year-select">
+                <option value="" disabled selected>Year</option>
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+              </select>
+              <img src="assets/images/arrow-down.png" alt="Dropdown" class="dropdown-arrow">
+            </div>
+            <div class="cvv-field">
+              <input type="text" [(ngModel)]="newCard.cvv" placeholder="digital code" class="cvv-input">
+            </div>
+          </div>
+          <span class="billing-label">Billing address</span>
+          <div class="billing-field">
+            <span class="billing-name">Ismail 54</span>
+            <span class="billing-address">с. Odesa, s/p. Odesa UA 65007, Ukraine</span>
+            <span class="billing-edit">Edit</span>
+          </div>
+          <button class="add-button" (click)="saveNewCard()">Add your card</button>
+        </div>
+      </div>
+    </div>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
+  </div>

@@ -1,8 +1,63 @@
-<section class="address-section">
-    <div class="container">
-        <h2></h2>
-        <div class="section-content">
-            <p>&nbsp;reviews works!</p>
+<div class="tab">
+  <div class="tab-header">
+    <!-- Заголовок вкладки (если есть) -->
+  </div>
+  <div class="tab-content">
+    <!-- По умолчанию отображаем основной контент, если нет дочернего маршрута -->
+    <div class="reviews-container" *ngIf="showReviews && !isNoactiveRoute">
+      <div class="tabs-wrapper">
+        <div class="tabs">
+          <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back" (click)="goBack()" *ngIf="isMobile()">
+          <span class="title">Your Feedback</span>
         </div>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <img src="assets/images/Bear.jpg" alt="Product" class="product-image" />
+          <div class="content">
+            <p class="product-name">Pair Charming Floral Stud Earrings - Vibrant Multiple</p>
+            <div class="review-box">
+              Looks good material versus Value arrived<br>15 days before the stipulated date
+            </div>
+          </div>
+          <div class="card-footer">
+            <p class="attached-photos">Your attached photos</p>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+          </div>
+          <div class="photos-and-buttons">
+            <img src="assets/images/Bear.jpg" alt="Mini Photo 1" class="mini-photo" />
+            <img src="assets/images/Bear.jpg" alt="Mini Photo 2" class="mini-photo" />
+            <img src="assets/images/Bear.jpg" alt="Mini Photo 3" class="mini-photo" />
+            <button class="edit-button">Edit</button>
+            <button class="delete-button">Delete</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/Bear.jpg" alt="Product" class="product-image" />
+          <div class="content">
+            <p class="product-name">Ninja Statue Set - Sword Master Miniature</p>
+            <div class="review-box">
+              Love these, like mini toys. I've put them<br>on my car dashboard and one sentry<br>samurai on my wheel so actually if he is<br>upright my wheels are straight!
+            </div>
+          </div>
+          <div class="card-footer">
+            <p class="attached-photos">Your attached photos</p>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+          <div class="photos-and-buttons">
+            <img src="assets/images/Bear.jpg" alt="Mini Photo 1" class="mini-photo" />
+            <img src="assets/images/Bear.jpg" alt="Mini Photo 2" class="mini-photo" />
+            <img src="assets/images/Bear.jpg" alt="Mini Photo 3" class="mini-photo" />
+            <button class="edit-button">Edit</button>
+            <button class="delete-button">Delete</button>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+    <!-- Рендерим дочерние маршруты (например, noactive) -->
+    <router-outlet (activate)="onOutletActivated($event)"></router-outlet>
+  </div>

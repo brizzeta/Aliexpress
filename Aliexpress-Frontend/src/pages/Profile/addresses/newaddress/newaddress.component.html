@@ -1,0 +1,41 @@
+<div class="new-address-container">
+    <div class="tabs-wrapper">
+      <div class="tabs">
+        <img class="back-arrow" src="assets/images/arrowBack.png" alt="Back to addresses" (click)="goBack()">
+        <span class="title">Delivery addresses</span>
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="field-group">
+        <label class="field-label">First Name</label>
+        <input type="text" class="field-input" placeholder="Enter your first name">
+      </div>
+      <div class="field-group last-name-group">
+        <label class="field-label">Last Name</label>
+        <input type="text" class="field-input" placeholder="Enter your last name">
+      </div>
+      <div class="field-group">
+        <label class="field-label">Country</label>
+        <input type="text" class="field-input" placeholder="Enter your country">
+      </div>
+      <div class="field-group">
+        <label class="field-label">Phone</label>
+        <input type="text" class="field-input" placeholder="Enter your phone number">
+      </div>
+      <div class="field-group">
+        <label class="field-label">Address</label>
+        <input type="text" class="field-input" placeholder="Enter your address">
+      </div>
+      <div class="field-group postal-code-group">
+        <label class="field-label">Postal Code</label>
+        <input type="text" class="field-input" placeholder="Enter your postal code">
+      </div>
+      <div class="field-group">
+        <label class="field-label">City</label>
+        <input type="text" class="field-input" placeholder="Enter your city">
+      </div>
+      <div class="buttons-container">
+        <button class="new-address-button" (click)="createAddress()">Create delivery address</button>
+      </div>
+    </div>
+  </div>

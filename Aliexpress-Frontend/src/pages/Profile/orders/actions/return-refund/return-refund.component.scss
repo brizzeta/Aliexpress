@@ -1,0 +1,903 @@
+@use "../../../../../assets/variables.scss" as *;
+@use "../../../../../assets/functions.scss" as *;
+
+// Десктопные стили (базовые, для ≥ 1500px)
+.return-refund-container {
+  width: px-to-rem(510);
+  height: px-to-rem(803);
+  margin-top: px-to-rem(-40);
+  margin-left: px-to-rem(-40);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  .back-arrow {
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-left: px-to-rem(20);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: px-to-rem(36);
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $black;
+  }
+}
+
+.return-refund-card {
+  width: px-to-rem(1255);
+  height: px-to-rem(280);
+  margin-left: px-to-rem(20);
+  margin-top: px-to-rem(10);
+  border-radius: px-to-rem(10);
+  background-color: $white;
+  display: flex;
+  align-items: flex-start;
+}
+
+.return-refund-image {
+  width: px-to-rem(280);
+  height: px-to-rem(207);
+  margin-left: px-to-rem(20);
+  margin-top: px-to-rem(30);
+  border-radius: px-to-rem(20);
+}
+
+.return-refund-text-block {
+  display: flex;
+  flex-direction: column;
+  margin-left: px-to-rem(40);
+  margin-top: px-to-rem(30);
+}
+
+.return-refund-text-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.return-refund-info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.return-refund-info {
+  width: px-to-rem(487);
+  height: px-to-rem(38);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  padding: px-to-rem(10);
+  display: flex;
+  align-items: center;
+}
+
+.return-refund-info span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $grey;
+}
+
+.return-refund-product-info {
+  width: px-to-rem(348);
+  height: px-to-rem(38);
+  margin-left: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  padding: px-to-rem(10);
+  display: flex;
+  align-items: center;
+}
+
+.return-refund-product-info span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+}
+
+.return-refund-add-block {
+  display: flex;
+  flex-direction: row;
+  margin-top: px-to-rem(10);
+}
+
+.return-refund-input {
+  width: px-to-rem(487);
+  height: px-to-rem(157);
+  border-radius: px-to-rem(10);
+  border: px-to-rem(1) solid $light-grey;
+  padding: px-to-rem(10);
+  font-family: 'Montserrat', sans-serif;
+  font-size: px-to-rem(16);
+  resize: none;
+  box-sizing: border-box;
+}
+
+.return-refund-add-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: px-to-rem(40);
+}
+
+.return-refund-add-label-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.return-refund-add-label {
+  width: px-to-rem(56);
+  height: px-to-rem(38);
+  border-radius: px-to-rem(10);
+  background-color: $greyish;
+  padding: px-to-rem(10);
+  display: flex;
+  align-items: center;
+}
+
+.return-refund-add-label span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+}
+
+.return-refund-add-input {
+  width: px-to-rem(274);
+  height: px-to-rem(100);
+  margin-left: px-to-rem(18);
+  border-radius: px-to-rem(10);
+  border: px-to-rem(1) solid $light-grey;
+  padding: px-to-rem(10);
+  font-family: 'Montserrat', sans-serif;
+  font-size: px-to-rem(16);
+  resize: none;
+  box-sizing: border-box;
+}
+
+.return-refund-rating-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: px-to-rem(25);
+  justify-content: flex-end; // Размещаем кнопку справа
+}
+
+.return-refund-submit-button {
+  width: px-to-rem(132); // Обновлено с 114px на 132px
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  background-color: $grey;
+  padding: px-to-rem(8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.return-refund-submit-button span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $white;
+}
+
+// Мобильные стили (для телефона, < 768px)
+@include media-breakpoint-down(sm) {
+  .return-refund-container {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .header {
+    padding-left: px-to-rem(20); // 20px от левого края для стрелки
+
+    .back-arrow {
+      width: px-to-rem(15);
+      height: px-to-rem(25);
+    }
+
+    h2 {
+      margin-left: px-to-rem(20); // 20px правее стрелки
+      font-size: px-to-rem(36);
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+  }
+
+  .return-refund-card {
+    width: px-to-rem(335);
+    height: px-to-rem(484);
+    border-radius: px-to-rem(10);
+    margin-top: -5px;
+    flex-direction: column; // Вертикальное расположение для уровней
+    padding: 0;
+    position: relative; // Для абсолютного позиционирования
+  }
+
+  .return-refund-image {
+    width: px-to-rem(147);
+    height: px-to-rem(147);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(30);
+    border-radius: px-to-rem(20);
+  }
+
+  .return-refund-text-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .return-refund-text-header {
+    position: absolute;
+    top: px-to-rem(30); // Выравниваем с картинкой
+    left: px-to-rem(187); // 147px (картинка) + 20px (отступ) + 20px (отступ слева)
+    width: px-to-rem(128);
+    height: px-to-rem(147);
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .return-refund-info-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .return-refund-product-info {
+    width: px-to-rem(128);
+    height: px-to-rem(38);
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: px-to-rem(10);
+    background-color: $greyish;
+    padding: px-to-rem(10);
+  }
+
+  .return-refund-product-info span {
+    font-size: px-to-rem(14);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+
+  .return-refund-add-block {
+    flex-direction: column;
+    margin-top: px-to-rem(7); // 7px ниже .return-refund-product-info
+    margin-left: 0;
+  }
+
+  .return-refund-add-details {
+    margin-left: 0;
+    width: px-to-rem(128);
+    height: px-to-rem(103);
+    border: px-to-rem(1) solid $light-grey;
+    border-radius: px-to-rem(10);
+  }
+
+  .return-refund-add-label-row {
+    flex-direction: column;
+  }
+
+  .return-refund-add-label {
+    width: 100%;
+    height: px-to-rem(38);
+    border-radius: px-to-rem(10) px-to-rem(10) 0 0;
+    background-color: $greyish;
+    padding: px-to-rem(10);
+  }
+
+  .return-refund-add-label span {
+    font-size: px-to-rem(14);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+  }
+
+  .return-refund-add-input {
+    width: 100%;
+    height: px-to-rem(65); // 103px - 38px
+    margin-left: 0;
+    border: none;
+    border-radius: 0 0 px-to-rem(10) px-to-rem(10);
+    padding: px-to-rem(10);
+    font-size: px-to-rem(14);
+  }
+
+  // Второй уровень: .return-refund-info
+  .return-refund-info {
+    position: absolute;
+    top: px-to-rem(167); // 30px (margin-top .return-refund-image) + 147px (высота первого уровня) + 20px (отступ)
+    left: px-to-rem(-165);
+    width: px-to-rem(295);
+    height: px-to-rem(38);
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: px-to-rem(10);
+    background-color: $greyish;
+    padding: px-to-rem(10);
+  }
+
+  .return-refund-info span {
+    display: none; // Скрываем оригинальный текст
+  }
+
+  .return-refund-info::after {
+    content: 'Reason for return'; // Новый текст для мобильной версии
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: px-to-rem(13);
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $grey;
+  }
+
+  // Третий уровень: .return-refund-input
+  .return-refund-input {
+    position: absolute;
+    top: px-to-rem(218); // 197px (top .return-refund-info) + 38px (высота .return-refund-info) + 12px (отступ)
+    left: px-to-rem(-165);
+    width: px-to-rem(295);
+    height: px-to-rem(157);
+    margin-left: 0;
+    margin-top: 0;
+    border: px-to-rem(1) solid $light-grey;
+    border-radius: px-to-rem(10);
+    padding: px-to-rem(10);
+    font-size: px-to-rem(14);
+  }
+
+  // Четвёртый уровень: .return-refund-rating-row
+  .return-refund-rating-row {
+    position: absolute;
+    top: px-to-rem(400); // 245px (top .return-refund-input) + 157px (высота .return-refund-input) + 20px (отступ)
+    left: px-to-rem(-165);
+    margin-left: 0;
+    margin-top: 0;
+    justify-content: flex-end; // Размещаем кнопку справа
+  }
+
+  .return-refund-submit-button {
+    width: px-to-rem(132); // Обновлено с 114px на 132px
+    height: px-to-rem(40);
+    margin-left: 163px;
+  }
+
+  .return-refund-submit-button span {
+    font-size: px-to-rem(16);
+  }
+}
+
+// Адаптация для sm-md (768px–991px)
+@include media-breakpoint-between(sm, md) {
+  .return-refund-container {
+    width: px-to-rem(700);
+    height: px-to-rem(260);
+    margin-top: px-to-rem(-10);
+    margin-left: px-to-rem(-10);
+  }
+
+  .header {
+    padding-left: 0;
+
+    .back-arrow {
+      width: px-to-rem(11);
+      height: px-to-rem(18);
+    }
+
+    h2 {
+      margin-left: px-to-rem(12);
+      font-size: px-to-rem(26);
+    }
+  }
+
+  .return-refund-card {
+    width: px-to-rem(650);
+    height: px-to-rem(240);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(5);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(10);
+  }
+
+  .return-refund-image {
+    width: px-to-rem(130);
+    height: px-to-rem(97);
+    margin-left: px-to-rem(12);
+    margin-top: px-to-rem(15);
+    border-radius: px-to-rem(10);
+  }
+
+  .return-refund-text-block {
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(15);
+  }
+
+  .return-refund-info-row {
+    gap: px-to-rem(8);
+  }
+
+  .return-refund-info {
+    width: px-to-rem(240);
+    height: px-to-rem(32);
+    border-radius: px-to-rem(6);
+    padding: px-to-rem(6);
+  }
+
+  .return-refund-info span {
+    font-size: px-to-rem(13);
+  }
+
+  .return-refund-product-info {
+    width: px-to-rem(195);
+    height: px-to-rem(32);
+    margin-left: px-to-rem(8);
+    border-radius: px-to-rem(6);
+    padding: px-to-rem(6);
+  }
+
+  .return-refund-product-info span {
+    font-size: px-to-rem(13);
+  }
+
+  .return-refund-add-block {
+    flex-direction: row;
+    margin-top: px-to-rem(8);
+  }
+
+  .return-refund-add-details {
+    margin-left: px-to-rem(15);
+  }
+
+  .return-refund-add-label-row {
+    flex-direction: row;
+  }
+
+  .return-refund-add-label {
+    height: px-to-rem(32);
+    border-radius: px-to-rem(6);
+    padding: px-to-rem(6);
+    border: none;
+  }
+
+  .return-refund-add-label span {
+    font-size: px-to-rem(13);
+  }
+
+  .return-refund-add-input {
+    width: px-to-rem(130);
+    height: px-to-rem(80);
+    margin-left: px-to-rem(10);
+    border-radius: px-to-rem(6);
+    padding: px-to-rem(6);
+    font-size: px-to-rem(13);
+  }
+
+  .return-refund-input {
+    width: px-to-rem(240);
+    height: px-to-rem(110);
+    border-radius: px-to-rem(6);
+    padding: px-to-rem(6);
+    font-size: px-to-rem(13);
+  }
+
+  .return-refund-rating-row {
+    margin-top: px-to-rem(12);
+    justify-content: flex-end; // Размещаем кнопку справа
+  }
+
+  .return-refund-submit-button {
+    width: px-to-rem(121); // 132 / 114 * 70 ≈ 81
+    height: px-to-rem(37); // 132 / 114 * 32 ≈ 37
+    border-radius: px-to-rem(6);
+    padding: px-to-rem(5);
+  }
+
+  .return-refund-submit-button span {
+    font-size: px-to-rem(13);
+  }
+}
+
+// Адаптация для md-lg (992px–1199px)
+@include media-breakpoint-between(md, lg) {
+  .return-refund-container {
+    width: px-to-rem(900);
+    height: auto;
+    margin-top: px-to-rem(-20);
+    margin-left: px-to-rem(-20);
+  }
+
+  .header {
+    .back-arrow {
+      width: px-to-rem(13);
+      height: px-to-rem(22);
+    }
+
+    h2 {
+      margin-left: px-to-rem(15);
+      font-size: px-to-rem(30);
+    }
+  }
+
+  .return-refund-card {
+    width: 28.125rem;
+    height: auto;
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(8);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(10);
+    flex-direction: column;
+  }
+
+  .return-refund-image {
+    width: px-to-rem(430);
+    height: px-to-rem(318);
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: px-to-rem(12);
+  }
+
+  .return-refund-text-block {
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    width: 100%;
+  }
+
+  .return-refund-info-row {
+    flex-direction: column;
+    gap: px-to-rem(10);
+  }
+
+  .return-refund-info {
+    width: px-to-rem(430);
+    height: px-to-rem(32);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+  }
+
+  .return-refund-info span {
+    font-size: px-to-rem(14);
+  }
+
+  .return-refund-product-info {
+    width: px-to-rem(430);
+    height: px-to-rem(32);
+    margin-left: 0;
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+  }
+
+  .return-refund-product-info span {
+    font-size: px-to-rem(14);
+  }
+
+  .return-refund-input {
+    width: px-to-rem(430);
+    height: px-to-rem(120);
+    margin-top: px-to-rem(10);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+    font-size: px-to-rem(14);
+  }
+
+  .return-refund-add-block {
+    flex-direction: column;
+    margin-top: px-to-rem(10);
+  }
+
+  .return-refund-add-details {
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+  }
+
+  .return-refund-add-label-row {
+    flex-direction: row;
+  }
+
+  .return-refund-add-label {
+    height: px-to-rem(32);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+    border: none;
+  }
+
+  .return-refund-add-label span {
+    font-size: px-to-rem(14);
+  }
+
+  .return-refund-add-input {
+    width: px-to-rem(395);
+    height: px-to-rem(80);
+    margin-left: px-to-rem(10);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+    font-size: px-to-rem(14);
+  }
+
+  .return-refund-rating-row {
+    margin-top: px-to-rem(10);
+    justify-content: flex-end; // Уже есть, оставляем
+  }
+
+  .return-refund-submit-button {
+    width: px-to-rem(121); // 132 / 114 * 70 ≈ 81
+    height: px-to-rem(37); // 132 / 114 * 32 ≈ 37
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(6);
+  }
+
+  .return-refund-submit-button span {
+    font-size: px-to-rem(14);
+  }
+}
+
+// Адаптация для lg-xl (1200px–1499px)
+@include media-breakpoint-between(lg, xl) {
+  .return-refund-container {
+    width: px-to-rem(1100);
+    height: px-to-rem(260);
+    margin-top: px-to-rem(-30);
+    margin-left: px-to-rem(-30);
+  }
+
+  .header {
+    .back-arrow {
+      width: px-to-rem(14);
+      height: px-to-rem(24);
+    }
+
+    h2 {
+      margin-left: px-to-rem(18);
+      font-size: px-to-rem(32);
+    }
+  }
+
+  .return-refund-card {
+    width: px-to-rem(950);
+    height: px-to-rem(260);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(10);
+    border-radius: px-to-rem(10);
+    padding: px-to-rem(10);
+  }
+
+  .return-refund-image {
+    width: px-to-rem(200);
+    height: px-to-rem(148);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(25);
+    border-radius: px-to-rem(15);
+  }
+
+  .return-refund-text-block {
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+  }
+
+  .return-refund-info-row {
+    gap: px-to-rem(20);
+  }
+
+  .return-refund-info {
+    width: px-to-rem(360);
+    height: px-to-rem(36);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+  }
+
+  .return-refund-info span {
+    font-size: px-to-rem(15);
+  }
+
+  .return-refund-product-info {
+    width: px-to-rem(270);
+    height: px-to-rem(36);
+    margin-left: px-to-rem(1);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+  }
+
+  .return-refund-product-info span {
+    font-size: px-to-rem(15);
+  }
+
+  .return-refund-add-block {
+    flex-direction: row;
+    margin-top: px-to-rem(10);
+  }
+
+  .return-refund-add-details {
+    margin-left: px-to-rem(20);
+  }
+
+  .return-refund-add-label-row {
+    flex-direction: row;
+  }
+
+  .return-refund-add-label {
+    height: px-to-rem(36);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+    border: none;
+  }
+
+  .return-refund-add-label span {
+    font-size: px-to-rem(15);
+  }
+
+  .return-refund-add-input {
+    width: px-to-rem(200);
+    height: px-to-rem(95);
+    margin-left: px-to-rem(15);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+    font-size: px-to-rem(15);
+  }
+
+  .return-refund-input {
+    width: px-to-rem(360);
+    height: px-to-rem(140);
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(8);
+    font-size: px-to-rem(15);
+  }
+
+  .return-refund-rating-row {
+    margin-top: px-to-rem(20);
+    justify-content: flex-end; // Размещаем кнопку справа
+  }
+
+  .return-refund-submit-button {
+    width: px-to-rem(136); // 132 / 114 * 100 ≈ 116
+    height: px-to-rem(42); // 132 / 114 * 36 ≈ 42
+    border-radius: px-to-rem(8);
+    padding: px-to-rem(6);
+  }
+
+  .return-refund-submit-button span {
+    font-size: px-to-rem(15);
+  }
+}
+
+// Адаптация для xxl (≥ 1920px)
+@include media-breakpoint-up(xxl) {
+  .return-refund-container {
+    width: px-to-rem(600);
+    height: px-to-rem(900);
+    margin-top: px-to-rem(-50);
+    margin-left: px-to-rem(-50);
+  }
+
+  .header {
+    .back-arrow {
+      width: px-to-rem(18);
+      height: px-to-rem(28);
+    }
+
+    h2 {
+      margin-left: px-to-rem(25);
+      font-size: px-to-rem(40);
+    }
+  }
+
+  .return-refund-card {
+    width: px-to-rem(1300);
+    height: px-to-rem(320);
+    margin-left: px-to-rem(25);
+    margin-top: px-to-rem(15);
+    border-radius: px-to-rem(12);
+  }
+
+  .return-refund-image {
+    width: px-to-rem(300);
+    height: px-to-rem(222);
+    margin-left: px-to-rem(25);
+    margin-top: px-to-rem(35);
+    border-radius: px-to-rem(20);
+  }
+
+  .return-refund-text-block {
+    margin-left: px-to-rem(40);
+    margin-top: px-to-rem(35);
+  }
+
+  .return-refund-info-row {
+    gap: px-to-rem(30);
+  }
+
+  .return-refund-info {
+    width: px-to-rem(510);
+    height: px-to-rem(42);
+    border-radius: px-to-rem(12);
+    padding: px-to-rem(12);
+  }
+
+  .return-refund-info span {
+    font-size: px-to-rem(18);
+  }
+
+  .return-refund-product-info {
+    width: px-to-rem(365);
+    height: px-to-rem(42);
+    margin-left: px-to-rem(30);
+    border-radius: px-to-rem(12);
+    padding: px-to-rem(12);
+  }
+
+  .return-refund-product-info span {
+    font-size: px-to-rem(18);
+  }
+
+  .return-refund-add-block {
+    margin-top: px-to-rem(15);
+  }
+
+  .return-refund-add-details {
+    margin-left: px-to-rem(30);
+  }
+
+  .return-refund-add-label {
+    width: px-to-rem(60);
+    height: px-to-rem(42);
+    border-radius: px-to-rem(12);
+    padding: px-to-rem(12);
+  }
+
+  .return-refund-add-label span {
+    font-size: px-to-rem(18);
+  }
+
+  .return-refund-add-input {
+    width: px-to-rem(285);
+    height: px-to-rem(110);
+    margin-left: px-to-rem(18);
+    border-radius: px-to-rem(12);
+    padding: px-to-rem(12);
+    font-size: px-to-rem(18);
+  }
+
+  .return-refund-input {
+    width: px-to-rem(510);
+    height: px-to-rem(170);
+    border-radius: px-to-rem(12);
+    padding: px-to-rem(12);
+    font-size: px-to-rem(18);
+  }
+
+  .return-refund-rating-row {
+    margin-top: px-to-rem(30);
+    justify-content: flex-end; // Размещаем кнопку справа
+  }
+
+  .return-refund-submit-button {
+    width: px-to-rem(139); // 132 / 114 * 120 ≈ 139
+    height: px-to-rem(51); // 132 / 114 * 44 ≈ 51
+    border-radius: px-to-rem(12);
+    padding: px-to-rem(10);
+  }
+
+  .return-refund-submit-button span {
+    font-size: px-to-rem(18);
+  }
+}

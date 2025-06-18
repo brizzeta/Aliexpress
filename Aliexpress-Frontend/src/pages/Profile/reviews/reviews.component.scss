@@ -1,0 +1,568 @@
+@use "../../../assets/variables.scss" as *;
+@use "../../../assets/functions.scss" as *;
+
+.reviews-container {
+  width: px-to-rem(1255);
+  margin-left: px-to-rem(23);
+  margin-top: px-to-rem(3);
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(550);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(5);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(750);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(1000);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(15);
+  }
+}
+
+.tabs-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tabs {
+  width: px-to-rem(877);
+  height: px-to-rem(44);
+  margin-left: px-to-rem(17);
+  margin-top: px-to-rem(25);
+  margin-bottom: px-to-rem(20);
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    margin-bottom: px-to-rem(12);
+    padding-left: 0;
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(500);
+    margin-left: px-to-rem(10);
+    margin-top: px-to-rem(15);
+    margin-bottom: px-to-rem(15);
+    padding-right: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(650);
+    margin-left: px-to-rem(15);
+    margin-top: px-to-rem(20);
+    margin-bottom: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(800);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(25);
+    margin-bottom: px-to-rem(25);
+  }
+}
+
+.back-arrow {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(30);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    display: block;
+    width: px-to-rem(15);
+    height: px-to-rem(25);
+    filter: brightness(0);
+    cursor: pointer;
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    display: none;
+  }
+}
+
+.title {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(36);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(32);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(34);
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(36);
+    white-space: nowrap;
+  }
+}
+
+.cards-container {
+  margin-top: px-to-rem(40);
+  display: flex;
+  flex-direction: row;
+  gap: px-to-rem(20);
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    gap: px-to-rem(10);
+    width: 100%;
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    flex-direction: column; /* Вертикальное расположение */
+    gap: px-to-rem(20);
+    width: 100%;
+    align-items: center; /* Центрируем карточки */
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    flex-direction: column; /* Вертикальное расположение */
+    gap: px-to-rem(20);
+    width: 100%;
+    align-items: center; /* Центрируем карточки */
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    flex-direction: column; /* Вертикальное расположение */
+    gap: px-to-rem(20);
+    width: 100%;
+  }
+}
+
+.card {
+  width: px-to-rem(618);
+  height: px-to-rem(290);
+  border-radius: px-to-rem(10);
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(335);
+    height: px-to-rem(540);
+    margin: 0 auto; /* Центрируем карточку */
+    display: flex;
+    flex-direction: column; /* Убеждаемся, что порядок сохраняется */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(618);
+    height: px-to-rem(290);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(618);
+    height: px-to-rem(290);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(618);
+    height: px-to-rem(290);
+  }
+}
+
+.product-image {
+  width: px-to-rem(208);
+  height: px-to-rem(176);
+  border-radius: px-to-rem(20);
+  margin-left: px-to-rem(20);
+  margin-top: px-to-rem(20);
+  object-fit: cover;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(295);
+    height: px-to-rem(176);
+    margin-left: px-to-rem(20);
+    margin-top: px-to-rem(20);
+    margin-right: px-to-rem(20);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(208);
+    height: px-to-rem(176);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(208);
+    height: px-to-rem(176);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(208);
+    height: px-to-rem(176);
+  }
+}
+
+.attached-photos {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(12);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    margin-top: px-to-rem(10); /* 10px ниже фотки */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-top: px-to-rem(10);
+    text-align: left;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-top: px-to-rem(10);
+    text-align: left;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-top: px-to-rem(10);
+    text-align: left;
+  }
+}
+
+.photos-and-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: px-to-rem(23); /* 23px от левого борта .card */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: px-to-rem(20); /* 20px слева от борта контейнера */
+    margin-right: px-to-rem(20); /* 20px справа от последней кнопки */
+    justify-content: center;
+    width: px-to-rem(295); /* Ограничиваем ширину для центрирования */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: px-to-rem(10); /* 10px ниже "Your attached photos" */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(23);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(23);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(23);
+  }
+}
+
+.mini-photo {
+  width: px-to-rem(61);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(20);
+  margin-right: px-to-rem(10); /* 10px между фотками */
+
+  @include media-breakpoint-down(sm) {
+    margin-right: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(61);
+    height: px-to-rem(40);
+    margin-right: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(61);
+    height: px-to-rem(40);
+    margin-right: px-to-rem(10);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(61);
+    height: px-to-rem(40);
+    margin-right: px-to-rem(10);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-left: px-to-rem(250);
+  margin-top: px-to-rem(-196); /* Поднимаем .content на высоту картинки */
+  margin-right: px-to-rem(20); /* Поднимаем .content на высоту картинки */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-top: px-to-rem(10); /* 10px ниже мини-фоток и кнопок */
+    width: 100%;
+    align-items: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(250);
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(250);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(250);
+  }
+}
+
+.product-name {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: px-to-rem(24);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: justify;
+  color: $black;
+  width: px-to-rem(340);
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(20);
+    width: px-to-rem(295);
+    text-align: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    font-size: px-to-rem(24);
+    width: px-to-rem(340);
+    text-align: left;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    font-size: px-to-rem(24);
+    width: px-to-rem(340);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    font-size: px-to-rem(24);
+    width: px-to-rem(340);
+  }
+}
+
+.review-box {
+  width: px-to-rem(347);
+  height: px-to-rem(108);
+  border-radius: px-to-rem(10);
+  border-width: px-to-rem(1);
+  border-style: solid;
+  border-color: $greyish;
+  margin-top: px-to-rem(-10);
+  padding-left: px-to-rem(10);
+  padding-top: px-to-rem(10);
+  overflow-y: auto; /* Добавляем вертикальную прокрутку */
+  overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+  box-sizing: border-box; /* Учитываем padding в размерах */
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(295);
+    margin-top: px-to-rem(10); /* 10px ниже заголовка */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(347);
+    height: px-to-rem(108);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(347);
+    height: px-to-rem(108);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(347);
+    height: px-to-rem(108);
+  }
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  margin-left: px-to-rem(60); /* 60px от левого борта .card */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: px-to-rem(60); /* 60px от левого борта для мобилок */
+    margin-top: px-to-rem(20); /* Увеличенное расстояние между "Your attached photos" и рейтингом */
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(60);
+    margin-top: px-to-rem(10);
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(60);
+    margin-top: px-to-rem(10);
+    width: 100%;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(60);
+    margin-top: px-to-rem(10);
+    width: 100%;
+  }
+}
+
+.rating {
+  font-size: px-to-rem(20);
+  line-height: 100%;
+  color: #FFD942;
+  margin-left: px-to-rem(320); /* 320px от текста "Your attached photos" */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(320);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(320);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(320);
+  }
+}
+
+.edit-button, .delete-button {
+  width: px-to-rem(165);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  border-width: px-to-rem(1);
+  border-style: solid;
+  border-color: $greyish;
+  padding: px-to-rem(10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: px-to-rem(10);
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: $grey;
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(140);
+    font-size: px-to-rem(16);
+    margin-top: px-to-rem(10); /* 10px ниже рейтинга */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    width: px-to-rem(165);
+    font-size: px-to-rem(16);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    width: px-to-rem(165);
+    font-size: px-to-rem(16);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    width: px-to-rem(165);
+    font-size: px-to-rem(16);
+  }
+}
+
+.edit-button {
+  margin-left: px-to-rem(20); /* 20px от последней фотки */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: px-to-rem(20); /* 20px от левого борта */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20);
+  }
+}
+
+.delete-button {
+  margin-left: px-to-rem(20); /* 20px от кнопки Edit */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: px-to-rem(20); /* Отступ между кнопками */
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    margin-left: px-to-rem(20);
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    margin-left: px-to-rem(20);
+  }
+}

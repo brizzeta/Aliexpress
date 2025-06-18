@@ -1,0 +1,304 @@
+@use "../../../../assets/variables.scss" as *;
+@use "../../../../assets/functions.scss" as *;
+
+.new-address-container {
+  width: px-to-rem(1255);
+  margin-left: px-to-rem(23);
+  margin-top: px-to-rem(3);
+
+  @include media-breakpoint-down(xl) {
+    width: px-to-rem(405);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: px-to-rem(385);
+  }
+
+  @include media-breakpoint-down(md) {
+    width: px-to-rem(375);
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: px-to-rem(375);
+    margin-top: 0;
+  }
+}
+
+.tabs-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tabs {
+  width: px-to-rem(877);
+  height: px-to-rem(44);
+  margin-left: px-to-rem(17);
+  margin-top: px-to-rem(25);
+  margin-bottom: px-to-rem(20);
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(xl) {
+    width: px-to-rem(385); // Соответствует ширине .form-container
+    margin-left: px-to-rem(15);
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: px-to-rem(405); // Соответствует ширине .form-container
+    margin-left: px-to-rem(15);
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: px-to-rem(10);
+    margin-bottom: px-to-rem(12);
+    padding-left: 0;
+    padding-right: px-to-rem(20);
+  }
+}
+
+.back-arrow {
+  width: px-to-rem(15);
+  height: px-to-rem(25);
+  filter: brightness(0);
+  cursor: pointer;
+  margin-right: px-to-rem(15);
+
+  @include media-breakpoint-down(sm) {
+    margin-right: px-to-rem(15);
+  }
+
+  @include media-breakpoint-between(sm, md) {
+    margin-left: px-to-rem(20);
+    margin-right: px-to-rem(15);
+  }
+}
+
+.title {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(36);
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: $black;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(30);
+    white-space: nowrap;
+  }
+}
+
+.form-container {
+  width: px-to-rem(1162);
+  height: auto;
+  margin-top: px-to-rem(40);
+  display: flex;
+  flex-wrap: wrap;
+  gap: px-to-rem(40);
+
+  @include media-breakpoint-down(xl) {
+    width: px-to-rem(335);
+    height: auto;
+    margin-top: px-to-rem(20);
+    gap: px-to-rem(15);
+    margin-left: px-to-rem(55);
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: px-to-rem(75);
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: px-to-rem(25);
+  }
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(10);
+
+  &.last-name-group {
+    @include media-breakpoint-down(xl) {
+      margin-left: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+    }
+  }
+
+  &.postal-code-group {
+    @include media-breakpoint-up(xl) {
+      margin-left: 0;
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-left: 0;
+    }
+  }
+
+  &:nth-child(n+3) {
+    @include media-breakpoint-up(xl) {
+      margin-top: px-to-rem(20);
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-top: px-to-rem(15);
+    }
+  }
+
+  &:nth-child(5) {
+    @include media-breakpoint-up(xl) {
+      margin-top: px-to-rem(20);
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-top: px-to-rem(15);
+    }
+  }
+
+  &:nth-child(6) {
+    @include media-breakpoint-up(xl) {
+      margin-top: px-to-rem(20);
+      margin-left: 0;
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-top: px-to-rem(15);
+      margin-left: 0;
+    }
+  }
+
+  &:nth-child(7) {
+    @include media-breakpoint-up(xl) {
+      margin-top: px-to-rem(20);
+    }
+
+    @include media-breakpoint-down(xl) {
+      margin-top: px-to-rem(15);
+    }
+  }
+}
+
+.field-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  color: $grey;
+  margin-left: px-to-rem(10);
+
+  @include media-breakpoint-down(sm) {
+    font-size: px-to-rem(14);
+    margin-left: px-to-rem(5);
+  }
+}
+
+.field-input {
+  width: px-to-rem(561);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(10);
+  gap: px-to-rem(10);
+  background-color: $white;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: px-to-rem(16);
+  color: $black;
+
+  @include media-breakpoint-down(xl) {
+    width: px-to-rem(295);
+    height: px-to-rem(40);
+    font-size: px-to-rem(14);
+  }
+
+  @include media-breakpoint-down(sm) {
+    // Мобильная версия остаётся без изменений
+  }
+
+  &::placeholder {
+    color: $grey;
+  }
+}
+
+.buttons-container {
+  width: 100%;
+  margin-top: px-to-rem(160);
+  display: flex;
+  justify-content: flex-end;
+  gap: px-to-rem(40);
+
+  @include media-breakpoint-down(xl) {
+    margin-top: px-to-rem(50);
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: px-to-rem(15);
+  }
+
+  @include media-breakpoint-down(sm) {
+    // Мобильная версия остаётся без изменений
+  }
+}
+
+.delete-button {
+  width: px-to-rem(243);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: #FF3C3C;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: $white;
+  cursor: pointer;
+
+  @include media-breakpoint-down(xl) {
+    width: px-to-rem(295);
+  }
+
+  @include media-breakpoint-down(sm) {
+    // Мобильная версия остаётся без изменений
+  }
+}
+
+.save-button {
+  width: px-to-rem(114);
+  height: px-to-rem(40);
+  border-radius: px-to-rem(10);
+  padding: px-to-rem(8);
+  gap: px-to-rem(10);
+  background-color: $black;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: px-to-rem(16);
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: $white;
+  cursor: pointer;
+
+  @include media-breakpoint-down(xl) {
+    width: px-to-rem(295);
+  }
+
+  @include media-breakpoint-down(sm) {
+    // Мобильная версия остаётся без изменений
+  }
+}
