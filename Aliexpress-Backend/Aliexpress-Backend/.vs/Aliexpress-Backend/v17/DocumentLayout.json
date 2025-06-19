@@ -5,17 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\aliexpress-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC57E1-50FD-4A78-8117-15C43B32DD3E}|..\\Domain\\Domain.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\aliexpress-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|c:\\project\\project aliexpress\\aliexpress\\aliexpress-backend\\aliexpress-backend\\aliexpress-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6B814DD8-8040-4447-A65C-0DF79411FA68}|Aliexpress-Backend.csproj|solutionrelative:aliexpress-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -97,53 +86,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\UserRole.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Enums\\UserRole.cs",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Domain\\Enums\\UserRole.cs",
-              "RelativeToolTip": "..\\Domain\\Enums\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T12:26:10.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAmwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T14:28:23.113Z",
+              "WhenOpened": "2025-06-18T13:39:21.469Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-28T14:27:48.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Aliexpress-Backend.csproj",
-              "DocumentMoniker": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
-              "RelativeDocumentMoniker": "Aliexpress-Backend.csproj",
-              "ToolTip": "C:\\project\\Project Aliexpress\\Aliexpress\\Aliexpress-Backend\\Aliexpress-Backend\\Aliexpress-Backend.csproj",
-              "RelativeToolTip": "Aliexpress-Backend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-28T14:27:28.754Z"
             },
             {
               "$type": "Bookmark",
