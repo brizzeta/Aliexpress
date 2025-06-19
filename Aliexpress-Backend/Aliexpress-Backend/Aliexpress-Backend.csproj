@@ -7,6 +7,7 @@
     <InvariantGlobalization>true</InvariantGlobalization>
     <RootNamespace>Aliexpress_Backend</RootNamespace>
     <UserSecretsId>4d5ec8d3-1537-4cf4-9e10-517033324a07</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>

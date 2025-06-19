@@ -134,3 +134,14 @@ C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\b
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\web.config
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Aliexpress-Backend.deps.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Aliexpress-Backend.runtimeconfig.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Aliexpress-Backend.staticwebassets.endpoints.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Application.deps.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\appsettings.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Domain.deps.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Infrastructure.deps.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Infrastructure.runtimeconfig.json
+C:\project\Project Aliexpress\Aliexpress\Aliexpress-Backend\Aliexpress-Backend\bin\Debug\net8.0\publish\Shared.deps.json
